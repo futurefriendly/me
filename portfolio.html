@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<title>Portfolio</title>
+<style>
+body,img{ margin:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td,header,footer,nav,article{margin:0;padding:0}
+html,body{}
+html{overflow-y:scroll; -webkit-overflow-scrolling: touch;}
+header,footer,nav,article{ display: block;}
+table{border-collapse:collapse;border-spacing:0}
+img,video{border:0; max-width:100%; vertical-align:top}
+iframe{ vertical-align:top;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+body{ font:16px/1.5 Helvetica Neue,Helvetica,Arial,sans-serif;}
+input,textarea,select,button{ outline: none; resize:none; font:16px/1.7 Helvetica,Arial,sans-serif;}
+button{line-height:1.7;white-space:nowrap;vertical-align:middle;cursor:pointer}
+strong{font-weight:800}
+a{ text-decoration: none; outline: none; cursor: pointer;}
+a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
+a:hover{ text-decoration:none;}
+a:active{ background:none;}
+img{ vertical-align:top; max-width:100%;}
+
+.btn,
+.btn:active,
+.btn:hover{ background:rgb(255, 90, 95); padding:10px 20px; border:none; color:#fff; display:inline-block; *display:inline; *zoom:1; vertical-align:top; border-radius:4px; cursor:pointer;
+    font-size:14px; font-weight:bold;
+    -webkit-appearance:none;
+    appearance:none;
+}
+.btn2{ margin-top:5px}
+.btn2,
+.btn2:active,
+.btn2:hover{ background:rgb(255, 90, 95); padding:6px 8px; border:none; color:#fff; display:inline-block; *display:inline; *zoom:1; vertical-align:top; border-radius:4px; cursor:pointer;
+    font-size:12px; font-weight:bold;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+/* 布局
+----------------------------------------------------------------*/
+
+/* 浮动 */
+.clearfix:after,
+.msgBox:after{content:'.';clear:both;display:block;height:0;visibility:hidden;line-height:0}
+.clearfix,
+.msgBox{zoom:1}
+.left{float:left}
+.right{float:right}
+
+/* DISPLAY */
+.dis_b{ display:block; *zoom:1;}
+.dis_in{ display:inline}
+.dis_inb{ display:inline-block; *display:inline; *zoom:1}
+.vis_on{ visibility: visible;}
+.vis_off{ visibility: hidden;}
+
+/* 边距 */
+.mt5{ margin-top:5px}
+.mr5{ margin-right:5px}
+.mb5{ margin-bottom:5px}
+.ml5{ margin-left:5px}
+.mt10{ margin-top:10px}
+.mr10{ margin-right:10px}
+.mb10{ margin-bottom:10px}
+.ml10{ margin-left:10px}
+.mt15{ margin-top:15px}
+.mr15{ margin-right:15px}
+.mb15{ margin-bottom:15px}
+.ml15{ margin-left:15px}
+.mt20{ margin-top:20px}
+.mr20{ margin-right:20px}
+.mb20{ margin-bottom:20px}
+.ml20{ margin-left:20px}
+.mt25{ margin-top:25px}
+.mr25{ margin-right:25px}
+.mb25{ margin-bottom:25px}
+.ml25{ margin-left:25px}
+.mt30{ margin-top:30px}
+.mr30{ margin-right:30px}
+.mb30{ margin-bottom:30px}
+.ml30{ margin-left:30px}
+
+.pt5{ padding-top:5px}
+.pr5{ padding-right:5px}
+.pb5{ padding-bottom:5px}
+.pl5{ padding-left:5px}
+.pt10{ padding-top:10px}
+.pr10{ padding-right:10px}
+.pb10{ padding-bottom:10px}
+.pl10{ padding-left:10px}
+.pt15{ padding-top:15px}
+.pr15{ padding-right:15px}
+.pb15{ padding-bottom:15px}
+.pl15{ padding-left:15px}
+.pt20{ padding-top:20px}
+.pr20{ padding-right:20px}
+.pb20{ padding-bottom:20px}
+.pl20{ padding-left:20px}
+.pt25{ padding-top:25px}
+.pr25{ padding-right:25px}
+.pb25{ padding-bottom:25px}
+.pl25{ padding-left:25px}
+.pt30{ padding-top:30px}
+.pr30{ padding-right:30px}
+.pb30{ padding-bottom:30px}
+.pl30{ padding-left:30px}
+
+body .mt0{ margin-top:0!important}
+body .mr0{ margin-right:0!important}
+body .mb0{ margin-bottom:0!important}
+body .ml0{ margin-left:0!important}
+body .pt0{ padding-top:0!important}
+body .pr0{ padding-right:0!important}
+body .pb0{ padding-bottom:0!important}
+body .pl0{ padding-left:0!important}
+
+/* 对齐 */
+.vt_t{ vertical-align:top}
+.vt_m{ vertical-align:middle}
+.vt_b{ vertical-align:bottom}
+.vt_bl{ vertical-align:baseline;}
+
+/* 默认文字色 */
+.c_t0,body{ color:#666}
+/* 强文字色 */
+.c_t1{ color:#364450}
+/* 强文字色2 */
+.c_t2{ color:#1c81c1}
+/* 弱文字色 */
+.c_t3{ color:#999;}
+/* 弱文字色2 */
+.c_t4{ color:#abf3ff;}
+/* 强文字色3 */
+.c_t5{ color:#ffce23}
+
+.c_t6{ color:#cc3362}
+
+.c_t7{ color:#6a4a4a}
+
+.c_t8{ color:#666}
+
+.c_t9{ color:#fbb8ff}
+
+.c_t10{ color:#cc56f2}
+
+.c_t11{ color:#ffe94d}
+
+.c_t12{ color:#394d75}
+
+/* 白色 */
+.c_tw{ color:#fff;}
+
+/* 链接色
+----------------------------------------------------------------*/
+
+/* 默认链接色 */
+a.c_a0,a{ color:#366;}
+a.c_a0:active,a:active{ color:#366}
+/* 强链接色 */
+a.c_a1{ color:#366}
+a.c_a1:active{ color:#366}
+/* 弱链接色 */
+a.c_a2{ color:#366}
+a.c_a2:active{ color:#366}
+
+body{ border-top:#000 5px solid; background:#fff;}
+p{ margin-bottom:10px}
+blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20px;}
+.container{ position:relative; width:960px; margin:0 auto; border-right:#000 1px solid;}
+
+.plant{ display:inline-block; vertical-align:middle; width:17px; height:20px; padding:22px 0 0 22px; transform:rotateZ(-15deg);}
+.leaf{ position:relative; width:17px; height:17px;}
+
+.leaf .a,
+.leaf .b,
+.leaf .c{ position:absolute; left:0; top:0; width:17px; height:17px; transform-origin:0px 0px;}
+.leaf .b{ transform:rotateZ(120deg);}
+.leaf .c{ transform:rotateZ(240deg);}
+.leaf .in{ position:relative; width:15px; height:15px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
+.leaf .in:after{ position:absolute; content:""; left:-5px; width:15px; height:1px; border-radius:2px; background:#000; transform:rotate(45deg); transform-origin:6px 0;}
+.leaf .a .in{ transform:scale(1.25) translateZ(60px);}
+.leaf .b .in{ transform:scale(1.25) translateZ(60px);}
+.leaf .c .in{ transform:scale(1.25) translateZ(60px);}
+
+.e_plant_logo{ display:block; position:absolute; left:0; top:0; height:80px; width:80px; padding:100px 0 0 10px; transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
+.e_plant_logo .leaf{ width:80px; height:80px;
+	animation:plant_logo 60s ease-in-out infinite;
+	transform-origin:0 0;
+}
+.e_plant_logo .leaf .a,
+.e_plant_logo .leaf .b,
+.e_plant_logo .leaf .c{ width:80px; height:80px;}
+.e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
+.e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; transform-origin:21px 0;}
+
+.e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
+.e_plant_act .leaf .a:hover .in,
+.e_plant_act .leaf .b:hover .in,
+.e_plant_act .leaf .c:hover .in{ transform:rotateZ(10deg);}
+
+@keyframes plant_logo{
+	0%{transform:rotateZ(0deg);}
+	25%{transform:rotateZ(120deg);}
+	50%{transform:rotateZ(0deg);}
+	75%{transform:rotateZ(-120deg);}
+	100%{transform:rotateZ(0deg);}
+}
+
+.bottom .leaf{ position:absolute; bottom:0; right:0; animation:none;}
+.bottom .leaf .a{ transform:translateY(12px) rotate(45deg); transform-origin: right bottom;}
+.bottom .leaf .a .in{ background:none;}
+.bottom .leaf .a .in:after{ display:none}
+
+footer{ height:100px}
+.content{ padding-left:130px}
+h1,h2{ color:#000}
+h1{ font-size:3.5rem; padding-top: 3rem; text-transform:uppercase;}
+h2{ font-size:2rem; padding-top:2rem;}
+ul{ padding-left:2rem}
+li{ list-style:disc; padding-top:20px; margin-bottom:5px}
+
+i{font-style:italic;}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="plant e_plant_logo e_plant_act">
+	<div class="leaf">
+		<div class="a"><div class="in"></div></div>
+		<div class="b"><div class="in"></div></div>
+		<div class="c"><div class="in"></div></div>
+	</div>
+</div>
+
+<div class="bottom">
+	<div class="leaf">
+		<div class="a"><div class="in"></div></div>
+	</div>
+</div>
+
+<div class="content">
+	<h1>Portfolio</h1>
+	<blockquote><p>ZHAI is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
+		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
+		<p class="mb0 mt20"><a class="btn" target="_blank" href="###">Download Resume</a></p></blockquote>
+	
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Translate</span>
+	</h2>
+	<ul>
+		<li>2017: Translated Aaron Gustafson's Book: <i>"Adaptive Web Design"</i><br>
+			<a target="_blank" href="https://item.jd.com/33795656214.html" class="btn2">View it in JD.com</a>
+			<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
+		</li>
+		<li>2017: Translated Stephen A. Thomas' Book: <i>"Data Visualization with JavaScript"</i><br>
+			<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View it in JD.com</a>
+			<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
+		</li>
+		<li>2014: Translated <i>futurefriendlyweb.com</i> into Chinese<br><a target="_blank" href="http://www.futurefriendly.cn" class="btn2">View futurefriendly.cn</a></li>
+	</ul>
+	
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Speak</span></h2>
+	<ul>
+		<li>2016: <i>"From Voice & Tone to Content Strategy"</i> at DiDi Chuxing <br>
+			<a target="_blank" href="###" class="btn2">View slides</a></li>
+		<li>2016: <i>"The Overview of Web Design"</i> at DiDi Chuxing <br>
+			<a target="_blank" href="###" class="btn2">View slides</a></li>
+		<li>2015: <i>"Future Friendly Web Design"</i> at Tencent Company <br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></li>
+		<li>2013: <i>"Responsive Web Design"</i> at Tencent Company<br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></li>
+	</ul>
+
+
+	
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Manage Design Systems (Guideline)<span></h2>
+	<ul>
+		<li>2016: <i>"DiDi Hitch's Design System"</i> <br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a></li>
+		<li>2013: <i>"Tencent Weishi's Design Guideline (PC)"</i> <br>
+			<a target="_blank" href="###" class="btn2">View it</a></li>
+	</ul>
+
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Product Interaction Design</span></h2>
+	<ul>
+		<li>2017: <i>"Knowbox"</i> <br>
+			<a href="###" class="btn2">View it</a>
+		</li>
+		<li>2016: <i>"DiDi Hitch"</i> <br>
+			<a href="###" class="btn2">View it</a>
+		</li>
+		<li>2015: <i>"Tencent Weishi"</i> <br>
+			<a href="###" class="btn2">View it</a>
+		</li>
+	</ul>
+
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">UX Design on Promotion Pages</span></h2>
+	<ul>
+		<li>2016: <i>"Hitch Calendar"</i>, DiDi Chuxing <br>
+			<a href="###" class="btn2">View demo</a></li>
+		<li>2016: <i>"National Day Promotion"</i>, DiDi Chuxing <br>
+			<a href="###" class="btn2">View demo</a></li>
+		<li>2016: <i>"StarTrek Big Data"</i>, DiDi Chuxing <br>
+			<a href="###" class="btn2">View demo</a></li>
+		<li>2015: <i>"Big Movie on Mid-autumn Day"</i>, DiDi Chuxing <br>
+			<a href="###" class="btn2">View demo</a></li>
+	</ul>
+
+
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Build Sites</span></h2>
+	<ul>
+		<li>2015: <i>"Epubit.com, The online e-book store of Post & Telecom Press"</i>, PM.
+			<br><a target="_blank" href="http://www.epubit.com" class="btn2">View it</a></li>
+		<li>2014: <i>"The Int'l official Website of Peking University"</i>, Design and development.
+			<br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">View it</a></li>
+	</ul>
+
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Create Tools</span></h2>
+	<ul>
+		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese)"</i>, Design and development. <br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it</a></li>
+	</ul>
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+				<div class="b"><div class="in"></div></div>
+				<div class="c"><div class="in"></div></div>
+			</div>
+		</div>
+		<span class="ml5">Finally, don't hesitate to contact ZHAI via:</span></h2><ul>
+		<li class="mb0">Mobile: +86 186 1253 6186</li>
+		<li class="pt10">Gmail/Skype: bienfantaisie@gmail.com</li>
+	</ul>
+</div>
+
+</div>
+<footer>
+	
+</footer>
+</body>
+</html>
