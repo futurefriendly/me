@@ -226,8 +226,15 @@ h1{ font-size:3.5rem; padding-top: 3rem; text-transform:uppercase;}
 h2{ font-size:2rem; padding-top:2rem;}
 ul{ padding-left:1.4rem}
 li{ list-style:disc; padding-top:20px; margin-bottom:5px}
+li img{ margin:10px 0}
 
 i{font-style:italic;}
+label{ display:inline-block; background:#eee; margin:10px 0; padding:2px 15px; border-radius:15px; font-size:12px}
+
+@media print{
+.btn:after,
+.btn2:after{ content:" (" attr(href) ")";}
+}
 </style>
 </head>
 <body>
@@ -243,7 +250,7 @@ i{font-style:italic;}
 
 <div class="bottom">
 	<div class="leaf">
-		<div class="a"><div class="in"></div></div>
+		<div class="a"><a style="display:block;" href="#" title="back to top" class="in"></a></div>
 	</div>
 </div>
 
@@ -251,7 +258,8 @@ i{font-style:italic;}
 	<h1>Portfolio</h1>
 	<blockquote><p>ZHAI is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
 		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
-		<p class="mb0 mt20"><a class="btn" target="_blank" href="./zhai-resume.pdf">Download Resume</a></p></blockquote>
+		<p class="mb0 mt20"><a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume (PDF)</a>
+		<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历 (PDF)</a></p></blockquote>
 	
 	<h2>
 		<div class="plant e_plant_act">
@@ -264,15 +272,15 @@ i{font-style:italic;}
 		<span class="ml5">Translate</span>
 	</h2>
 	<ul>
-		<li>2017: Translated Aaron Gustafson's Book: <i>"Adaptive Web Design"</i><br>
+		<li>2017: <i>《渐进增强：跨平台用户体验设计》</i>, from Aaron Gustafson's: <i>"Adaptive Web Design"</i>.<br>
 			<a target="_blank" href="https://item.jd.com/33795656214.html" class="btn2">View it in JD.com</a>
 			<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
 		</li>
-		<li>2017: Translated Stephen A. Thomas' Book: <i>"Data Visualization with JavaScript"</i><br>
+		<li>2017: <i>《JavaScript数据可视化编程》</i>, from Stephen A. Thomas': <i>"Data Visualization with JavaScript"</i>.<br>
 			<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View it in JD.com</a>
 			<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
 		</li>
-		<li>2014: Translated <i>futurefriendlyweb.com</i> into Chinese<br><a target="_blank" href="http://www.futurefriendly.cn" class="btn2">View futurefriendly.cn</a></li>
+		<li>2014: <i>〈面向未来的友好设计〉</i>, from <i>www.futurefriendlyweb.com</i>.<br><a target="_blank" href="http://www.futurefriendly.cn" class="btn2">Visit futurefriendly.cn</a></li>
 	</ul>
 	
 	<h2>
@@ -285,15 +293,13 @@ i{font-style:italic;}
 		</div>
 		<span class="ml5">Speak</span></h2>
 	<ul>
-		<li>2016: <i>"From Voice & Tone to Content Strategy"</i> at DiDi Chuxing <br>
-			<a target="_blank" href="###" class="btn2">View slides</a></li>
-		<li>2016: <i>"The Overview of Web Design"</i> at DiDi Chuxing <br>
-			<a target="_blank" href="###" class="btn2">View slides</a></li>
-		<li>2015: <i>"Future Friendly Web Design"</i> at Tencent Company <br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></li>
-		<li>2013: <i>"Responsive Web Design"</i> at Tencent Company<br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></li>
+		<li>2016: <i>"情感化内容策略 (From Voice & Tone to Content Strategy)"</i> at DiDi Chuxing <br>
+			<a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn2">View slides online</a></li>
+		<li>2016: <i>"Web设计基础 (The Overview of Web Design)"</i> at DiDi Chuxing <br>
+			<a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn2">View slides online</a></li>
+		<li>2015: <i>"面向未来的友好设计 (Future Friendly Web Design)"</i> at Tencent Company <br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></li>
+		<li>2013: <i>"响应式设计 (Responsive Web Design)"</i> at Tencent Company<br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></li>
 	</ul>
-
-
 	
 	<h2>
 		<div class="plant e_plant_act">
@@ -303,10 +309,10 @@ i{font-style:italic;}
 				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Manage Design Systems (Guideline)<span></h2>
+		<span class="ml5">Manage Design Systems<span></h2>
 	<ul>
-		<li>2016: <i>"DiDi Hitch's Design System"</i> <br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a></li>
-		<li>2013: <i>"Tencent Weishi's Design Guideline (PC)"</i> <br>
+		<li>2016: <i>"滴滴顺风车设计规范 (DiDi Hitch's Design Guideline)"</i> <br><img src="./assets/designsystem.png" style="width:400px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a></li>
+		<li>2013: <i>"腾讯微视PC端组件库 (Tencent Weishi's PC Components Library)"</i> <br><img src="./assets/weishi.png" style="width:400px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/weishi/guideline/" class="btn2">View it</a></li>
 	</ul>
 
@@ -318,7 +324,7 @@ i{font-style:italic;}
 				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Product Interaction Design</span></h2>
+		<span class="ml5">Interaction Design</span></h2>
 	<ul>
 		<li>2017: <i>"Knowbox"</i> <br>
 			<a href="###" class="btn2">View it</a>
@@ -339,16 +345,12 @@ i{font-style:italic;}
 				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">UX Design on Promotion Pages</span></h2>
+		<span class="ml5">Motion design</span></h2>
 	<ul>
-		<li>2016: <i>"Hitch Calendar"</i>, DiDi Chuxing <br>
-			<a href="###" class="btn2">View demo</a></li>
-		<li>2016: <i>"National Day Promotion"</i>, DiDi Chuxing <br>
-			<a href="###" class="btn2">View demo</a></li>
-		<li>2016: <i>"StarTrek Big Data"</i>, DiDi Chuxing <br>
-			<a href="###" class="btn2">View demo</a></li>
-		<li>2015: <i>"Big Movie on Mid-autumn Day"</i>, DiDi Chuxing <br>
-			<a href="###" class="btn2">View demo</a></li>
+		<li>2016: <i>"星际迷航品宣 (StarTrek Big Data Brand Promotion)"</i>, DiDi Chuxing. <br>
+			<img src="./assets/startrek2016img.jpg" style="width:300px" /><br><label>Storyboarding</label> <label>Motion Design</label></li>
+		<li>2016: <i>"十一出走计划 (National Day Promotion)"</i>, DiDi Chuxing.<br>
+			<img src="./assets/october2016img.jpg" style="width:300px" /><br><label>Storyboarding</label> <label>Motion Design</label></li>
 	</ul>
 
 
@@ -362,12 +364,11 @@ i{font-style:italic;}
 		</div>
 		<span class="ml5">Build Sites</span></h2>
 	<ul>
-		<li>2015: <i>"Epubit.com, The online e-book store of Post & Telecom Press"</i>, Project Management.
-			<br><a target="_blank" href="http://www.epubit.com" class="btn2">Website online</a></li>
-		<li>2014: <i>"The Int'l official Website of Peking University"</i>, Design and UI development (Responsive).
-			<br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Website online</a>
+		<li>2015: <i>"The online e-book store of Post & Telecom Press"</i>.<br><img src="./assets/epubit.jpg" style="width:400px" /> <br><a target="_blank" href="http://www.epubit.com" class="btn2">Visit epubit.com</a><br><label>Project Management</label></li>
+		<li>2014: <i>"The Int'l official Website of Peking University"</i>.
+			<br><img src="./assets/pku.jpg" style="width:400px" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
-			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a>
+			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development (Responsive Web Design)</label>
 		</li>
 	</ul>
 
@@ -381,7 +382,7 @@ i{font-style:italic;}
 		</div>
 		<span class="ml5">Create Tools</span></h2>
 	<ul>
-		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese)"</i>, Design and development. <br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a></li>
+		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese supported)"</i><br><img src="./assets/csstool.png" style="width:400px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
 	</ul>
 	<h2>
 		<div class="plant e_plant_act">
