@@ -295,6 +295,13 @@ li img{ display:none}
 li .qr{ display:inline-block;}
 }
 </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script>
+window.onload = function(){
+	const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+	observer.observe();
+}
+</script>
 </head>
 <body>
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -386,8 +393,8 @@ li .qr{ display:inline-block;}
 		</div>
 		<span class="ml5">Design Systems<span></h2>
 	<ul>
-		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="f_zoom" src="./assets/designsystem.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Build and Manage</label></li>
-		<li>2013: <i>"腾讯微视PC端Web组件库 (Tencent Weishi's Components Library on Large Screen)"</i>, for Tencent. <br><img class="f_zoom" src="./assets/weishi.png" style="width:200px" /><br>
+		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/designsystem.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Build and Manage</label></li>
+		<li>2013: <i>"腾讯微视PC端Web组件库 (Tencent Weishi's Components Library on Large Screen)"</i>, for Tencent. <br><img class="lozad f_zoom" data-src="./assets/weishi.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/weishi/guideline/" class="btn2">View it</a><br><label>Build and Manage</label></li>
 	</ul>
 	</article>
@@ -402,10 +409,10 @@ li .qr{ display:inline-block;}
 		</div>
 		<span class="ml5">Interaction Design</span></h2>
 	<ul>
-		<li>2017: <i>"小学游戏化教育产品暑期活动 (Destory the pirate: a web-based game)"</i>, for Knowbox. <br><img class="f_zoom" src="./assets/summer_thumb.png" style="width:200px" /><br>
+		<li>2017: <i>"小学游戏化教育产品暑期活动 (Destory the pirate: a web-based game)"</i>, for Knowbox. <br><img class="lozad f_zoom" data-src="./assets/summer_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/summer.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
-		<li>2016: <i>"顺风车行程结束评价页 (Evaluate Step After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="f_zoom" src="./assets/didi_thumb.png" style="width:200px" /><br>
+		<li>2016: <i>"顺风车行程结束评价页 (Evaluate Step After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/didi_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
 	</ul>
@@ -422,9 +429,9 @@ li .qr{ display:inline-block;}
 		<span class="ml5">Motion Design</span></h2>
 	<ul>
 		<li>2016: <i>"星际迷航品宣 (StarTrek Big Data Brand Promotion)"</i>, for DiDi Chuxing. <br>
-			<img class="vt_b qr" src="./assets/startrek2016.png" style="height:160px;" /> <img class="vt_b f_zoom" src="./assets/startrek2016pic.jpg" style="height:160px" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b qr" src="./assets/startrek2016.png" style="height:160px;" /> <img class="vt_b lozad f_zoom" data-src="./assets/startrek2016pic.jpg" style="height:160px" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
 		<li>2016: <i>"十一出走计划 (National Day Promotion)"</i>, for DiDi Chuxing.<br>
-			<img class="vt_b qr" src="./assets/october2016.png" style="height:160px;" /> <img class="vt_b f_zoom" src="./assets/october2016pic.png" style="height:160px" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b qr" src="./assets/october2016.png" style="height:160px;" /> <img class="vt_b lozad f_zoom" data-src="./assets/october2016pic.png" style="height:160px" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
 	</ul>
 	</article>
 	<article>
@@ -439,7 +446,7 @@ li .qr{ display:inline-block;}
 		<span class="ml5">Build Sites</span></h2>
 	<ul>
 		<li>2015: <i>"北京大学国际版官网 (The International Official Website)"</i>, for Peking University.
-			<br><img class="f_zoom" src="./assets/pku.jpg" style="width:200px" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
+			<br><img class="lozad f_zoom" data-src="./assets/pku.jpg" style="width:200px" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development (Responsive Web Design)</label>
 		</li>
@@ -456,7 +463,7 @@ li .qr{ display:inline-block;}
 		</div>
 		<span class="ml5">Create Design Tools</span></h2>
 	<ul>
-		<li>2017: <i>"UFO Animate, An CSS Animation Tool"</i>, Personal Project.<br><img class="f_zoom" src="./assets/csstool.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
+		<li>2017: <i>"UFO Animate, An CSS Animation Tool"</i>, Personal Project.<br><img class="lozad f_zoom" data-src="./assets/csstool.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
 	</ul>
 	</article>
 	<article>
