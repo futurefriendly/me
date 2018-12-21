@@ -31,19 +31,17 @@ a:active{ background:none;}
 img{ vertical-align:top; max-width:100%;}
 
 .btn,
+.btn2{ display:block; text-align:center; margin-top:10px; border-radius:4px; vertical-align:top; color:#fff; border:none; cursor:pointer; font-weight:bold; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
+.btn,
 .btn:active,
-.btn:hover{ background:rgb(255, 90, 95); padding:10px 20px; border:none; color:#fff; display:inline-block; *display:inline; *zoom:1; vertical-align:top; border-radius:4px; cursor:pointer;
-    font-size:14px; font-weight:bold;
-    -webkit-appearance:none;
-    appearance:none;
+.btn:hover{ padding:10px 20px;
+    font-size:14px;
 }
 .btn2{ margin-top:5px}
 .btn2,
 .btn2:active,
-.btn2:hover{ background:rgb(255, 90, 95); padding:6px 8px; border:none; color:#fff; display:inline-block; *display:inline; *zoom:1; vertical-align:top; border-radius:4px; cursor:pointer;
-    font-size:12px; font-weight:bold;
-    -webkit-appearance:none;
-    appearance:none;
+.btn2:hover{ padding:6px 8px;
+    font-size:12px;
 }
 
 /* 布局
@@ -175,8 +173,8 @@ a.c_a2:active{ color:#366}
 
 body{ border-top:#000 5px solid; background:#fff;}
 p{ margin-bottom:10px; text-align:justify;}
-blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20px;}
-.container{ position:relative; max-width:960px; margin:0 auto; border-right:#000 1px solid;}
+blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
+.container{ position:relative; max-width:960px; margin:0 10px;}
 
 .plant{ display:inline-block; vertical-align:middle; width:17px; height:20px; padding:18px 0 0 22px; transform:rotateZ(-15deg);}
 .leaf{ position:relative; width:17px; height:17px;}
@@ -192,7 +190,7 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 .leaf .b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .c .in{ transform:scale(1.25) translateZ(60px);}
 
-.e_plant_logo{ display:block; position:absolute; left:0; top:0; height:80px; width:80px; padding:100px 0 0 10px; transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
+.e_plant_logo{ display:block; position:absolute; left:0; top:0; height:80px; width:80px;  transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
 .e_plant_logo .leaf{ width:80px; height:80px;
 	animation:plant_logo 60s ease-in-out infinite;
 	transform-origin:0 0;
@@ -203,6 +201,7 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 .e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
 .e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
 
+.e_plant_act{ position:absolute; left:0}
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
 .e_plant_act .leaf .a:hover .in,
 .e_plant_act .leaf .b:hover .in,
@@ -216,7 +215,7 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 	100%{transform:rotateZ(0deg);}
 }
 
-.bottom .leaf{ position:absolute; bottom:0; right:0; animation:none;}
+.bottom .leaf{ display:none; position:absolute; bottom:0; right:0; animation:none;}
 .bottom .leaf .a{ transform:translateY(12px) rotate(45deg); transform-origin: right bottom;}
 .bottom .leaf .a .in{ background:none;}
 .bottom .leaf .a .in:after{ display:none}
@@ -225,11 +224,10 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 .f_zoom:hover{ z-index:2; transform:scale(3);}
 
 footer{ height:100px}
-.content{ padding-left:130px}
 h1,h2{ color:#000}
-h1{ font-size:3.5rem; padding-top: 3rem; text-transform:uppercase;}
+h1{ text-align:right; font-size:2.5rem; padding-top: 3rem; text-transform:uppercase;}
 article{ padding-top:2rem;}
-h2{ font-size:2rem;}
+h2{ padding-left:50px; font-size:1.5rem;}
 ul{ padding-left:1.4rem}
 li{ list-style:disc; padding-top:20px; margin-bottom:5px}
 li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:1px;}
@@ -237,6 +235,17 @@ li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:1px;}
 i{font-style:italic;}
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px}
 
+@media (min-width:700px){
+.e_plant_act{ position:static;}
+.container{ margin:0 auto; border-right:#000 1px solid;}
+.content{ padding-left:130px}
+h1{ font-size:3.5rem; text-align:left;}
+h2{ padding-left:0; font-size:2rem}
+.e_plant_logo{ position:absolute; padding:100px 0 0 10px;}
+.btn,.btn2{display:inline-block;}
+blockquote{ margin-right:4px}
+.bottom .leaf{ display:block}
+}
 @media print{
 
 .container{ border-right:none;}
@@ -254,7 +263,7 @@ li .qr{ display:inline-block;}
 <body>
 <div class="container">
 
-<div class="plant e_plant_logo e_plant_act">
+<div class="plant e_plant_act e_plant_logo">
 	<div class="leaf">
 		<div class="a"><div class="in"></div></div>
 		<div class="b"><div class="in"></div></div>
