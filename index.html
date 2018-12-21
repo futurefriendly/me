@@ -186,7 +186,7 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 .leaf .b{ transform:rotateZ(120deg);}
 .leaf .c{ transform:rotateZ(240deg);}
 .leaf .in{ position:relative; width:15px; height:15px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
-.leaf .in:after{ position:absolute; content:""; left:-5px; width:15px; height:1px; border-radius:2px; background:#000; transform:rotate(45deg); transform-origin:6px 0;}
+.leaf .in:after{ position:absolute; content:""; left:-5px; width:15px; height:0; border-top:#000 1px solid; transform:rotate(45deg); transform-origin:6px 0;}
 .leaf .a .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .c .in{ transform:scale(1.25) translateZ(60px);}
@@ -200,7 +200,7 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 .e_plant_logo .leaf .b,
 .e_plant_logo .leaf .c{ width:80px; height:80px;}
 .e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
-.e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; transform-origin:21px 0;}
+.e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
 
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
 .e_plant_act .leaf .a:hover .in,
@@ -224,7 +224,8 @@ footer{ height:100px}
 .content{ padding-left:130px}
 h1,h2{ color:#000}
 h1{ font-size:3.5rem; padding-top: 3rem; text-transform:uppercase;}
-h2{ font-size:2rem; padding-top:2rem;}
+article{ padding-top:2rem;}
+h2{ font-size:2rem;}
 ul{ padding-left:1.4rem}
 li{ list-style:disc; padding-top:20px; margin-bottom:5px}
 li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:4px}
@@ -240,7 +241,9 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 .btn:after,
 .btn2:after{ content:" (" attr(href) "); "; border-bottom:#666 1px solid;}
 label{ border-color:#666}
-li{page-break-inside: avoid;}
+li,article{page-break-inside: avoid;}
+li img{ display:none}
+li .qr{ display:inline-block;}
 }
 </style>
 </head>
@@ -267,7 +270,7 @@ li{page-break-inside: avoid;}
 		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
 		<p class="mb0 mt20"><a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume (PDF)</a>
 		<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历 (PDF)</a></p></blockquote>
-	
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -289,7 +292,8 @@ li{page-break-inside: avoid;}
 		</li>
 		<li>2014: <i>〈面向未来的友好设计〉</i>, from <i>www.futurefriendlyweb.com</i>.<br><a target="_blank" href="http://www.futurefriendly.cn" class="btn2">Visit futurefriendly.cn</a></li>
 	</ul>
-	
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -307,7 +311,8 @@ li{page-break-inside: avoid;}
 		<li>2015: <i>"面向未来的友好设计 (Future Friendly Web Design)"</i> at Tencent. <br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></li>
 		<li>2013: <i>"响应式设计 (Responsive Web Design: Rebuild as Design)"</i> at Tencent.<br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></li>
 	</ul>
-	
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -322,7 +327,8 @@ li{page-break-inside: avoid;}
 		<li>2013: <i>"腾讯微视PC端Web组件库 (Tencent Weishi's Components Library on Large Screen)"</i>, for Tencent. <br><img src="./assets/weishi.png" style="width:400px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/weishi/guideline/" class="btn2">View it</a><br><label>Build and Manage</label></li>
 	</ul>
-
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -343,7 +349,8 @@ li{page-break-inside: avoid;}
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/weishi_activity.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
 	</ul>
-
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -355,12 +362,12 @@ li{page-break-inside: avoid;}
 		<span class="ml5">Motion Design</span></h2>
 	<ul>
 		<li>2016: <i>"星际迷航品宣 (StarTrek Big Data Brand Promotion)"</i>, for DiDi Chuxing. <br>
-			<img class="vt_b" src="./assets/startrek2016pic.jpg" style="width:160px" /> <img class="vt_b" src="./assets/startrek2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b" src="./assets/startrek2016pic.jpg" style="width:160px" /> <img class="vt_b qr" src="./assets/startrek2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
 		<li>2016: <i>"十一出走计划 (National Day Promotion)"</i>, for DiDi Chuxing.<br>
-			<img class="vt_b" src="./assets/october2016pic.png" style="width:160px" /> <img class="vt_b" src="./assets/october2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b" src="./assets/october2016pic.png" style="width:160px" /> <img class="vt_b qr" src="./assets/october2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
 	</ul>
-
-
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -378,7 +385,8 @@ li{page-break-inside: avoid;}
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development (Responsive Web Design)</label>
 		</li>
 	</ul>
-
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -391,6 +399,8 @@ li{page-break-inside: avoid;}
 	<ul>
 		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese supported)"</i>, Personal Project.<br><img src="./assets/csstool.png" style="width:400px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
 	</ul>
+	</article>
+	<article>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -399,10 +409,13 @@ li{page-break-inside: avoid;}
 				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Finally, don't hesitate to contact ZHAI via:</span></h2><ul>
+		<span class="ml5">Finally, don't hesitate to contact ZHAI via:</span>
+	</h2>
+	<ul>
 		<li class="mb0">Mobile: +86 186 1253 6186</li>
 		<li class="pt10">Gmail/Skype: bienfantaisie@gmail.com</li>
 	</ul>
+	</article>
 </div>
 
 </div>
