@@ -175,7 +175,7 @@ p{ margin-bottom:10px; text-align:justify;}
 blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
 .container{ position:relative; max-width:960px; margin:0 10px;}
 
-.plant{ display:inline-block; vertical-align:middle; width:17px; height:20px; padding:18px 0 0 22px; transform:rotateZ(-15deg);}
+.plant{ display:inline-block; vertical-align:middle; width:17px; height:20px; padding:18px 0 0 22px; transform:rotateZ(-15deg); transition:all ease .5s;}
 .leaf{ position:relative; width:17px; height:17px;}
 
 .leaf .a,
@@ -214,14 +214,12 @@ blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
 	100%{transform:rotateZ(0deg);}
 }
 
-.bottom .leaf{ display:none; position:absolute; bottom:0; right:0; animation:none;}
-.bottom .leaf .a{ transform:translateY(12px) rotate(45deg); transform-origin: right bottom;}
-.bottom .leaf .a .in{ background:none;}
-.bottom .leaf .a .in:after{ display:none}
+.bottom{ display:none; position:absolute; bottom:0; right:0;}
+.bottom .leaf{ animation:none;}
 
 footer{ height:100px}
 h1,h2{ color:#000}
-h1{ text-align:right; font-size:2.5rem; padding-top: 3rem; text-transform:uppercase;}
+h1{ text-align:right; font-size:2.5rem; padding-top: 3rem; letter-spacing:.12em; text-transform:uppercase;}
 article{ padding-top:2rem;}
 h2{ padding-left:50px; font-size:1.5rem;}
 ul{ padding-left:1.4rem}
@@ -247,7 +245,12 @@ h2{ padding-left:0; font-size:2rem}
 .btn{ margin-top:0}
 .btn2{ margin-top:5px}
 blockquote{ margin-right:4px}
-.bottom .leaf{ display:block}
+.bottom{ right:-51px; bottom:-45px; display:block; width:100px; text-align:center;}
+.bottom .leaf{ margin:0 auto;}
+.bottom .leaf .a{ transform:rotate(45deg); transform-origin:center center}
+.bottom .leaf .a .in{ background:none;}
+.bottom .leaf .a .in:after{ display:none}
+.bottom a{ display:block; padding:10px 0; color:#000; text-transform:uppercase; letter-spacing:.12em; font-size:12px; width:100px; white-space:nowrap;}
 }
 @media print{
 
@@ -276,8 +279,9 @@ li .qr{ display:inline-block;}
 
 <div class="bottom">
 	<div class="leaf">
-		<div class="a"><a style="display:block;" href="#" title="back to top" class="in"></a></div>
+		<div class="a"><div class="in"></div></div>
 	</div>
+	<a href="#">back to top</a>
 </div>
 
 <div class="content">
@@ -306,7 +310,6 @@ li .qr{ display:inline-block;}
 			<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
 			<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
 		</li>
-		<li>2014: <i>〈面向未来的友好设计〉</i>, from <i>www.futurefriendlyweb.com</i>.<br><a target="_blank" href="http://www.futurefriendly.cn" class="btn2">Visit futurefriendly.cn</a></li>
 	</ul>
 	</article>
 	<article>
@@ -361,9 +364,6 @@ li .qr{ display:inline-block;}
 		<li>2016: <i>"顺风车行程结束评价页 (Evaluate Step After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="f_zoom" src="./assets/didi_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
-		<li>2014: <i>"微视2014年末活动 (Activity at The End of 2014 by Weishi)"</i>, for Tencent.<br><img class="f_zoom" src="./assets/weishi_activity_thumb.png" style="width:200px" /><br>
-			<a target="_blank" href="http://futurefriendly.cn/me/assets/weishi_activity.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
-		</li>
 	</ul>
 	</article>
 	<article>
@@ -411,7 +411,7 @@ li .qr{ display:inline-block;}
 				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Create Tools</span></h2>
+		<span class="ml5">Create Design Tools</span></h2>
 	<ul>
 		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese supported)"</i>, Personal Project.<br><img class="f_zoom" src="./assets/csstool.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
 	</ul>
@@ -425,7 +425,7 @@ li .qr{ display:inline-block;}
 				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Finally, don't hesitate to contact ZHAI via:</span>
+		<span class="ml5">Finally, Contact</span>
 	</h2>
 	<ul>
 		<li class="mb0">Mobile: +86 186 1253 6186</li>
