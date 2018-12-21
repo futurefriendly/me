@@ -226,15 +226,16 @@ article{ padding-top:2rem;}
 h2{ padding-left:50px; font-size:1.5rem;}
 ul{ padding-left:1.4rem}
 li{ list-style:disc; padding-top:20px; margin-bottom:5px}
-li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:1px;}
+li img{ margin:10px 0; box-shadow:rgba(0,0,0,.1) 0 3px 5px; border-radius:2px;}
 
 i{font-style:italic;}
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px}
 
 @media (min-width:600px){
 body{ padding-right:20px}
-.f_zoom{ position:relative; z-index:1; transition:transform ease-in-out .4s; transform-origin:3px 3px;}
-.f_zoom:hover{ z-index:2; transform:scale(3);}
+article:hover{ z-index:1; position:relative;}
+.f_zoom{ transition:all ease .5s; transform-origin:3px 3px;}
+.f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 9px 15px; border-radius:1px}
 .e_plant_act{ position:static;}
 .container{ margin:0 auto; border-right:#000 1px solid;}
 .content{ padding-left:130px}
