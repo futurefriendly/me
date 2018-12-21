@@ -220,6 +220,9 @@ blockquote{ background:#f4f4f4; border-radius:4px; margin-right:4px; padding:20p
 .bottom .leaf .a .in{ background:none;}
 .bottom .leaf .a .in:after{ display:none}
 
+.f_zoom{ position:relative; transition:transform ease-in-out .4s; transform-origin:0 0;}
+.f_zoom:hover{ z-index:1; transform:scale(3)}
+
 footer{ height:100px}
 .content{ padding-left:130px}
 h1,h2{ color:#000}
@@ -228,7 +231,7 @@ article{ padding-top:2rem;}
 h2{ font-size:2rem;}
 ul{ padding-left:1.4rem}
 li{ list-style:disc; padding-top:20px; margin-bottom:5px}
-li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:4px}
+li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:2px}
 
 i{font-style:italic;}
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px}
@@ -323,8 +326,8 @@ li .qr{ display:inline-block;}
 		</div>
 		<span class="ml5">Design Systems<span></h2>
 	<ul>
-		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img src="./assets/designsystem.png" style="width:400px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Build and Manage</label></li>
-		<li>2013: <i>"腾讯微视PC端Web组件库 (Tencent Weishi's Components Library on Large Screen)"</i>, for Tencent. <br><img src="./assets/weishi.png" style="width:400px" /><br>
+		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="f_zoom" src="./assets/designsystem.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Build and Manage</label></li>
+		<li>2013: <i>"腾讯微视PC端Web组件库 (Tencent Weishi's Components Library on Large Screen)"</i>, for Tencent. <br><img class="f_zoom" src="./assets/weishi.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/weishi/guideline/" class="btn2">View it</a><br><label>Build and Manage</label></li>
 	</ul>
 	</article>
@@ -339,13 +342,13 @@ li .qr{ display:inline-block;}
 		</div>
 		<span class="ml5">Interaction Design</span></h2>
 	<ul>
-		<li>2017: <i>"小学游戏化教育产品暑期活动 (Destory the pirate: a web-based game)"</i>, for Knowbox. <br><img class="vt_b" src="./assets/summer_thumb.png" style="height:320px" /><br>
+		<li>2017: <i>"小学游戏化教育产品暑期活动 (Destory the pirate: a web-based game)"</i>, for Knowbox. <br><img class="f_zoom" src="./assets/summer_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/summer.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
-		<li>2016: <i>"顺风车行程结束评价页 (Evaluate Step After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="vt_b" src="./assets/didi_thumb.png" style="width:400px" /><br>
+		<li>2016: <i>"顺风车行程结束评价页 (Evaluate Step After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="f_zoom" src="./assets/didi_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
-		<li>2014: <i>"微视2014年末活动 (Activity at The End of 2014 by Weishi)"</i>, for Tencent.<br><img class="vt_b" src="./assets/weishi_activity_thumb.png" style="width:300px" /><br>
+		<li>2014: <i>"微视2014年末活动 (Activity at The End of 2014 by Weishi)"</i>, for Tencent.<br><img class="f_zoom" src="./assets/weishi_activity_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/weishi_activity.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
 	</ul>
@@ -362,9 +365,9 @@ li .qr{ display:inline-block;}
 		<span class="ml5">Motion Design</span></h2>
 	<ul>
 		<li>2016: <i>"星际迷航品宣 (StarTrek Big Data Brand Promotion)"</i>, for DiDi Chuxing. <br>
-			<img class="vt_b" src="./assets/startrek2016pic.jpg" style="width:160px" /> <img class="vt_b qr" src="./assets/startrek2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b" src="./assets/startrek2016pic.jpg" style="width:200px" /> <img class="vt_b qr" src="./assets/startrek2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
 		<li>2016: <i>"十一出走计划 (National Day Promotion)"</i>, for DiDi Chuxing.<br>
-			<img class="vt_b" src="./assets/october2016pic.png" style="width:160px" /> <img class="vt_b qr" src="./assets/october2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b" src="./assets/october2016pic.png" style="width:200px" /> <img class="vt_b qr" src="./assets/october2016.png" style="width:100px;" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
 	</ul>
 	</article>
 	<article>
@@ -380,7 +383,7 @@ li .qr{ display:inline-block;}
 	<ul>
 		<li>2015: <i>"人民邮电出版社异步社区 (The Online E-book Store)"</i>, for Post & Telecom Press.<br><a target="_blank" href="http://www.epubit.com" class="btn2">Visit epubit.com</a><br><label>Project Management</label></li>
 		<li>2014: <i>"北京大学国际版官网 (The International Official Website)"</i>, for Peking University.
-			<br><img src="./assets/pku.jpg" style="width:400px" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
+			<br><img class="f_zoom" src="./assets/pku.jpg" style="width:200px" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development (Responsive Web Design)</label>
 		</li>
@@ -397,7 +400,7 @@ li .qr{ display:inline-block;}
 		</div>
 		<span class="ml5">Create Tools</span></h2>
 	<ul>
-		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese supported)"</i>, Personal Project.<br><img src="./assets/csstool.png" style="width:400px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
+		<li>2015: <i>"CSS Animate Tool (English & Simplified Chinese supported)"</i>, Personal Project.<br><img class="f_zoom" src="./assets/csstool.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
 	</ul>
 	</article>
 	<article>
