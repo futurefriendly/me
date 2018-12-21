@@ -230,11 +230,17 @@ li{ list-style:disc; padding-top:20px; margin-bottom:5px}
 li img{ margin:10px 0; box-shadow:#ccc 0 0 5px 0; border-radius:4px}
 
 i{font-style:italic;}
-label{ display:inline-block; background:#eee; margin:10px 0; padding:2px 15px; border-radius:15px; font-size:12px}
+label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px}
 
 @media print{
+
+.container{ border-right:none;}
+.btn,
+.btn2{ border-radius:0; padding:0;}
 .btn:after,
-.btn2:after{ content:" (" attr(href) ")";}
+.btn2:after{ content:" (" attr(href) "); "; border-bottom:#666 1px solid;}
+label{ border-color:#666}
+li{page-break-inside: avoid;}
 }
 </style>
 </head>
