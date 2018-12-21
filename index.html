@@ -30,7 +30,17 @@ a:hover{ text-decoration:none;}
 img{ vertical-align:top; max-width:100%;}
 
 .btn,
-.btn2{ display:block; text-align:center; margin-top:10px; border-radius:4px; vertical-align:top; color:#fff; border:none; cursor:pointer; font-weight:bold; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
+.btn:link,
+.btn:hover,
+.btn:active,
+.btn:visited,
+.btn2,
+.btn2:link,
+.btn2:hover,
+.btn2:active,
+.btn2:visited{ color:#fff;}
+.btn,
+.btn2{ display:block; text-align:center; margin-top:10px; border-radius:4px; vertical-align:top; border:none; cursor:pointer; font-weight:bold; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
 .btn,
 .btn:active,
 .btn:hover{ padding:10px 20px;
@@ -160,8 +170,12 @@ body .pl0{ padding-left:0!important}
 ----------------------------------------------------------------*/
 
 /* 默认链接色 */
-a.c_a0,a{}
-a.c_a0:active,a:active{}
+a.c_a0,a{ color:#666;}
+a.c_a0:active,
+a:link,
+a:hover,
+a:active,
+a:visited{ color:#000;}
 /* 强链接色 */
 a.c_a1{ color:#366}
 a.c_a1:active{ color:#366}
@@ -216,9 +230,11 @@ blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
 .bottom{ display:none; position:absolute; bottom:0; right:0;}
 .bottom .leaf{ animation:none;}
 
+.option{ display:none}
+
 footer{ height:100px}
 h1,h2{ color:#000}
-h1{ text-align:right; font-size:2.5rem; padding-top: 3rem; letter-spacing:.12em; text-transform:uppercase;}
+h1{ text-align:right; font-size:2.5rem; padding-top: 2rem; letter-spacing:.12em; text-transform:uppercase;}
 article{ padding-top:2rem;}
 h2{ padding-left:50px; font-size:1.5rem;}
 ul{ padding-left:1.4rem}
@@ -226,7 +242,12 @@ li{ list-style:disc; padding-top:20px; margin-bottom:5px}
 li img{ margin:10px 0; box-shadow:rgba(0,0,0,.1) 0 3px 5px; border-radius:2px;}
 
 i{font-style:italic;}
-label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px}
+label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px;}
+
+@media screen and (min-width:600px){
+.option{display:block; text-align:right; font-size:14px; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
+.option a:hover{ text-decoration:underline;}
+}
 
 @media (min-width:600px){
 body{ padding-right:20px}
@@ -250,9 +271,12 @@ blockquote{ margin-right:4px}
 .bottom .leaf .a .in{ background:none;}
 .bottom .leaf .a .in:after{ display:none}
 .bottom a{ display:block; padding:10px 0; color:#000; text-transform:uppercase; letter-spacing:.12em; font-size:12px; width:100px; white-space:nowrap;}
+.bottom a:hover{ text-decoration:underline;}
 }
-@media print{
 
+@media print{
+body{ border-top:none}
+blockquote{ border:#666 1px solid;}
 .container{ border-right:none;}
 .btn,
 .btn2{ border-radius:0; padding:0;}
@@ -260,6 +284,7 @@ blockquote{ margin-right:4px}
 .btn2:after{ content:" (" attr(href) "); "; border-bottom:#666 1px solid;}
 label{ border-color:#666}
 li,article{page-break-inside: avoid;}
+.bottom{ display:none}
 li img{ display:none}
 li .qr{ display:inline-block;}
 }
@@ -284,6 +309,7 @@ li .qr{ display:inline-block;}
 </div>
 
 <div class="content">
+	<div class="option"><a href="javascript:window:print();">Print</a></div>
 	<h1>Portfolio</h1>
 	<blockquote><p>ZHAI is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
 		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
