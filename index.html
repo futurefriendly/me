@@ -132,16 +132,16 @@ p{ margin-bottom:10px; text-align:justify;}
 blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
 .container{ position:relative; max-width:960px; margin:0 10px;}
 
-.plant{ display:inline-block; vertical-align:middle; width:17px; height:20px; padding:18px 0 0 22px; transform:rotateZ(-15deg); transition:all ease .5s;}
-.leaf{ position:relative; width:17px; height:17px;}
+.plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .5s;}
+.leaf{ position:relative; width:11px; height:11px;}
 
 .leaf .a,
 .leaf .b,
-.leaf .c{ position:absolute; left:0; top:0; width:17px; height:17px; transform-origin:0px 0px;}
+.leaf .c{ position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
 .leaf .b{ transform:rotateZ(120deg);}
 .leaf .c{ transform:rotateZ(240deg);}
-.leaf .in{ position:relative; width:15px; height:15px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
-.leaf .in:after{ position:absolute; content:""; left:-5px; width:15px; height:0; border-top:#000 1px solid; transform:rotate(45deg); transform-origin:6px 0;}
+.leaf .in{ position:relative; width:9px; height:9px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
+.leaf .in:after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:0; border-top:#000 1px solid; transform:rotate(45deg); transform-origin:3px 0;}
 .leaf .a .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .c .in{ transform:scale(1.25) translateZ(60px);}
@@ -156,6 +156,8 @@ blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
 .e_plant_logo .leaf .c{ width:80px; height:80px;}
 .e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
 .e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
+
+h2 .plant{ display:none}
 
 .e_plant_act{ position:absolute; left:0}
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
@@ -216,7 +218,7 @@ h2{ padding-left:0; font-size:1.8rem}
 .btn{ margin-top:0}
 .btn2{ margin-top:5px}
 blockquote{ margin-right:4px}
-.bottom{ right:-50px; bottom:-45px; display:block; width:100px; text-align:center;}
+.bottom{ right:-50px; bottom:-43px; display:block; width:100px; text-align:center;}
 .bottom .leaf{ margin:0 auto;}
 .bottom .leaf .a{ transform:rotate(45deg); transform-origin:center center}
 .bottom .leaf .a .in{ background:none;}
@@ -293,8 +295,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Translate</span>
@@ -315,8 +315,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Speak</span></h2>
@@ -334,8 +332,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Design Systems<span></h2>
@@ -350,8 +346,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Interaction Design</span></h2>
@@ -369,8 +363,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Motion Design</span></h2>
@@ -386,8 +378,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Build Sites</span></h2>
@@ -404,8 +394,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Create Design Tools</span></h2>
@@ -418,8 +406,6 @@ window.onload = function(){
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
-				<div class="b"><div class="in"></div></div>
-				<div class="c"><div class="in"></div></div>
 			</div>
 		</div>
 		<span class="ml5">Welcome to Contact</span>
