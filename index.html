@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html id="root">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -21,13 +21,13 @@ ol,ul{list-style:none}
 caption,th{text-align:left}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
 body{ font:16px/1.5 Helvetica Neue,Helvetica,Arial,sans-serif; overflow:hidden}
-input,textarea,select,button{ outline: none; resize:none; font:16px/1.7 Helvetica,Arial,sans-serif;}
+input,textarea,select,button{ outline: none; resize:none; font:16px/1.5 Helvetica,Arial,sans-serif;}
 button{line-height:1.7;white-space:nowrap;vertical-align:middle;cursor:pointer}
 strong{font-weight:800}
 a{ text-decoration: none; outline: none; cursor: pointer;}
 a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
 a:hover{ text-decoration:none;}
-img{ vertical-align:top; max-width:100%;}
+img{ vertical-align:top; max-width:100%}
 
 .btn,
 .btn:link,
@@ -40,17 +40,24 @@ img{ vertical-align:top; max-width:100%;}
 .btn2:active,
 .btn2:visited{ color:#fff;}
 .btn,
-.btn2{ display:block; text-align:center; margin-top:10px; border-radius:4px; vertical-align:top; border:none; cursor:pointer; font-weight:bold; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
+.btn2{ display:block; text-align:center; margin-top:.625rem; border-radius:.25rem; vertical-align:top; border:none; cursor:pointer; font-weight:bold; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
 .btn,
 .btn:active,
-.btn:hover{ padding:10px 20px;
-    font-size:14px;
+.btn:hover{ padding:.625rem 1.25rem;
+    font-size:.875rem;
 }
 .btn2,
 .btn2:active,
-.btn2:hover{ padding:6px 8px;
-    font-size:12px;
+.btn2:hover{ padding:.375rem .5rem;
+    font-size:.75rem;
 }
+
+.tx_12{ font-size:.75rem}
+.tx_14{ font-size:.875rem}
+.tx_16{ font-size:1rem}
+.tx_18{ font-size:1.125rem}
+.tx_20{ font-size:1.25rem}
+.tx_22{ font-size:1.375rem}
 
 /* 布局
 ----------------------------------------------------------------*/
@@ -127,10 +134,10 @@ a.c_a1:active{ color:#366}
 a.c_a2{ color:#366}
 a.c_a2:active{ color:#366}
 
-body{ border-top:#000 5px solid; background:#fff;}
-p{ margin-bottom:10px; text-align:justify;}
-blockquote{ background:#f4f4f4; border-radius:4px; padding:20px;}
-.container{ position:relative; max-width:960px; margin:0 10px;}
+body{ border-top:#000 .3rem solid; background:#fff;}
+p{ margin-bottom:.625rem; text-align:justify;}
+blockquote{ background:#f4f4f4; border-radius:.25rem; padding:1.25rem;}
+.container{ position:relative; max-width:960px; margin:0 .625rem;}
 
 .plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .5s;}
 .leaf{ position:relative; width:11px; height:11px;}
@@ -186,44 +193,44 @@ h2 .plant{ display:none}
   fill: currentColor;
 }
 
-footer{ height:100px}
+footer{ height:6rem}
 h1,h2{ color:#000}
-h1{ text-align:right; font-size:2.5rem; padding-top: 2rem; letter-spacing:.12em; text-transform:uppercase;}
+h1{ text-align:right; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
 section{ padding-top:2rem;}
-h2{ padding-left:50px; font-size:1.5rem;}
+h2{ padding-left:3rem; font-size:1.5rem;}
 ul{ padding-left:1.4rem}
-li{ list-style:disc; padding-top:20px; margin-bottom:5px}
-li img{ margin:10px 0; box-shadow:rgba(0,0,0,.1) 0 3px 5px; border-radius:2px;}
+li{ list-style:disc; padding-top:1.25rem; margin-bottom:.3rem}
+li img{ margin:.625rem 0; box-shadow:rgba(0,0,0,.1) 0 .2rem .3rem; border-radius:.125rem;}
 
 i{font-style:italic;}
-label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:10px 0; padding:1px 13px; border-radius:15px; font-size:12px;}
+label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.625rem 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
 
 @media screen and (min-width:600px){
-.option{display:block; text-align:right; font-size:14px; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
+.option{display:block; text-align:right; font-size:.875rem; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
 }
 
 @media (min-width:600px){
-body{ padding-right:20px}
+body{ padding-right:1.25rem}
 section:hover{ z-index:1; position:relative;}
 .f_zoom{ transition:all ease .5s; transform-origin:3px 3px;}
-.f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 9px 15px; border-radius:1px}
+.f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 .6rem 1rem; border-radius:1px}
 .e_plant_act{ position:static;}
 .container{ margin:0 auto; border-right:#000 1px solid;}
 .content{ padding-left:130px}
-section{ margin-right:10px}
+section{ margin-right:.625rem}
 h1{ font-size:3.5rem; text-align:left;}
 h2{ padding-left:0; font-size:1.8rem}
 .e_plant_logo{ position:absolute; padding:100px 0 0 10px;}
 .btn,.btn2{display:inline-block;}
 .btn{ margin-top:0}
-.btn2{ margin-top:5px}
-blockquote{ margin-right:4px}
-.bottom{ right:-50px; bottom:-43px; display:block; width:100px; text-align:center;}
+.btn2{ margin-top:.3rem}
+blockquote{ margin-right:.25rem}
+.bottom{ right:-3rem; bottom:-2.7rem; display:block; width:6rem; text-align:center;}
 .bottom .leaf{ margin:0 auto;}
 .bottom .leaf .a{ transform:rotate(45deg); transform-origin:center center}
 .bottom .leaf .a .in{ background:none;}
 .bottom .leaf .a .in:after{ display:none}
-.bottom a{ display:block; padding:10px 0; color:#000; text-transform:uppercase; letter-spacing:.12em; font-size:12px; width:100px; white-space:nowrap;}
+.bottom a{ display:block; padding:.625rem 0; color:#000; text-transform:uppercase; letter-spacing:.12em; font-size:12px; width:6.25rem; white-space:nowrap;}
 }
 
 @media print{
@@ -255,6 +262,9 @@ window.onload = function(){
 	const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 	observer.observe();
 }
+function textsize(o){
+	document.getElementById('root').style = 'font-size:' + o + 'px';
+}
 </script>
 </head>
 <body>
@@ -284,7 +294,7 @@ window.onload = function(){
 </div>
 
 <article class="content">
-	<div class="option"><a title="Print This Page" href="javascript:window:print();"><svg class="icon icon-printer"><use xlink:href="#icon-printer"></use></svg></a></div>
+	<div class="option"><a onclick="textsize(14);" class="tx_12 ml5" href="javascript:;">T</a><a onclick="textsize(16);" class="tx_16 ml5" href="javascript:;">T</a><a onclick="textsize(22);" class="tx_20 ml5" href="javascript:;">T</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><svg class="icon icon-printer"><use xlink:href="#icon-printer"></use></svg></a></div>
 	<h1>Portfolio</h1>
 	<blockquote><p>ZHAI is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
 		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
