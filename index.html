@@ -20,14 +20,36 @@ address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:nor
 ol,ul{list-style:none}
 caption,th{text-align:left}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
-body{ font:16px/1.5 Helvetica Neue,Helvetica,Arial,sans-serif; overflow:hidden}
-input,textarea,select,button{ outline: none; resize:none; font:16px/1.5 Helvetica,Arial,sans-serif;}
+body{ font:16px/1.5 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; overflow:hidden}
+input,textarea,select,button{ outline: none; resize:none; font:16px/1.5 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 button{line-height:1.7;white-space:nowrap;vertical-align:middle;cursor:pointer}
 strong{font-weight:800}
 a{ text-decoration: none; outline: none; cursor: pointer;}
 a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
 a:hover{ text-decoration:none;}
 img{ vertical-align:top; max-width:100%}
+
+@font-face {
+font-family: 'Circular Std Book';
+font-style: normal;
+font-weight: normal;
+src: local('Circular Std Book'), url('./font/CircularStd-Book.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Circular Std Book Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Circular Std Book Italic'), url('./font/CircularStd-BookItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Circular Std Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('woff');
+}
 
 .btn,
 .btn:link,
@@ -136,7 +158,7 @@ a.c_a2:active{ color:#366}
 
 body{ border-top:#000 .3rem solid; background:#fff;}
 p{ margin-bottom:.625rem; text-align:justify;}
-blockquote{ background:#f4f4f4; border-radius:.25rem; padding:1.25rem;}
+blockquote{ background:#f4f4f4; border-radius:.25rem 0 0 .25rem; padding:1.25rem;}
 .container{ position:relative; max-width:960px; margin:0 .625rem;}
 
 .plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .5s;}
@@ -194,16 +216,16 @@ h2 .plant{ display:none}
 }
 
 footer{ padding-bottom:3rem; margin-top:4rem; background-color:#f4f4f4}
-footer .container{ border-right:none;}
+footer .content{ border-right:none;}
 h1,h2{ color:#000}
-h1{ text-align:right; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
+h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
 section{ padding-top:2rem;}
 h2{/* padding-left:3rem;*/ text-align:center; font-size:1.5rem;}
 ul{ padding-left:1.4rem; padding-right:1.4rem}
 li{ list-style:disc; padding-top:1.25rem; margin-bottom:.3rem}
 li img{ margin:.625rem 0; box-shadow:rgba(0,0,0,.1) 0 .2rem .3rem; border-radius:.125rem;}
 
-i{font-style:italic;}
+i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.625rem 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
 
 @media screen and (min-width:600px){
@@ -211,13 +233,12 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 }
 
 @media (min-width:600px){
-body{ padding-right:1.25rem}
 section:hover{ z-index:1; position:relative;}
 .f_zoom{ transition:all ease .5s; transform-origin:3px 3px;}
 .f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 .6rem 1rem; border-radius:1px}
 .e_plant_act{ position:static;}
-.container{ margin:0 auto; border-right:#000 1px solid;}
-.content{ padding-left:130px}
+.container{ margin:0 auto;}
+.content{ position:relative; margin-right:4rem; padding-left:130px; border-right:#000 1px solid;}
 section{ margin-right:.625rem}
 h1{ font-size:3.5rem; text-align:left;}
 h2{ padding-left:0; font-size:1.8rem; text-align:left;}
@@ -225,7 +246,6 @@ h2{ padding-left:0; font-size:1.8rem; text-align:left;}
 .btn,.btn2{display:inline-block;}
 .btn{ margin-top:0}
 .btn2{ margin-top:.3rem}
-blockquote{ margin-right:.25rem}
 .bottom{ right:-3rem; bottom:-2.7rem; display:block; width:6rem; text-align:center;}
 .bottom .leaf{ margin:0 auto;}
 .bottom .leaf .a{ transform:rotate(45deg); transform-origin:center center}
@@ -238,7 +258,7 @@ ul{ padding-right:0}
 @media print{
 body{ border-top:none}
 blockquote{ border:#666 1px solid;}
-.container{ border-right:none;}
+.content{ border-right:none;}
 .btn,
 .btn2{ border-radius:0; padding:0;}
 .btn:after,
@@ -288,20 +308,13 @@ function textsize(o){
 	</div>
 </div>
 
-<div class="bottom">
-	<div class="leaf">
-		<div class="a"><div class="in"></div></div>
-	</div>
-	<a href="#">back to top</a>
-</div>
-
 <article class="content">
 	<div class="option"><a title="smaller font size" onclick="textsize(14);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16);" class="tx_16 ml5" href="javascript:;">A</a><a title="larger font size" onclick="textsize(22);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><svg class="icon icon-printer"><use xlink:href="#icon-printer"></use></svg></a></div>
 	<h1>Portfolio</h1>
 	<blockquote><p>ZHAI is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
 		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
-		<p class="mb0 mt20"><a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume (PDF)</a>
-		<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历 (PDF)</a></p></blockquote>
+		<p class="mb0 mt20"><a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
+		<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a></p></blockquote>
 	<section>
 	<h2>
 		<div class="plant e_plant_act">
@@ -413,6 +426,14 @@ function textsize(o){
 		<li>2017: <i>"UFO Animate, An CSS Animation Tool"</i>, Personal Project.<br><img class="lozad f_zoom" data-src="./assets/csstool.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>Design</label> <label>Development</label> <label>Localization</label></li>
 	</ul>
 	</section>
+
+	<div class="bottom">
+		<div class="leaf">
+			<div class="a"><div class="in"></div></div>
+		</div>
+		<a href="#">back to top</a>
+	</div>
+
 </article>
 
 </div>
