@@ -5,7 +5,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Portfolio</title>
+<title>Dongfang Chak</title>
 <link rel="shortcut icon" href="http://futurefriendly.cn/me/favicon.ico"/>
 <style>
 body,img{ margin:0;}
@@ -51,6 +51,8 @@ font-weight: normal;
 src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('woff');
 }
 
+.tx_cb{ font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif;}
+
 .btn,
 .btn:link,
 .btn:hover,
@@ -80,6 +82,8 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .tx_18{ font-size:1.125rem}
 .tx_20{ font-size:1.25rem}
 .tx_22{ font-size:1.375rem}
+
+.tx_up{ text-transform:uppercase;}
 
 /* 布局
 ----------------------------------------------------------------*/
@@ -206,9 +210,11 @@ h2 .plant{ display:none}
 .bottom .leaf{ animation:none;}
 
 .sampletext{ margin-top:.626rem;}
-.sampletext .pic{ float:left; margin-right:.625rem; width:100px}
-.sampletext .pic img{ margin:0;}
-.sampletext .text{ border-left:#f4f4f4 .2rem solid; padding-left:.625rem; overflow:hidden; font-size:.75rem;}
+.sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
+.sampletext .text .c{ border-left:#f4f4f4 3px solid; padding-left:.625rem; margin-right:2%; overflow:hidden; font-size:.75rem;
+	box-sizing:border-box;
+}
+.sampletext .text .c:last-child{ margin-top:.626rem}
 
 .option{ display:none}
 .icon {
@@ -238,6 +244,8 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 }
 
 @media (min-width:600px){
+.sampletext .text .c:last-child{ margin-top:0;}
+.sampletext .text .c{ width:48%; float:left;}
 section:hover{ z-index:1; position:relative;}
 .f_zoom{ transition:all ease .5s; transform-origin:3px 3px;}
 .f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 .6rem 1rem; border-radius:1px}
@@ -308,8 +316,8 @@ function textsize(o){
 <article class="content">
 	<div class="option"><a title="smaller font size" onclick="textsize(14);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16);" class="tx_16 ml5" href="javascript:;">A</a><a title="larger font size" onclick="textsize(22);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><svg class="icon icon-printer"><use xlink:href="#icon-printer"></use></svg></a></div>
 	<h1>Portfolio</h1>
-	<blockquote><p>ZHAI is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
-		<p>Since 2011, ZHAI has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by ZHAI as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
+	<blockquote><p>Dongfang is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
+		<p>Since 2011, Dongfang has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Dongfang as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
 		<p class="mb0 mt20"><a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
 		<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a></p></blockquote>
 	<section>
@@ -319,19 +327,19 @@ function textsize(o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Translate</span>
+		<span class="ml5">Translation</span>
 	</h2>
 	<ul>
-		<li>2017: <i>《渐进增强：跨平台用户体验设计》</i>, from Aaron Gustafson's: <i>"Adaptive Web Design"</i>.
+		<li>2017: <i>《渐进增强：跨平台用户体验设计》</i>, from Aaron Gustafson's: <i>"Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement"</i>.
 			<div class="sampletext clearfix">
-				<div class="pic">
-					<img class="lozad f_zoom" data-src="./assets/awd.jpg" />
-				</div>
-				<div class="text">
-					<p>A Sample Paragraph in the beginning of Chapter 4: </p>
-					<p><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008
-to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent. "</i></p>
-					<p><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。”</i></p>
+				<div class="text clearfix">
+					<p class="tx_cb">Sample paragraph in Chapter 4:</p>
+					<div class="c">
+						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> --><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93).</i></p>
+					</div>
+					<div class="c">
+						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> --><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页).</i></p>
+					</div>
 				</div>
 			</div>
 			<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">View comments on JD.com</a>
@@ -339,13 +347,14 @@ to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile an
 		</li>
 		<li>2017: <i>《JavaScript数据可视化编程》</i>, from Stephen A. Thomas': <i>"Data Visualization with JavaScript"</i>.
 			<div class="sampletext clearfix">
-				<div class="pic">
-					<img class="lozad f_zoom" data-src="./assets/dvj.jpg" />
-				</div>
-				<div class="text">
-					<p>A Sample Paragraph in the beginning of Chapter 7: </p>
-					<p><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities."</i></p>
-					<p><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。”</i></p>
+				<div class="text clearfix">
+					<p class="tx_cb">Sample paragraph in Chapter 7:</p>
+					<div class="c">
+						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> --><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224).</i></p>
+					</div>
+					<div class="c">
+						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> --><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页).</i></p>
+					</div>
 				</div>
 			</div>
 			<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
@@ -360,7 +369,7 @@ to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile an
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Speak</span></h2>
+		<span class="ml5">Slides and Share</span></h2>
 	<ul>
 		<li>2016: <i>"情感化内容策略 (From Voice & Tone to Content Strategy)"</i> at DiDi Chuxing. <br>
 			<a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn2">View slides online</a></li>
@@ -377,11 +386,9 @@ to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile an
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Design Systems<span></h2>
+		<span class="ml5">Design System<span></h2>
 	<ul>
-		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/designsystem.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Build and Manage</label></li>
-		<li>2013: <i>"腾讯微视PC端Web组件库 (Tencent Weishi's Components Library on Large Screen)"</i>, for Tencent. <br><img class="lozad f_zoom" data-src="./assets/weishi.png" style="width:200px" /><br>
-			<a target="_blank" href="http://futurefriendly.cn/weishi/guideline/" class="btn2">View it</a><br><label>Build and Manage</label></li>
+		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/designsystem.png" style="width:200px" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Establish and Maintain</label></li>
 	</ul>
 	</section>
 	<section>
@@ -396,7 +403,7 @@ to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile an
 		<li>2017: <i>"小学游戏化教育产品暑期活动 (Destory the pirate: a web-based game)"</i>, for Knowbox. <br><img class="lozad f_zoom" data-src="./assets/summer_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/summer.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
-		<li>2016: <i>"顺风车行程结束评价页 (Evaluate Step After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/didi_thumb.png" style="width:200px" /><br>
+		<li>2016: <i>"顺风车行程结束评价页 (The Survey Page After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/didi_thumb.png" style="width:200px" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
 	</ul>
@@ -411,9 +418,9 @@ to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile an
 		<span class="ml5">Motion Design</span></h2>
 	<ul>
 		<li>2016: <i>"星际迷航品宣 (StarTrek Big Data Brand Promotion)"</i>, for DiDi Chuxing. <br>
-			<img class="vt_b qr" src="./assets/startrek2016.png" style="height:160px;" /> <img class="vt_b lozad f_zoom" data-src="./assets/startrek2016pic.jpg" style="height:160px" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b qr" src="./assets/startrek2016.png" style="height:160px;" /> <img class="vt_b lozad f_zoom" data-src="./assets/startrek2016pic.jpg" style="height:160px" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
 		<li>2016: <i>"十一出走计划 (National Day Promotion)"</i>, for DiDi Chuxing.<br>
-			<img class="vt_b qr" src="./assets/october2016.png" style="height:160px;" /> <img class="vt_b lozad f_zoom" data-src="./assets/october2016pic.png" style="height:160px" /><br><label>Storyboarding</label> <label>Motion Design</label> <label>CSS</label></li>
+			<img class="vt_b qr" src="./assets/october2016.png" style="height:160px;" /> <img class="vt_b lozad f_zoom" data-src="./assets/october2016pic.png" style="height:160px" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
 	</ul>
 	</section>
 	<section>
@@ -428,7 +435,7 @@ to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile an
 		<li>2015: <i>"北京大学国际版官网 (The International Official Website)"</i>, for Peking University.
 			<br><img class="lozad f_zoom" data-src="./assets/pku.jpg" style="width:200px" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
-			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development (Responsive Web Design)</label>
+			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development</label>
 		</li>
 	</ul>
 	</section>
