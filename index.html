@@ -30,6 +30,45 @@ a:hover{ text-decoration:none;}
 img{ vertical-align:top; max-width:100%}
 
 @font-face {
+  font-family: 'icomoon';
+  src:  url('./font/icomoon.eot?3aoubj');
+  src:  url('./font/icomoon.eot?3aoubj#iefix') format('embedded-opentype'),
+    url('./font/icomoon.ttf?3aoubj') format('truetype'),
+    url('./font/icomoon.woff?3aoubj') format('woff'),
+    url('./font/icomoon.svg?3aoubj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope:before {
+  content: "\e900";
+}
+.icon-wechat:before {
+  content: "\e901";
+}
+.icon-weixin:before {
+  content: "\e901";
+}
+.icon-printer:before {
+  content: "\e902";
+}
+
+@font-face {
 font-family: 'Circular Std Book';
 font-style: normal;
 font-weight: normal;
@@ -206,8 +245,9 @@ h2 .plant{ display:none}
 	100%{transform:rotateZ(0deg);}
 }
 
-.bottom{ display:none; position:absolute; bottom:0; right:0;}
-.bottom .leaf{ animation:none;}
+.bottom{ margin-top:1rem; text-align:center;}
+.bottom .leaf{ display:none}
+.bottom a{ display:block; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem;}
 
 .sampletext{ margin-top:.626rem;}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
@@ -226,18 +266,22 @@ h2 .plant{ display:none}
   fill: currentColor;
 }
 
-footer{ padding-bottom:3rem; margin-top:4rem; background-color:#f4f4f4}
+footer{ padding-bottom:3rem; margin-top:1rem; background-color:#f4f4f4}
 footer .content{ border-right:none;}
 h1,h2{ color:#000}
 h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
 section{ padding-top:2rem;}
 h2{/* padding-left:3rem;*/ text-align:center; font-size:1.5rem;}
-ul{ padding-left:1.4rem; padding-right:1.4rem}
-li{ list-style:disc; padding-top:1.25rem; margin-bottom:.3rem}
+ul{}
+li{ padding-top:1.25rem; margin-bottom:.3rem}
 li img{ margin:.625rem 0; box-shadow:rgba(0,0,0,.1) 0 .2rem .3rem; border-radius:.125rem;}
 
+.semiul li{}
+.semiul li img{ margin-top:0; width:16rem;}
+.semiul li p{ margin-bottom:0}
+
 i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
-label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.625rem 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
+label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.625rem 0 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
 
 @media screen and (min-width:600px){
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
@@ -259,13 +303,15 @@ h2{ padding-left:0; font-size:1.8rem; text-align:left;}
 .btn,.btn2{display:inline-block;}
 .btn{ margin-top:0}
 .btn2{ margin-top:.3rem}
-.bottom{ right:-3rem; bottom:-2.7rem; display:block; width:6rem; text-align:center;}
-.bottom .leaf{ margin:0 auto;}
+.bottom{ position:absolute; bottom:0; right:0; right:-3rem; bottom:-2.7rem; display:block; margin-top:0; width:6rem; text-align:center;}
+.bottom .leaf{ display:block; margin:0 auto;}
 .bottom .leaf .a{ transform:rotate(45deg); transform-origin:center center}
 .bottom .leaf .a .in{ background:none;}
 .bottom .leaf .a .in:after{ display:none}
-.bottom a{ display:block; padding:.625rem 0; color:#000; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; width:6.25rem; white-space:nowrap;}
-ul{ padding-right:0}
+.bottom a{ padding:.625rem 0; color:#000; width:6.25rem; white-space:nowrap;}
+footer{ margin-top:4rem;}
+.semiul li{ width:19rem; margin-right:.625rem; float:left;}
+.semiul li img{ width:auto; max-width:90%}
 }
 
 @media print{
@@ -273,13 +319,14 @@ body{ border-top:none}
 blockquote{ border:#666 1px solid;}
 .content{ border-right:none;}
 .btn,
-.btn2{ border-radius:0; padding:0;}
+.btn2{ border-radius:0; padding:0; text-align:left; word-wrap:break-word; word-break:break-all;}
 .btn:after,
 .btn2:after{ content:" (" attr(href) "); "; border-bottom:#666 1px solid;}
 label{ border-color:#666}
 li,section{page-break-inside: avoid;}
 .bottom{ display:none}
 li img{ display:none}
+.semiul li img{ display:block}
 li .qr{ display:inline-block;}
 }
 </style>
@@ -307,18 +354,10 @@ function textsize(n,o){
 </script>
 </head>
 <body>
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-printer" viewBox="0 0 24 24">
-<title>printer</title>
-<path d="M20 8h-1v-6c0-0.6-0.4-1-1-1h-12c-0.6 0-1 0.4-1 1v6h-1c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3h1v3c0 0.6 0.4 1 1 1h12c0.6 0 1-0.4 1-1v-3h1c1.7 0 3-1.3 3-3v-5c0-1.7-1.3-3-3-3zM7 3h10v5h-10v-5zM17 21h-10v-6h10v6zM21 16c0 0.6-0.4 1-1 1h-1v-3c0-0.6-0.4-1-1-1h-12c-0.6 0-1 0.4-1 1v3h-1c-0.6 0-1-0.4-1-1v-5c0-0.6 0.4-1 1-1h16c0.6 0 1 0.4 1 1v5z"></path>
-</symbol>
-</defs>
-</svg>
 <div class="container">
 
 <article class="content">
-	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><svg class="icon icon-printer"><use xlink:href="#icon-printer"></use></svg></a></div>
+	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
 	<h1>Portfolio</h1>
 	<blockquote><p>Dongfang is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
 		<p>Since 2011, Dongfang has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Dongfang as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
@@ -331,7 +370,7 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Translation</span>
+		<span>Translation</span>
 	</h2>
 	<ul>
 		<li>2017: <i>《渐进增强：跨平台用户体验设计》</i>, from Aaron Gustafson's: <i>"Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement"</i>.
@@ -373,14 +412,35 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Slides and Share</span></h2>
-	<ul>
-		<li>2016: <i>"情感化内容策略 (From Voice & Tone to Content Strategy)"</i> at DiDi Chuxing. <br>
-			<a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn2">View slides online</a></li>
-		<li>2016: <i>"Web设计基础 (The Overview of Web Design)"</i> at DiDi Chuxing. <br>
-			<a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn2">View slides online</a></li>
-		<li>2015: <i>"面向未来的友好设计 (Future Friendly Web Design)"</i> at Tencent. <br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></li>
-		<li>2013: <i>"响应式设计 (Responsive Web Design: Rebuild as Design)"</i> at Tencent.<br><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></li>
+		<span>Slides and Share</span></h2>
+		<ul class="semiul clearfix">
+			<li><img class="lozad" data-src="./assets/ppt1.png" alt="情感化内容策略 (From Voice & Tone to Content Strategy at DiDi Chuxing in 2016." />
+				<p><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn2">View slides online</a></p>
+			</li>
+			<li><img class="lozad" data-src="./assets/ppt2.png" alt="Web设计基础 (The Overview of Web Design) at DiDi Chuxing in 2016." />
+				<p><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn2">View slides online</a></p>
+			</li>
+			<li><img class="lozad" data-src="./assets/ppt3.png" alt="面向未来的友好设计 (Future Friendly Web Design) at Tencent in 2015." />
+				<p><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></p>
+			</li>
+			<li><img class="lozad" data-src="./assets/ppt4.png" alt="响应式设计 (Responsive Web Design: Rebuild as Design) at Tencent in 2013." />
+				<p><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></p>
+			</li>
+		</ul>
+	</section>
+	<section>
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+			</div>
+		</div>
+		<span>Web Motion Design</span></h2>
+	<ul class="semiul clearfix">
+		<li>
+			<img class="vt_b qr" src="./assets/startrek2016pic_a.png" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
+		<li>
+			<img class="vt_b qr" src="./assets/october2016pic_a.png" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
 	</ul>
 	</section>
 	<section>
@@ -390,9 +450,9 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Design System<span></h2>
+		<span>Design System<span></h2>
 	<ul>
-		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/designsystem.png" style="width:13rem" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Establish and Maintain</label></li>
+		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="lozad" data-src="./assets/designsystem.jpg" style="width:15.4rem" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Establish and Maintain</label></li>
 	</ul>
 	</section>
 	<section>
@@ -402,12 +462,23 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Interaction Design</span></h2>
+		<span>Interaction Design, Products</span></h2>
 	<ul>
-		<li>2017: <i>"小学游戏化教育产品暑期活动 (Destory the pirate: a web-based game)"</i>, for Knowbox. <br><img class="lozad f_zoom" data-src="./assets/summer_thumb.png" style="width:13rem" /><br>
-			<a target="_blank" href="http://futurefriendly.cn/me/assets/summer.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
+		<li>2016: <i>"顺风车行程结束评价页 (The Survey Page After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad" data-src="./assets/didi_pro_thumb.png" style="width:15.4rem" /><br>
+			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
-		<li>2016: <i>"顺风车行程结束评价页 (The Survey Page After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad f_zoom" data-src="./assets/didi_thumb.png" style="width:13rem" /><br>
+	</ul>
+	</section>
+	<section>
+	<h2>
+		<div class="plant e_plant_act">
+			<div class="leaf">
+				<div class="a"><div class="in"></div></div>
+			</div>
+		</div>
+		<span>Interaction Design, Operational Activities</span></h2>
+	<ul>
+		<li>2016: <i>"顺风车运营活动：完成任务赢1000万现金行程结束评价页 (The Survey Page After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad" data-src="./assets/didi_thumb.png" style="width:15.4rem" /><br>
 			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
 		</li>
 	</ul>
@@ -419,25 +490,10 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Motion Design</span></h2>
-	<ul>
-		<li>2016: <i>"星际迷航品宣 (StarTrek Big Data Brand Promotion)"</i>, for DiDi Chuxing. <br>
-			<img class="vt_b qr" src="./assets/startrek2016.png" style="height:10rem;" /> <img class="vt_b lozad f_zoom" data-src="./assets/startrek2016pic.jpg" style="height:10rem" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
-		<li>2016: <i>"十一出走计划 (National Day Promotion)"</i>, for DiDi Chuxing.<br>
-			<img class="vt_b qr" src="./assets/october2016.png" style="height:10rem;" /> <img class="vt_b lozad f_zoom" data-src="./assets/october2016pic.png" style="height:10rem" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
-	</ul>
-	</section>
-	<section>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span class="ml5">Make Websites</span></h2>
+		<span>Make Websites</span></h2>
 	<ul>
 		<li>2015: <i>"北京大学国际版官网 (The International Official Website)"</i>, for Peking University.
-			<br><img class="lozad f_zoom" data-src="./assets/pku.jpg" style="width:13rem" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
+			<br><img class="lozad" data-src="./assets/pku.jpg" style="width:15.4rem" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
 			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development</label>
 		</li>
@@ -450,9 +506,9 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Build Design Tools</span></h2>
+		<span>Build Design Tools</span></h2>
 	<ul>
-		<li>2017: <i>"UFO Animate, An CSS Animation Tool"</i>, Personal Project.<br><img class="lozad f_zoom" data-src="./assets/csstool.png" style="width:13rem" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></li>
+		<li>2017: <i>"UFO Animate, An CSS Animation Tool"</i>, Personal Project.<br><img class="lozad" data-src="./assets/csstool.jpg" style="width:15.4rem" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></li>
 	</ul>
 	</section>
 
@@ -484,11 +540,18 @@ function textsize(n,o){
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span class="ml5">Welcome to Contact</span>
+		<span>Get in Touch</span>
 	</h2>
 	<ul>
-		<li class="mb0"><a href="mailto:bienfantaisie@gmail.com">Gmail/Skype: bienfantaisie@gmail.com</a></li>
-		<li class="pt10 mb0"><a href="tel:18612536186">WeChat ID: bienfantaisie</a></li>
+		<li class="mb0">
+			<a href="mailto:bienfantaisie@gmail.com">
+				<span class="icon-envelope"></span><span class="ml5">EMAIL: bienfantaisie@gmail.com</span>
+			</a></li>
+		<li class="pt10 mb0">
+			<a href="javascript:;">
+				<span class="icon-wechat"></span><span class="ml5">WECHAT: bienfantaisie</span>
+			</a>
+		</li>
 	</ul>
 	</section>
 	</article>
