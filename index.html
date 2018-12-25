@@ -90,6 +90,7 @@ font-weight: normal;
 src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('woff');
 }
 
+.tx_l{ text-align:left;}
 .tx_cb{ font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif;}
 
 .btn,
@@ -202,7 +203,7 @@ a.c_a2:active{ color:#366}
 body{ border-top:#000 .3rem solid; background:#fff;}
 p{ margin-bottom:.625rem; text-align:justify;}
 blockquote{ background:#f4f4f4; border-radius:.25rem 0 0 .25rem; padding:1.25rem;}
-.container{ position:relative; max-width:960px; margin:0 .625rem;}
+.container{ position:relative; max-width:960px; margin:0 4%;}
 
 .plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .5s;}
 .leaf{ position:relative; width:11px; height:11px;}
@@ -274,10 +275,10 @@ section{ padding-top:2rem;}
 h2{/* padding-left:3rem;*/ text-align:center; font-size:1.5rem;}
 ul{}
 li{ padding-top:1.25rem; margin-bottom:.3rem}
-li img{ margin:.625rem 0;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ border-radius:.125rem;}
+li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ border-radius:.125rem;}
 
 .semiul li{}
-.semiul li img{ margin-top:0; width:16rem;}
+.semiul li img{ border-bottom:#000 0.0625rem solid; border-radius:0; margin-top:0; width:80%; max-width:20em;}
 .semiul li p{ margin-bottom:0}
 
 i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
@@ -295,12 +296,12 @@ section:hover{ z-index:1; position:relative;}
 .f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 .6rem 1rem; border-radius:1px}
 .e_plant_act{ position:static;}
 .container{ margin:0 auto;}
-.content{ position:relative; margin-right:4rem; padding-left:130px; border-right:#000 1px solid;}
+.content{ position:relative; margin-right:60px; padding-left:130px; border-right:#000 1px solid;}
 section{ margin-right:.625rem}
 h1{ font-size:3.5rem; text-align:left;}
 h2{ padding-left:0; font-size:1.8rem; text-align:left;}
 .e_plant_logo{ position:absolute; padding:100px 0 0 10px;}
-.btn,.btn2{display:inline-block;}
+.btn,.btn2{ display:inline-block;}
 .btn{ margin-top:0}
 .btn2{ margin-top:.3rem}
 .bottom{ position:absolute; bottom:0; right:0; right:-3rem; bottom:-2.7rem; display:block; margin-top:0; width:6rem; text-align:center;}
@@ -310,8 +311,9 @@ h2{ padding-left:0; font-size:1.8rem; text-align:left;}
 .bottom .leaf .a .in:after{ display:none}
 .bottom a{ padding:.625rem 0; color:#000; width:6.25rem; white-space:nowrap;}
 footer{ margin-top:4rem;}
-.semiul li{ width:19rem; margin-right:.625rem; float:left;}
-.semiul li img{ width:auto; max-width:90%}
+li img{ margin-left:0; margin-right:0}
+.semiul li{ width:50%; float:left;}
+.semiul li img{ width:20rem; max-width:95%}
 }
 
 @media print{
@@ -359,10 +361,14 @@ function textsize(n,o){
 <article class="content">
 	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
 	<h1>Portfolio</h1>
-	<blockquote><p>Dongfang is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
+	<blockquote>
+		<p>Dongfang is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
 		<p>Since 2011, Dongfang has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Dongfang as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
-		<p class="mb0 mt20"><a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
-		<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a></p></blockquote>
+		<p class="mb0 mt20">
+			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
+			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a>
+		</p>
+	</blockquote>
 	<section>
 	<h2>
 		<div class="plant e_plant_act">
@@ -373,34 +379,40 @@ function textsize(n,o){
 		<span>Translation</span>
 	</h2>
 	<ul>
-		<li>2017: <i>《渐进增强：跨平台用户体验设计》</i>, from Aaron Gustafson's: <i>"Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement"</i>.
+		<li>
+			<div>
+				Name: <i>《渐进增强：跨平台用户体验设计》(2017)</i> <br>From: <i>"Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement" (Aaron Gustafson, 2015)</i>
+			</div>
 			<div class="sampletext clearfix">
 				<div class="text clearfix">
-					<p class="tx_cb">Sample paragraph in Chapter 4:</p>
+					<p class="tx_cb">SAMPLE PARAGRAPH:</p>
 					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> --><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93).</i></p>
+						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> --><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93; ch. 4).</i></p>
 					</div>
 					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> --><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页).</i></p>
+						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> --><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页; 第4章).</i></p>
 					</div>
 				</div>
 			</div>
-			<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">View comments on JD.com</a>
+			<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">Paperback on JD.com</a>
 			<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
 		</li>
-		<li>2017: <i>《JavaScript数据可视化编程》</i>, from Stephen A. Thomas': <i>"Data Visualization with JavaScript"</i>.
+		<li>
+			<div>
+				NAME: <i>《JavaScript数据可视化编程》(2017)</i> <br>FROM: <i>"Data Visualization with JavaScript" (Stephen A. Thomas, 2015)</i>
+			</div>
 			<div class="sampletext clearfix">
 				<div class="text clearfix">
-					<p class="tx_cb">Sample paragraph in Chapter 7:</p>
+					<p class="tx_cb">SAMPLE PARAGRAPH:</p>
 					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> --><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224).</i></p>
+						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> --><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224; ch. 7).</i></p>
 					</div>
 					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> --><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页).</i></p>
+						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> --><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页; 第7章).</i></p>
 					</div>
 				</div>
 			</div>
-			<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
+			<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">Paperback on JD.com</a>
 			<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
 		</li>
 	</ul>
@@ -414,16 +426,20 @@ function textsize(n,o){
 		</div>
 		<span>Slides and Share</span></h2>
 		<ul class="semiul clearfix">
-			<li><img class="lozad" data-src="./assets/ppt1.png" alt="情感化内容策略 (From Voice & Tone to Content Strategy at DiDi Chuxing in 2016." />
+			<li>
+				<p><img class="lozad" data-src="./assets/ppt1.png" alt="情感化内容策略 (From Voice & Tone to Content Strategy at DiDi Chuxing in 2016." /></p>
 				<p><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn2">View slides online</a></p>
 			</li>
-			<li><img class="lozad" data-src="./assets/ppt2.png" alt="Web设计基础 (The Overview of Web Design) at DiDi Chuxing in 2016." />
+			<li>
+				<p><img class="lozad" data-src="./assets/ppt2.png" alt="Web设计基础 (The Overview of Web Design) at DiDi Chuxing in 2016." /></p>
 				<p><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn2">View slides online</a></p>
 			</li>
-			<li><img class="lozad" data-src="./assets/ppt3.png" alt="面向未来的友好设计 (Future Friendly Web Design) at Tencent in 2015." />
+			<li>
+				<p><img class="lozad" data-src="./assets/ppt3.png" alt="面向未来的友好设计 (Future Friendly Web Design) at Tencent in 2015." /></p>
 				<p><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></p>
 			</li>
-			<li><img class="lozad" data-src="./assets/ppt4.png" alt="响应式设计 (Responsive Web Design: Rebuild as Design) at Tencent in 2013." />
+			<li>
+				<p><img class="lozad" data-src="./assets/ppt4.png" alt="响应式设计 (Responsive Web Design: Rebuild as Design) at Tencent in 2013." /></p>
 				<p><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></p>
 			</li>
 		</ul>
@@ -438,9 +454,13 @@ function textsize(n,o){
 		<span>Web Motion Design</span></h2>
 	<ul class="semiul clearfix">
 		<li>
-			<img alt="顺风车大数据品宣 (Hitch Big Data Brand Promotion) at DiDi Chuxing in 2016" class="vt_b qr lozad" src="./assets/startrek2016pic_a.png" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
+			<p><img alt="顺风车大数据品宣 (Hitch Big Data Brand Promotion) at DiDi Chuxing in 2016" class="vt_b qr lozad" src="./assets/startrek2016pic_a.png" /></p>
+			<p class="tx_l"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
+		</li>
 		<li>
-			<img alt="十一出走计划 (National Day Promotion) at DiDi Chuxing in 2016" class="vt_b qr lozad" src="./assets/october2016pic_a.png" /><br><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></li>
+			<p><img alt="十一出走计划 (National Day Promotion) at DiDi Chuxing in 2016" class="vt_b qr lozad" src="./assets/october2016pic_a.png" /></p>
+			<p class="tx_l"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
+		</li>
 	</ul>
 	</section>
 	<section>
@@ -452,7 +472,12 @@ function textsize(n,o){
 		</div>
 		<span>Design System<span></h2>
 	<ul>
-		<li>2016: <i>"滴滴顺风车Web设计开发指南 (DiDi Hitch's Design System)"</i>, for DiDi Chuxing. <br><img class="lozad" data-src="./assets/designsystem.jpg" style="width:15.4rem" /><br><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a><br><label>Establish and Maintain</label></li>
+		<li>
+			<p><i>"滴滴顺风车Web设计开发指南 - DiDi Hitch's Design System"</i><br>2016, DiDi Chuxing</p>
+			<p><img class="lozad" data-src="./assets/designsystem.jpg" style="width:15.4rem" /></p>
+			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it</a></div>
+			<div><label>Establish and Maintain</label></div>
+		</li>
 	</ul>
 	</section>
 	<section>
@@ -464,8 +489,11 @@ function textsize(n,o){
 		</div>
 		<span>Interaction Design, Products</span></h2>
 	<ul>
-		<li>2016: <i>"顺风车行程结束评价页 (The Survey Page After A Hitch Journey)"</i>, for DiDi Chuxing. <br><img class="lozad" data-src="./assets/didi_pro_thumb.png" style="width:15.4rem" /><br>
-			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
+		<li>
+			<p><i>"顺风车行程结束评价页 - The Survey Page After A Hitch Journey"</i><br>2016, DiDi Chuxing</p>
+			<p><img class="lozad" data-src="./assets/didi_pro_thumb.png" style="width:15.4rem" /></p>
+			<div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.png" class="btn2">View full-size picture</a></div>
+			<div><label>Interaction Design</label></div>
 		</li>
 	</ul>
 	</section>
@@ -478,8 +506,11 @@ function textsize(n,o){
 		</div>
 		<span>Interaction Design, Operational Activities</span></h2>
 	<ul>
-		<li>2016: <i>"运营活动：完成任务赢1000万现金 (Do Task, Share 10 million)"</i>, for DiDi Chuxing. <br><img class="lozad" data-src="./assets/didi_thumb.png" style="width:15.4rem" /><br>
-			<a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a><br><label>Interaction Design</label>
+		<li>
+			<p><i>"完成任务赢一千万现金 - Do Task, Share 10 Million"</i><br>2016, DiDi Chuxing</p>
+			<p><img class="lozad" data-src="./assets/didi_thumb.png" style="width:15.4rem" /></p>
+			<div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a></div>
+			<div><label>Interaction Design</label></div>
 		</li>
 	</ul>
 	</section>
@@ -492,10 +523,15 @@ function textsize(n,o){
 		</div>
 		<span>Make Websites</span></h2>
 	<ul>
-		<li>2015: <i>"北京大学国际版官网 (The International Official Website)"</i>, for Peking University.
-			<br><img class="lozad" data-src="./assets/pku.jpg" style="width:15.4rem" /><br><a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
-			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
-			<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a><br><label>Interaction Design</label> <label>UI Development</label>
+		<li>
+			<p><i>"北京大学英文官方网站 - The International Official Website"</i><br>2015, for Peking University</p>
+			<p><img class="lozad" data-src="./assets/pku.jpg" style="width:15.4rem" /></p>
+			<div>
+				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
+				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">View working draft 1</a>
+				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">View working draft 2</a>
+			</div>
+			<div><label>Interaction Design</label> <label>UI Development</label></div>
 		</li>
 	</ul>
 	</section>
@@ -508,7 +544,12 @@ function textsize(n,o){
 		</div>
 		<span>Build Design Tools</span></h2>
 	<ul>
-		<li>2017: <i>"UFO Animate, An CSS Animation Tool"</i>, Personal Project.<br><img class="lozad" data-src="./assets/csstool.jpg" style="width:15.4rem" /><br><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a><br><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></li>
+		<li>
+			<p><i>"UFO Animate, An CSS Animation Tool"</i><br>2017, Personal Project</p>
+			<p><img class="lozad" data-src="./assets/csstool.jpg" style="width:15.4rem" /></p>
+			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">View it online</a></div>
+			<div><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></div>
+		</li>
 	</ul>
 	</section>
 
