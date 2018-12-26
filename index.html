@@ -285,8 +285,10 @@ i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-ser
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.625rem 0 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
 
 .pubwrap{}
-.pubimg{}
-.pubimg img{ width:40%; margin:0 auto; box-shadow:rgba(0,0,0,.3) 0 2px 3px;}
+.pubimg{ text-align:center}
+.pubimg img{ height:9rem; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.3) 1px 1px 3px; -webkit-filter:grayscale(40%);}
+.pubimg img{ margin-right:.625rem}
+.pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
 
 @media screen and (min-width:600px){
@@ -295,11 +297,11 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 
 @media (min-width:600px){
 .pubwrap{ position:relative;}
-.pubimg{ float:left; margin-right:1.25rem}
-.pubimg img{ width:auto; height:9rem;}
-.pubtxt{ margin-top:0}
-.pubtxt .btm{ position:absolute; bottom:0;}
-.sampletext{ margin-top:1.25rem}
+.pubimg{ width:40%; min-width:14.3rem; text-align:right; float:right; margin-right:2%}
+.pubimg img{}
+.pubtxt{ padding-top:.625rem; margin-top:0}
+.pubtxt .btm{ position:absolute; max-width:60%; bottom:.625rem;}
+.sampletext{}
 .sampletext .text .c:last-child{ margin-top:0;}
 .sampletext .text .c{ width:48%; float:left;}
 section:hover{ z-index:1; position:relative;}
