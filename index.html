@@ -286,7 +286,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 
 .pubwrap{}
 .pubimg{ text-align:center}
-.pubimg img{ height:9rem; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.3) 1px 1px 3px; -webkit-filter:grayscale(40%);}
+.pubimg img{ width:40%; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.3) 1px 1px 3px; -webkit-filter:grayscale(100%);}
 .pubimg img{ margin-right:.625rem}
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
@@ -297,10 +297,11 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 
 @media (min-width:600px){
 .pubwrap{ position:relative;}
-.pubimg{ width:40%; min-width:14.3rem; text-align:right; float:right; margin-right:2%}
-.pubimg img{}
+.pubimg{ text-align:left; float:left; margin-right:1.25rem}
+.pubimg img{ width:auto; height:9rem; transition:-webkit-filter .2s ease;}
+.pubwrap:hover .pubimg img{ -webkit-filter:grayscale(30%);}
 .pubtxt{ padding-top:.625rem; margin-top:0}
-.pubtxt .btm{ position:absolute; max-width:60%; bottom:.625rem;}
+.pubtxt .btm{ position:absolute; bottom:.625rem;}
 .sampletext{}
 .sampletext .text .c:last-child{ margin-top:0;}
 .sampletext .text .c{ width:48%; float:left;}
@@ -425,7 +426,7 @@ function textsize(n,o){
 					<!-- <img src="./assets/dvj-en.jpg" alt="image of Data Visualization with JavaScript in English" /> -->
 				</div>
 				<div class="pubtxt">
-					Name: <i>《JavaScript数据可视化编程》(2017)</i> <br>FROM: <i>"Data Visualization with JavaScript" (2015)</i> <br>Written by Stephen A. Thomas
+					NAME: <i>《JavaScript数据可视化编程》(2017)</i> <br>FROM: <i>"Data Visualization with JavaScript" (2015)</i> <br>Written by Stephen A. Thomas
 					<div class="btm">
 						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
 						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
