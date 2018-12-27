@@ -267,7 +267,7 @@ h2 .plant{ display:none}
   fill: currentColor;
 }
 
-footer{ padding-bottom:3rem; margin-top:1rem; background-color:#f4f4f4}
+footer{ padding-bottom:3rem; margin-top:1rem; border-top:#000 2px solid; background-color:#fff; position:relative; z-index:2}
 footer .content{ border-right:none;}
 h1,h2{ color:#000}
 h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
@@ -291,10 +291,23 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margi
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
 
+nav{ display:none; position:fixed; top:-400px; z-index:1; transition:all .5s ease;}
+nav .ins{ width:180px; margin-left:-100px; padding-left:20px; padding-bottom:20px; border-left:#000 1px solid; transition:all .5s ease;}
+nav .ins a{ display:inline-block; vertical-align:top; font-size:12px; margin-top:10px; text-transform:uppercase; letter-spacing:2px}
+.scroll nav{ top:0;}
+.scroll nav .ins{ padding-top:50px;}
+
 @media screen and (min-width:600px){
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
 }
 
+@media (min-width:1180px){
+nav{ display:block;}
+nav .leaf{ display:block; margin:-5px 0 0 -105px}
+nav .leaf .a{ transform:rotate(45deg); transform-origin:center center}
+nav .leaf .a .in{ background:none;}
+nav .leaf .a .in:after{ display:none}
+}
 @media (min-width:600px){
 .pubwrap{ position:relative;}
 .pubimg{ text-align:left; float:left; margin-right:1.25rem}
@@ -346,7 +359,35 @@ li img{ display:none}
 li .qr{ display:inline-block;}
 }
 </style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
+
+var scrollPos = 0;
+var windowH = $(window).height();
+
+function onScroll(){
+
+	// 滚动距离
+    scrollPos = Math.floor($(document).scrollTop() - 50);
+
+    if (scrollPos > 400){
+    	$("body").addClass('scroll');
+    }else{
+    	$("body").removeClass('scroll');
+    }
+
+}
+
+window.onscroll = onScroll;
+window.onload = onScroll;
+
+// All animations will take exactly 500ms
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 300,
+	speedAsDuration: true
+});
+
 /*! lozad.js - v1.7.0 - 2018-11-08
 * https://github.com/ApoorvSaxena/lozad.js
 * Copyright (c) 2018 Apoorv Saxena; Licensed MIT */
@@ -370,7 +411,23 @@ function textsize(n,o){
 </script>
 </head>
 <body>
+
 <div class="container">
+
+<nav>
+<div class="ins">
+<a data-scroll href="#0">Translation</a><br>
+<a data-scroll href="#1">Slides</a><br>
+<a data-scroll href="#2">Web Motion</a><br>
+<a data-scroll href="#3">Design System</a><br>
+<a data-scroll href="#4">Interaction Design</a><br>
+<a data-scroll href="#5">Make Websites</a><br>
+<a data-scroll href="#6">Build Tools</a><br>
+</div>
+<div class="leaf">
+	<div class="a"><div class="in"></div></div>
+</div>
+</nav>
 
 <article class="content">
 	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
@@ -384,6 +441,7 @@ function textsize(n,o){
 		</p>
 	</blockquote>
 	<section>
+	<a id="0"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -448,13 +506,14 @@ function textsize(n,o){
 	</ul>
 	</section>
 	<section>
+	<a id="1"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span>Slides and Share</span></h2>
+		<span>Slides</span></h2>
 		<ul class="semiul clearfix">
 			<li>
 				<p><img class="lozad" data-src="./assets/ppt1.png" alt="情感化内容策略 (From Voice & Tone to Content Strategy at DiDi Chuxing in 2016." /></p>
@@ -475,13 +534,14 @@ function textsize(n,o){
 		</ul>
 	</section>
 	<section>
+	<a id="2"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span>Web Motion Design</span></h2>
+		<span>Web Motion</span></h2>
 	<ul class="semiul clearfix">
 		<li>
 			<p><img alt="顺风车大数据品宣 (Hitch Big Data Brand Promotion) at DiDi Chuxing in 2016" class="vt_b qr lozad" src="./assets/startrek2016pic_a.png" /></p>
@@ -494,6 +554,7 @@ function textsize(n,o){
 	</ul>
 	</section>
 	<section>
+	<a id="3"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -511,13 +572,14 @@ function textsize(n,o){
 	</ul>
 	</section>
 	<section>
+	<a id="4"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span>Interaction Design, Products</span></h2>
+		<span>Interaction Design</span></h2>
 	<ul>
 		<li>
 			<p><i>"顺风车行程结束评价页 - The Survey Page After A Hitch Journey"</i><br>2016, DiDi Chuxing</p>
@@ -525,17 +587,6 @@ function textsize(n,o){
 			<div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.png" class="btn2">View full-size picture</a></div>
 			<div><label>Interaction Design</label></div>
 		</li>
-	</ul>
-	</section>
-	<section>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span>Interaction Design, Operational Activities</span></h2>
-	<ul>
 		<li>
 			<p><i>"完成任务赢一千万现金 - Do Task, Share 10 Million"</i><br>2016, DiDi Chuxing</p>
 			<p><img class="lozad" data-src="./assets/didi_thumb.png" style="width:30rem" /></p>
@@ -545,6 +596,7 @@ function textsize(n,o){
 	</ul>
 	</section>
 	<section>
+	<a id="5"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
@@ -566,13 +618,14 @@ function textsize(n,o){
 	</ul>
 	</section>
 	<section>
+	<a id="6"></a>
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
 				<div class="a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span>Build Design Tools</span></h2>
+		<span>Build Tools</span></h2>
 	<ul>
 		<li>
 			<p><i>"UFO Animate, An CSS Animation Tool"</i><br>2016, Personal Project</p>
