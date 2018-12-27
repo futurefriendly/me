@@ -384,8 +384,7 @@ window.onload = onScroll;
 
 // All animations will take exactly 500ms
 var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 300,
-	speedAsDuration: true
+  speed: 500
 });
 
 /*! lozad.js - v1.7.0 - 2018-11-08
@@ -401,6 +400,7 @@ window.onload = function(){
 	const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 	observer.observe();
 }
+
 function textsize(n,o){
 	document.getElementById('root').style = 'font-size:' + n + 'px';
 	document.getElementById('option').childNodes[0].style = 'text-decoration:none';
