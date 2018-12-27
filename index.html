@@ -295,7 +295,7 @@ nav{ display:none; position:fixed; top:-400px; z-index:1; transition:all .5s eas
 nav .ins{ width:180px; margin-left:-100px; padding-left:20px; padding-bottom:20px; border-left:#000 1px solid; transition:all .5s ease;}
 nav .ins a{ display:inline-block; vertical-align:top; font-size:12px; margin-top:10px; text-transform:uppercase; letter-spacing:2px}
 .scroll nav{ top:0;}
-.scroll nav .ins{ padding-top:50px;}
+.scroll nav .ins{ padding-top:135px;}
 
 @media screen and (min-width:600px){
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
@@ -371,7 +371,7 @@ function onScroll(){
 	// 滚动距离
     scrollPos = Math.floor($(document).scrollTop() - 50);
 
-    if (scrollPos > 400){
+    if (scrollPos > 320){
     	$("body").addClass('scroll');
     }else{
     	$("body").removeClass('scroll');
