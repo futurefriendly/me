@@ -364,11 +364,9 @@ li .qr{ display:inline-block;}
 <script>
 
 var scrollPos = 0;
-var windowH = $(window).height();
 
 function onScroll(){
 
-	// 滚动距离
     scrollPos = Math.floor($(document).scrollTop() - 50);
 
     if (scrollPos > 320){
