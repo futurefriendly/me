@@ -360,7 +360,7 @@ li .qr{ display:inline-block;}
 }
 </style>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
 
 var scrollPos = 0;
@@ -384,7 +384,8 @@ window.onload = onScroll;
 
 // All animations will take exactly 500ms
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 500
+  speed: 500,
+  speedAsDuration: true
 });
 
 /*! lozad.js - v1.7.0 - 2018-11-08
