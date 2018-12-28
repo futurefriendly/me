@@ -300,6 +300,8 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .scroll nav{ top:0;}
 .scroll nav .ins{ padding-top:135px;}
 
+.singleimg{}
+
 @media screen and (min-width:600px){
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem .5rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
 }
@@ -322,8 +324,8 @@ nav .leaf .a .in:after{ display:none}
 .sampletext .text .c:last-child{ margin-top:0;}
 .sampletext .text .c{ width:48%; float:left;}
 section:hover{ z-index:1; position:relative;}
-.f_zoom{ transition:all ease .5s; transform-origin:3px 3px;}
-.f_zoom:hover{ transform:scale(2); box-shadow:rgba(0,0,0,.1) 0 .6rem 1rem; border-radius:1px}
+.f_zoom{ transition:all ease .5s; transform-origin:50% 0; background-color:#fff}
+.f_zoom:hover{ transform:scale(1.5); box-shadow:#fff 0 0 0 10px;}
 .e_plant_act{ position:static;}
 .container{ margin:0 auto;}
 .content{ position:relative; margin-right:60px; padding-left:130px; border-right:#000 1px solid;}
@@ -344,6 +346,8 @@ footer{ margin-top:4rem;}
 li img{ margin-left:0; margin-right:0}
 .semiul li{ width:50%; float:left;}
 .semiul li img{ width:20rem; max-width:95%}
+
+.singleimg{ margin-right:2%}
 }
 
 @media print{
@@ -452,6 +456,7 @@ function textsize(n,o){
 
 <nav>
 <div class="ins">
+<a data-scroll href="#kdm">Knowledge Dev Map</a><br>
 <a data-scroll href="#0">Translation</a><br>
 <a data-scroll href="#1">Slides</a><br>
 <a data-scroll href="#2">Web Motion</a><br>
@@ -470,12 +475,30 @@ function textsize(n,o){
 	<h1>Portfolio</h1>
 	<blockquote>
 		<p>Dongfang is a UX designer who prefers social, content and education related products. He holds a master degree in the major of Chinese language & literature, as X-shaped, he has 10 years of experience on Web design and front-end development.</p>
-		<p>Since 2011, Dongfang has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Dongfang as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
+		<p>Recent years, Dongfang has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Dongfang as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
 		<p class="mb0 mt20">
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a>
 		</p>
 	</blockquote>
+  <section>
+  <a id="kdm"></a>
+  <h2>
+    <div class="plant e_plant_act">
+      <div class="leaf">
+        <div class="a"><div class="in"></div></div>
+      </div>
+    </div>
+    <span>Knowledge Development Map</span></h2>
+  <ul>
+    <li>
+      <div class="singleimg">
+        <img src="./assets/kdm.svg" />
+      </div>
+      <p><a target="_blank" href="./assets/kdm.svg" class="btn2">Open it in new window</a></p>
+    </li>
+  </ul>
+  </section>
 	<section>
 	<a id="0"></a>
 	<h2>
