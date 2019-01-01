@@ -288,8 +288,9 @@ h1,h2{ color:#000}
 h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
 section{ padding-top:3rem;}
 h2{/* padding-left:3rem;*/ font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; border-bottom:#000 2px solid; text-transform:uppercase;}
+h3{ font-size:1.25rem; color:#666}
 ul{}
-li{ padding-top:2rem; margin-bottom:.3rem}
+li{ padding-top:1rem; margin-bottom:.3rem}
 li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ /*border-radius:.125rem;*/}
 
 .semiul li{ padding-bottom:1rem}
@@ -298,7 +299,7 @@ li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem 
 .semiul li p{ margin-bottom:0}
 .semiul .showcase{ max-width:26rem; width:100%; box-sizing:border-box;}
 .semiul .showcase p{ text-align:left;}
-.semiul .showcase strong{ font-size:1.25rem}
+.semiul .showcase .c1 .word{ text-align:justify;}
 .semiul .showcase .c2{ margin-top:1rem}
 .semiul .showcase .c2 img{ width:40%; margin:0 auto;}
 
@@ -338,7 +339,6 @@ blockquote{ margin-right:1rem;}
 .pubimg img{ width:auto; height:12rem; transition:-webkit-filter .2s ease;}
 .pubtxt{ padding-top:.625rem; margin-top:0;}
 .pubtxt p{ line-height:2em}
-.pubtxt strong{ font-size:1.25rem;}
 .pubtxt .btm{ position:absolute; bottom:.625rem;}
 .sampletext{}
 .sampletext .text{}
@@ -367,9 +367,10 @@ footer{ margin-top:4rem;}
 li img{ margin-left:0; margin-right:0}
 .semiul li{ width:100%; float:left;}
 .semiul li img{ width:24rem; max-width:100%}
-.semiul .showcase{ max-width:100%;}
-.semiul .showcase .c1{ float:left;}
-.semiul .showcase .c2{ overflow:hidden; margin-top:0; text-align:right;}
+.semiul .showcase{ max-width:100%; display:table}
+.semiul .showcase .c1{ display:table-cell; width:80%; max-width:40em}
+.semiul .showcase .c1 .word{ margin:1.25rem 0;}
+.semiul .showcase .c2{ display:table-cell; overflow:hidden; text-align:center;}
 .semiul .showcase .c2 img{ margin:0; width:5rem; display:inline-block;}
 
 
@@ -473,14 +474,14 @@ function textsize(n,o){
 
 <nav>
 <div class="ins">
-<a data-scroll href="#kdm">Overview</a><br>
-<a data-scroll href="#0">Translation Work</a><br>
-<a data-scroll href="#1">Slides</a><br>
-<a data-scroll href="#2">Web Motion Design</a><br>
-<a data-scroll href="#3">Design System</a><br>
-<a data-scroll href="#4">Interaction Design</a><br>
-<a data-scroll href="#5">Make Websites</a><br>
-<a data-scroll href="#6">Build Tools</a><br>
+<a data-scroll href="#1">Overview</a><br>
+<a data-scroll href="#2">Translation Work</a><br>
+<a data-scroll href="#3">Keynotes</a><br>
+<a data-scroll href="#4">Design System</a><br>
+<a data-scroll href="#5">Web Motion Design</a><br>
+<a data-scroll href="#6">Interaction Design</a><br>
+<a data-scroll href="#7">Make Websites</a><br>
+<a data-scroll href="#8">Build Tools</a><br>
 </div>
 <div class="leaf">
 	<div class="a"><div class="in"></div></div>
@@ -499,7 +500,7 @@ function textsize(n,o){
 		</p> -->
 	</blockquote>
   <section>
-    <a id="kdm"></a>
+    <a id="1"></a>
     <h2>
       <div class="plant e_plant_act">
         <div class="leaf">
@@ -510,259 +511,271 @@ function textsize(n,o){
     </h2>
     <ul>
       <li>
-        <p class="tx_20 mb0"><strong>Knowledge Development Map</strong></p>
-        <p>This map depicts my knowledge structure about design, past experience and work are also listed in it.</p>
-        <div class="singleimg" style=" margin-top:2rem">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2223.29 1120.05"><defs><style>.a{fill:#fff;}.b,.c,.d,.g,.n,.o{fill:#231815;}.c{font-size:32px;font-family:HelveticaNeue-BoldItalic, Helvetica Neue;font-weight:700;}.ac,.c,.d,.h,.i,.n,.o,.r,.s,.t{font-style:italic;}.d{font-size:28px;font-family:HelveticaNeue-Italic, Helvetica Neue;}.e{letter-spacing:-0.06em;}.f{letter-spacing:-0.06em;}.g,.m{font-size:20px;font-family:HelveticaNeue-Medium, Helvetica Neue;}.ac,.h,.i,.n,.o,.r,.s,.t{font-family:HelveticaNeue-MediumItalic, Helvetica Neue;}.i,.o{letter-spacing:-0.06em;}.j{letter-spacing:0.02em;}.k,.s{letter-spacing:0em;}.l{letter-spacing:-0.02em;}.m,.w{fill:#040000;}.p{letter-spacing:-0.09em;}.q{letter-spacing:0em;}.r{letter-spacing:-0.04em;}.t{letter-spacing:-0.11em;}.u{letter-spacing:-0.11em;}.v,.x{fill:none;}.v{stroke:#040000;stroke-miterlimit:10;stroke-width:2px;}.y{letter-spacing:-0.09em;}.z{letter-spacing:-0.11em;}.aa{letter-spacing:-0.02em;}.ab{letter-spacing:-0.09em;}.ac{letter-spacing:-0.06em;}.ad{letter-spacing:-0.07em;}</style></defs><title>Knowledge Development Map</title><path class="a" d="M1 942.81h765.28v66.03h-765.28z"/><path class="b" d="M765.29 943.81v64h-763.29v-64h763.29m2-2h-767.29v68h767.29v-68z"/><text class="c" transform="translate(150.09 987.88)">UI DEVELOPMENT for Devices</text><path class="a" d="M1457.01 942.81h765.28v66.03h-765.28z"/><path class="b" d="M2221.29 943.81v64h-763.29v-64h763.28m2-2h-767.28v68h767.28v-68z"/><text class="c" transform="translate(1645.92 987.88)">LINGUISTICS for Content</text><path class="a" d="M884.84 1008.84a33 33 0 1 1 0-66h462a33 33 0 0 1 0 66z"/><path class="b" d="M1346.81 943.81a32 32 0 0 1 0 64h-462a32 32 0 1 1 0-64h462m0-2h-462a34.12 34.12 0 0 0-34 34 34.11 34.11 0 0 0 34 34h462a34.1 34.1 0 0 0 34-34 34.11 34.11 0 0 0-34-34z"/><text class="d" transform="translate(1030.18 985.88)">Semantic<tspan class="e" x="124.99" y="0">W</tspan><tspan x="149.32" y="0">eb</tspan></text><path class="a" d="M339.17 773.65a33 33 0 0 1 0-66h711.74a33 33 0 1 1 0 66z"/><path class="b" d="M1050.91 708.62a32 32 0 1 1 0 64h-711.74a32 32 0 0 1 0-64h711.74m0-2h-711.74a34.11 34.11 0 0 0-34 34 34.11 34.11 0 0 0 34 34h711.74a34.12 34.12 0 0 0 34-34 34.12 34.12 0 0 0-34-34z"/><text class="d" transform="translate(544.18 750.68)">Responsive<tspan class="f" x="151.9" y="0">W</tspan><tspan x="176.23" y="0">eb Design</tspan></text><text class="g" transform="translate(305.16 807.4)">2016: Speak:<tspan class="h" x="124.88" y="0">“The Overview of</tspan><tspan class="i" x="288.26" y="0">W</tspan><tspan class="h" x="305.68" y="0">eb Design”</tspan><tspan x="0" y="24">2015: Redesign and launch the inte</tspan><tspan class="j" x="324.58" y="24">r</tspan><tspan class="k" x="331.98" y="24">national o</tspan><tspan class="l" x="422.76" y="24">f</tspan><tspan x="428.7" y="24">ficial website for Peking University</tspan><tspan x="0" y="48">2013: Speak:</tspan><tspan class="h" x="124.88" y="48">“Responsive</tspan><tspan class="i" x="246.02" y="48">W</tspan><tspan class="h" x="263.44" y="48">eb Design: Rebuild as Design”</tspan></text><path class="a" d="M1180.74 773.65a33 33 0 1 1 0-66h711.74a33 33 0 0 1 0 66z"/><path class="b" d="M1892.48 708.62a32 32 0 0 1 0 64h-711.74a32 32 0 1 1 0-64h711.74m0-2h-711.74a34.12 34.12 0 0 0-34 34 34.12 34.12 0 0 0 34 34h711.74a34.12 34.12 0 0 0 34-34 34.12 34.12 0 0 0-34-34z"/><text class="d" transform="translate(1459.37 750.68)">Accessibility</text><text class="m" transform="translate(1146.72 807.4)">2015: Speak:<tspan class="n" x="124.88" y="0">“Future Friendly</tspan><tspan class="o" x="278.6" y="0">W</tspan><tspan class="n" x="296.02" y="0">eb Design”</tspan></text><text class="m" transform="translate(0 1042.31)">2017:<tspan class="p" x="55.6" y="0">T</tspan><tspan class="q" x="65.62" y="0">ranslate Book:</tspan><tspan class="h" x="204.58" y="0">“Data</tspan><tspan class="r" x="262.36" y="0">V</tspan><tspan class="h" x="273.8" y="0">isualization with JavaScript”</tspan><tspan x="0" y="24">2016: Build</tspan><tspan class="s" x="108.58" y="24">“UFO Animate, A CSS Animation</tspan><tspan class="t" x="417.14" y="24">T</tspan><tspan class="h" x="426.9" y="24">ool”</tspan><tspan x="0" y="48">2011 - 2014: UI Development for</tspan><tspan class="u" x="303.48" y="48">T</tspan><tspan x="313.12" y="48">encent</tspan><tspan class="l" x="381.66" y="48">W</tspan><tspan x="400.18" y="48">eibo,</tspan><tspan class="u" x="451.32" y="48">T</tspan><tspan x="460.96" y="48">encent</tspan><tspan x="0" y="72">2010 - 2011: F</tspan><tspan class="l" x="130.84" y="72">r</tspan><tspan x="137.52" y="72">ont-end Develope</tspan><tspan class="p" x="302.76" y="72">r</tspan><tspan x="307.96" y="72">, Beijing Rising Co., Ltd.</tspan></text><text class="m" transform="translate(850.82 1042.31)">2017:<tspan class="p" x="55.6" y="0">T</tspan><tspan class="q" x="65.62" y="0">ranslate Book:</tspan><tspan class="h" x="204.58" y="0">“Adaptive</tspan><tspan class="i" x="300.88" y="0">W</tspan><tspan class="h" x="318.3" y="0">eb Design”</tspan></text><text class="m" transform="translate(1456.01 1042.31)">M.A. in Chinese Studies (Language Education), EdUHK<tspan x="0" y="24">B.A. in Chinese Language &amp; Literatu</tspan><tspan class="l" x="332.34" y="24">r</tspan><tspan class="k" x="339.02" y="24">e, BNU</tspan></text><path class="v" d="M1101 642.76a36.91 36.91 0 0 1-34.93 25h-332.79a38.24 38.24 0 0 0-38.28 38.24v.64"/><path class="w" d="M1103 630.84c-3.1 5.21-7.91 11.49-12.44 15.1l10-1.67 8.74 5.11c-3-4.99-5.3-12.57-6.3-18.54z"/><path class="v" d="M1443.94 975.73h-63.12"/><path class="w" d="M1456 975.73c-5.68-2.11-12.73-5.7-17.1-9.51l3.44 9.51-3.44 9.51c4.38-3.81 11.43-7.41 17.1-9.51z"/><path class="v" d="M779.36 975.48h71.46"/><path class="w" d="M767.29 975.48c5.67 2.11 12.72 5.7 17.09 9.51l-3.44-9.51 3.44-9.51c-4.38 3.81-11.38 7.4-17.09 9.51z"/><path class="v" d="M695 870.24a43.32 43.32 0 0 1-43.32 43.32h-240.62a27.43 27.43 0 0 0-24.76 15.63"/><path class="w" d="M383.64 941c-.68-6-2.47-13.72-5.12-18.88l8.41 5.63 10.07-1.08c-4.76 3.33-9.95 9.33-13.36 14.33z"/><path class="x" d="M383.64 941M695 882.38M1536.61 843"/><path class="v" d="M1130.62 642.76a36.91 36.91 0 0 0 34.93 25h332.81a38.24 38.24 0 0 1 38.25 38.24v.64"/><path class="w" d="M1128.66 630.84c-1.05 6-3.31 13.55-6.27 18.54l8.73-5.11 10 1.67c-4.56-3.61-9.37-9.89-12.46-15.1z"/><path class="a" d="M739.32 487.12h763.35v66.03h-763.35z"/><path class="b" d="M1501.68 488.12v64h-761.36v-64h761.36m2-2h-765.36v68h765.36v-68z"/><text class="c" transform="translate(870.58 532.18)">INTERACTION DESIGN for Users</text><text class="g" transform="translate(738.32 586.75)">2015 - 2016: Interaction Design for DiDi Hitch, DiDi Chuxing<tspan x="0" y="24">2014 - 2015: Interaction Design for</tspan><tspan class="l" x="323.88" y="24">W</tspan><tspan class="k" x="342.4" y="24">eishi and Ali</tspan><tspan class="y" x="459.5" y="24">Y</tspan><tspan x="470.74" y="24">unOS,</tspan><tspan class="z" x="532.98" y="24">T</tspan><tspan class="k" x="542.62" y="24">encent and Alibaba</tspan></text><path class="a" d="M1 1h765.28v66.03h-765.28z"/><path class="b" d="M765.28 2v64h-763.28v-64h763.28m2-2h-767.28v68h767.28v-68z"/><text class="c" transform="translate(173.18 46.06)">MANANGEMENT for System</text><text class="g" transform="translate(0 103.65)">2012 - 2016: Hold design-tech sharing meeting,<tspan class="z" x="442.8" y="0">T</tspan><tspan class="k" x="452.44" y="0">encent, DiDi Chuxing</tspan><tspan x="0" y="24">2008 - 2010: P</tspan><tspan class="l" x="132.32" y="24">r</tspan><tspan x="139" y="24">oject Management, Vchoice Era Design Consultant Co., Ltd.</tspan><tspan x="0" y="48">2006 - 2008: ISO9000 Quality Management System Certification Assistant, CCIC G</tspan><tspan class="aa" x="757.71" y="48">r</tspan><tspan x="764.39" y="48">oup.</tspan></text><path class="a" d="M1457.01 6.25h765.29v66.03h-765.29z"/><path class="b" d="M2221.29 7.25v64h-763.29v-64h763.28m2-2h-767.28v68h767.28v-68z"/><text class="c" transform="translate(1661.19 51.31)">LITER<tspan class="ab" x="91.84" y="0">A</tspan><tspan x="110.81" y="0">TURE for Human</tspan></text><path class="a" d="M1180.74 306.46a33 33 0 1 1 0-66h711.74a33 33 0 0 1 0 66z"/><path class="b" d="M1892.48 241.43a32 32 0 0 1 0 64h-711.74a32 32 0 1 1 0-64h711.74m0-2h-711.74a34 34 0 1 0 0 68h711.74a34 34 0 0 0 0-68z"/><text class="d" transform="translate(1430.56 283.49)">Content Strategy</text><text class="m" transform="translate(1146.72 340.21)">2016: Speak:<tspan class="h" x="124.88" y="0">“From</tspan><tspan class="ac" x="188.22" y="0">V</tspan><tspan class="h" x="199.28" y="0">oice &amp;</tspan><tspan class="t" x="262.66" y="0">T</tspan><tspan class="h" x="272.42" y="0">one to Content Strategy”</tspan></text><path class="a" d="M339.17 306.46a33 33 0 0 1 0-66h711.74a33 33 0 1 1 0 66z"/><path class="b" d="M1050.91 241.43a32 32 0 1 1 0 64h-711.74a32 32 0 0 1 0-64h711.74m0-2h-711.74a34 34 0 0 0 0 68h711.74a34 34 0 1 0 0-68z"/><text class="d" transform="translate(601.72 283.49)">Design System</text><text class="g" transform="translate(305.16 340.21)">2016: C<tspan class="l" x="70.04" y="0">r</tspan><tspan x="76.72" y="0">eate DiDi Hitch&apos;s Design System</tspan><tspan x="0" y="24">2014: C</tspan><tspan class="l" x="70.04" y="24">r</tspan><tspan x="76.72" y="24">eate the guideline of</tspan><tspan class="l" x="270.14" y="24">W</tspan><tspan class="k" x="288.66" y="24">eishi</tspan><tspan class="ad" x="331.28" y="24">’</tspan><tspan x="335.36" y="24">s</tspan><tspan class="l" x="351.3" y="24">W</tspan><tspan class="k" x="369.82" y="24">eb design</tspan></text><path class="v" d="M1536.61 824.79v45.45a43.32 43.32 0 0 0 43.32 43.32h240.66a27.43 27.43 0 0 1 24.76 15.63"/><path class="w" d="M1848 941c-3.41-5-8.6-11-13.35-14.3l10.06 1.05 8.41-5.63c-2.64 5.14-4.43 12.88-5.12 18.88z"/><path class="v" d="M694.74 239.73a43.33 43.33 0 0 0-43.32-43.33h-240.66a27.41 27.41 0 0 1-24.76-15.63"/><path class="w" d="M383.34 169c3.41 5 8.6 11 13.35 14.3l-10.06-1-8.41 5.63c2.65-5.22 4.45-12.93 5.12-18.93z"/><path class="v" d="M1101 453.17a36.91 36.91 0 0 0-34.93-25h-332.79a38.24 38.24 0 0 1-38.28-38.17v-.64"/><path class="w" d="M1103 465.08c1-6 3.31-13.55 6.27-18.53l-8.74 5.1-10-1.66c4.56 3.61 9.37 9.89 12.47 15.09z"/><path class="x" d="M1536.61 362.1"/><path class="v" d="M1130.62 453.17a36.91 36.91 0 0 1 34.93-25h305a66.09 66.09 0 0 0 66.08-66.09"/><path class="w" d="M1128.66 465.08c3.1-5.2 7.91-11.48 12.44-15.09l-10 1.66-8.73-5.1c2.98 4.98 5.24 12.57 6.29 18.53z"/><path class="x" d="M1848 91.84"/><path class="v" d="M1536.61 239.73a43.33 43.33 0 0 1 43.32-43.33h163.52a104.57 104.57 0 0 0 103.87-92.5"/><path class="w" d="M1848 91.84c1.73 5.81 4.87 13.07 8.39 17.68l-9.27-4-9.72 2.82c4.1-4.17 8.14-10.97 10.6-16.5z"/><path class="v" d="M67.32 181.06v747.85"/><path class="w" d="M67.32 169c-2.11 5.68-5.7 12.72-9.51 17.09l9.51-3.44 9.51 3.44c-3.83-4.38-7.41-11.42-9.51-17.09zM67.32 941c-2.11-5.68-5.7-12.73-9.51-17.09l9.51 3.44 9.51-3.44c-3.83 4.34-7.41 11.39-9.51 17.09z"/><path class="v" d="M2163.24 85.35v843.56"/><path class="w" d="M2163.24 73.28c-2.11 5.68-5.7 12.73-9.51 17.1l9.51-3.44 9.51 3.44c-3.81-4.38-7.4-11.38-9.51-17.1zM2163.24 941c-2.11-5.68-5.7-12.73-9.51-17.09l9.51 3.44 9.51-3.44c-3.81 4.34-7.4 11.39-9.51 17.09z"/><path class="a" d="M884.84 67.45a33 33 0 1 1 0-66h462a33 33 0 0 1 0 66z"/><path class="b" d="M1346.81 2.42a32 32 0 0 1 0 64h-462a32 32 0 1 1 0-64h462m0-2h-462a34 34 0 1 0 0 68h462a34 34 0 0 0 0-68z"/><text class="d" transform="translate(1021.61 44.49)">Cultural Studies</text><path class="v" d="M1443.94 34.34h-63.12"/><path class="w" d="M1456 34.34c-5.68-2.11-12.73-5.7-17.1-9.51l3.44 9.51-3.44 9.51c4.38-3.85 11.43-7.41 17.1-9.51z"/><path class="v" d="M779.35 34.09h71.47"/><path class="w" d="M767.28 34.09c5.68 2.11 12.73 5.7 17.1 9.51l-3.44-9.51 3.44-9.51c-4.38 3.81-11.38 7.42-17.1 9.51z"/></svg>
+        <h3><strong>Knowledge Development Graph</strong></h3>
+        <p class="mt10">This picture depicts my knowledge structure about design, past experience is listed in it by relevance.</p>
+        <div class="singleimg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2223.29 1226.01"><defs><style>.a{fill:#fff;}.aa,.ab,.b,.c,.d,.u{fill:#231815;}.c{font-size:32px;}.c,.d{font-family:HelveticaNeue-BoldItalic, Helvetica Neue;}.ad,.c,.d{font-weight:700;}.aa,.ab,.c,.d,.i,.j,.n,.o,.p,.z{font-style:italic;}.ad,.d{font-size:28px;}.e{letter-spacing:-0.06em;}.f,.u{font-size:20px;font-family:HelveticaNeue-Medium, Helvetica Neue;}.ad,.f,.s{fill:#040000;}.g{letter-spacing:-0.09em;}.h{letter-spacing:0em;}.aa,.ab,.i,.j,.n,.o,.p,.z{font-family:HelveticaNeue-MediumItalic, Helvetica Neue;}.ab,.j{letter-spacing:-0.06em;}.k{letter-spacing:0.02em;}.l,.o{letter-spacing:0em;}.m{letter-spacing:-0.02em;}.n{letter-spacing:-0.04em;}.p{letter-spacing:-0.11em;}.q{letter-spacing:-0.11em;}.r,.t{fill:none;}.r{stroke:#040000;stroke-miterlimit:10;stroke-width:2px;}.v{letter-spacing:-0.09em;}.w{letter-spacing:-0.11em;}.x{letter-spacing:-0.02em;}.y{letter-spacing:-0.09em;}.z{letter-spacing:-0.06em;}.ac{letter-spacing:-0.07em;}.ad{font-family:Helvetica-Bold, Helvetica;}</style></defs><title>Knowledge Development Graph</title><rect class="a" x="1" y="991.64" width="765.28" height="66.03"/><path class="b" d="M765.29,992.64v64H2v-64H765.29m2-2H0v68H767.29v-68Z"/><text class="c" transform="translate(150.09 1036.71)">UI DEVELOPMENT for Devices</text><rect class="a" x="1457.01" y="991.64" width="765.28" height="66.03"/><path class="b" d="M2221.29,992.64v64H1458v-64h763.28m2-2H1456v68h767.28v-68Z"/><text class="c" transform="translate(1645.92 1036.71)">LINGUISTICS for Content</text><path class="a" d="M884.84,1057.67a33,33,0,1,1,0-66h462a33,33,0,0,1,0,66Z"/><path class="b" d="M1346.81,992.64a32,32,0,0,1,0,64h-462a32,32,0,1,1,0-64h462m0-2h-462a34.12,34.12,0,0,0-34,34h0a34.11,34.11,0,0,0,34,34h462a34.1,34.1,0,0,0,34-34h0a34.11,34.11,0,0,0-34-34Z"/><text class="d" transform="translate(1024.78 1034.7)">Semantic <tspan class="e" x="133.75" y="0">W</tspan><tspan x="158.59" y="0">eb</tspan></text><path class="a" d="M339.17,822.48a33,33,0,0,1,0-66h711.74a33,33,0,1,1,0,66Z"/><path class="b" d="M1050.91,757.45a32,32,0,1,1,0,64H339.17a32,32,0,0,1,0-64h711.74m0-2H339.17a34.11,34.11,0,0,0-34,34h0a34.11,34.11,0,0,0,34,34h711.74a34.12,34.12,0,0,0,34-34h0a34.12,34.12,0,0,0-34-34Z"/><text class="d" transform="translate(534.83 799.51)">Responsive <tspan class="e" x="161.81" y="0">W</tspan><tspan x="186.65" y="0">eb Design</tspan></text><text class="f" transform="translate(305.16 856.23)">2017: <tspan class="g" x="55.6" y="0">T</tspan><tspan class="h" x="65.62" y="0">ranslate Book: </tspan><tspan class="i" x="204.58" y="0">“Adaptive </tspan><tspan class="j" x="300.88" y="0">W</tspan><tspan class="i" x="318.3" y="0">eb Design”</tspan><tspan class="b"><tspan x="0" y="24">2016: Speak: </tspan><tspan class="i" x="124.88" y="24">“The Overview of </tspan><tspan class="j" x="288.26" y="24">W</tspan><tspan class="i" x="305.68" y="24">eb Design”</tspan><tspan x="0" y="48">2015: Redesign and launch the inte</tspan><tspan class="k" x="324.58" y="48">r</tspan><tspan class="l" x="331.98" y="48">national o</tspan><tspan class="m" x="422.76" y="48">f</tspan><tspan x="428.7" y="48">ficial website for Peking University</tspan><tspan x="0" y="72">2013: Speak: </tspan><tspan class="i" x="124.88" y="72">“Responsive </tspan><tspan class="j" x="246.02" y="72">W</tspan><tspan class="i" x="263.44" y="72">eb Design: Rebuild as Design”</tspan></tspan></text><path class="a" d="M1180.74,822.48a33,33,0,1,1,0-66h711.74a33,33,0,0,1,0,66Z"/><path class="b" d="M1892.48,757.45a32,32,0,0,1,0,64H1180.74a32,32,0,1,1,0-64h711.74m0-2H1180.74a34.12,34.12,0,0,0-34,34h0a34.12,34.12,0,0,0,34,34h711.74a34.12,34.12,0,0,0,34-34h0a34.12,34.12,0,0,0-34-34Z"/><text class="d" transform="translate(1453.38 799.51)">Accessibility</text><text class="f" transform="translate(0 1091.14)">2017: <tspan class="g" x="55.6" y="0">T</tspan><tspan class="h" x="65.62" y="0">ranslate Book: </tspan><tspan class="i" x="204.58" y="0">“Data </tspan><tspan class="n" x="262.36" y="0">V</tspan><tspan class="i" x="273.8" y="0">isualization with JavaScript”</tspan><tspan x="0" y="24">2016: Build </tspan><tspan class="o" x="108.58" y="24">“UFO Animate, A CSS Animation </tspan><tspan class="p" x="417.14" y="24">T</tspan><tspan class="i" x="426.9" y="24">ool”</tspan><tspan x="0" y="48">2011 - 2014: UI Development for </tspan><tspan class="q" x="303.48" y="48">T</tspan><tspan x="313.12" y="48">encent </tspan><tspan class="m" x="381.66" y="48">W</tspan><tspan x="400.18" y="48">eibo, </tspan><tspan class="q" x="451.32" y="48">T</tspan><tspan x="460.96" y="48">encent</tspan><tspan x="0" y="72">2010 - 2011: F</tspan><tspan class="m" x="130.84" y="72">r</tspan><tspan x="137.52" y="72">ont-end Develope</tspan><tspan class="g" x="302.76" y="72">r</tspan><tspan x="307.96" y="72">, Beijing Rising Co., Ltd.</tspan></text><path class="r" d="M1101,691.59a36.91,36.91,0,0,1-34.93,25H733.28A38.23,38.23,0,0,0,695,754.81v.64"/><path class="s" d="M1103,679.67c-3.1,5.21-7.91,11.49-12.44,15.1l10-1.67,8.74,5.1C1106.3,693.22,1104,685.64,1103,679.67Z"/><line class="r" x1="1443.94" y1="1024.56" x2="1380.82" y2="1024.56"/><path class="s" d="M1456,1024.56c-5.68-2.11-12.73-5.7-17.1-9.51l3.44,9.51-3.44,9.51C1443.28,1030.26,1450.33,1026.66,1456,1024.56Z"/><line class="r" x1="779.36" y1="1024.31" x2="850.82" y2="1024.31"/><path class="s" d="M767.29,1024.31c5.67,2.1,12.72,5.7,17.09,9.51l-3.44-9.51,3.44-9.51C780,1018.61,773,1022.2,767.29,1024.31Z"/><path class="r" d="M695,942.62a19.77,19.77,0,0,1-19.77,19.77H411.06A27.43,27.43,0,0,0,386.3,978"/><path class="s" d="M383.64,989.81c-.68-6-2.47-13.73-5.12-18.88l8.41,5.63L397,975.5C392.24,978.83,387.05,984.8,383.64,989.81Z"/><path class="t" d="M383.64,989.81"/><path class="t" d="M695,931.21"/><path class="t" d="M1536.61,891.78"/><path class="r" d="M1130.62,691.59a36.91,36.91,0,0,0,34.93,25h332.81a38.23,38.23,0,0,1,38.25,38.24v.64"/><path class="s" d="M1128.66,679.67c-1.05,6-3.31,13.55-6.27,18.54l8.73-5.11,10,1.67C1136.56,691.16,1131.75,684.88,1128.66,679.67Z"/><rect class="a" x="739.32" y="535.95" width="763.35" height="66.03"/><path class="b" d="M1501.67,537v64H740.32V537h761.35m2-2H738.32v68h765.35V535Z"/><text class="c" transform="translate(870.58 581.01)">INTERACTION DESIGN for Users</text><text class="u" transform="translate(738.32 635.58)">2015 - 2016: Interaction Design for DiDi Hitch, DiDi Chuxing<tspan x="0" y="24">2014 - 2015: Interaction Design for </tspan><tspan class="m" x="323.88" y="24">W</tspan><tspan class="l" x="342.4" y="24">eishi and Ali </tspan><tspan class="v" x="459.5" y="24">Y</tspan><tspan x="470.74" y="24">unOS, </tspan><tspan class="w" x="532.98" y="24">T</tspan><tspan class="l" x="542.62" y="24">encent and Alibaba</tspan></text><rect class="a" x="1" y="49.83" width="765.28" height="66.03"/><path class="b" d="M765.28,50.83v64H2v-64H765.28m2-2H0v68H767.28v-68Z"/><text class="c" transform="translate(185.04 94.89)">MANAGEMENT for System</text><text class="u" transform="translate(0 152.48)">2012 - 2016: Hold design-tech sharing meeting, <tspan class="w" x="442.8" y="0">T</tspan><tspan class="l" x="452.44" y="0">encent, DiDi Chuxing</tspan><tspan x="0" y="24">2008 - 2010: P</tspan><tspan class="m" x="132.32" y="24">r</tspan><tspan x="139" y="24">oject Management, Vchoice Era Design Consultant Co., Ltd.</tspan><tspan x="0" y="48">2006 - 2008: ISO9000 Quality Management System Certification Assistant, CCIC G</tspan><tspan class="x" x="757.71" y="48">r</tspan><tspan x="764.39" y="48">oup.</tspan></text><rect class="a" x="1457.01" y="55.08" width="765.29" height="66.03"/><path class="b" d="M2221.29,56.08v64H1458v-64h763.28m2-2H1456v68h767.28v-68Z"/><text class="c" transform="translate(1661.19 100.14)">LITER<tspan class="y" x="91.84" y="0">A</tspan><tspan x="110.81" y="0">TURE for Human</tspan></text><path class="a" d="M1180.74,355.29a33,33,0,1,1,0-66h711.74a33,33,0,0,1,0,66Z"/><path class="b" d="M1892.48,290.26a32,32,0,0,1,0,64H1180.74a32,32,0,1,1,0-64h711.74m0-2H1180.74a34,34,0,1,0,0,68h711.74a34,34,0,0,0,0-68Z"/><text class="d" transform="translate(1421.77 332.32)">Content Strategy</text><text class="f" transform="translate(1146.72 389.04)">2016: Speak: <tspan class="i" x="124.88" y="0">“From </tspan><tspan class="z" x="188.22" y="0">V</tspan><tspan class="i" x="199.28" y="0">oice &amp; </tspan><tspan class="p" x="262.66" y="0">T</tspan><tspan class="i" x="272.42" y="0">one to Content Strategy”</tspan></text><path class="a" d="M339.17,355.29a33,33,0,0,1,0-66h711.74a33,33,0,1,1,0,66Z"/><path class="b" d="M1050.91,290.26a32,32,0,1,1,0,64H339.17a32,32,0,0,1,0-64h711.74m0-2H339.17a34,34,0,0,0,0,68h711.74a34,34,0,1,0,0-68Z"/><text class="d" transform="translate(595.22 332.32)">Design System</text><text class="u" transform="translate(305.16 389.04)">2016: C<tspan class="m" x="70.04" y="0">r</tspan><tspan x="76.72" y="0">eate DiDi Hitch&apos;s Design System</tspan><tspan class="s"><tspan x="0" y="24">2015: Speak: </tspan><tspan class="aa" x="124.88" y="24">“Future Friendly </tspan><tspan class="ab" x="278.6" y="24">W</tspan><tspan class="aa" x="296.02" y="24">eb Design”</tspan></tspan><tspan x="0" y="48">2014: C</tspan><tspan class="m" x="70.04" y="48">r</tspan><tspan x="76.72" y="48">eate the guideline of </tspan><tspan class="m" x="270.14" y="48">W</tspan><tspan class="l" x="288.66" y="48">eishi</tspan><tspan class="ac" x="331.28" y="48">’</tspan><tspan x="335.36" y="48">s </tspan><tspan class="m" x="351.3" y="48">W</tspan><tspan class="l" x="369.82" y="48">eb design</tspan></text><path class="r" d="M1536.61,823.48v95.59a43.33,43.33,0,0,0,43.32,43.32h240.66A27.43,27.43,0,0,1,1845.35,978"/><path class="s" d="M1848,989.81c-3.41-5-8.6-11-13.35-14.31l10.06,1.06,8.41-5.63C1850.48,976.09,1848.69,983.79,1848,989.81Z"/><path class="r" d="M694.74,288.56h0a43.33,43.33,0,0,0-43.32-43.33H410.76A27.43,27.43,0,0,1,386,229.6"/><path class="s" d="M383.34,217.81c3.41,5,8.6,11,13.35,14.31l-10.06-1.05-8.41,5.62C380.87,231.54,382.67,223.83,383.34,217.81Z"/><path class="r" d="M1101,502a36.91,36.91,0,0,0-34.93-25H715.89A20.86,20.86,0,0,1,695,456.17"/><path class="s" d="M1103,513.91c1-6,3.31-13.55,6.27-18.53l-8.74,5.1-10-1.66C1095.08,502.42,1099.9,508.71,1103,513.91Z"/><path class="t" d="M1536.61,410.93"/><path class="r" d="M1130.62,502a36.91,36.91,0,0,1,34.93-25h305a66.09,66.09,0,0,0,66.08-66.09h0"/><path class="s" d="M1128.66,513.91c3.09-5.2,7.91-11.49,12.44-15.09l-10,1.66-8.73-5.1C1125.35,500.36,1127.61,507.94,1128.66,513.91Z"/><path class="t" d="M1848,140.67"/><path class="r" d="M1536.61,288.56h0a43.33,43.33,0,0,1,43.32-43.33h145a123.13,123.13,0,0,0,122.54-111.06"/><path class="s" d="M1848,122.11c1.8,5.78,5,13,8.58,17.58l-9.31-3.95-9.68,2.93C1841.63,134.51,1845.6,127.67,1848,122.11Z"/><path class="a" d="M884.84,116.28a33,33,0,1,1,0-66h462a33,33,0,0,1,0,66Z"/><path class="b" d="M1346.81,51.25a32,32,0,0,1,0,64h-462a32,32,0,1,1,0-64h462m0-2h-462a34,34,0,1,0,0,68h462a34,34,0,0,0,0-68Z"/><text class="d" transform="translate(1013.09 93.31)">Cultural Studies</text><line class="r" x1="1443.94" y1="83.17" x2="1380.82" y2="83.17"/><path class="s" d="M1456,83.17c-5.68-2.11-12.73-5.7-17.1-9.51l3.44,9.51-3.44,9.51C1443.28,88.87,1450.33,85.27,1456,83.17Z"/><line class="r" x1="779.35" y1="82.92" x2="850.82" y2="82.92"/><path class="s" d="M767.28,82.92c5.68,2.1,12.73,5.7,17.1,9.51l-3.44-9.51,3.44-9.51C780,77.22,773,80.81,767.28,82.92Z"/><text class="f" transform="translate(1456.01 1091.14)">M.A. in Chinese Studies (Language Education), The Education University of HK<tspan x="0" y="24">B.A. in Chinese Language &amp; Literatu</tspan><tspan class="m" x="332.34" y="24">r</tspan><tspan class="l" x="339.02" y="24">e, Beijing Normal University</tspan></text><text class="ad" transform="translate(2048.28 581.16)">ACADEMIC +</text><text class="ad" transform="translate(0 581.16)">PRACTICE +</text><text class="ad" transform="translate(0 1212.54)">ENGINEERING +</text><text class="ad" transform="translate(2122.94 24.08)">ARTS +</text></svg>
         </div>
-        <p class="mt10"><a target="_blank" href="./assets/kdm.svg" class="btn">View it in a new window</a></p>
+        <p class="mt10"><a target="_blank" href="./assets/kdg.svg" class="btn">View it in a new window</a></p>
       </li>
     </ul>
   </section>
 	<section>
-	<a id="0"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Translation Work</span>
-	</h2>
-	<ul>
-		<li>
-			<div class="pubwrap clearfix">
-				<div class="pubimg clearfix">
-					<img src="./assets/awd.svg" alt="image of Adaptive Web Design in Chinese" />
-				</div>
-				<div class="pubtxt">
-          <p class="tx_l">
-          <strong>渐进增强：跨平台用户体验设计 (2017) <br>FROM: "Adaptive Web Design" (Aaron Gustafson, 2015) </strong><br>ISBN: 9787115448484
-          </p>	
-					<div class="btm">
-						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn">View comments on JD.com</a>
-						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn">E-book on epubit.com</a>
-					</div>
-				</div>
-			</div>
-			<div class="sampletext clearfix">
-        <p class="tx_cm">SAMPLE PARAGRAPH:</p>
-				<div class="text clearfix">
-					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> --><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93; ch. 4).</i></p>
-					</div>
-					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> --><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页; 第4章).</i></p>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<div class="pubwrap clearfix">
-				<div class="pubimg clearfix">
-          <img src="./assets/dvj.svg" alt="image of Data Visualization with JavaScript in Chinese" />
-				</div>
-				<div class="pubtxt">
-          <p class="tx_l">
-            <strong>JavaScript数据可视化编程 (2017) <br>FROM: "Data Visualization with JavaScript" (Stephen A. Thomas, 2015)</strong> <br>ISBN: 9787115444356
-          </p>
-					<div class="btm">
-						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn">View comments on JD.com</a>
-						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn">E-book on epubit.com</a>
-					</div>
-				</div>
-			</div>
-			<div class="sampletext clearfix">
-        <p class="tx_cm">SAMPLE PARAGRAPH:</p>
-				<div class="text clearfix">
-					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> --><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224; ch. 7).</i></p>
-					</div>
-					<div class="c">
-						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> --><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页; 第7章).</i></p>
-					</div>
-				</div>
-			</div>
-		</li>
-	</ul>
+  	<a id="2"></a>
+  	<h2>
+  		<div class="plant e_plant_act">
+  			<div class="leaf">
+  				<div class="a"><div class="in"></div></div>
+  			</div>
+  		</div>
+  		<span><span class="icon-leaf"></span> Translation Work</span>
+  	</h2>
+  	<ul>
+  		<li>
+  			<div class="pubwrap clearfix">
+  				<div class="pubimg clearfix">
+  					<img src="./assets/awd.svg" alt="image of Adaptive Web Design in Chinese" />
+  				</div>
+  				<div class="pubtxt">
+            <h3 class="tx_l">
+            <strong>渐进增强：跨平台用户体验设计 <br>FROM: "Adaptive Web Design" by Aaron Gustafson</strong>
+            </h3>	
+            <p>2017, ISBN: 9787115448484</p>
+  					<div class="btm">
+  						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn">View comments on JD.com</a>
+  						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn">E-book on epubit.com</a>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="sampletext clearfix">
+          <p class="tx_cm">SAMPLE PARAGRAPH:</p>
+  				<div class="text clearfix">
+  					<div class="c">
+  						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> --><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93; ch. 4).</i></p>
+  					</div>
+  					<div class="c">
+  						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> --><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页; 第4章).</i></p>
+  					</div>
+  				</div>
+  			</div>
+  		</li>
+  		<li>
+  			<div class="pubwrap clearfix">
+  				<div class="pubimg clearfix">
+            <img src="./assets/dvj.svg" alt="image of Data Visualization with JavaScript in Chinese" />
+  				</div>
+  				<div class="pubtxt">
+            <h3 class="tx_l">
+              <strong>JavaScript数据可视化编程<br>FROM: "Data Visualization with JavaScript" by Stephen A. Thomas</strong>
+            </h3>
+            <p>2017, ISBN: 9787115444356</p>
+  					<div class="btm">
+  						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn">View comments on JD.com</a>
+  						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn">E-book on epubit.com</a>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="sampletext clearfix">
+          <p class="tx_cm">SAMPLE PARAGRAPH:</p>
+  				<div class="text clearfix">
+  					<div class="c">
+  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> --><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224; ch. 7).</i></p>
+  					</div>
+  					<div class="c">
+  						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> --><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页; 第7章).</i></p>
+  					</div>
+  				</div>
+  			</div>
+  		</li>
+  	</ul>
 	</section>
 	<section>
-	<a id="1"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Slides</span></h2>
+  	<a id="3"></a>
+  	<h2>
+  		<div class="plant e_plant_act">
+  			<div class="leaf">
+  				<div class="a"><div class="in"></div></div>
+  			</div>
+  		</div>
+  		<span><span class="icon-leaf"></span> Keynotes</span>
+    </h2>
 		<ul class="semiul clearfix">
 			<li>
+        <h3><strong>From Voice & Tone to Content Strategy - 情感化內容策略</strong></h3>
+        <p>2016, DiDi Chuxing</p>
         <div class="showcase clearfix">
           <div class="c1">
-          <p><strong>From Voice & Tone to Content Strategy - 情感化內容策略</strong></p>
-          <p>2016, DiDi Chuxing</p>
+            <div class="word">I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</div>
           </div>
           <div class="c2">
-            <img src="./assets/ffly.svg" />
+            <!-- <img src="./assets/ffly.svg" /> -->
           </div>
         </div>
-				<p class="mt10"><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn">View slides online</a></p>
+				<p class="mt10"><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn">View it online</a></p>
 			</li>
 			<li>
+        <h3><strong>The Overview of Web Design - Web 设计基础</strong></h3>
+        <p>2016, DiDi Chuxing</p>
         <div class="showcase clearfix">
           <div class="c1">
-          <p><strong>The Overview of Web Design - Web 设计基础</strong></p>
-          <p>2016, DiDi Chuxing</p>
+            <div class="word">Considering most designers in DiDi's design team were more familiar with the mobile platform than desktop, This presentation focus on mobile: how to present a graceful web page on mobile devices? how to take the advantage of adaptivity for web pages? what is the design trend in recent years? In the end, I reviewed some concepts that frequently be discussed by UI developers.</div>
           </div>
           <div class="c2">
-            <img src="./assets/ffly.svg" />
+            <!-- <img src="./assets/ffly.svg" /> -->
           </div>
         </div>
-				<p class="mt10"><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn">View slides online</a></p>
+				<p class="mt10"><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn">View it online</a></p>
 			</li>
 			<li>
+        <h3><strong>Future Friendly Web Design - 面向未来的友好设计</strong></h3>
+        <p>2015, Tencent</p>
         <div class="showcase clearfix">
           <div class="c1">
-          <p><strong>Future Friendly Web Design - 面向未来的友好设计</strong></p>
-          <p>2015, Tencent</p>
+            <div class="word">This keynote is for junior designers of Tencent online media group. Here I introduced some fantastic shares by great designers around the world, sorted the core concepts and principles of Future Friendly Web Design, listed some designers, books, and resources about FFLY.</div>
           </div>
           <div class="c2">
-            <img src="./assets/ffly.svg" />
+            <!-- <img src="./assets/ffly.svg" /> -->
           </div>
         </div>
-				<p class="mt10"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View slides on Slideshare</a></p>
+				<p class="mt10"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View it on Slideshare</a></p>
 			</li>
 			<li>
+        <h3><strong>Responsive Web Design: Rebuild as Design - 响应式设计</strong></h3>
+        <p>2013, Tencent</p>
         <div class="showcase clearfix">
           <div class="c1">
-            <p><strong>Responsive Web Design: Rebuild as Design - 响应式设计</strong></p>
-            <p>2013, Tencent</p>
+            <div class="word">Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? with the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</div>
           </div>
           <div class="c2">
-            <img src="./assets/ffly.svg" />
+            <!-- <img src="./assets/ffly.svg" /> -->
           </div>
         </div>
-				<p class="mt10"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View slides on Slideshare</a></p>
+				<p class="mt10"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View it on Slideshare</a></p>
 			</li>
 		</ul>
 	</section>
 	<section>
-	<a id="2"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Web Motion Design</span></h2>
-	<ul class="semiul clearfix">
-		<li>
-      <div class="showcase clearfix">
-        <div class="c1">
-          <p><strong>Hitch Big Data Promotion - 顺风车大数据品宣 H5</strong></p>
-          <p>2016, DiDi Chuxing</p>
-        </div>
-        <div class="c2">
-          <img src="./assets/startrek2016_qr.svg" />
-        </div>
-      </div>
-			<p class="tx_l mt10"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
-		</li>
-		<li>
-      <div class="showcase clearfix">
-        <div class="c1">
-          <p><strong>National Day Promotion - 十一出走计划 H5</strong></p>
-          <p>2016, DiDi Chuxing</p>
-        </div>
-        <div class="c2">
-          <img src="./assets/october2016_qr.svg" />
+  	<a id="4"></a>
+  	<h2>
+  		<div class="plant e_plant_act">
+  			<div class="leaf">
+  				<div class="a"><div class="in"></div></div>
+  			</div>
+  		</div>
+  		<span><span class="icon-leaf"></span> Design System<span></h2>
+  	<ul>
+  		<li>
+  			<h3><strong>DiDi Hitch's Design System - 滴滴顺风车Web设计开发指南</strong></h3>
+        <p>2016, DiDi Chuxing</p>
+        <p><img src="./assets/designsystem.svg" /></p>
+  			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn">View it online</a></div>
+  			<div><label>UI Design</label> <label>UI Development</label></div>
+  		</li>
+  	</ul>
+	</section>
+  <section>
+    <a id="5"></a>
+    <h2>
+      <div class="plant e_plant_act">
+        <div class="leaf">
+          <div class="a"><div class="in"></div></div>
         </div>
       </div>
-			<p class="tx_l"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
-		</li>
-	</ul>
+      <span><span class="icon-leaf"></span> Web Motion Design</span></h2>
+    <ul class="semiul clearfix">
+      <li>
+        <div class="showcase clearfix">
+          <div class="c1">
+            <h3><strong>Hitch Big Data Promotion - 顺风车大数据品宣 H5</strong></h3>
+            <p>2016, DiDi Chuxing</p>
+          </div>
+          <div class="c2">
+            <img src="./assets/startrek2016_qr.svg" />
+          </div>
+        </div>
+        <p class="tx_l mt10"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
+      </li>
+      <li>
+        <div class="showcase clearfix">
+          <div class="c1">
+            <h3><strong>National Day Promotion - 十一出走计划 H5</strong></h3>
+            <p>2016, DiDi Chuxing</p>
+          </div>
+          <div class="c2">
+            <img src="./assets/october2016_qr.svg" />
+          </div>
+        </div>
+        <p class="tx_l"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
+      </li>
+    </ul>
+  </section>
+	<section>
+  	<a id="6"></a>
+  	<h2>
+  		<div class="plant e_plant_act">
+  			<div class="leaf">
+  				<div class="a"><div class="in"></div></div>
+  			</div>
+  		</div>
+  		<span><span class="icon-leaf"></span> Interaction Design</span></h2>
+  	<ul>
+  		<li>
+  			<h3><strong>The Survey Page After A Hitch Journey - 顺风车行程结束评价页</strong></h3>
+        <p>2016, DiDi Chuxing</p>
+        <p><img class="lazyload" data-src="./assets/didi_pro_show.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAMqCAMAAAAmXZtpAAABC1BMVEXw7+/19fX5+fn4+Pjx8PD39/f29vbz8/Py8vLn5eP39O/59vH8/Pvo5eP58ej68un8+PT7+/vt7e3x8fH8/Pzs7OzBwcHu7u737Nv/9OP////48OP+8Nz///7m5ubk5OT6+vrw8PD68uT78N/8+/r79On77977+fb+/v709PTOzs6+vr68vLzY2Ni9vb3q6urh4eG/v7/p6enAwMDPz8/k4N748Ob78ebk4d/d3d3Hx8fv7ezo5uX4+Pn39vbi39327d3/9eb48OT+8d/88uP/8t/9/Pz89en/8d79+/j89Ov58ef8+fb99ez9/f349/fQ0NDExMTZ2dnr6+vCwsLj4+P+9u368+r////PsLF3AAAAWXRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AE+FAQ8AAAjdSURBVHgB7dUDDyx3FMbhd7p7a9u2bTMq4vslG6O2FdW2dW18guJNZudO2ueJcfLfs5NfzpDa8B+Z2DXBG4sJ3tiR1VuT1p5ZfvPtE7yxTGu/Cf7d4o2ZAIQ+KRA6IHRA6IDQAaEDQgehA0IHhA4IHRA6IHRA6IDQQeiA0AGhA0IHhA4IHRA6IHRA6CB0QOiA0AGhA0IHhA4IHRA6CB0QOiB0QOiA0AGhA0IHhA5CB4QOCB0QOiB0QOiA0AGhA8NB/YiJmU+Mb09Wb3Nah6a1O63FPL+5iw4IfVwgdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoYPQAaEDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdBA6IHRA6IDQAaEDQgeEDggdhA4IHRA6IHRA6IDQAaEDQgeGE/uRCSa2p3XALPfYkta6tE6a5ea9DWltTGtnWkeldVhaP6S1w0UHxg0dEDogdEDogNABoQNCB6EDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdEDoIHRA6IDQAaEDQgeEDggdEDoIHRA6IHRA6IDQAaEDQgeEDkIHhA4IHRA6IHRA6IDQAaEDw9n9yAQTf6Z11Cz3+C2tP1Kb4L/q/Z7W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" /></p>
+  			<!-- <div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.svg" class="btn2">View full-size picture</a></div> -->
+  			<div><label>Prototyping</label> <label>Interaction Design</label></div>
+  		</li>
+  		<li>
+  			<h3><strong>Do Task, Share 10 Million - 完成任务赢1000万现金 </strong></h3>
+        <p>2016, DiDi Chuxing</p>
+        <p><img class="lazyload" data-src="./assets/didi_show.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPiCAMAAADb5gewAAABWVBMVEVQUFJOTU/s7O2srK6oqKrx8fGlpaagoKHt7e2lpaefn6CmpqienqDu7u6QkJCOjo7q6updXV5YV1mUlJSbm5vv7+/y8vLs7Oz29vbe3t7d3d3w8PDc3NzZ2dnr6+tycnJvb292dnZpaWng4ODb29v39/fMzMzFxcW+vr68vLzp6en4+Pj7+/tkZGRjY2NaWlpYWFjd3d7W1tb5+fmTk5P09PSxsbGurq78/PxwcHDLy8v6+vrz8/P9/f3///+zs7SwsLKtra6op6nt7e6ura+np6jd29jk5OSrq6v19fWvr6+tra3f39/+/v6xsbKsrK2qqqyqqqvn5+fj4+Pi4uLl5eXj4+TX19efn5+6uLawsLDh4eHDw8OpqaqoqKmmpaf19fazs7WysbOxsbOxsLKHh4eJiYmGhobv7/C0tLSZmZllZWXs7Ovu7ezV1dXY2NhmZmbR0dHU1NR137nBAAAAP3RSTlP//////////////////////////////////////////////////////////////////////////////////wCOJnwXAAAKvUlEQVR4Ae3VNZck+RHF0Zfq6hEzMzMzMzP4cgS+vpBcmVpmZmZm5t1hZnfdd07lf2tq7vXjZGRW/zqm1CYTJ93E0bQ2Vuo9TLwqJxpA6IDQQeiA0AGhA0IHhD4UCB0QOiB0QOiA0AGhA0IHhA5CB4QOCB0QOiB0QOiA0AGhA0IHoQNCB4QOCB0QOiB0QOiA0EHogNABoQNCB4QOCB0QOiB0EDogdEDogNABoQNCB4QOCB2Y3t6PmFipiaNpbaR1IK1Xn7S/x/a03uqiA6906IDQAaEDQgeEDggdEDoIHRA6IHRA6IDQAaEDQgeEDkIHhA4IHRA6IHRA6IDQAaEDQgehA0IHhA4IHRA6IHRA6IDQQeiA0AGhA0IHhA4IHRA6IHQQOiB0QOiA0AGhA0IHhA4IHZg+lvntSutNaU1rMrE7rTcO2GrngIkPprU1rbcP+FZPDnjzyUUHhA5CB4QOCB0QOiB0QOiA0AGhg9ABoQNCB4QOCB0QOiB0QOiA0EHogNABoQNCB4QOCB0QOiB0EDogdEDogNABoQNCB4QOCB2EDggdEDogdEDogNABoQNC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" /></p>
+  			<!-- <div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a></div> -->
+  			<div><label>Prototyping</label> <label>Interaction Design</label></div>
+  		</li>
+  	</ul>
 	</section>
 	<section>
-	<a id="3"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Design System<span></h2>
-	<ul>
-		<li>
-			<p><strong class="tx_20">DiDi Hitch's Design System - 滴滴顺风车Web设计开发指南</strong> <br>2016, DiDi Chuxing</p>
-      <p><img src="./assets/designsystem.svg" /></p>
-			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn">View it online</a></div>
-			<div><label>UI Design</label> <label>UI Development</label></div>
-		</li>
-	</ul>
+  	<a id="7"></a>
+  	<h2>
+  		<div class="plant e_plant_act">
+  			<div class="leaf">
+  				<div class="a"><div class="in"></div></div>
+  			</div>
+  		</div>
+  		<span><span class="icon-leaf"></span> Make Websites</span></h2>
+  	<ul>
+  		<li>
+  			<h3><strong>The International Official Website - 北京大学英文官网</strong></h3>
+        <p>2015, for Peking University</p>
+  			<p><img class="lazyload" data-src="./assets/pku.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAQaCAMAAADngKJKAAADAFBMVEW2p6elpaXV1dXKysu5trailpaura27u7vl5eWknJyYjo6fnp6rq6usrKzx8fHNt7eysrKxsbG1tbWkWlLLRTrah4O3oZqCS0HMMyvVNS3FMy3t39/NvrygfnWcamLeaWPhaWPcaGPQiIXw8PD09PTv7+/6+vqsUEqRMy7Ge3yvb2q8CgGoKRegMR66CgDv2tm7qKNnFQy4CgHGFQnDGg3BCwDAPjjc3Nzj4+Pm5OT49/fKopRyVlS1m5nOb2u0FA2vEw2oCwTt2trRjou/CQC8DwGWMR+YNiSqDgK1JB2vb2R8bm27b3LpxMm5qKSpmZTLv769paGxbFh1Zl2JZG+fWFzt3eDkjorGCgDECQDCCQC2LSS/oI1lQT5mPzrLw8KOdWjQv7XNw7y/q52DaGOIa2Z9Xlvk4uLz5+bk0tLm1dXu29vy4N/x39/y4uLq29bw5ubu5OT08/Ts6enx7u75+fnSxcOdioPPurb08fHXzcuEcGHUvbbz8/P9/f3q4tn59PT79/f8+/vr6+v29vbo5+LWz8vr6+Tx8O7k3tno4d3y8+/t7e339/f7+/v29PT48fH79vbFxcX4+Pjp6enm5ub////29fX58/L89/f8/Pzu7u7n5+fs7Oz19fXy8vL19PT69vb+/v7i39zz7u78+fnf39/BwcHt7u/m6evu7/Dt5+L69fX59/fw7ej69/f8+Pj9+/vp6Obd29rc29nAvLbc08zk4eDc19Hi1MPX1M/S0tP7+vr7+fn7+PjV09Grqam8ubaLe2yvoJe1rKm/rp+kj3e6tKySj47m5uX6+Pjf5OPX3d7b4NzY29Xj4dvp4t3m4t3n5d/g39zh4N7o6Ofr7e3o6urx8vL19vX39vXu7+/06Ojk19fc3t7y9PLk5OXj4+Tu7u/Fwr7Pzs6Edmmjkoa/tbDw8PHk5+bd4Nvk49/q5OL////m5eXFuKy/qIual5TMy8vl2Nnh4ODp5+Xo5eHf3t3n5+bq6ury8PDs8O/w4uLr6+rj5uX5+vrVgWKJAAAA7nRSTlP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AoRm6pQAACttJREFUeAHs1gGEn3Ucx/HPr/tvdbfm2rYk0mCjggBAACloESipJAyUCRGIUITAKjQpSA2JKABAoBAFIdG0qdqJjEYBAGcfPf/Hc3evFwAf9+y5ve/7jNSGhcUSFgXv6pYAe5fQAaGD0AGhA0IHhA4IHRA6IHRA6CB0QOiA0AGhA0IHhA4IHRA6CB0QOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0QOiA0AGhA0IHoQNCB4QOCB0QOiB0QOiA0EHogNABoQNCB4QOzGDjxBbsTUcsbpqLDj7dAaEDQgeEDggdEDogdEDoIHRA6IDQAaEDQgeEDgh9dyB0QOiA0AGhA0IHhA4IHRA6IHQQOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0QOiA0AGhA0IHoQNCB4QOCB0QOiB0QOiA0EHoJ4F9z0UHn+6A0AGhA0IHhA4IHRA6IHQQOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0QOiA0AGhA0KHXQkdEDogdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoYPQAaEDQgeEDggdEDogdEDowMZ9W60jFrDHuOjg0x0QOiB0QOiA0AGhA0IHdg0dEDogdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoQNCB6EDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdBA6IHRA6IDQAaEDQgeEDggdGI/1kwO3sMgin+pqWnftl9+giw5MGzogdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoYPQAaEDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdBA6IHRA6IDQAaEDQgeEDggdhA4IHRA6IHRA6IDQAaEDQgfG2bSOpTVSsChYWLjowAShA0IHhA4IHRA6IHRA6CB0QOiA0AGhA0IHhA4IHRA6CB0QOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0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" /></p>
+  			<div>
+  				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn">Visit newsen.pku.edu.cn</a>
+  				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn">View working draft 1</a>
+  				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn">View working draft 2</a>
+  			</div>
+  			<div><label>Interaction Design</label> <label>UI Development</label></div>
+  		</li>
+  	</ul>
 	</section>
 	<section>
-	<a id="4"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Interaction Design</span></h2>
-	<ul>
-		<li>
-			<p><strong class="tx_20">The Survey Page After A Hitch Journey - 顺风车行程结束评价页</strong> <br>2016, DiDi Chuxing</p>
-      <p><img class="lazyload" data-src="./assets/didi_pro_show.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAMqCAMAAAAmXZtpAAABC1BMVEXw7+/19fX5+fn4+Pjx8PD39/f29vbz8/Py8vLn5eP39O/59vH8/Pvo5eP58ej68un8+PT7+/vt7e3x8fH8/Pzs7OzBwcHu7u737Nv/9OP////48OP+8Nz///7m5ubk5OT6+vrw8PD68uT78N/8+/r79On77977+fb+/v709PTOzs6+vr68vLzY2Ni9vb3q6urh4eG/v7/p6enAwMDPz8/k4N748Ob78ebk4d/d3d3Hx8fv7ezo5uX4+Pn39vbi39327d3/9eb48OT+8d/88uP/8t/9/Pz89en/8d79+/j89Ov58ef8+fb99ez9/f349/fQ0NDExMTZ2dnr6+vCwsLj4+P+9u368+r////PsLF3AAAAWXRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AE+FAQ8AAAjdSURBVHgB7dUDDyx3FMbhd7p7a9u2bTMq4vslG6O2FdW2dW18guJNZudO2ueJcfLfs5NfzpDa8B+Z2DXBG4sJ3tiR1VuT1p5ZfvPtE7yxTGu/Cf7d4o2ZAIQ+KRA6IHRA6IDQAaEDQgehA0IHhA4IHRA6IHRA6IDQQeiA0AGhA0IHhA4IHRA6IHRA6CB0QOiA0AGhA0IHhA4IHRA6CB0QOiB0QOiA0AGhA0IHhA5CB4QOCB0QOiB0QOiA0AGhA8NB/YiJmU+Mb09Wb3Nah6a1O63FPL+5iw4IfVwgdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoYPQAaEDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdBA6IHRA6IDQAaEDQgeEDggdhA4IHRA6IHRA6IDQAaEDQgeGE/uRCSa2p3XALPfYkta6tE6a5ea9DWltTGtnWkeldVhaP6S1w0UHxg0dEDogdEDogNABoQNCB6EDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdEDoIHRA6IDQAaEDQgeEDggdEDoIHRA6IHRA6IDQAaEDQgeEDkIHhA4IHRA6IHRA6IDQAaEDw9n9yAQTf6Z11Cz3+C2tP1Kb4L/q/Z7W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" /></p>
-			<!-- <div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.svg" class="btn2">View full-size picture</a></div> -->
-			<div><label>Prototyping</label> <label>Interaction Design</label></div>
-		</li>
-		<li>
-			<p><strong class="tx_20">Do Task, Share 10 Million - 完成任务赢1000万现金 </strong> <br>2016, DiDi Chuxing</p>
-      <p><img class="lazyload" data-src="./assets/didi_show.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPiCAMAAADb5gewAAABWVBMVEVQUFJOTU/s7O2srK6oqKrx8fGlpaagoKHt7e2lpaefn6CmpqienqDu7u6QkJCOjo7q6updXV5YV1mUlJSbm5vv7+/y8vLs7Oz29vbe3t7d3d3w8PDc3NzZ2dnr6+tycnJvb292dnZpaWng4ODb29v39/fMzMzFxcW+vr68vLzp6en4+Pj7+/tkZGRjY2NaWlpYWFjd3d7W1tb5+fmTk5P09PSxsbGurq78/PxwcHDLy8v6+vrz8/P9/f3///+zs7SwsLKtra6op6nt7e6ura+np6jd29jk5OSrq6v19fWvr6+tra3f39/+/v6xsbKsrK2qqqyqqqvn5+fj4+Pi4uLl5eXj4+TX19efn5+6uLawsLDh4eHDw8OpqaqoqKmmpaf19fazs7WysbOxsbOxsLKHh4eJiYmGhobv7/C0tLSZmZllZWXs7Ovu7ezV1dXY2NhmZmbR0dHU1NR137nBAAAAP3RSTlP//////////////////////////////////////////////////////////////////////////////////wCOJnwXAAAKvUlEQVR4Ae3VNZck+RHF0Zfq6hEzMzMzMzP4cgS+vpBcmVpmZmZm5t1hZnfdd07lf2tq7vXjZGRW/zqm1CYTJ93E0bQ2Vuo9TLwqJxpA6IDQQeiA0AGhA0IHhD4UCB0QOiB0QOiA0AGhA0IHhA5CB4QOCB0QOiB0QOiA0AGhA0IHoQNCB4QOCB0QOiB0QOiA0EHogNABoQNCB4QOCB0QOiB0EDogdEDogNABoQNCB4QOCB2Y3t6PmFipiaNpbaR1IK1Xn7S/x/a03uqiA6906IDQAaEDQgeEDggdEDoIHRA6IHRA6IDQAaEDQgeEDkIHhA4IHRA6IHRA6IDQAaEDQgehA0IHhA4IHRA6IHRA6IDQQeiA0AGhA0IHhA4IHRA6IHQQOiB0QOiA0AGhA0IHhA4IHZg+lvntSutNaU1rMrE7rTcO2GrngIkPprU1rbcP+FZPDnjzyUUHhA5CB4QOCB0QOiB0QOiA0AGhg9ABoQNCB4QOCB0QOiB0QOiA0EHogNABoQNCB4QOCB0QOiB0EDogdEDogNABoQNCB4QOCB2EDggdEDogdEDogNABoQNC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" /></p>
-			<!-- <div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a></div> -->
-			<div><label>Prototyping</label> <label>Interaction Design</label></div>
-		</li>
-	</ul>
-	</section>
-	<section>
-	<a id="5"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Make Websites</span></h2>
-	<ul>
-		<li>
-			<p><strong class="tx_20">The International Official Website - 北京大学英文官网</strong> <br> 2015, for Peking University</p>
-			<p><img class="lazyload" data-src="./assets/pku.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAQaCAMAAADngKJKAAADAFBMVEW2p6elpaXV1dXKysu5trailpaura27u7vl5eWknJyYjo6fnp6rq6usrKzx8fHNt7eysrKxsbG1tbWkWlLLRTrah4O3oZqCS0HMMyvVNS3FMy3t39/NvrygfnWcamLeaWPhaWPcaGPQiIXw8PD09PTv7+/6+vqsUEqRMy7Ge3yvb2q8CgGoKRegMR66CgDv2tm7qKNnFQy4CgHGFQnDGg3BCwDAPjjc3Nzj4+Pm5OT49/fKopRyVlS1m5nOb2u0FA2vEw2oCwTt2trRjou/CQC8DwGWMR+YNiSqDgK1JB2vb2R8bm27b3LpxMm5qKSpmZTLv769paGxbFh1Zl2JZG+fWFzt3eDkjorGCgDECQDCCQC2LSS/oI1lQT5mPzrLw8KOdWjQv7XNw7y/q52DaGOIa2Z9Xlvk4uLz5+bk0tLm1dXu29vy4N/x39/y4uLq29bw5ubu5OT08/Ts6enx7u75+fnSxcOdioPPurb08fHXzcuEcGHUvbbz8/P9/f3q4tn59PT79/f8+/vr6+v29vbo5+LWz8vr6+Tx8O7k3tno4d3y8+/t7e339/f7+/v29PT48fH79vbFxcX4+Pjp6enm5ub////29fX58/L89/f8/Pzu7u7n5+fs7Oz19fXy8vL19PT69vb+/v7i39zz7u78+fnf39/BwcHt7u/m6evu7/Dt5+L69fX59/fw7ej69/f8+Pj9+/vp6Obd29rc29nAvLbc08zk4eDc19Hi1MPX1M/S0tP7+vr7+fn7+PjV09Grqam8ubaLe2yvoJe1rKm/rp+kj3e6tKySj47m5uX6+Pjf5OPX3d7b4NzY29Xj4dvp4t3m4t3n5d/g39zh4N7o6Ofr7e3o6urx8vL19vX39vXu7+/06Ojk19fc3t7y9PLk5OXj4+Tu7u/Fwr7Pzs6Edmmjkoa/tbDw8PHk5+bd4Nvk49/q5OL////m5eXFuKy/qIual5TMy8vl2Nnh4ODp5+Xo5eHf3t3n5+bq6ury8PDs8O/w4uLr6+rj5uX5+vrVgWKJAAAA7nRSTlP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AoRm6pQAACttJREFUeAHs1gGEn3Ucx/HPr/tvdbfm2rYk0mCjggBAACloESipJAyUCRGIUITAKjQpSA2JKABAoBAFIdG0qdqJjEYBAGcfPf/Hc3evFwAf9+y5ve/7jNSGhcUSFgXv6pYAe5fQAaGD0AGhA0IHhA4IHRA6IHRA6CB0QOiA0AGhA0IHhA4IHRA6CB0QOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0QOiA0AGhA0IHoQNCB4QOCB0QOiB0QOiA0EHogNABoQNCB4QOzGDjxBbsTUcsbpqLDj7dAaEDQgeEDggdEDogdEDoIHRA6IDQAaEDQgeEDgh9dyB0QOiA0AGhA0IHhA4IHRA6IHQQOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0QOiA0AGhA0IHoQNCB4QOCB0QOiB0QOiA0EHoJ4F9z0UHn+6A0AGhA0IHhA4IHRA6IHQQOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0QOiA0AGhA0KHXQkdEDogdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoYPQAaEDQgeEDggdEDogdEDowMZ9W60jFrDHuOjg0x0QOiB0QOiA0AGhA0IHdg0dEDogdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoQNCB6EDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdBA6IHRA6IDQAaEDQgeEDggdGI/1kwO3sMgin+pqWnftl9+giw5MGzogdEDogNABoQNCB4QOQgeEDggdEDogdEDogNABoYPQAaEDQgeEDggdEDogdEDogNBB6IDQAaEDQgeEDggdEDogdBA6IHRA6IDQAaEDQgeEDggdhA4IHRA6IHRA6IDQAaEDQgfG2bSOpTVSsChYWLjowAShA0IHhA4IHRA6IHRA6CB0QOiA0AGhA0IHhA4IHRA6CB0QOiB0QOiA0AGhA0IHhA4IHYQOCB0QOiB0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" /></p>
-			<div>
-				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn">Visit newsen.pku.edu.cn</a>
-				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn">View working draft 1</a>
-				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn">View working draft 2</a>
-			</div>
-			<div><label>Interaction Design</label> <label>UI Development</label></div>
-		</li>
-	</ul>
-	</section>
-	<section>
-	<a id="6"></a>
-	<h2>
-		<div class="plant e_plant_act">
-			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
-			</div>
-		</div>
-		<span><span class="icon-leaf"></span> Build Tools</span></h2>
-	<ul>
-		<li>
-			<p><strong class="tx_20">UFO Animate, An CSS Animation Tool </strong> <br>2016, Personal project</p>
-			<p><img class="lazyload" data-src="./assets/csstool.png" src="data:image/png;base64,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" /></p>
-			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn">View it online</a></div>
-			<div><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></div>
-		</li>
-	</ul>
+  	<a id="8"></a>
+  	<h2>
+  		<div class="plant e_plant_act">
+  			<div class="leaf">
+  				<div class="a"><div class="in"></div></div>
+  			</div>
+  		</div>
+  		<span><span class="icon-leaf"></span> Build Tools</span></h2>
+  	<ul>
+  		<li>
+  			<h3><strong>UFO Animate, An CSS Animation Tool </strong></h3>
+        <p>2016, Personal project</p>
+  			<p><img class="lazyload" data-src="./assets/csstool.png" src="data:image/png;base64,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" /></p>
+  			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn">View it online</a></div>
+  			<div><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></div>
+  		</li>
+  	</ul>
 	</section>
 
 	<div class="bottom">
