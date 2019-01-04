@@ -73,6 +73,15 @@ img{ vertical-align:top; max-width:100%}
 .icon-linkedin:before {
   content: "\eac9";
 }
+.icon-appleinc:before {
+  content: "\eabe";
+}
+.icon-android:before {
+  content: "\e904";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
 
 @font-face {
 font-family: 'Circular Std Book';
@@ -136,6 +145,7 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .tx_18{ font-size:1.125rem}
 .tx_20{ font-size:1.25rem}
 .tx_22{ font-size:1.375rem}
+.tx_24{ font-size:1.5rem}
 
 .tx_up{ text-transform:uppercase;}
 
@@ -158,14 +168,22 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .vis_off{ visibility: hidden;}
 
 /* 边距 */
-.mt5{ margin-top:5px}
-.mr5{ margin-right:5px}
-.mb5{ margin-bottom:5px}
-.ml5{ margin-left:5px}
-.mt10{ margin-top:10px}
-.mr10{ margin-right:10px}
-.mb10{ margin-bottom:10px}
-.ml10{ margin-left:10px}
+.mt5{ margin-top:.3rem}
+.mr5{ margin-right:.3rem}
+.mb5{ margin-bottom:.3rem}
+.ml5{ margin-left:.3rem}
+.mt10{ margin-top:.625rem}
+.mr10{ margin-right:.625rem}
+.mb10{ margin-bottom:.625rem}
+.ml10{ margin-left:.625rem}
+.mt15{ margin-top:1rem}
+.mr15{ margin-right:1rem}
+.mb15{ margin-bottom:1rem}
+.ml15{ margin-left:1rem}
+.mt20{ margin-top:1.25rem}
+.mr20{ margin-right:1.25rem}
+.mb20{ margin-bottom:1.25rem}
+.ml20{ margin-left:1.25rem}
 
 .pt5{ padding-top:5px}
 .pr5{ padding-right:5px}
@@ -296,15 +314,25 @@ li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem 
 .semiul li{ padding-bottom:1rem}
 .semiul li:last-child{ padding-bottom:0}
 .semiul li img{ width:100%; max-width:26rem;}
-.semiul li p{ margin-bottom:0}
-.semiul .showcase{ max-width:26rem; width:100%; box-sizing:border-box;}
-.semiul .showcase p{ text-align:left;}
-.semiul .showcase .c1 .word{ text-align:justify;}
-.semiul .showcase .c2{ margin-top:1rem}
-.semiul .showcase .c2 img{ width:40%; margin:0 auto;}
+.semiul li p{}
+
+.showcase{ width:100%; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;}
+.showcase .inner{ width:700px}
+.showcase .c1{ float:left; padding-left:20px; padding-bottom:20px; padding-top:1.5rem; margin-right:50px}
+.showcase .c1 .phone{ position:relative; border-radius:50px; padding:90px 20px; box-shadow:rgba(0,0,0,.1) 5px 5px 30px}
+.showcase .c1 .phone iframe{ border:#000 2px solid;}
+.showcase .c1 .phone .d1,
+.showcase .c1 .phone .d2,
+.showcase .c1 .phone .d3,
+.showcase .c1 .phone .d4{ position:absolute; display:block}
+.showcase .c1 .phone .d1{ width:50px; height:50px; border:#eee 2px solid; bottom:20px; left:50%; margin-left:-25px; border-radius:26px}
+.showcase .c1 .phone .d2{ width:64px; height:6px; background:#ddd; border-radius:3px; top:46px; left:50%; margin-left:-32px}
+.showcase .c1 .phone .d3{ width:8px; height:8px; background:#ddd; border-radius:4px; top:20px; left:50%; margin-left:-4px}
+.showcase .c1 .phone .d4{ width:12px; height:12px; background:#ddd; border-radius:6px;top:43px; left:120px}
+.showcase .c2{ overflow:hidden; padding-top:7rem;}
 
 i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
-label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.625rem 0 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
+label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; margin:.5rem 0 0; padding:1px .8rem; border-radius:1rem; font-size:.75rem;}
 
 .pubwrap{}
 .pubimg{ text-align:center}
@@ -319,7 +347,9 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .scroll nav{ transform:translateY(0); opacity:1;}
 .scroll nav .ins{ padding-top:3.5rem;}
 
-.singleimg{}
+.singleimg{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.singleimg img,
+.singleimg svg{ width:200%; max-width:200%;}
 
 @media screen and (min-width:600px){
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
@@ -331,6 +361,16 @@ nav .leaf{ display:block; margin:-5px 0 0 -125px}
 nav .leaf .a{ transform:rotate(45deg); transform-origin:center center}
 nav .leaf .a .in{ background:none;}
 nav .leaf .a .in:after{ display:none}
+
+.showcase .inner{ width:auto}
+}
+@media (max-width:599px){
+.showcase .c1 .phone{ padding:0;border-radius:0; box-shadow:none}
+.showcase .c1 .phone .d1,
+.showcase .c1 .phone .d2,
+.showcase .c1 .phone .d3,
+.showcase .c1 .phone .d4{ display:none}
+.showcase .c2{ padding-top:2rem}
 }
 @media (min-width:600px){
 blockquote{ margin-right:1rem;}
@@ -367,14 +407,9 @@ footer{ margin-top:4rem;}
 li img{ margin-left:0; margin-right:0}
 .semiul li{ width:100%; float:left;}
 .semiul li img{ width:24rem; max-width:100%}
-.semiul .showcase{ max-width:100%; display:table}
-.semiul .showcase .c1{ display:table-cell; width:80%; max-width:40em}
-.semiul .showcase .c1 .word{ margin:1.25rem 0;}
-.semiul .showcase .c2{ display:table-cell; overflow:hidden; text-align:center;}
-.semiul .showcase .c2 img{ margin:0; width:5rem; display:inline-block;}
 
-
-.singleimg{}
+.singleimg img,
+.singleimg svg{ width:auto; max-width:100%}
 }
 
 @media print{
@@ -432,6 +467,13 @@ function textsize(n,o){
 	document.getElementById('option').childNodes[2].style = 'text-decoration:none';
 	o.style = 'text-decoration:underline';
 }
+
+$(function(){
+  $('.f_play').on('click',function(){
+    $('#h5stage').attr('src',$(this).data('href'));
+    return false;
+  });
+});
 </script>
 </head>
 <body>
@@ -540,7 +582,7 @@ function textsize(n,o){
             <h3 class="tx_l">
             <strong>渐进增强：跨平台用户体验设计 <br>FROM: "Adaptive Web Design" by Aaron Gustafson</strong>
             </h3>	
-            <p>2017, ISBN: 9787115448484</p>
+            <p><strong>2017, ISBN: 9787115448484</strong></p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn">E-book on epubit.com</a>
@@ -568,7 +610,7 @@ function textsize(n,o){
             <h3 class="tx_l">
               <strong>JavaScript数据可视化编程<br>FROM: "Data Visualization with JavaScript" by Stephen A. Thomas</strong>
             </h3>
-            <p>2017, ISBN: 9787115444356</p>
+            <p><strong>2017, ISBN: 9787115444356</strong></p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn">E-book on epubit.com</a>
@@ -602,55 +644,27 @@ function textsize(n,o){
 		<ul class="semiul clearfix">
 			<li>
         <h3><strong>From Voice & Tone to Content Strategy - 情感化內容策略</strong></h3>
-        <p>2016, DiDi Chuxing</p>
-        <div class="showcase clearfix">
-          <div class="c1">
-            <div class="word">I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</div>
-          </div>
-          <div class="c2">
-            <!-- <img src="./assets/ffly.svg" /> -->
-          </div>
-        </div>
-				<p class="mt10"><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn">View it online</a></p>
+        <p><strong>2016, DIDI CHUXING</strong></p>
+        <p>I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</p>
+				<p class="mt15"><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn">View it online</a></p>
 			</li>
 			<li>
         <h3><strong>The Overview of Web Design - Web 设计基础</strong></h3>
-        <p>2016, DiDi Chuxing</p>
-        <div class="showcase clearfix">
-          <div class="c1">
-            <div class="word">Considering most designers in DiDi's design team were more familiar with the mobile platform than desktop, This presentation focus on mobile: how to present a graceful web page on mobile devices? how to take the advantage of adaptivity for web pages? what is the design trend in recent years? In the end, I reviewed some concepts that frequently be discussed by UI developers.</div>
-          </div>
-          <div class="c2">
-            <!-- <img src="./assets/ffly.svg" /> -->
-          </div>
-        </div>
-				<p class="mt10"><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn">View it online</a></p>
+        <p><strong>2016, DIDI CHUXING</strong></p>
+        <p>Considering most designers in DiDi's design team were more familiar with the mobile platform than desktop, This presentation focus on mobile: how to present a graceful web page on mobile devices? how to take the advantage of adaptivity for web pages? what is the design trend in recent years? In the end, I reviewed some concepts that frequently be discussed by UI developers.</p>
+				<p class="mt15"><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn">View it online</a></p>
 			</li>
 			<li>
         <h3><strong>Future Friendly Web Design - 面向未来的友好设计</strong></h3>
-        <p>2015, Tencent</p>
-        <div class="showcase clearfix">
-          <div class="c1">
-            <div class="word">This keynote is for junior designers of Tencent online media group. Here I introduced some fantastic shares by great designers around the world, sorted the core concepts and principles of Future Friendly Web Design, listed some designers, books, and resources about FFLY.</div>
-          </div>
-          <div class="c2">
-            <!-- <img src="./assets/ffly.svg" /> -->
-          </div>
-        </div>
-				<p class="mt10"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View it on Slideshare</a></p>
+        <p><strong>2015, TENCENT INC.</strong></p>
+        <p>This keynote is for junior designers of Tencent online media group. Here I introduced some fantastic shares by great designers around the world, sorted the core concepts and principles of Future Friendly Web Design, listed some designers, books, and resources about FFLY.</p>
+				<p class="mt15"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View it on Slideshare</a></p>
 			</li>
 			<li>
         <h3><strong>Responsive Web Design: Rebuild as Design - 响应式设计</strong></h3>
-        <p>2013, Tencent</p>
-        <div class="showcase clearfix">
-          <div class="c1">
-            <div class="word">Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? With the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</div>
-          </div>
-          <div class="c2">
-            <!-- <img src="./assets/ffly.svg" /> -->
-          </div>
-        </div>
-				<p class="mt10"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View it on Slideshare</a></p>
+        <p><strong>2013, TENCENT INC.</strong></p>
+        <p>Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? With the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</p>
+				<p class="mt15"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">View it on Slideshare</a></p>
 			</li>
 		</ul>
 	</section>
@@ -665,9 +679,12 @@ function textsize(n,o){
   		<span><span class="icon-leaf"></span> Design System<span></h2>
   	<ul>
   		<li>
-  			<h3><strong>DiDi Hitch's Design System - 滴滴顺风车Web设计开发指南</strong></h3>
-        <p>2016, DiDi Chuxing</p>
-        <p><img src="./assets/designsystem.png" /></p>
+  			<h3><strong>DiDi Hitch's Design System</strong></h3>
+        <p><strong>2016, DIDI CHUXING</strong></p>
+        <p>Firstly, this design system serves Web products of DiDi Hitch, including the built-in webview and the operational activity web pages. Secondly, this design system serves UX designer and front-end developer. It is both a front-end guideline and a UI component library.</p>
+        <div class="singleimg">
+          <img src="./assets/designsystem.png" />
+        </div>
   			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn">View it online</a></div>
   			<div><label>UI Design</label> <label>UI Development</label></div>
   		</li>
@@ -681,33 +698,34 @@ function textsize(n,o){
           <div class="a"><div class="in"></div></div>
         </div>
       </div>
-      <span><span class="icon-leaf"></span> Web Motion Design</span></h2>
-    <ul class="semiul clearfix">
-      <li>
-        <div class="showcase clearfix">
-          <div class="c1">
-            <h3><strong>Hitch Big Data Promotion - 顺风车大数据品宣 H5</strong></h3>
-            <p>2016, DiDi Chuxing</p>
-          </div>
-          <div class="c2">
-            <img src="./assets/startrek2016_qr.svg" />
-          </div>
-        </div>
-        <p class="tx_l mt10"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
-      </li>
-      <li>
-        <div class="showcase clearfix">
-          <div class="c1">
-            <h3><strong>National Day Promotion - 十一出走计划 H5</strong></h3>
-            <p>2016, DiDi Chuxing</p>
-          </div>
-          <div class="c2">
-            <img src="./assets/october2016_qr.svg" />
+      <span><span class="icon-leaf"></span> Web Motion Design</span>
+    </h2>
+    <h3><strong>The operational activity pages of DiDi Hitch, 2015 - 2016</strong></h3>
+    <div class="showcase clearfix">
+      <div class="inner">
+        <div class="c1 clearfix">
+          <div class="phone">
+            <span class="d1"></span>
+            <span class="d2"></span>
+            <span class="d3"></span>
+            <span class="d4"></span>
+            <iframe id="h5stage" src="http://futurefriendly.cn/ds/page/invitation2016.html" style="width:320px; height:570px;" frameborder="0"></iframe>
           </div>
         </div>
-        <p class="tx_l"><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
-      </li>
-    </ul>
+        <div class="c2 clearfix">
+            <h3><strong>Product Launch Invitation</strong></h3>
+            <p><a href="javascript:;" class="btn2 f_play" data-href="http://futurefriendly.cn/ds/page/invitation2016.html" style="width:60px">Play</a></p>
+            <h3 class="mt20"><strong>Hitch Big Data Promotion</strong></h3>
+            <p><a href="javascript:;" class="btn2 f_play" data-href="http://futurefriendly.cn/ds/page/startrek2016.html" style="width:60px">Play</a></p>
+            <h3 class="mt20"><strong>National Day Promotion</strong></h3>
+            <p><a href="javascript:;" class="btn2 f_play" data-href="http://futurefriendly.cn/ds/page/oct2016c.html" style="width:60px">Play</a></p>
+            <h3 class="mt20"><strong>Hitch Man</strong></h3>
+            <p><a href="javascript:;" class="btn2 f_play" data-href="http://static.xiaojukeji.com/pinche/staticpage/pop.html" style="width:60px">Play</a></p>
+            <h3 class="mt20"><strong>Team Style</strong></h3>
+            <p><a href="javascript:;" class="btn2 f_play" data-href="http://static.xiaojukeji.com/pinche/staticpage/team_slides.html" style="width:60px">Play</a></p>
+        </div>
+      </div>
+    </div>
   </section>
 	<section>
   	<a id="6"></a>
@@ -720,19 +738,30 @@ function textsize(n,o){
   		<span><span class="icon-leaf"></span> Interaction Design</span></h2>
   	<ul>
   		<li>
-  			<h3><strong>The Survey Page After A Hitch Journey - 顺风车行程结束评价页</strong></h3>
-        <p>2016, DiDi Chuxing</p>
-        <p><img src="./assets/didi_pro_show.png" /></p>
-  			<!-- <div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi_pro.svg" class="btn2">View full-size picture</a></div> -->
+  			<h3><strong>The Survey Page After A Hitch Journey</strong></h3>
+        <p><strong>2016, DIDI CHUXING</strong></p>
+        <p>After the trip, we will collect passengers' evaluation data on his or her driver to help us continuously improve the quality of our services. The survey page is divided into a real-name part and an anonymous part. The driver client will see a positive evaluation written by the passenger, and the negative evaluation written by the passenger will be submitted directly to the backend system anonymously as evidence, we will use that data to analyze whether a driver is good enough.</p>
+        <p>For fast-paced iterations, 70% of DiDi client's UI was implemented in webview mode, no exception this page was.</p>
+        <div class="singleimg">
+          <img src="./assets/didi_pro_show.png" />
+        </div>
   			<div><label>Prototyping</label> <label>Interaction Design</label></div>
   		</li>
-  		<li>
-  			<h3><strong>Do Task, Share 10 Million - 完成任务赢1000万现金 </strong></h3>
-        <p>2016, DiDi Chuxing</p>
+      <!-- <li>
+        <h3><strong>A Promotion Activity: Do Task, Share 10 Million - 运营活动：完成任务赢1000万现金 </strong></h3>
+        <p>2016, DiDi Chuxing, iOS/Android</p>
         <p><img src="./assets/didi_show.png" /></p>
-  			<!-- <div><a target="_blank" href="http://futurefriendly.cn/me/assets/didi.png" class="btn2">View full-size picture</a></div> -->
-  			<div><label>Prototyping</label> <label>Interaction Design</label></div>
-  		</li>
+        <div><label>Prototyping</label> <label>Interaction Design</label></div>
+      </li> -->
+      <li>
+        <h3><strong>Process of Forwarding A Video on WEISHI APP </strong></h3>
+        <p><strong>2015, TENCENT INC.</strong></p>
+        <p>WEISHI was a Vine-like short video sharing App. In this project, considering the difference between iOS and Android platform, we applied different design strategies for them. For example, on the iOS platform, we combined "share" and "forward" operations into the iOS-only actionsheet to reduce the number of buttons visible on the video page.</p>
+        <div class="singleimg">
+          <img src="./assets/weishi.png" />
+        </div>
+        <div><label>Prototyping</label> <label>Interaction Design</label></div>
+      </li>
   	</ul>
 	</section>
 	<section>
@@ -746,9 +775,12 @@ function textsize(n,o){
   		<span><span class="icon-leaf"></span> Make Websites</span></h2>
   	<ul>
   		<li>
-  			<h3><strong>The International Official Website - 北京大学英文官网</strong></h3>
-        <p>2015, for Peking University</p>
-  			<p><img src="./assets/pku.png" /></p>
+  			<h3><strong>The International Official Website of Peking University</strong></h3>
+        <p><strong>2015, for PKU</strong></p>
+        <p>The International Official Portal Website of Peking University has made its debut on Nov 20th, 2015. This new responsive site is designed with "Future-Friendly Design" thinking, applied bootstrap grid system, and support IE7+ browser.</p>
+        <div class="singleimg">
+          <img src="./assets/pku.png" />
+        </div>
   			<div>
   				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn">Visit newsen.pku.edu.cn</a>
   				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn">View working draft 1</a>
@@ -769,9 +801,12 @@ function textsize(n,o){
   		<span><span class="icon-leaf"></span> Build Tools</span></h2>
   	<ul>
   		<li>
-  			<h3><strong>UFO Animate, An CSS Animation Tool </strong></h3>
-        <p>2016, Personal project</p>
-  			<p><img src="./assets/csstool.png" /></p>
+  			<h3><strong>UFO Animate, An CSS Animation Tool</strong></h3>
+        <p><strong>2016, PERSONAL PROJECT</strong></p>
+        <p>UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Not only is it a tool, the designer wants to make it fun. This system has been optimized for accessibility. English and Chinese language are supported.</p>
+        <div class="singleimg">
+          <img src="./assets/csstool.png" />
+        </div>
   			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn">View it online</a></div>
   			<div><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></div>
   		</li>
