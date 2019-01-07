@@ -5,7 +5,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>Portfolio</title>
+<title>Benny's Portfolio</title>
 <link rel="shortcut icon" href="http://futurefriendly.cn/me/favicon.ico"/>
 <style>
 body,img{ margin:0;}
@@ -245,14 +245,14 @@ blockquote{ background:#f4f4f4; padding:1.25rem;}
 
 .leaf .a,
 .leaf .b,
-.leaf .c{ position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
+.leaf .d{ position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
 .leaf .b{ transform:rotateZ(120deg);}
-.leaf .c{ transform:rotateZ(240deg);}
+.leaf .d{ transform:rotateZ(240deg);}
 .leaf .in{ position:relative; width:9px; height:9px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
 .leaf .in:after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:0; border-top:#000 1px solid; transform:rotate(45deg); transform-origin:3px 0;}
 .leaf .a .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .b .in{ transform:scale(1.25) translateZ(60px);}
-.leaf .c .in{ transform:scale(1.25) translateZ(60px);}
+.leaf .d .in{ transform:scale(1.25) translateZ(60px);}
 
 .e_plant_logo{ display:block; position:absolute; left:0; top:0; height:80px; width:80px;  transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
 .e_plant_logo .leaf{ width:80px; height:80px;
@@ -261,7 +261,7 @@ blockquote{ background:#f4f4f4; padding:1.25rem;}
 }
 .e_plant_logo .leaf .a,
 .e_plant_logo .leaf .b,
-.e_plant_logo .leaf .c{ width:80px; height:80px;}
+.e_plant_logo .leaf .d{ width:80px; height:80px;}
 .e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
 .e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
 
@@ -271,7 +271,7 @@ h2 .plant{ display:none}
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
 .e_plant_act .leaf .a:hover .in,
 .e_plant_act .leaf .b:hover .in,
-.e_plant_act .leaf .c:hover .in{ transform:rotateZ(10deg);}
+.e_plant_act .leaf .d:hover .in{ transform:rotateZ(10deg);}
 
 @keyframes plant_logo{
 	0%{transform:rotateZ(0deg);}
@@ -285,13 +285,13 @@ h2 .plant{ display:none}
 .bottom .leaf{ display:none}
 .bottom a{ display:block; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem;}
 
-.sampletext{ margin-top:.626rem;}
+.sampletext{ margin-top:.626rem; font-weight:100}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
-.sampletext .text .c{ border-left:#f4f4f4 4px solid; padding-left:1rem; overflow:hidden; font-size:.875rem;
+.sampletext .text .col{ border-left:#f4f4f4 4px solid; padding-left:1rem; overflow:hidden; font-size:.875rem;
 	box-sizing:border-box;
 }
-.sampletext .text .c:last-child{ margin-top:.626rem}
-.sampletext .text .c p{ margin-bottom:0}
+.sampletext .text .col:last-child{ margin-top:.626rem}
+.sampletext .text .col p{ margin-bottom:0}
 
 .option{ display:none}
 .icon {
@@ -306,7 +306,7 @@ h2 .plant{ display:none}
 footer{ padding-bottom:3rem; margin-top:1rem; border-top:#000 1px solid; background-color:#fff; position:relative; z-index:2}
 footer .content{ border-right:none;}
 h1,h2{ color:#000}
-h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding-top:32px; letter-spacing:.12em; text-transform:uppercase;}
+h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding:32px 0 .5em; line-height:1em; letter-spacing:.12em; text-transform:uppercase;}
 section{ padding-top:3rem;}
 h2{/* padding-left:3rem;*/ font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; border-bottom:#000 2px solid; text-transform:uppercase;}
 h3{ font-size:1.25rem; color:#666}
@@ -354,11 +354,20 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .singleimg img,
 .singleimg svg{ width:200%; max-width:200%;}
 
+.paper{ font-family:Times New Roman, serif; padding:0 4%; color:#242424; line-height:2em;
+}
+.paper .topic{ font-size:2em; text-align:center;}
+.paper .main{ margin-top:1em}
+.paper .main p{ text-indent:1em}
+.paper .main p:first-child{ text-indent:0}
+.paper .main:first-letter{ font-size:2em; letter-spacing:.12em; vertical-align:middle; line-height:1em}
+
 @media screen and (min-width:600px){
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
 }
 
 @media (min-width:1240px){
+h1{}
 nav{ display:block;}
 nav .leaf{ display:block; margin:-5px 0 0 -125px}
 nav .leaf .a{ transform:rotate(45deg); transform-origin:center center}
@@ -376,6 +385,8 @@ nav .leaf .a .in:after{ display:none}
 .showcase .c2{ padding-top:2rem}
 }
 @media (min-width:600px){
+.paper{ padding:3% 10% 0 0;}
+.paper .main{ margin-top:1em}
 blockquote{ margin-right:1rem;}
 .pubwrap{ position:relative;}
 .pubimg{ text-align:left; float:left; margin-right:1.25rem}
@@ -385,8 +396,8 @@ blockquote{ margin-right:1rem;}
 .pubtxt .btm{ position:absolute; bottom:.625rem;}
 .sampletext{}
 .sampletext .text{}
-.sampletext .text .c{ width:50%; float:left; padding-right:1rem;}
-.sampletext .text .c:last-child{ margin-top:0; padding-right:0}
+.sampletext .text .col{ width:50%; float:left; padding-right:1rem;}
+.sampletext .text .col:last-child{ margin-top:0; padding-right:0}
 section:hover{ z-index:1; position:relative;}
 .f_zoom{ position:relative; transition:transform ease .3s; transform-origin:50% 0; background-color:#fff}
 .f_zoom:hover{ transform:scale(2); z-index:1}
@@ -522,13 +533,14 @@ $(function(){
 <nav>
 <div class="ins">
 <a data-scroll href="#1">Overview</a><br>
-<a data-scroll href="#2">Translation Work</a><br>
-<a data-scroll href="#3">Keynotes</a><br>
-<a data-scroll href="#4">Design System</a><br>
-<a data-scroll href="#5">Web Motion Design</a><br>
-<a data-scroll href="#6">Interaction Design</a><br>
-<a data-scroll href="#7">Make Websites</a><br>
-<a data-scroll href="#8">Build Tools</a><br>
+<a data-scroll href="#2">Micro-fiction</a><br>
+<a data-scroll href="#3">Translation Work</a><br>
+<a data-scroll href="#4">Keynotes</a><br>
+<a data-scroll href="#5">Design System</a><br>
+<a data-scroll href="#6">Web Motion Design</a><br>
+<a data-scroll href="#7">Interaction Design</a><br>
+<a data-scroll href="#8">Make Websites</a><br>
+<a data-scroll href="#9">Build Tools</a><br>
 </div>
 <div class="leaf">
 	<div class="a"><div class="in"></div></div>
@@ -537,10 +549,10 @@ $(function(){
 
 <article class="content">
 	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
-	<h1>Portfolio</h1>
+	<h1>Benny's Portfolio</h1>
 	<blockquote>
-		<p class="mb0">Dongfang is a UX designer with a cross-knowledge background. As an experienced interaction designer or UI developer who is passionate about Web, he used to work for Tencent, Alibaba and DiDi Chuxing group. In addition, he holds a master degree in the major of Chinese Studies (Language Education).</p>
-		<!-- <p>Recent years, Dongfang has paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Dongfang as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
+		<p class="mb0">I am a UX designer with a cross-knowledge background. As an experienced interaction designer or UI developer who is passionate about Web, he used to work for Tencent, Alibaba and DiDi Chuxing group. In addition, he holds a master degree in the major of Chinese Studies (Language Education).</p>
+		<!-- <p>Recent years, I have paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by Benny as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
 		<p class="mb0 mt20">
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a>
@@ -567,8 +579,38 @@ $(function(){
       </li>
     </ul>
   </section>
+  <section>
+    <a id="2"></a>
+    <h2>
+      <div class="plant e_plant_act">
+        <div class="leaf">
+          <div class="a"><div class="in"></div></div>
+        </div>
+      </div>
+      <span><span class="icon-leaf"></span> Micro-fiction</span></h2>
+    <ul>
+      <li>
+        <h3><strong>A.I.</strong></h3>
+        <p><strong>2018, Merit Award in the 45th Youth Literary Awards (ylaa.org.hk)</strong></p>
+        <p><label>Creative Writing</label></p>
+        <div class="paper">
+          <p class="topic"><strong>A.I.</strong></p>
+          <div class="main">
+            <p>In the first year, my dear, you said: "Draw a peacock with blue feathers." I said ok, then I drew it. </p>
+            <p>In the following year, you said: "Draw a peacock." I said ok, and I drew it, with blue feathers. </p>
+            <p>In the third year, you said you want to draw a bird. I said ok, and then draw a peacock with blue feathers. You said: "You know what I want is to draw peacocks, really sweet." </p>
+            <p>In the fourth year, you said you want a picture. I drew one. You said, "How do you know I want a BIRD?" </p>
+            <p>In the fifth year, you said "Let There Be Bird" in a bad mood. I painted for you. Then you said: "I'm really happy." </p>
+            <p>In the sixth year, I painted for you, you said "HAHA". </p>
+            <p>Last year, I painted for you. You hurt me. I thought I do not understand you.</p>
+            <p style="text-align:right">12151701#</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
 	<section>
-  	<a id="2"></a>
+  	<a id="3"></a>
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
@@ -597,11 +639,11 @@ $(function(){
   			<div class="sampletext clearfix">
           <p class="tx_cm">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
-  					<div class="c">
-  						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> --><i>"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93; ch. 4).</i></p>
+  					<div class="col">
+  						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> -->"He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent." (p. 93; ch. 4).</p>
   					</div>
-  					<div class="c">
-  						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> --><i>“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页; 第4章).</i></p>
+  					<div class="col">
+  						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> -->“从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200% 到400% 的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。” (第79页; 第4章).</p>
   					</div>
   				</div>
   			</div>
@@ -625,11 +667,11 @@ $(function(){
   			<div class="sampletext clearfix">
           <p class="tx_cm">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
-  					<div class="c">
-  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> --><i>"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224; ch. 7).</i></p>
+  					<div class="col">
+  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->"For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities." (p. 224; ch. 7).</p>
   					</div>
-  					<div class="c">
-  						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> --><i>“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页; 第7章).</i></p>
+  					<div class="col">
+  						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> -->“在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。” (第232页; 第7章).</p>
   					</div>
   				</div>
   			</div>
@@ -637,7 +679,7 @@ $(function(){
   	</ul>
 	</section>
 	<section>
-  	<a id="3"></a>
+  	<a id="4"></a>
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
@@ -674,7 +716,7 @@ $(function(){
 		</ul>
 	</section>
 	<section>
-  	<a id="4"></a>
+  	<a id="5"></a>
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
@@ -696,7 +738,7 @@ $(function(){
   	</ul>
 	</section>
   <section>
-    <a id="5"></a>
+    <a id="6"></a>
     <h2>
       <div class="plant e_plant_act">
         <div class="leaf">
@@ -738,7 +780,7 @@ $(function(){
     </div>
   </section>
 	<section>
-  	<a id="6"></a>
+  	<a id="7"></a>
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
@@ -775,7 +817,7 @@ $(function(){
   	</ul>
 	</section>
 	<section>
-  	<a id="7"></a>
+  	<a id="8"></a>
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
@@ -801,7 +843,7 @@ $(function(){
   	</ul>
 	</section>
 	<section>
-  	<a id="8"></a>
+  	<a id="9"></a>
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
@@ -836,7 +878,7 @@ $(function(){
 	<div class="leaf">
 		<div class="a"><div class="in"></div></div>
 		<div class="b"><div class="in"></div></div>
-		<div class="c"><div class="in"></div></div>
+		<div class="d"><div class="in"></div></div>
 	</div>
 </div>
 
