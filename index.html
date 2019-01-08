@@ -391,7 +391,18 @@ nav .leaf .a .in{ background:none;}
 nav .leaf .a .in:after{ display:none}
 
 .showcase .inner{ width:auto}
+
+#cnzz:before{ position:absolute; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
+  transform:translateY(-100%);
+  opacity:0;
+  transition:all .5s ease;
 }
+#cnzz:hover:before{
+  opacity:1;
+  transform:translateY(0);
+}
+}
+
 @media (max-width:599px){
 .showcase .c1 .phone{ padding:0;border-radius:0; box-shadow:none}
 .showcase .c1 .phone .d1,
@@ -933,8 +944,10 @@ $(function(){
 	</div>
 	</div>
 </footer>
-<div id="cnzz" style="height:0; overflow:hidden">
+<div id="cnzz" style=" position:absolute; right:0; top:0;">
+<div style="opacity:0">
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275874278'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1275874278%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
 </div>
 <div style="text-align:center">
   <script type="text/javascript" src="http://tajs.qq.com/stats?sId=53540232" charset="UTF-8"></script> 
