@@ -532,11 +532,7 @@ function textsize(n,o){
 
 $(function(){
   $('.f_play').on(tapend,function(){
-    if(windowW > 599){
-      $(this).attr('target','h5stage');
-    }else{
-      $(this).attr('target','_blank');
-    }
+      $(this).attr('target',(windowW > 599)?'h5stage':'_blank');
   });
 });
 </script>
