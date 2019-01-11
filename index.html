@@ -154,7 +154,7 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 }
 .btn2,
 .btn2:active,
-.btn2:hover{ padding:.375rem .5rem;
+.btn2:hover{ padding:.375rem 1.25rem;
     font-size:.75rem;
 }
 
@@ -338,7 +338,7 @@ li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem 
 .semiul li p{}
 
 .showcase{ width:100%; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;}
-.showcase .inner{ width:300%}
+.showcase .inner{}
 .showcase .c1{ display:none; float:left; padding-left:20px; padding-bottom:20px; padding-top:1.5rem; margin-right:50px}
 .showcase .c1 .phone{ position:relative; border-radius:50px; padding:90px 20px; box-shadow:#ddd 5px 5px 30px; overflow:hidden;}
 .showcase .c1 .phone iframe{ border:#000 2px solid;}
@@ -533,11 +533,9 @@ function textsize(n,o){
 $(function(){
   $('.f_play').on(tapend,function(){
     if(windowW > 599){
-      $('#h5stage').show().attr('src',$(this).attr('href'));
-      return false;
+      $(this).attr('target','h5stage');
     }else{
-      $('#h5stage').hide().attr('src',$('#h5stage').data('default'));
-      return;
+      $(this).attr('target','_blank');
     }
   });
 });
@@ -603,7 +601,7 @@ $(function(){
 	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
 	<h1>Dongfang's Portfolio</h1>
 	<blockquote>
-		<p class="mb0">Dongfang is a craftsman with a cross-knowledge background. He holds a master degree in the major of Chinese Studies (Language Education). In addition, as an content-first interaction designer or UI developer who is passionate about Web, he used to work for Tencent, Alibaba and DiDi Chuxing group.</p>
+		<p class="mb0">Dongfang is a craftsman with a cross-knowledge background located in Beijing. As an interaction designer or UI developer who is passionate about Web, he used to work for Tencent, Alibaba and DiDi Chuxing group.</p>
 		<!-- <p>Recent years, I have paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by DONGFANG as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
 		<p class="mb0 mt20">
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
@@ -679,7 +677,7 @@ $(function(){
             <h3 class="tx_l">
             <strong>渐进增强：跨平台用户体验设计<span class="icon-g_translate ml10"></span></strong>
             </h3>	
-            <p><strong>WITH: Ren, FROM: "Adaptive Web Design" by Gustafson, A. <br>2017, Post & Telecom Press, ISBN: 9787115448484</strong></p>
+            <p><strong>FROM: "ADAPTIVE WEB DESIGN" BY GUSTAFSON, A. <br>2017, WITH REN, POST & TELECOM PRESS, ISBN: 9787115448484</strong></p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn">E-book on epubit.com</a>
@@ -706,7 +704,7 @@ $(function(){
             <h3 class="tx_l">
               <strong>JavaScript数据可视化编程<span class="icon-g_translate ml10"></span></strong>
             </h3>
-            <p><strong>WITH: Zhang and Liu, FROM: "Data Visualization with JavaScript" by Thomas, S. A.<br>2017, Post & Telecom Press, ISBN: 9787115444356</strong></p>
+            <p><strong>FROM: "DATA VISUALIZATION WITH JAVASCRIPT" BY THOMAS, S. A.<br>2017, WITH ZHANG AND LIU, POST & TELECOM PRESS, ISBN: 9787115444356</strong></p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn">E-book on epubit.com</a>
@@ -848,30 +846,30 @@ $(function(){
                 <span class="d2"></span>
                 <span class="d3"></span>
                 <span class="d4"></span>
-                <iframe id="h5stage" data-default="http://futurefriendly.cn/ds/page/invitation2016.html" src="http://futurefriendly.cn/ds/page/invitation2016.html" style="width:320px; height:570px;" frameborder="0"></iframe>
+                <iframe id="h5stage" name="h5stage" src="http://futurefriendly.cn/ds/page/invitation2016.html" style="width:320px; height:570px;" frameborder="0"></iframe>
               </div>
             </div>
             <div class="c2 clearfix">
-              <h3 class="mt20"><strong>Product Launch Invitation<span class="icon-html-five ml10"></span></strong></h3>
+              <h3 class="pt10"><strong>Product Launch Invitation<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>A quiet and sweet invitation.</strong></p>
-              <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/invitation2016.html" style="width:60px">Play</a></p>
+              <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/invitation2016.html">Play</a></p>
               <!-- <h3 class="mt20"><strong>"National Day Promotion"</strong></h3>
               <p><a href="javascript:;" class="btn2 f_play" data-href="http://futurefriendly.cn/ds/page/oct2016c.html" style="width:60px">Play</a></p> -->
               <h3 class="mt20"><strong>Hitch Big Data Promotion<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>Users' trip data on the 1<small>st</small> Anniversary of DiDi Hitch.</strong></p>
-              <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/startrek2016.html" style="width:60px">Play</a></p>
+              <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/startrek2016.html">Play</a></p>
               <h3 class="mt20"><strong>Hitch Man<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>This is the ONLY game on this portfolio site, don't miss it.</strong></p>
               <p>"Come and Get Your Love" (Redbone, 1973)<span class="icon-music ml10"></span> <br>Time Signature 4/4, 108bpm</p>
-              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/pop.html" style="width:60px">Play</a></p>
+              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/pop.html">Play</a></p>
               <h3 class="mt20"><strong>Team Style<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>DiDi Hitch's Product and Marketing team.</strong></p>
               <p>"The Ludlows" (James Horner, 1995)<span class="icon-music ml10"></span> <br>Time Signature 3/4, 80bpm</p>
-              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/team_slides.html" style="width:60px">Play</a></p>
+              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/team_slides.html">Play</a></p>
               <h3 class="mt20"><strong>Love Story On The Road<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>Frame-by-frame animation.</strong></p>
               <p>"Cross My Mind" (Twin Forks, 2014)<span class="icon-music ml10"></span> <br>Time Signature 4/4, 91bpm</p>
-              <p><a class="btn2 f_play" href="http://static.didialift.com/pinche/staticpage/romance2016.html" style="width:60px">Play</a></p>
+              <p><a class="btn2 f_play" href="http://static.didialift.com/pinche/staticpage/romance2016.html">Play</a></p>
             </div>
           </div>
         </div>
