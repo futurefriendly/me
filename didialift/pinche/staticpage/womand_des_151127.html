@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>粉色星期三</title>
+<style>
+*{
+	margin: 0;padding: 0
+}
+body{
+	max-width: 750px;
+	margin: 0 auto;
+}
+img{
+	vertical-align: top;
+	max-width: 100%;
+}
+</style>
+</head>
+<body>
+<img src="http://www.futurefriendly.cn/me/didialift/pinche/xiaojushow/womanday/images/womday_01.jpg" alt="">
+<img src="http://www.futurefriendly.cn/me/didialift/pinche/xiaojushow/womanday/images/womday_02.jpg" alt="">
+<img src="http://www.futurefriendly.cn/me/didialift/pinche/xiaojushow/womanday/images/womday_03.jpg" alt="">
+<script src="http://www.futurefriendly.cn/me/didialift/pinche/js/zeptov2.js"></script>
+<script src="http://www.futurefriendly.cn/me/didialift/pinche/js/app-wx-share.js"></script>
+<script src="http://www.futurefriendly.cn/me/didialift/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script>
+var wxShare = {
+    title: '滴滴粉色星期三，邀妳享受温暖特权',
+    desc: '这个冬天其实不冷，滴滴顺风车为女性出行免单护航，总有温暖在路上。',
+    link: location.href,
+    imgUrl: 'http://static.diditaxi.com.cn/pinche/images/forimage/womday_04.jpg'
+};
+$(function(){
+	initWxShare(wxShare);
+	// 统计   
+	var _send = DidiMonitor.sendBeatles;
+	// 发送显示日志，等同于PV
+	_send('womandaydesc-20151127_index_sw');
+
+})
+
+</script>
+</body>
+</html>
