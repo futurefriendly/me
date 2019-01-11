@@ -357,7 +357,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 
 .pubwrap{}
 .pubimg{ text-align:center}
-.pubimg img{ width:80%; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 4px 4px 8px; -webkit-filter:brightness(97%); background:#fff}
+.pubimg img{ width:80%; margin:0; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 4px 4px 8px; -webkit-filter:brightness(97%); background:#fff}
 .pubimg img{ margin-right:.625rem}
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
@@ -404,8 +404,9 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .paper .main{ margin-top:1em}
 blockquote{ margin-right:1rem;}
 .pubwrap{ position:relative;}
-.pubimg{ text-align:left; float:left; margin-right:1.25rem}
-.pubimg img{ width:auto; height:15rem; transition:-webkit-filter .2s ease;}
+.pubimg{ text-align:left; float:left; margin-right:1.25rem;}
+.pubimg:hover img{ transform:perspective(1000px) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
+.pubimg img{ width:auto; height:15rem; transition:all .5s ease;}
 .pubtxt{ padding-top:.625rem; margin-top:0;}
 .pubtxt p{ line-height:2em}
 .pubtxt .btm{ position:absolute; bottom:.625rem;}
@@ -678,7 +679,7 @@ $(function(){
   	<ul>
   		<li>
   			<div class="pubwrap clearfix">
-  				<div class="pubimg clearfix"><img src="./assets/awd-thin.svg" class="ml10" alt="image of Adaptive Web Design in Chinese" />
+  				<div class="pubimg clearfix" style="background:rgba(0,0,0,.02) url(./assets/awd-en.svg) center center no-repeat; background-size:contain"><img src="./assets/awd-thin.svg" class="ml10" alt="image of Adaptive Web Design in Chinese" />
   				</div>
   				<div class="pubtxt">
             <h3 class="tx_l">
@@ -705,7 +706,7 @@ $(function(){
   		</li>
   		<li>
   			<div class="pubwrap clearfix">
-  				<div class="pubimg clearfix"><img class="ml10" src="./assets/dvj.png" alt="image of Data Visualization with JavaScript in Chinese" />
+  				<div class="pubimg clearfix" style="background:rgba(0,0,0,.1) url(./assets/dvj-en.png) center center no-repeat; background-size:contain"><img class="ml10" src="./assets/dvj.png" alt="image of Data Visualization with JavaScript in Chinese" />
   				</div>
   				<div class="pubtxt">
             <h3 class="tx_l">
