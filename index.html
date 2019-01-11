@@ -375,9 +375,9 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .singleimg:after{ content:''; position:absolute; right:0; top:0; height:100%; width:5px;
   background-image:linear-gradient(-90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
 }
-.singleimg .inner{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.singleimg .inner{ box-sizing:border-box; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
 .singleimg img,
-.singleimg svg{ width:300%; max-width:300%;}
+.singleimg svg{ box-sizing:border-box; width:300%; max-width:300%; border-left:transparent 10px solid; border-right:transparent 10px solid;}
 
 .paper{ font-family:Georgia, serif; padding:0 4%; color:#242424; line-height:2em;
 }
@@ -440,7 +440,7 @@ li img{ margin-left:0; margin-right:0}
 .semiul li img{ width:24rem; max-width:100%}
 
 .singleimg img,
-.singleimg svg{ width:auto; max-width:100%}
+.singleimg svg{ width:auto; max-width:100%; border:none;}
 .singleimg:before,
 .singleimg:after{ display:none;}
 
