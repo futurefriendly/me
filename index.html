@@ -368,7 +368,14 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .scroll nav{ transform:translateY(0); opacity:1;}
 .scroll nav .ins{ padding-top:1rem;}
 
-.singleimg{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.singleimg{ position:relative;}
+.singleimg:before{ content:''; position:absolute; left:0; top:0; height:100%; width:5px;
+  background-image:linear-gradient(90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
+}
+.singleimg:after{ content:''; position:absolute; right:0; top:0; height:100%; width:5px;
+  background-image:linear-gradient(-90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
+}
+.singleimg .inner{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
 .singleimg img,
 .singleimg svg{ width:300%; max-width:300%;}
 
@@ -434,6 +441,8 @@ li img{ margin-left:0; margin-right:0}
 
 .singleimg img,
 .singleimg svg{ width:auto; max-width:100%}
+.singleimg:before,
+.singleimg:after{ display:none;}
 
 .li_weishi{ margin-top:-5rem}
 
@@ -619,7 +628,9 @@ $(function(){
         <h3><strong>Craft Development Map<span class="icon-pie-chart ml10"></span></strong></h3>
         <p class="mt10 tx_geo">This picture depicts my knowledge structure about design, past experience is listed in it by relevance.</p>
         <div class="singleimg">
-          <img src="./assets/kdg.svg" alt="Image of Knowledge Development Graph">
+          <div class="inner">
+            <img src="./assets/kdg.svg" alt="Image of Knowledge Development Graph">
+          </div>
         </div>
         <p class="mt10"><a target="_blank" href="./assets/kdg.svg" class="btn">View it in a new window</a></p>
       </li>
@@ -774,7 +785,9 @@ $(function(){
         <p><label>UI Design</label> <label>UI Development</label></p>
         <p>Firstly, this design system serves Web products of DiDi Hitch, including the built-in webview and the operational activity web pages. Secondly, this design system serves UX designer and front-end developer. It is both a front-end guideline and a UI component library.</p>
         <div class="singleimg">
-          <img src="./assets/designsystem.png" />
+          <div class="inner">
+            <img src="./assets/designsystem.png" />
+          </div>
         </div>
   			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn">View it online</a></div>
   		</li>
@@ -797,7 +810,9 @@ $(function(){
         <p><strong>The Survey Page After A Hitch Journey: </strong>After the trip, we will collect passengers' evaluation data on his or her driver to help us continuously improve the quality of our services. The survey page is divided into a real-name part and an anonymous part. The driver client will see a positive evaluation written by the passenger, and the negative evaluation written by the passenger will be submitted directly to the backend system anonymously as evidence, we will use that data to analyze whether a driver is good enough. </p>
         <p>For fast-paced iterations, 70% of DiDi client's UI was implemented in webview mode, no exception this page was.</p>
         <div class="singleimg">
-          <img src="./assets/didi_pro_show.png" />
+          <div class="inner">
+            <img src="./assets/didi_pro_show.png" />
+          </div>
         </div>
       </li>
       <!-- <li>
@@ -812,7 +827,9 @@ $(function(){
         <p><label>Prototyping</label> <label>Interaction Design</label></p>
         <p><strong>Process of Forwarding A Video: </strong>WEISHI was a Vine-like short video sharing App. In this project, considering the difference between iOS and Android platform, we applied different design strategies for them. For example, on the iOS platform, we combined "share" and "forward" operations into the iOS-only actionsheet to reduce the number of buttons visible on the video page.</p>
         <div class="singleimg">
-          <img src="./assets/weishi.png" />
+          <div class="inner">
+            <img src="./assets/weishi.png" />
+          </div>
         </div>
       </li>
     </ul>
@@ -832,8 +849,7 @@ $(function(){
         <h3><strong>DiDi Hitch<span class="icon-html-five ml10"></span></strong></h3>
         <p><strong>2015 - 2016, DIDI CHUXING</strong></p>
         <p><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
-        <p><strong>Mobile Pages of DiDi Hitch: </strong>We noticed the harmony between the background music and the animation rhythm if a web page contains background music. The value of animation-duration should be equal to an integer multiple of one beat.</p>
-        <p>(If you are using a desktop browser, please don't hesitate to tap or drag the content on the LEFT to preview more.)</p>
+        <p><strong>Mobile Pages of DiDi Hitch: </strong>We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</p>
         <div class="showcase clearfix">
           <div class="inner">
             <div class="c1 clearfix">
@@ -862,10 +878,10 @@ $(function(){
               <p><strong>August 2015</strong></p>
               <p>"Come and Get Your Love" (Redbone, 1973)<span class="icon-music ml10"></span> <br>Time Signature 4/4, 108bpm</p>
               <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/pop.html">Play</a></p>
-              <h3 class="mt20"><strong>Team Style<span class="icon-html-five ml10"></span></strong></h3>
+              <!-- <h3 class="mt20"><strong>Team Style<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>July 2015</strong></p>
               <p>"The Ludlows" (James Horner, 1995)<span class="icon-music ml10"></span> <br>Time Signature 3/4, 80bpm</p>
-              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/team_slides.html">Play</a></p>
+              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/team_slides.html">Play</a></p> -->
             </div>
           </div>
         </div>
@@ -888,7 +904,9 @@ $(function(){
         <p><label>Interaction Design</label> <label>Front-end Development</label></p>
         <p>The International Official Portal Website of Peking University has made its debut on Nov 20th, 2015. This new responsive site is designed with "Future-Friendly Design" thinking, applied bootstrap grid system, and support IE7+ browser.</p>
         <div class="singleimg">
-          <img src="./assets/pku.png" />
+          <div class="inner">
+            <img src="./assets/pku.png" />
+          </div>
         </div>
   			<div>
   				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn">Visit newsen.pku.edu.cn</a>
@@ -914,7 +932,9 @@ $(function(){
         <p><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></p>
         <p>UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Not only is it a tool, the designer wants to make it fun. This system has been optimized for accessibility. English and Chinese language are supported.</p>
         <div class="singleimg">
-          <img src="./assets/csstool.png" />
+          <div class="inner">
+            <img src="./assets/csstool.png" />
+          </div>
         </div>
   			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn">View it online</a></div>
   		</li>
