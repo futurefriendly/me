@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="expires" content="0"/>
+<title>滴滴顺风车</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img,
+a img {
+  border: none;
+}
+input,
+textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+input,
+textarea {
+  border: none;
+  -webkit-appearance: none;
+  font-family: "Microsoft YaHei";
+}
+table {
+  border-collapse: collapse;
+}
+textarea {
+  resize: none;
+  font-family: "Microsoft YaHei";
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: "Microsoft YaHei", "SimSun", "Arial Narrow", HELVETICA;
+  line-height: 22px;
+  -webkit-text-size-adjust: none;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 20px;
+}
+body {
+  font-size: 20px;
+  line-height: 1.5;
+  background: #fff
+}
+html,body{height: 100%}
+.empt_01,.empt_02{
+	height: 8.29%;
+}
+.top_div{
+	height: 69.65%;
+	text-align: center;
+}
+.top_div img{
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.other_btn{
+	width: 47%;
+	display: inline-block;
+	font-size: 0.9rem;
+	color: #fff;
+	background:#ff8c03;
+	padding: 0.3rem 0;
+	border-radius: 16px;
+}
+</style>
+</head>
+<body>
+<div class="empt_01"></div>
+<div class="top_div">
+	<img src="http://www.futurefriendly.cn/me/didialift/pinche/images/offline_img.png" alt="">
+</div>
+<div class="empt_02"></div>
+
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+    };
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script src="http://www.futurefriendly.cn/me/didialift/pinche/js/zeptov2.js"></script>
+<script src="http://www.futurefriendly.cn/me/didialift/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script>
+$(function(){
+	var _send = DidiMonitor.sendBeatles;
+	var _channel = DidiMonitor.getQuery('channel');
+	// 发送显示日志，等同于PV
+	_send('activeoffline_index_sw', {
+	    channel: _channel
+	});
+})
+</script>
+</body>
+</html>

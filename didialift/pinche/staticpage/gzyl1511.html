@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>关注有礼</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link type="image/x-icon" href="http://www.xiaojukeji.com/website/images/favicon.ico" rel="icon" />
+<link rel="stylesheet" type="text/css" href="http://www.futurefriendly.cn/me/didialift/pinche/css/merged-common-ui.css" />
+<style>
+html,body{ background:#0a0a24; height:100%; overflow:hidden}
+.container{ position:relative; top:35%; max-width:750px; margin:-62% auto 0;}
+.container img{ max-width:100%; vertical-align:top}
+.wordBlink{ display:none; position:absolute; left:66.4%; top:40.6%; width:6.8%; overflow:hidden; }
+.wordBlink .c1{ width:200%}
+.ani .wordBlink .c1 img{
+    -webkit-animation:wordBlink .6s steps(1) infinite;
+    animation:wordBlink .6s steps(1) infinite;
+    -webkit-backface-visibility:hidden;
+}
+@-webkit-keyframes wordBlink{
+    0%{ margin-left:0;}
+    50%{ margin-left:-50%;}
+    100%{ margin-left:0;}
+}
+@keyframes wordBlink{
+    0%{ margin-left:0;}
+    50%{ margin-left:-50%;}
+    100%{ margin-left:0;}
+}
+.openCard{ position:absolute; width:32%; left:34%; top:73%}
+.openCard .shadow{ position:absolute; left:0; bottom:-15%; width:100%; height:17%; border-radius:100%; background:#9b1a21;
+    -webkit-animation:shadow 1.2s ease-in-out infinite;
+    animation:shadow 1.2s ease-in-out infinite;
+    -webkit-backface-visibility:hidden;
+}
+@-webkit-keyframes shadow{
+    0%{ opacity:1; -webkit-transform:scale(1.1);}
+    40%{ opacity:1; -webkit-transform:scale(1.1);}
+    50%{ opacity:.8; -webkit-transform:scale(1);}
+    60%{ opacity:1; -webkit-transform:scale(1.1);}
+    100%{ opacity:1; -webkit-transform:scale(1.1);}
+}
+@keyframes shadow{
+    0%{ opacity:1; transform:scale(1.1);}
+    40%{ opacity:1; transform:scale(1.1);}
+    50%{ opacity:.8; transform:scale(1);}
+    60%{ opacity:1; transform:scale(1.1);}
+    100%{ opacity:1; transform:scale(1.1);}
+}
+.openCard img{ position:relative;
+    -webkit-animation:opencard 1.2s ease-in-out infinite;
+    animation:opencard 1.2s ease-in-out infinite;
+    -webkit-backface-visibility:hidden;
+}
+@-webkit-keyframes opencard{
+    0%{ -webkit-transform:rotate(0deg) translateY(0%);}
+    40%{ -webkit-transform:rotate(0deg) translateY(0%);}
+    45%{ -webkit-transform:rotate(-3deg) translateY(-5%);}
+    50%{ -webkit-transform:rotate(0deg) translateY(-5%);}
+    55%{ -webkit-transform:rotate(3deg) translateY(-5%);}
+    60%{ -webkit-transform:rotate(0deg) translateY(0%);}
+    100%{ -webkit-transform:rotate(0deg) translateY(0%);}
+}
+@keyframes opencard{
+    0%{ transform:rotate(0deg) translateY(0%);}
+    40%{ transform:rotate(0deg) translateY(0%);}
+    45%{ transform:rotate(-3deg) translateY(-5%);}
+    50%{ transform:rotate(0deg) translateY(-5%);}
+    55%{ transform:rotate(3deg) translateY(-5%);}
+    60%{ transform:rotate(0deg) translateY(0%);}
+    100%{ transform:rotate(0deg) translateY(0%);}
+}
+.openGift{ position:absolute; width:100%; height:32%; left:0; bottom:0; overflow:hidden; text-indent:-9999em}
+</style>
+</head>
+
+<body ontouchstart="">
+<input id="d" style="display:block;width:100%; height:300px; font-size:30px; background:#fff;word-wrap:break-word" value="The   diagram" type="text" />
+<div>ddddddddddddd</div>
+<div class="container">
+<img src="http://www.futurefriendly.cn/me/didialift/pinche/images/gzyl1511/page1_151113b.jpg" />
+<div class="wordBlink"><div class="c1"><img src="http://www.futurefriendly.cn/me/didialift/pinche/images/gzyl1511/wordBlink.png" /></div></div>
+<div class="openCard">
+    <div class="shadow"></div>
+    <img src="http://www.futurefriendly.cn/me/didialift/pinche/images/gzyl1511/card.png" />
+</div>
+<a href="javascript:;" data-href="http://www.futurefriendly.cn/me/didialift/pinche/staticpage/gzyl1511_gz.html" id="openGift" class="openGift">打开礼包</a>
+</div>
+<script type="text/javascript" src="http://www.futurefriendly.cn/me/didialift/pinche/js/zeptov2.js"></script>
+<script type="text/javascript" src="http://www.futurefriendly.cn/me/didialift/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script>  
+$(function(){
+    $('#d').on('touchend',function(){
+        console.log(1);
+        $('#d')[0].selectionStart=0;
+        $('#d')[0].selectionEnd=$('#d')[0].value.length;
+    }).on('input propertychange',function(){
+        $(this).val($(this)[0].defaultValue);
+        (function(){
+            $('#d')[0].selectionStart=0;
+            $('#d')[0].selectionEnd=$('#d')[0].value.length;
+        }());
+    });
+});
+</script>   
+<script>
+$(function(){
+
+    //统计
+    var _send = DidiMonitor.sendBeatles;
+    var _channel = DidiMonitor.getQuery('channel');
+    var _href = $('#openGift').data('href') + '?channel=' + _channel;
+
+    // 发送显示日志，等同于PV
+    _send('firstpage_gzyl1511_sw');
+
+    $('#openGift').on('touchend',function(){
+        _send('openGift_gzyl1511_ck');
+        setTimeout(function(){
+            location.href = _href;
+        },300);
+    });
+});
+window.onload = function(){
+    $('.wordBlink').css('display','block');
+    setTimeout(function(){
+        $('body').addClass('ani');
+    },300);
+}
+</script>
+
+</body>
+
+</html>

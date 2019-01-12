@@ -1,0 +1,396 @@
+/* CSS GUIDE - 通用样式 - 基础
+================================================================
+ *
+ * PROJECT:	Spark;
+ *
+----------------------------------------------------------------
+ *
+ * 1. CSS RESET;
+ * 2. 基础;
+ *
+================================================================*/
+
+
+
+
+
+/* 1 CSS RESET
+================================================================*/
+
+html,body{ height:auto}
+input,textarea,select{ font-family:Helvetica,Arial,sans-serif}
+
+
+
+/* 2 基础
+================================================================*/
+
+/* 布局
+----------------------------------------------------------------*/
+
+/* 浮动 */
+.clearfix:after,
+.msgBox:after{content:'.';clear:both;display:block;height:0;visibility:hidden;line-height:0}
+.clearfix,
+.msgBox{zoom:1}
+.left{float:left}
+.right{float:right}
+
+/* DISPLAY */
+.dis_b{ display:block; *zoom:1;}
+.dis_in{ display:inline}
+.dis_inb{ display:inline-block; *display:inline; *zoom:1}
+.vis_on{ visibility: visible;}
+.vis_off{ visibility: hidden;}
+
+/* 边距 */
+.mt5{ margin-top:5px}
+.mr5{ margin-right:5px}
+.mb5{ margin-bottom:5px}
+.ml5{ margin-left:5px}
+.mt10{ margin-top:10px}
+.mr10{ margin-right:10px}
+.mb10{ margin-bottom:10px}
+.ml10{ margin-left:10px}
+.mt15{ margin-top:15px}
+.mr15{ margin-right:15px}
+.mb15{ margin-bottom:15px}
+.ml15{ margin-left:15px}
+.mt20{ margin-top:20px}
+.mr20{ margin-right:20px}
+.mb20{ margin-bottom:20px}
+.ml20{ margin-left:20px}
+
+.pt5{ padding-top:5px}
+.pr5{ padding-right:5px}
+.pb5{ padding-bottom:5px}
+.pl5{ padding-left:5px}
+.pt10{ padding-top:10px}
+.pr10{ padding-right:10px}
+.pb10{ padding-bottom:10px}
+.pl10{ padding-left:10px}
+.pt15{ padding-top:15px}
+.pr15{ padding-right:15px}
+.pb15{ padding-bottom:15px}
+.pl15{ padding-left:15px}
+.pt20{ padding-top:20px}
+.pr20{ padding-right:20px}
+.pb20{ padding-bottom:20px}
+.pl20{ padding-left:20px}
+
+body .mt0{ margin-top:0!important}
+body .mr0{ margin-right:0!important}
+body .mb0{ margin-bottom:0!important}
+body .ml0{ margin-left:0!important}
+body .pt0{ padding-top:0!important}
+body .pr0{ padding-right:0!important}
+body .pb0{ padding-bottom:0!important}
+body .pl0{ padding-left:0!important}
+
+/* 对齐 */
+.vt_t{ vertical-align:top}
+.vt_m{ vertical-align:middle}
+.vt_b{ vertical-align:bottom}
+.vt_bl{ vertical-align:baseline;}
+
+/* 文字
+----------------------------------------------------------------*/
+
+/* 字体 */
+.tx_song{font-family:SimSun,Helvetica}
+.tx_yh{font-family:Microsoft YaHei,Mingliu,Helvetica,sans-serif}
+.tx_ar{ font-family:Arial}
+.tx_ss{ font-family:sans-serif}
+.tx_code{ font-family:Courier New}
+
+/* 字号 */
+.tx_12{ font-size:1.2rem;}
+.tx_14{ font-size:1.4rem;}
+.tx_15{ font-size:1.5rem;}
+.tx_16{ font-size:1.6rem;}
+.tx_18{ font-size:1.8rem;}
+.tx_20{ font-size:2rem;}
+.tx_22{ font-size:2.2rem;}
+.tx_24{ font-size:2.4rem;}
+.tx_26{ font-size:2.6rem;}
+.tx_28{ font-size:2.8rem;}
+.tx_30{ font-size:3rem;}
+
+/* 字重 */
+.tx_b{ font-weight: 800}
+.tx_n{ font-weight:normal}
+
+/* 字体样式 */
+.tx_udl{ text-decoration:underline}
+.tx_del{ text-decoration:line-through}
+
+/* 对齐 */
+.tx_l{ text-align:left}
+.tx_c{ text-align:center}
+.tx_r{ text-align:right}
+
+/* 折行 */
+.tx_br{ word-wrap:break-word; word-break:break-all}
+.tx_nbr{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+/* 其他
+----------------------------------------------------------------*/
+
+.hr1{ height:0; overflow:hidden; border-top:#ccc 1px dotted; margin-top:10px;}
+
+/* 鼠标手型 */
+.cur_auto{ cursor: auto!important;}
+.cur_default{ cursor: default!important;}
+.cur_pointer{ cursor:pointer!important;}
+
+/* 动画
+----------------------------------------*/
+
+
+
+
+
+/* CSS GUIDE - 通用样式 - 模块
+================================================================
+ *
+ * PROJECT:	Spark;
+ *
+----------------------------------------------------------------
+ *
+ * 1. 图标;
+ * 2. 模块;
+ * 3. 结构;
+ *
+================================================================*/
+
+
+
+
+
+/* 1 图标
+================================================================*/
+
+.ico{ display:inline-block; *display:inline; *zoom:1; background-repeat:no-repeat; font-size:0; vertical-align:middle; overflow:hidden;
+	background:url(http://static.didialift.com/pinche/images/team_wechat/ico_sprite.png) 0 0 no-repeat;
+	background-size:50px 16px;
+}
+.ico_16_arr-r{ width:16px; height:16px; background-position:0 0}
+.ico_16_clock{ width:16px; height:16px; background-position:-17px 0}
+.ico_16_pen{ width:16px; height:16px; background-position:-34px 0}
+
+
+
+
+/* 2 模块
+================================================================*/
+
+/* 表单元素
+----------------------------------------------------------------*/
+
+.inputTxt{ position:relative; background:#fff;}
+
+.inputTxt input,
+.inputTxt textarea,
+.inputTxt select{ box-sizing:border-box; width:100%; height:44px; padding:10px; color:#666; border:#dadada 1px solid; background:none; font:16px/1.5 Helvetica,Arial,sans-serif; border-radius:5px;
+	-webkit-appearance:none;
+	appearance:none;
+}
+
+.inputTxt input:focus,
+.inputTxt textarea:focus,
+.inputTxt select:focus{ border-color:#03acb9}
+
+.inputTxt .arr{ position:absolute; right:3%; top:50%; margin-top:-4px; border-width:8px 5px 0; border-color:#333 transparent transparent transparent; border-style:solid dashed dashed dashed; pointer-events:none;}
+
+.inputCheck,
+.inputCheck .imcheckbox{ display:inline-block; vertical-align:middle; cursor:pointer;}
+.inputCheck input{ vertical-align:middle}
+.inputCheck input[type="radio"],
+.inputCheck input[type="checkbox"],
+.inputCheck .imcheckbox{ width:20px; height:20px;
+	background:url(http://static.didialift.com/pinche/images/spark/input_2x_151027.png) 0 0 no-repeat;
+	background-image:-webkit-image-set(url(http://static.didialift.com/pinche/images/spark/input_151027.png) 1x,url(http://static.didialift.com/pinche/images/spark/input_2x_151027.png) 2x);
+	background-size:83px 20px;
+}
+.inputCheck input[type="radio"]:checked{ background-position:-21px 0}
+.inputCheck input[type="checkbox"],
+.inputCheck .imcheckbox{ background-position:-42px 0}
+.inputCheck input[type="checkbox"]:checked,
+.inputCheck .imcheckbox.checked{ background-position:-63px 0}
+
+.inputAreaLim{ position:relative; background:#fff; border-bottom:#d8d8d8 1px solid}
+.inputAreaLim textarea{ width:100%; height:180px; overflow-y:auto; overflow-y:scroll; padding:15px; border:none; outline:none; background:none; font-size:14px; resize:none;
+	-webkit-appearance:none;
+	-webkit-box-sizing:border-box;
+}
+
+/* 按钮
+----------------------------------------------------------------*/
+
+/* 按钮 */
+.btn{ display:block;}
+.btn a,
+.btn input,
+.btn button{ display:block; width:100%; padding-left:15px; padding-right:15px; border:none; border-radius:5px; line-height:1.5em; text-align:center; cursor:pointer;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.e_btn_inb{ display:inline-block; vertical-align:middle}
+.e_btn_inb a,
+.e_btn_inb input,
+.e_btn_inb button{ display:inline-block; width:auto; vertical-align:top}
+
+.btn1{}
+.btn1 a,
+.btn1 a:active,
+.btn1 input,
+.btn1 button{ padding-top:8px; padding-bottom:8px; font-size:1.6rem; background:#ff8903; color:#fff;}
+
+.btn1 a:active,
+.btn1 input:active,
+.btn1 button:active{
+	-webkit-filter:brightness(.8);
+	filter:brightness(.8);
+}
+
+.btn2 a,
+.btn2 a:active,
+.btn2 input,
+.btn2 button{ padding-top:6px; padding-bottom:6px; font-size:1.2rem; background:#fdab2b; color:#fff;}
+
+.btn2 a:active,
+.btn2 input:active,
+.btn2 button:active{
+	-webkit-filter:brightness(.8);
+	filter:brightness(.8);
+}
+
+/* 头像
+----------------------------------------------------------------*/
+
+.avatar{ position:relative;}
+.avatar .head{ width:100%; vertical-align:top}
+.avatar .dot{ position:absolute; right:0; top:0; display:block; width:5px; height:5px; border-radius:3px; background:#ff5046;}
+
+.avatar1{ width:36px; height:36px;}
+.avatar1 .head{ border-radius:18px;}
+
+/* 消息体
+----------------------------------------------------------------*/
+
+.msgBox{}
+.msgBox .picCnt{ float:left; margin-right:20px}
+.msgBox .msgCnt{ overflow:hidden;}
+li .msgBox .msgCnt{ border-bottom:#e5e5e5 1px solid}
+.msgBox .msgCnt .username span{ line-height:1.4em}
+.msgBox .msgCnt .message{ text-align:justify; line-height:1.4em}
+.msgBox .arr{ position:absolute; top:50%; right:12px; margin-top:-8px;}
+
+.foothold{ height:75px;}
+.footbar{ position:fixed; left:0; width:100%; bottom:0; padding-top:20px;}
+.footbar .lk{ height:55px; line-height:55px; background:#fff; border-top:#e5e5e5 1px solid; box-shadow:rgba(228,228,228,.26) 0 0 20px 10px}
+.footbar .lk:active{
+	-webkit-filter:brightness(.9);
+}
+
+.feed_list .item{ position:relative;}
+.feed_list .item .lk{ position:absolute; left:0; top:0; width:100%; height:100%; background:#000; opacity:0}
+.feed_list .item .lk:active{ opacity:.1}
+
+.mailDeco{ height:6px; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAAMCAMAAACa/FkKAAAABGdBTUEAALGPC/xhBQAAAbBQTFRFAAAAW7/oesvsseH0+Pz9ZcTpX8Lp8Pj9/vn5+cK996Sd9IB39paP9IyC9IZ9YsLpuOP1gc7tY8PpqN3z84N79IN6+sjE952X84R8+Li16vf8XcDp9IF4/e/ub8frweb29Y2Frd7z+szJ9YyC+b24YcPq9IB5d8vs9pSNc8js8Pn9X8Ho7fj984B4/fLy9ZCJ/fDvY8vzgtb1cNDzZsTpdMrrbcfqh9DucMjry+v3kNPv+v7+9YyEdtb0dNTz9I2E9paO96Sc84V93fL6p93y9IV895+ZctDz9Y6G+Keh+9PR/vv7cNHzWr/oXsHqnOP3+Pz+itHu+f7+ddL09YmBYcPor+DzbMXq9ZOL/v38/vj49H91+Lav9IB4sd/0ccjr+Lm0/eTj+MC89IyD7/j99Y6H+cG9i9Hu9IF5X8HpZMTq/fPy96Obcc/zc9HzddX0ddT0dtT09IJ69peOa8Xq9Ih/b83z9pOM9piNaMXpdsrsc9LzaMTpddP0ctHzaMTq9Id/9paNdNLz84Z+9ZKK9peN9piO9IZ+dcnsZ8TpdMjr9ZGKdcnrdcrr////9ZKL5+VmKQAAAAF0Uk5TAEDm2GYAAAJfSURBVDjLxZOFutswDEY7ZmZmZubdMTMzb5e5DGnjBh07eeVJshOne4H5S2NZTn30S3IhVuP9p3e2a7vutGt7rut6btXzql4VDNvz4HHVA5u2e832pvuux2a8ePqIscmXrdZkq8VYo8HYWIs12ITFmGWxhsUmro6PX7FGrbvlcnl07NSJk/CnQkH9+cPI5yRJokS9aO4dUepUU+XGnYcZ+dnzJ4JzKaWQMHMBQ8KDJg+k5ELinqAPOHxSP33ukkH/+JhEeGiUUh0wdRAOEZ0sCPpu6oER/eYxHS4DfCEZYVwGFIKCioCTl2I7M3jBqB7+/VNTlTqCpo7ELLTmqHL7viH/+vqWZKkfgUkiKiShQFVuCiOoD12MDfrPVCUvOcrSC2p72Wr33qvvBv3ldR1gAZ6LGcfTUTGtda7R0BURwfniTYM+fuxydrRj5FEEKu2OTgbmHawj3wz58IGzXOiSEjstq6S0U6KF1JIxE4duxQa9e2++jirpWGonl3vHNFq0a/9Rg96xh8QJToKx4EIqjzZ51gcUQnHfQYPekmzP+jjtr+SfameZwHg27zTkjXIrJZMHIlMacC0YLCx2QKVWEYlN22KD3rAGU6tV9nCcrPBR7tYNjOTu9KplQl8r3c66r7lM25v2uG4FObc/zqHXDeSIKa6nryJ94XCxZNHC4Rx6xWCdy5RHbY0trRqKGlpHQyURxRn98/LotetXd2F0ur7fLfnw8rudTsnHNVglWKAPbd9f6i9eMD9HjpevHArbYS2EUQODRhNmNMHfDptNcoXtZjinNnPW7DhD/7/xF97Gr0RD4SH9AAAAAElFTkSuQmCC) center center repeat-x; background-size:61px 6px;}
+
+/* 3 结构
+================================================================*/
+
+.container{ margin:0 auto; max-width:768px}
+
+.msgDetail{ padding:5%;}
+
+
+
+
+
+/* CSS GUIDE - 通用样式 - 皮肤
+================================================================
+ *
+ * PROJECT:	Spark;
+ *
+----------------------------------------------------------------
+ *
+ * 1. 文字;
+ * 2. 边框;
+ * 3. 背景;
+ *
+================================================================*/
+
+
+
+
+
+/* 1 文字
+================================================================*/
+
+
+/* 文字色
+----------------------------------------------------------------*/
+
+/* 默认文字色 */
+.c_t0,body{ color:#666}
+/* 强文字色 */
+.c_t1{ color:#333}
+/* 强文字色2 */
+.c_t2{ color:#ff8903}
+/* 弱文字色 */
+.c_t3{ color:#999;}
+/* 弱文字色2 */
+.c_t4{ color:#ccc;}
+/* 白色 */
+.c_tw{ color:#fff;}
+
+/* 链接色
+----------------------------------------------------------------*/
+
+/* 默认链接色 */
+a.c_a0,a{ color:#366;}
+a.c_a0:active,a:active{ color:#366}
+/* 强链接色 */
+a.c_a1{ color:#ff9933}
+a.c_a1:active{ color:#ff9933}
+/* 弱链接色 */
+a.c_a2{ color:#366}
+a.c_a2:active{ color:#366}
+
+/* 表单元素色
+----------------------------------------------------------------*/
+
+:root ::-webkit-input-placeholder{ color:#ccc;}
+:root :-webkit-input-placeholder{ color:#ccc;}
+
+
+
+
+
+/* 2 边框
+================================================================*/
+
+.c_bor1{ border-color:#ccc}
+.c_bor2{ border-color:#ddd}
+.c_bor3{ border-color:#d9d9d9}
+
+
+
+
+
+/* 3 背景
+================================================================*/
+
+/* 背景色
+----------------------------------------------------------------*/
+.c_bg0,body{ background-color:#fff}/* 默认页面背景色 */
+.c_bg1{ background-color:#f9f9f9;}
+.c_bg2{ background-color:#f0f0f0}
+
+/* 底纹 */
+.img_bg1{}
+.img_bg2{}
