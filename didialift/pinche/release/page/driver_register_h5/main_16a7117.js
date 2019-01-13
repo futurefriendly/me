@@ -1,1 +1,0 @@
-define("page/driver_register_h5/main.js",function(e){var r=e("page/driver_register_h5/upload.js");new r(first,{url:"/output/upload.php",filekey:"file",onSuccess:function(e){e=JSON.parse(e),first.style.backgroundImage="url("+e.url+")"}}),$("#first").on("click",function(){})});

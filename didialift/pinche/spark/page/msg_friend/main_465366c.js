@@ -1,1 +1,0 @@
-define("page/msg_friend/main.js",function(){});

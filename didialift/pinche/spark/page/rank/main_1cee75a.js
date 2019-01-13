@@ -1,1 +1,0 @@
-define("page/rank/main.js",function(){console.log($("#main").html())});

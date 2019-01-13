@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("btn-refresh");e.addEventListener("touchend",function(e){setTimeout(function(){e.target.className="c-busy-ref",location.reload()},50)})},!1);

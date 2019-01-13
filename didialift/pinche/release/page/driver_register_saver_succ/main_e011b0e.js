@@ -1,1 +1,0 @@
-define("page/driver_register_saver_succ/main.js",function(e){var i=(e("dd"),e("log")),c=e("didibridge");i.saversucc_page_sw();var s=0==c.appVersion.main;$("#submit").html(s?"现在抢单 额外奖励20元":"现在抢单 额外奖励20元"),$("#submit").click(function(){i.saversucc_button_ck(),s?location.href="http://www.baidu.com":c.closePage()}),console.log(c)});

@@ -1,1 +1,0 @@
-define("second",function(n,c){function e(){i.on("click",".next,.prev",function(n){switch($(n.currentTarget).attr("class")){case"prev":o();break;case"next":t()}})}var t,o,i=c.$container=$(".form_second"),r=!1;c.wakeup=function(n,c,i){t=function(){c()},o=function(){i()},r===!1&&(r=!0,e())}});

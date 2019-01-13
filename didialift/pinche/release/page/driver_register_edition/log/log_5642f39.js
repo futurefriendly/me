@@ -1,1 +1,0 @@
-define("page/driver_register_edition/log/log.js",function(e,i){var o=DidiMonitor.sendBeatles;i.photo_upload_click=function(e){o("driverregisteredition_second_ck",{A:"click_upload",B:e})},i.photo_upload_success=function(e){o("driverregisteredition_second_ck",{A:"upload_success",B:e})}});

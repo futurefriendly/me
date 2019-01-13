@@ -1,1 +1,0 @@
-define("ddplayer/base/special.js",function(e,i,r){"use strict";var n=e("ddplayer/base/vars.js"),s={};s.TIMEUPDATE_REPLACE_ENDED_LIST=[/SM\-N90/i],s.isAllowTimeupdateReplaceEnded=function(){var e=!1;return $.each(s.TIMEUPDATE_REPLACE_ENDED_LIST,function(i,r){return r.test(n.UA)?(e=!0,!1):void 0}),e},s.isDiDiForceUseMp4=function(){return!0},r.exports=s});

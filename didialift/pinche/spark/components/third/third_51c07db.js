@@ -1,1 +1,0 @@
-define("third",function(n,t){function c(){r.on("click",".next,.prev",function(n){switch($(n.currentTarget).attr("class")){case"prev":i();break;case"next":e()}})}var e,i,r=t.$container=$(".form_third"),a=!1;t.wakeup=function(n,t,r){e=function(){t()},i=function(){r()},a===!1&&(a=!0,c())}});

@@ -1,1 +1,0 @@
-define("page/msg_pop/main.js",function(e){var l=e("dd");l.dialog.alert("hello beatles"),console.log($("#main").html())});

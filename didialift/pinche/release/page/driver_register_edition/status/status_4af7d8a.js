@@ -1,1 +1,0 @@
-define("page/driver_register_edition/status/status.js",function(t,e){e.to=function(t){$(".status_item").removeClass("active").eq(t).addClass("active")}});

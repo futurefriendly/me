@@ -1,1 +1,0 @@
-!function(){window.ddvp=window.ddvp||{},window.ddvp.debug={};var d=Date.now();ddvp.debug.playerLoadStartTime=d||0,ddvp.debug.playerLoadScriptTime=d||0,ddvp.debug.playerPlayStartTime=0,ddvp.debug.playerLoadDomStartTime=0,ddvp.debug.playerLoadAdDataStartTime=0,ddvp.debug.playerLoadMediaDataStartTime=0,ddvp.debug.isShowPlayerPlayStartTime=!1}();

@@ -1,1 +1,0 @@
-define("page/img_upload_demo/main.js",function(a){var i=a("didibridge");$(function(){$container=$("#img-frm"),console.log(123),i.uploadImage({data:uploda_data,url:pageParams.api_upload_url,outputWidth:$container.width(),outputHeight:$container.height()},function(a){console.log(a),a=JSON.parse(a),$container.find("img").attr("src",a.data.data)},null)})});

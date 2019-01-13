@@ -1,1 +1,0 @@
-define("page/driver_register_h5/rough/dd.slideSelect.js",function(){dd.base});

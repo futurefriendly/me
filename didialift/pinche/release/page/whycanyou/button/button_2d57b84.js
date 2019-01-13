@@ -1,1 +1,0 @@
-define("page/whycanyou/button/button.js",function(){});

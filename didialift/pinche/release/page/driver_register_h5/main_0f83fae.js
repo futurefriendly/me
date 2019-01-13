@@ -1,1 +1,0 @@
-define("page/driver_register_h5/main.js",function(e){var i=e("imgcliper");new i(second,{url:"/output/upload.php",filekey:"file",outputHeight:200,outputWidth:300,onSuccessUpload:function(e){e=JSON.parse(e),second.innerHTML=e.img}})});
