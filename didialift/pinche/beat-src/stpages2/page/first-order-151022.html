@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>接首单，抢大奖</title>
+    <style type="text/css">
+        * {padding: 0; margin: 0;}
+        a img{border: none}
+        img {max-width: 100%; vertical-align: top;}
+        body{text-align: center;max-width: 750px;margin: 0 auto}
+        .goRegis{
+        	width: 100%;
+        	height: 100%;
+        	display: inline-block;
+        }
+    </style>
+<body>
+	
+    <img src="../static/img/first-order-151022/main_01.jpg">
+    <a href="javascript:;" id="goRegis" class="goRegis">
+    	<img src="../static/img/first-order-151022/main_02.jpg">
+    </a>
+    <img src="../static/img/first-order-151022/main_03.jpg">
+</body>
+</html>
+<script src="/static/common/js/zepto.js"></script>
+<script src="/static/common/js/didi-h5-monitor.js"></script>
+<script src="/static/common/js/didibridge.js"></script>
+<script type="text/javascript">
+DidiMonitor.sendBeatles(
+    'first-order-151022_index_sw'
+    , {
+        token: DidiMonitor.getQuery('token')
+    }
+);
+
+var didiToken = ''; 
+var didiAppVersion = '';
+DidiBridge.getUserInfo(function(json){
+    var info = {};
+    try {
+        info = JSON.parse(json); 
+    }
+    catch(e){}
+    didiToken = info.token || '';
+});
+DidiBridge.getSystemInfo(function(json){
+    var info = {};
+    try {
+        info = JSON.parse(json); 
+    }
+    catch(e){}
+    didiAppVersion = info.appversion || '';
+});
+
+$('#goRegis').bind('click',function(){
+	DidiMonitor.sendBeatles('first-order-151022_index_ck',null,true);
+	setTimeout(function(){
+		location.href = "http://wap.didialift.com/pinche/driver_recruit/join?channel=500617&sign=38959dc32c5ed024815a465b56608330"
+            + 'token=' + didiToken
+            + '&appversion=' + didiAppVersion;
+	},300)
+});
+</script>
+

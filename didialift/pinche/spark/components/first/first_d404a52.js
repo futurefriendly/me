@@ -1,0 +1,1 @@
+define("first",function(n,t){function c(){r.on("click",".next,.prev",function(n){switch($(n.currentTarget).attr("class")){case"prev":i();break;case"next":e()}})}var e,i,r=t.$container=$(".form_first"),f=!1;t.wakeup=function(n,t,r){e=function(){t()},i=function(){r()},f===!1&&(f=!0,c())}});

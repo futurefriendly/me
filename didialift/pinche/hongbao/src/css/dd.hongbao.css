@@ -1,0 +1,185 @@
+/*body main*/
+
+html, body {
+    background-color: #f0f0f0;
+}
+.main {
+    padding: 3% 0 0 0;
+}
+/*page*/
+
+.page {
+    display: none;
+}
+/*end page*/
+/*head*/
+
+.head {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 16px;
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+.bubble {
+    width: 65%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    font-family: 'STHeitiSC-Medium';
+    font-size: 1.4rem;
+    color: #666;
+    text-align: center;
+    line-height: 20px;
+    padding: 10px 3.44%;
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+    /*overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;*/
+}
+.bubble:before {
+    content: '33';
+    text-indent: -9999em;
+    background: url(/static/pinche/hongbao/src/images/hb-bubble-arrow.png) center top no-repeat;
+    background-size: 10px auto;
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    height: 4px;
+}
+/*end head*/
+
+.letter {
+    width: 62.5%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.8);
+    border-radius: 8px;
+    margin-top: 36.5%;
+    padding: 4% 6.25%;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+}
+.letter .title {
+    color: #532d00;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    text-align: center;
+    display: block;
+    margin-top: 3rem;
+}
+.letter a[class^=btn-] {
+    margin: 6px auto;
+}
+.letter input {
+    height: 36px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #666;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    font-size: 1.4rem;
+    margin-top: 12px;
+    text-align: center;
+}
+/*coupon*/
+
+.letter .coupon {
+    line-height: 60px;
+    padding: 8.48% 0;
+    text-align: center;
+    color: #2996f1;
+    margin: 3% auto 5%;
+    max-width: 260px;
+    background: url('/static/pinche/hongbao/src/images/hb-coupon_b.png') center center no-repeat;
+    background-size: 100% auto;
+    font-size: 6rem;
+    font-family: "HelveticaNeue-Thin";
+}
+.letter .coupon em {
+    font-size: 5.2rem;
+    font-family: 'STHeitiSC-Medium';
+    position: relative;
+    top: -4px;
+    left: 6px;
+}
+/*end coupon*/
+/*line-between*/
+
+.line-between {
+    position: relative;
+    color: #999;
+    text-align: center;
+    line-height: 36px;
+    width: 98%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+.line-between .hr {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    top: 18px;
+}
+.line-between span {
+    background: #f0f0f0;
+    padding: 0 15px;
+    position: relative;
+    font-weight: normal;
+}
+/*list*/
+
+.others {
+    width: 78%;
+    margin: 20px auto 0;
+    background: #f0f0f0;
+    padding-bottom: 20px;
+}
+.others li {
+    list-style-type: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    height: 36px;
+    padding: 12px;
+    line-height: 18px;
+}
+.others li:last-child {
+    border: none;
+}
+.others li.empty {
+    text-align: center;
+    line-height: 36px;
+    color: #666;
+    font-size: 1.2rem;
+}
+.others li img {
+    float: left;
+    border-radius: 6px;
+}
+.others li div {
+    margin-left: 40px;
+    display: block;
+    color: #999;
+    font-size: 1.2rem;
+}
+.others li .name {
+    color: #333;
+    margin-right: 5px;
+}
+.others li .amount {
+    color: #ff8903;
+    font-size: 14px;
+    float: right;
+}
+/*other*/
+.letter a:visited{
+    color: #fff;
+}

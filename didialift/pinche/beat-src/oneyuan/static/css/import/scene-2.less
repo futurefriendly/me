@@ -1,0 +1,43 @@
+/**
+ * Scene 2
+ */
+
+
+
+#wrapper.scene_2 {
+
+    .lamp-layer {
+        .position-abs();
+        top: 8%;
+        bottom: auto;
+        height: 100%;
+        z-index: @lamp_layer_zindex;
+        background-image: url("../../img/lamp.png");
+        background-position: center center;
+        background-size: 80% auto; 
+
+        &.fadeOut {
+            .fade(fadeOut; 3s);
+        }
+    }
+
+    .bomb {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: @bomb_layer_zindex;
+
+        background-size: 100% auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .bombing {
+        .bombing();
+    }
+
+}
+
+

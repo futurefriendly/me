@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>帮助首页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/merged-common-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/help-page.css">
+</head>
+
+<body>
+    <section>
+         <div class="find-action">
+                    <div style="border-bottom:1px solid #e5e5e5"></div>
+                         <ul class="clearfix" id="help-tab-nav">
+                               <li class="find-active">
+                                  <a href="javascript:void(0)" class="font-333">
+                                    车主
+                                  </a>
+                               </li>
+                               <li class=""><a href="javascript:void(0)" class="color-3b3b3b">
+                                    乘客
+                               </a></li>
+                         </ul>
+                    <div style="border-bottom:1px solid #e5e5e5"></div>
+         </div>
+
+         <div class="help-tab-content" id="help-tab-content">
+
+              <div>
+                  <p class="help-tab-content-title">常见问题</p>
+                  <ul>
+                      <li class="positionRelative">
+                        <a href="help-accountDatumOQ03.html">为什么我提交的资料无法通过车主审核?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-orderRouteOQ01.html">我已经是认证车主，如何接单?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-orderRouteOQ03.html">为什么我没有收到推送，一个订单也没有?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-ownerValuation.html">拼车价格是怎么计算的，有服务费吗?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-payDrawOQ02.html">订单完成后，我的车费在哪里?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                  </ul>
+              </div>
+
+             <div style="display:none">
+                  <p class="help-tab-content-title">常见问题</p>
+                  <ul>
+                      <li class="positionRelative">
+                        <a href="help-orderRoutePQ01.html">怎样才能成功预约到顺风车?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-passengerValuation.html">拼车价格是怎么计算的，有服务费吗?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-orderRoutePQ03.html">预约成功后，可以多人一起乘坐顺风车吗?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-safeComplainPQ03.html">使用滴滴顺风车拼车，乘客安全有哪些保障?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-safeComplainPQ04.html">拼车过程中遇到突发状况，有哪些应急措施?</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                  </ul>
+             </div>
+         </div>
+    </section>
+
+    <section>
+
+         <div class="help-tab-content">
+
+              <div>
+                  <p class="help-tab-content-title">更多问题</p>
+                  <ul>
+                      <li class="positionRelative">
+                        <a href="help-accountDatum.html">账户与个人资料相关</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-orderRoute.html">订单与路线相关</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-payDraw.html">支付与提现相关</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                      <li class="positionRelative">
+                        <a href="help-safeComplain.html">安全与投诉相关</a>
+                        <span class="help-indicate"><img src="img/help-indicate.png"></span>
+                      </li>
+                  </ul>
+              </div>
+         </div>
+    </section>
+
+    <section>
+      <div style="height:30px"></div>
+    </section>
+
+    <script>
+       window.onload=function(){
+
+          var nav = document.getElementById("help-tab-nav");
+              content = document.getElementById("help-tab-content");
+              oli = nav.getElementsByTagName('li');
+              odiv = content.getElementsByTagName('div');
+
+          for(var i=0;i<=oli.length-1;i++){
+             
+              oli[i].addEventListener('touchend',function(){
+                      for(var i=0;i<=oli.length-1;i++){
+
+                     if(oli[i]==this){
+
+                         oli[i].className = 'find-active';
+                         odiv[i].style.display = 'block';
+
+                     }else{
+
+                         oli[i].className = '';
+                         odiv[i].style.display = 'none';
+
+                     } 
+                 }
+              });    
+           };
+
+       }
+    </script>
+
+</body>
+
+</html>

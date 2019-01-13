@@ -1,0 +1,1 @@
+define("page/friend/main.js",function(e){var l=e("dd");l.dialog.alert("hello beatles"),console.log($("#main").html()),l.dialog.loading("正在登录",2e5)});

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>滴滴顺风车</title>
+<link rel="stylesheet" href="../static/css/p-orainfo.css">
+<script src="/static/common/js/zepto.js"></script>
+</head>
+<body>
+<img id="img_placeholder" src="../static/img/ora_img_01.png" style="display:none;">
+<script>
+    var imgRoot = $('#img_placeholder').attr('src').replace(/\/[^\/]+\.png/, '/');
+</script>
+<div class="main_div">
+	<div class="main_top">
+		<ul class="main_topul">
+			<li class="topul_01">
+                <span class="left_s"><img src="<?php echo $task['user_info']['head_url'];?>" alt="">
+                <!-- <i class="miss_i"></i> -->
+                </span>
+            <!-- <a href="#" class="link_btn">查看活动详情</a> -->
+            </li>
+			<li class="topul_02">
+                <h1><?php echo $task['user_info']['nick'];?></h1>
+                <?php if($user_state==3) {?>
+			     <p><a href="<?php echo $reg_url; ?>"><img src="../static/img/ora_img_03_h.png" alt=""></a></p>
+                 <?php } else{?>
+                 <p><script>document.write('<img src="' + imgRoot + 'ora_img_0<?php echo $user_state;?>.png" alt="">');</script></p>
+                 
+                 <?php } ?>
+            </li>
+
+		</ul>
+
+        <ul class="right_s">
+                 <span> 
+                        <img src="../static/img/ora_img13.png">
+                        <!-- 第一周数据 -->
+                        <div class="show_info_02" style="display:block">
+                            <h1 class="top_h1">
+                                <?php echo $first_order_notice; ?>
+                            </h1>
+                        </div>
+                        <!-- 第二周数据 -->
+                        <div class="show_info_02">
+                             <h1 class="top_h1">
+                                <?php echo $second_order_notice; ?>
+                            </h1>
+                        </div>
+                  </span>
+        </ul>
+
+		<ul class="show_tab">
+			<li class="hover"><p class="top">第一周</p>
+			<p class="botom"><?php echo $first_month; ?></p>
+			</li>
+			<li><p class="top">第二周</p>
+			<p class="botom"><?php echo $second_month; ?></p></li>
+		</ul>
+	</div>
+	
+	<div class="contentPa">
+		
+		<div class="rwinfo_div rwwc_info">
+			<div class="xhb_div_03"><span>我的奖励</span></div>
+            <div class="show_info_01" style="display:block">
+                <!-- 第一周奖励输出的地方 -->
+                <p class="show_jlsm"><a href="<?php echo $detail_url; ?>">周一接单奖励增加50%  <span class="arrow-pic"><img src="../static/img/arrow-bg.jpg"></span></a></p>
+    			<ul class="show_list">
+    				<li>
+    					<span class="img_s"><img src="<?php echo $task['user_info']['head_url'];?>" alt=""></span>
+                        <span class="mcrz_s"><em><?php echo $task['user_info']['nick'];?></em><script>document.write('<img src="' + imgRoot + 'ora_img_0<?php echo $user_state;?>.png" alt="">');</script></span>
+    					<span class="info_s"><?php echo $first_order_num; ?></span>
+    					<span class="end_s">
+                            <em <?php if(!empty($first_order_price)) echo 'class="orangem"'?>><?php  if(!empty($first_order_price)){ echo $first_order_price;} else echo 0; ?>
+                            <span>元</span></em>
+                        </span>
+    				</li>
+    			</ul>
+            </div>
+            <div class="show_info_01">
+                <!-- 第二周奖励输出的地方 -->
+                <p class="show_jlsm"><a href="<?php echo $detail_url; ?>">周一接单奖励增加50% <span class="arrow-pic"><img src="../static/img/arrow-bg.jpg"></span></a>
+                <ul class="show_list">
+                    <li>
+                        <span class="img_s"><img src="<?php echo $task['user_info']['head_url'];?>" alt=""></span>
+                        <span class="mcrz_s"><em><?php echo $task['user_info']['nick'];?></em><script>document.write('<img src="' + imgRoot + 'ora_img_0<?php echo $user_state;?>.png" alt="">');</script></span>
+                        <span class="info_s"><?php echo $second_order_num; ?></span>
+                        <span class="end_s">
+                            <em <?php if(!empty($second_order_price)) echo 'class="orangem"'?>><?php  if(!empty($second_order_price)){ echo $second_order_price;} else echo 0; ?>
+                            <span>元</span></em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+<!-- 			<div class="xhb_div_03"><span>邀请奖励</span></div> -->
+            <p class="show_jlsm"><a href="<?php echo $detail_url; ?>">邀请好友周一接单，奖励无上限 <span class="arrow-pic"><img src="../static/img/arrow-bg.jpg"></span></a></p>
+			<ul class="show_list" id="showList">
+			</ul>
+            <p id="showTips" class="showtips">正在加载中...</p>
+		</div>
+	</div>
+</div>
+<div class="fix_div">
+    <span class="wxShare" id="wxShare" href="http://diditaxi.com.cn/api/v1/share"><img src="../static/img/ora_img_06.png" alt=""></span>
+    <a href="javascript:;" id="nativShare" class="nativShare"><img src="../static/img/ora_img_07.png" alt=""></a>
+    <p class="bot_p_06" id="wxTxtp"><img src="../static/img/ora_img_04.png" alt=""><a href="http://diditaxi.com.cn/api/v1/share">下载滴滴客户端</a></p>
+</div>
+<!--方向错误提示层-->
+<div class="wrong-layer fullLayer" id="wrongLayer"><div class="abs-mm ta-c"><img src="http://static.xiaojukeji.com/pinche/images/subwaydog/wrong.png"><br><div class="placeBlock-20"></div><span class="size14" style="color:#fff;">为了更好的体验，请使用竖屏浏览</span></div></div>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+    };
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script>
+$(function(){
+    var bNow=false,nCount=0,bTab=<?php echo $bTab;?>,nWeek=1;
+    // bTab=1;//临时
+    var showTips=$('#showTips');
+    startGet();
+    
+   $(window).bind('scroll',function(){
+        var nowScroll=$(window).scrollTop();
+        var bodyHeight=$('body').height();
+        var wHeight=$(window).height();
+        // console.log(wHeight+nowScroll)
+
+        if(bNow) return;
+        // && $('#showList').children().length<10 需要判断返回数据长度是否大于10
+        if((wHeight+nowScroll)>(bodyHeight-10) ){
+            console.log('nCount是'+nCount)
+            console.log('bNow是'+bNow)
+            bNow=true;
+            showTips.show();
+            
+            $.ajax({
+                type:'GET',
+                url:'/pinche/orangemonday/index/getInfos',
+                data:{'page':nCount,'phase':nWeek},
+                dataType:'json',
+                timeout:'5000',
+                success:function(json){
+                    console.log(json);
+                    if(json.errno==0) {
+                        showTips.hide();
+                        nCount++;
+                        bNow=false;
+                        var arr=json.data;nLength=arr.length;
+                        if(nLength<10){
+                            bNow=true;
+                        }
+                        for(var i=0;i<nLength;i++){
+                            var obj=creatEle(arr[i]);
+                            $('#showList').append(obj);
+                        }
+                    }else{
+                        showTips.hide();
+                    }
+                },error:function(){
+                    bNow=false;
+                    showTips.hide();
+                }
+            });
+        }
+    });
+    showWeek(); //调用显示第几周选项卡信息
+    //第几周点击选项卡 放到外面防止手机点击有效果
+    if(bTab){
+        $('.show_tab li').bind('click',function(){
+                $(this).siblings().removeClass('hover');
+                $(this).addClass('hover');
+                $('.show_info_01').hide();
+                $('.show_info_01').eq($(this).index()).show();
+                $('.show_info_02').hide();
+                $('.show_info_02').eq($(this).index()).show();
+                $('#showList').html('');
+                nCount=0;nWeek=$(this).index()+1;bNow=false;
+                startGet();
+            
+        })
+    }
+    //首次进来的请求接口
+    function startGet(){
+        $.ajax({
+            type:'GET',
+            url:'/pinche/orangemonday/index/getInfos',
+            data:{'page':nCount,'phase':nWeek},
+            dataType:'json',
+            timeout:'5000',
+            success:function(json){
+                console.log(json);
+                if(json.errno==0) {
+                    nCount++;
+                    var arr=json.data;nLength=arr.length;
+                        // if(nLength<10){
+                        //     bNow=true;
+                        // }
+                    for(var i=0;i<nLength;i++){
+                        var obj=creatEle(arr[i]);
+                        $('#showList').append(obj);
+                    }
+                }
+            },error:function(){
+                bNow=false;
+                showTips.hide();
+            }
+        });
+    }
+    //根据星期显示信息
+    function showWeek(){
+        $('.show_tab li').removeClass('hover');
+        $('.show_tab li').eq(nWeek-1).addClass('hover');
+        $('.show_info_01').hide();
+        $('.show_info_01').eq(nWeek-1).show();
+        $('.show_info_02').hide();
+        $('.show_info_02').eq(nWeek-1).show();
+        // console.log(nWeek)
+    }
+    //通过接口获取数据
+    function creatEle(json){
+        var arr=[],obj=null;
+        arr.push('<li><span class="img_s"><img src="'+json.user_img+'"></span>');
+        arr.push('<span class="mcrz_s"><em>'+json.user_name+'</em><img src="' + imgRoot + 'ora_img_0'+json.user_state+'.png"></span>');
+        arr.push('<span class="info_s">'+json.order_state+'</span>');
+        switch(json.info_state.state_no){
+            case 0:
+                arr.push('<span class="end_s"><em>'+json.info_state.get_money+'<span>元</span></em></span></li>');
+                break;
+            case 1:
+                arr.push('<span class="end_s"><em class="orangem">'+json.info_state.get_money+'<span>元</span></em></span></li>');
+                break;
+            case 2:
+                arr.push('<span class="end_s"><em>'+json.info_state.get_money+'<span>元</span></em><i>'+json.info_state.state_txt+'</i></span></li>');
+                break;
+            case 3:
+                arr.push('<span class="end_s">'+json.info_state.state_txt+'</span></li>');
+                break;
+        }
+        
+        obj=$(arr.join(''));
+        return obj;
+    }
+})
+</script>
+<script type="text/javascript" src="/static/common/js/merged-base-dialog.js"></script>
+<script type="text/javascript">
+dd.ready(function() {
+    var btnShare = document.getElementById('nativShare');
+    var wxShareBtn=document.getElementById('wxShare');
+    var wxTxtp=document.getElementById('wxTxtp');
+    var base = dd.base;
+
+    // 判断是否是微信
+    function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        }
+        return false;
+    };
+    if(!is_weixn()){
+        //滴滴打车客户端分享包括（ios and Android）
+        (function() {
+            var shareConfig = {
+                img_url: wxShare.imgUrl || "http://static.xiaojukeji.com/pinche/images/share.jpg",
+                title: wxShare.title || '顺风出行，期待每一次的不期而遇。',
+                desc: wxShare.desc || '滴滴顺风车车主有奖招募中，有车即可参与',
+                link: wxShare.link || location.href,
+            };
+
+
+            var map = function(array, callback) {
+                for (var i = 0, l = array.length; i < l; i++) {
+                    callback(array[i]);
+                }
+            };
+
+            var entranceMap = [{
+                button: btnShare,
+                method: 'invoke_entrance'
+            }];
+
+            // 绑定入口操作
+            var bindEntrance = function(bridge) {
+                map(entranceMap, function(item) {
+                    (function(it) {
+                        it.button.addEventListener('touchend', function(e) {
+                            if (typeof bridge === 'undefined') {
+                                return;
+                            }
+                            bridge.callHandler(it.method);
+                        });
+                    })(item);
+                });
+
+            };
+
+            // 初始化入口
+            var entranceCfg = {
+                entrance: {
+                    icon: 'http://static.diditaxi.com.cn/webapp/images/driver.png'
+                },
+                buttons: [{
+                    type: 'share_weixin_timeline',
+                    name: '分享到微信朋友圈',
+                    data: {
+                        share_url: shareConfig.link, // 分享出去的URL
+                        share_icon_url: shareConfig.img_url, // 分享小图icon
+                        share_img_url: shareConfig.img_url, // 分享大图
+                        share_title: shareConfig.title,
+                        share_content: shareConfig.desc,
+                        share_from: 'native' // 分享来源，便于做统计
+                    },
+                    callback: function() {
+
+                    }
+                }, {
+                    type: 'share_weixin_appmsg',
+                    name: '分享给微信好友',
+                    data: {
+                        share_url: shareConfig.link, // 分享出去的URL
+                        share_icon_url: shareConfig.img_url, // 分享小图icon
+                        share_img_url: shareConfig.img_url, // 分享大图
+                        share_title: shareConfig.title,
+                        share_content: shareConfig.desc,
+                        share_from: 'native' // 分享来源，便于做统计
+                    },
+                    callback: function() {
+
+                    }
+                }, {
+                    type: 'share_qq_appmsg',
+                    name: '分享给QQ好友',
+                    data: {
+                        share_url: shareConfig.link, // 分享出去的URL
+                        share_icon_url: shareConfig.img_url, // 分享小图icon
+                        share_img_url: shareConfig.img_url, // 分享大图
+                        share_title: shareConfig.title,
+                        share_content: shareConfig.desc,
+                        share_from: 'native' // 分享来源，便于做统计
+                    },
+                    callback: function() {
+
+                    }
+                }, {
+                    type: 'share_qzone',
+                    name: '分享到QQ空间',
+                    data: {
+                        share_url: shareConfig.link, // 分享出去的URL
+                        share_icon_url: shareConfig.img_url, // 分享小图icon
+                        share_img_url: shareConfig.img_url, // 分享大图
+                        share_title: shareConfig.title,
+                        share_content: shareConfig.desc,
+                        share_from: 'native' // 分享来源，便于做统计
+                    },
+                    callback: function() {
+
+                    }
+                }, {
+                    type: 'share_sina_weibo',
+                    name: '分享到新浪微博',
+                    data: {
+                        share_url: shareConfig.link, // 分享出去的URL
+                        share_icon_url: shareConfig.img_url, // 分享小图icon
+                        share_img_url: shareConfig.img_url, // 分享大图
+                        share_title: shareConfig.title,
+                        share_content: shareConfig.desc+' '+shareConfig.link,
+                        share_from: 'native' // 分享来源，便于做统计
+                    },
+                    callback: function() {
+
+                    }
+                }]
+            };
+            // 连接DidiJSBridge
+            var connectDidiJSBridge = function(callback) {
+                if (window.DidiJSBridge) {
+                    callback(DidiJSBridge);
+                } else {
+                    document.addEventListener('DidiJSBridgeReady', function() {
+                        callback(DidiJSBridge);
+                    }, false);
+                }
+            };
+
+            // 执行连接DidiJSBridge`
+            connectDidiJSBridge(function(bridge) {
+                if (typeof bridge === 'undefined') {
+                    return;
+                }
+                btnShare.style.display='block';
+                wxShareBtn.style.display='none';
+                wxTxtp.style.display='none';
+                bridge.callHandler('init_entrance', JSON.stringify(entranceCfg));
+                bindEntrance(bridge);
+
+            });
+
+        })();
+    }
+});
+</script>
+<script>
+// 配置分享信息
+var wx_funcs = [];
+var wxShare = {
+    title: '<?php echo $shareinfo['share_title']; ?>',
+    desc: '<?php  echo $shareinfo['share_wording']; ?>',
+    link: '<?php  echo $shareinfo['share_url']; ?>',
+    imgUrl: '<?php echo $shareinfo['share_logo']; ?>'
+};
+</script>
+<script type="text/javascript" src="/static/common/js/dd.wechat.js"></script>
+</body>
+</html>

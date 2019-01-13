@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <title>顺风出行 挑战早晚高峰</title>
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="/static/common/css/swiper.min.css">
+  <link rel="stylesheet" href="../css/dalaoslide.css">
+
+</head>
+</head>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide one"><div class="tips"></div></div>
+            <div class="swiper-slide two"><div class="tips"></div></div>
+            <div class="swiper-slide three"><div class="tips"></div></div>
+            <div class="swiper-slide four"><div class="tips"></div></div>
+            <div class="swiper-slide five"><div class="tips"></div></div>
+            <div class="swiper-slide six"><div class="tips"></div></div>
+            <div class="swiper-slide seven"><div class="tips"></div></div>
+            <div class="swiper-slide eight"><div class="tips"></div></div>
+            <div class="swiper-slide nine"><div class="tips"></div></div>
+            <div class="swiper-slide ten"></div>
+
+        </div>
+    </div>
+
+<script src="/static/common/js/swiper.min.js"></script>
+
+<script type="text/javascript">
+
+  var mySwiper = new Swiper('.swiper-container',{
+    direction:'vertical',//滑动方向，可设置水平(horizontal)或垂直(vertical)。
+    loop: false,  //loop模式：会在wrapper前后生成若干个slides让slides看起来是衔接的，用于无限循环切换。
+    speed :600,
+      autoResize : true,
+    preventClicksPropagation:true, //阻止click冒泡。拖动Swiper时阻止click事件。
+    updateOnImagesReady : true, //当所有的内嵌图像（img标签）加载完成后Swiper会重新初始化。
+      onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    }, 
+  });
+
+</script>
+
+
+</body></html>

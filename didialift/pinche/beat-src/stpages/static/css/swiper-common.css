@@ -1,0 +1,112 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #fafafa;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/*提示箭头*/
+.tips {
+  position:absolute;
+  background:url("../img/up.png") no-repeat;
+  background-size:100% auto;
+  top:91%;
+  height:36px;
+  width:40px;
+  left:50%;
+  text-align:center;
+  opacity:0;
+  z-index: 9999;
+  margin-left:-18px;
+  -webkit-animation:ToptoA 1.8s ease-out infinite;
+  -moz-animation:ToptoA 1.8s ease-out infinite;
+  -o-animation:ToptoA 1.8s ease-out infinite;
+  -ms-animation:ToptoA 1.8s ease-out infinite;
+}
+
+@-webkit-keyframes ToptoA {
+  0% {
+  -webkit-transform:translate(0,0);
+  opacity:0
+}
+20% {
+  -webkit-transform:translate(0,-12px);
+  opacity:1
+}
+100% {
+  -webkit-transform:translate(0,-27px);
+  opacity:0
+}
+}@-moz-keyframes ToptoA {
+  0% {
+  -moz-transform:translate(0,0);
+  opacity:0
+}
+20% {
+  -moz-transform:translate(0,-12px);
+  opacity:1
+}
+100% {
+  -moz-transform:translate(0,-27px);
+  opacity:0
+}
+}@-o-keyframes ToptoA {
+  0% {
+  -o-transform:translate(0,0);
+  opacity:0
+}
+20% {
+  -o-transform:translate(0,-12px);
+  opacity:1
+}
+100% {
+  -o-transform:translate(0,-27px);
+  opacity:0
+}
+}@-ms-keyframes ToptoA {
+  0% {
+  -ms-transform:translate(0,0);
+  opacity:0
+}
+20% {
+  -ms-transform:translate(0,-12px);
+  opacity:1
+}
+100% {
+  -ms-transform:translate(0,-27px);
+  opacity:0
+}
+} 
+
+

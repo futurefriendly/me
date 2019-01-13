@@ -1,0 +1,39 @@
+html, body {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+html, body, .css3demos-view { 
+    height: 100%;
+}
+
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    background: url("../img/bk.jpg") repeat 0 0;
+    background-size: 170.6px auto;
+
+    .lamp-shine-layer {
+        .position-abs();
+        top: 8%;
+        bottom: auto;
+        height: 100%;
+        z-index: @lamp_shine_layer_zindex;
+        background-size: 80% auto; 
+        background-position: center center;
+        -webkit-filter: drop-shadow(0 0 18px #fff);
+
+        &.zoomoutToBottom {
+            .zoomoutToBottom(zoomoutToBottom; 5s);     
+        }
+
+    }
+
+}
+
+@import "./import/variables-mixins";
+@import "./import/background";
+@import "./import/animation-zoomoutToBottom";
+
+
+

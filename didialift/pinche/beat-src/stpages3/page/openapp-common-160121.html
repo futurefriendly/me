@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>打开滴滴客户端</title>
+    <script src="/static/common/js/zepto.js"></script>
+    <script src="/static/common/js/didi-h5-monitor.js"></script>
+<script>
+
+    DidiMonitor.sendBeatles(
+        'openapp-common-160121_index_sw'
+        , null
+        , true
+    );
+    setTimeout(function(){
+        if( /micromessenger/i.test(navigator.userAgent) ) {
+            location.href = 'http://static.diditaxi.com.cn/pinche/pages/openappwx.html';
+        }
+        else {
+            location.href = 'http://wap.didialift.com/pinche/activity/callNative/index';
+        }
+    }, 300);
+
+</script>
+</head>
+<body>
+</body>
+</html>

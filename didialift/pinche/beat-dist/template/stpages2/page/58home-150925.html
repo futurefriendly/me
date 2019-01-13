@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>约顺风车抢壕福袋</title>
+    <style type="text/css">
+        * {padding: 0; margin: 0;}
+        img {max-width: 100%; vertical-align: top;}
+        body {position: relative;}
+    </style>
+<body>
+	<img src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/img/58home-150925/main_c84189c.png">
+	<img class="register-btn" src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/img/58home-150925/button_3ceda11.png">
+</body>
+</html>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/zepto.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script>
+(function(){
+    var _send = DidiMonitor.sendBeatles;
+
+    $('.register-btn')
+        .on('click', function(){
+            _send(
+                '58home-150925_register-btn_ck'
+                , null
+                , true
+            ); 
+            setTimeout(function(){
+                location.href = 'http://wap.didialift.com/pinche/driver_recruit/join?channel=500600&sign=d187fc3497ac979b1c96b4f206f998ca';
+            }, 300);
+        });
+
+    _send('58home-150925_index_sw');
+
+})();
+
+</script>
+

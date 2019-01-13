@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>顺风出行</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="/static/common/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/common/css/merged-common-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/chuxing.css">
+
+</head>
+
+<body>
+
+     <!-- 横屏提示层 -->
+    <div class="wrong-layer fullLayer" id="wrongLayer">
+        <div class="abs-mm ta-c">
+            <img src="http://static.xiaojukeji.com/pinche/images/subwaydog/wrong.png" style="width:74px;height:110px;">
+            <br>
+            <div class="placeBlock-20"></div>
+            <span class="size14" style="color:#fff;font-size:1.4rem">为了更好的体验，请使用竖屏浏览</span>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+	      var fullLayer = document.querySelector('.fullLayer');
+	      if(window.innerHeight>window.innerWidth){
+	          fullLayer.style.height= window.innerWidth + "px";
+	      }else{
+	          fullLayer.style.height= window.innerHeight + "px";
+	      }
+    </script>
+
+    <!-- 内容 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide banner">
+               <img src="../img/chuxing/banner.jpg">
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/1.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                </div>
+                 <div class="didi-text"><img src="../img/chuxing/2.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/3.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/4.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/5.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/6.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/7.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/8.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/9.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/10.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/11.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/12.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/13.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/14.jpg"></div>
+            </div>
+
+            <div class="swiper-slide">
+                 <div class="didi-fis">
+                    <img src="../img/chuxing/15.jpg">
+                    <div class="didi-silid"><img src="../img/chuxing/text.png"></div>
+                 </div>
+                 <div class="didi-text"><img src="../img/chuxing/16.jpg"></div>
+            </div>
+
+            <div class="swiper-slide bottom">
+                <div class="one"><img src="../img/chuxing/18.jpg"></div>
+                <div class="bottom-text"><img src="../img/chuxing/19.jpg"></div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- 登录按钮 -->
+        <div class="didi-login">
+        	<a href="javascript:void(0)" class="go-login">和他们一起倡议</a>
+        </div>
+    </div>
+
+
+        <!-- 验证码 -->
+        <div class="didi-dilog didi-code-alert">
+             <div class="content_tel">
+                 <!-- 关闭按钮 -->
+                 <div class="didi-close">
+                    <img src="../img/chuxing/didi-close.png">
+                 </div>
+                 <ul class="cont_ul">
+                     <li><p>输入手机号,发出倡议</p></li>
+                     <li class="li_phone form">
+                        <input type="tel" placeholder="填写手机号" id="phone" class="phone_i" maxlength="11">
+                     </li>
+                     <li>
+                        <a href="javascript:void(0);" class="chose_btn" id="chose_btn">确定</a>
+                     </li>
+                 </ul>
+             </div>
+        </div>
+
+        <input type="hidden" value="" id="nexturl">
+
+     <!-- Swiper JS -->
+     <script type="text/javascript" src="/static/common/js/zepto.js"></script>
+     <script src="/static/common/js/swiper.min.js"></script>
+     <script type="text/javascript" src="/static/common/js/merged-base-dialog.js"></script>
+     <script type="text/javascript" src="/static/common/js/app-wx-share.js"></script>
+     <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        });
+
+        function orient() {
+        if (window.orientation == 0 || window.orientation == 180) {
+        $('#wrongLayer').hide();
+        return false;
+        }
+        else if (window.orientation == 90 || window.orientation == -90) {
+        $('#wrongLayer').show();
+        return false;
+        }
+        }
+
+        $(window).bind('orientationchange', function(e){
+            orient();
+        });
+
+        $(window).on('load', function(){
+
+                var phone = $("#phone"),
+                    btnSubmit = $("#chose_btn"),
+                    close = $('.didi-close'),
+                    login = $('.go-login'),
+                    channelText = /[?&]channel=([^&]*)/.test(location.search) && RegExp.$1,
+                    nexturl = $('#nexturl');
+                var reg1=/^1[3|4|5|8|7][0-9]\d{8}$/; 
+
+                login.bind('touchend',function(){
+                    $.ajax({
+                        type:'POST',
+                        url:'<?php echo $nexturl;?>',
+                        data:{'channel':channelText},
+                        timeout:'5000',
+                        success:function(data){
+                            console.log(data);
+                            var da=JSON.parse(data);
+                            if(da.errno == 0){
+                                window.location.href = da.data.nexturl;
+                            } 
+                            else if(da.errno == 101){
+                                 $('.didi-code-alert').css('display','block');
+                                  nexturl.val(da.data.nexturl);
+                            }
+                        },
+                        error:function(){
+                             dd.dialog.alert({tip:"网络请求失败,请稍后重试",btn:{val:'确定',handler:function(){
+                             }}});
+                          }
+                      })
+                })
+
+                btnSubmit.bind('touchend',function(){
+                    var _this=$(this);
+                    if(!reg1.test(phone.val())){
+                      $('.didi-code-alert').css('display','none');
+                      dd.dialog.alert({tip:"请输入正确的手机号码",btn:{val:'确定',handler:function(){
+                           $('.didi-code-alert').css('display','block')
+                       }}});
+                      return;
+                    }
+                   
+                    $.ajax({
+                        type:'POST',
+                        url:nexturl.val(),
+                        data:{'phone':phone.val(),'channel':channelText},
+                        timeout:'5000',
+                        success:function(data){
+                            console.log(data);
+                            var da=JSON.parse(data);    
+                            if(da.errno==0){
+                                window.location.href = da.data.nexturl
+                            }
+                        },
+                        error:function(){
+                             $('.didi-code-alert').css('display','none');
+                                dd.dialog.alert({tip:"网络请求失败,请稍后重试",btn:{val:'确定',handler:function(){
+                                $('.didi-code-alert').css('display','block')
+                             }}});
+                          }
+                      })
+                  });
+
+
+                close.bind('touchend',function(){
+        	        phone.blur();
+        	        $('.didi-dilog').css('display','none');
+        	        event.preventDefault();
+                });
+            });
+    </script>
+    <script type="text/javascript">
+        $(function(){
+
+               var shareinfo = <?php echo isset($shareinfo) ? json_encode($shareinfo) : '{}';?>
+     
+                initWxShare(shareinfo);
+        });
+    </script>
+
+</body>
+</html>

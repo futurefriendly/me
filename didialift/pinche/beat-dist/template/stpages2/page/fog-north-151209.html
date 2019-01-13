@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>顺风抗霾周</title>
+    <style type="text/css">
+        * {padding: 0; margin: 0;}
+        a img{border: none}
+        img {max-width: 100%; vertical-align: top;}
+        body{text-align: center;max-width: 750px;margin: 0 auto}
+        .goRegis{
+        	width: 100%;
+        	height: 100%;
+        	display: inline-block;
+        }
+    </style>
+<body>
+	<img src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/img/fog-north-151209/fog-north-151209_01_0843500.jpg">
+	<img src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/img/fog-north-151209/fog-north-151209_02_2f7f558.png">
+	<img src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/img/fog-north-151209/fog-north-151209_03_9dc78f1.png">
+</body>
+</html>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/zepto.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/app-wx-share.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/didibridge.js"></script>
+<script type="text/javascript">
+
+DidiMonitor.sendBeatles('fog-north-151209_index_sw');
+
+$(function(){
+
+    var shareLink = location.href
+            .replace(/[?&](token|phone)=[^&]+/g, ''),
+        shareImgUrl = "http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/img/fog-151208/icon-fog-151208_a346389.jpg",
+        shareTitle = '雾霾终会退散，顺风始终温暖',
+        shareDesc = '共享出行，助力环保，为了迎回我们的蓝天，为了雾霾中的温暖。';
+    
+    initWxShare({
+        link: shareLink 
+        , img_url: shareImgUrl
+        , title: shareTitle
+        , desc: shareDesc
+    });
+
+    // DidiShare
+    var bridge = DidiBridge;
+    var shareConfig = {
+            share_url: shareLink,
+            share_img_url: '',
+            share_icon_url: shareImgUrl,
+            share_title: shareTitle,
+            share_content: shareDesc
+        };
+    var entranceConfig = { 
+            entrance: {
+                icon: 'http://static.xiaojukeji.com/api/img/i-webview-entrance.png'
+            }
+            , buttons: [
+                {
+                    type: 'share_weixin_timeline',
+                    name: '微信朋友圈',
+                    data: shareConfig
+                }
+                , {
+                    type: 'share_weixin_appmsg',
+                    name: '微信好友',
+                    data: shareConfig
+                }
+                , {
+                    type: 'share_sina_weibo'
+                    ,name: '新浪微博',
+                    data: shareConfig
+                }
+                , {
+                    type: 'share_qq_appmsg',
+                    name: 'QQ',
+                    data: shareConfig
+                }
+                , {
+                    type: 'share_qzone',
+                    name: 'QQ空间',
+                    data: shareConfig
+                }
+                , {
+                    type: 'page_refresh',
+                    name: '刷新'
+                }
+            ]
+        };
+
+    bridge.initEntrance(entranceConfig);
+    bridge.showEntrance();
+
+});
+
+</script>

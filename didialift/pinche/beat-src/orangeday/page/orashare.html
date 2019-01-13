@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>滴滴顺风车</title>
+<link rel="stylesheet" href="../static/css/p-orainfo.css">
+</head>
+<body class="share_body">
+<div class="share_main">
+	<div class="share_top">
+		<div class="top_cont">
+			<div class="cont_top">
+				<span class="left_s"><img src="<?php echo $user_info['head_url'];?>" alt=""></span>
+				<!--class名字 要是女乘客就是 miss_i男乘客就是mr_i  -->
+			</div>
+			<p class="cont_01"><?php echo $user_info['nick'];?></p>
+			<p class="cont_02">正在参加“桔色星期一”活动</p>
+		</div>
+	</div>
+	<div class="shar_bot">
+		<p class="bot_p_01">邀请了<span><?php echo $score;?></span>位好友<br>加入滴滴顺风车，成为车主</p>
+		<div class="bot_p_02">
+			<p class="bot_p_03"><?php echo $share_money; ?></p>
+		</div>
+		<p class="bot_p_07">还有<?php echo $total;?>人正在参与</p>
+		<p class="bot_p_05"><a href="<?php echo $url;?>">我也要拿奖励</a></p>
+		<p class="bot_p_06"><img src="../static/img/ora_img_04.png" alt=""><a href="http://diditaxi.com.cn/api/v1/share">下载滴滴客户端</a></p>
+	</div>
+</div>
+<!--方向错误提示层-->
+<div class="wrong-layer fullLayer" id="wrongLayer"><div class="abs-mm ta-c"><img src="http://static.xiaojukeji.com/pinche/images/subwaydog/wrong.png"><br><div class="placeBlock-20"></div><span class="size14" style="color:#fff;">为了更好的体验，请使用竖屏浏览</span></div></div>
+<script>
+(function (doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+    };
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<script>
+function IsPC()  
+{  
+   var userAgentInfo = navigator.userAgent;  
+   var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod", "iOS");  
+   var flag = true;  
+   for (var v = 0; v < Agents.length; v++) {  
+       if (userAgentInfo.indexOf(Agents[v]) >= 0) { flag = false; break; }  
+   }  
+   return flag;  
+}
+function getchannel(){
+    return /[?&](channel=[^&]+)/.test(location.href)
+        && RegExp.$1 || '';
+}
+function getInvitePhone () {
+    return /[?&](invitephone=[^&]+)/.test(location.href)
+        && RegExp.$1 || '';
+}
+var jumpPc = IsPC();
+var chanCode=getchannel();
+if(jumpPc){
+    window.location.href 
+        = 'http://static.xiaojukeji.com/pinche/beat-dist/template/pc-portal/page/index.html'
+            + '?' + chanCode 
+            + '&' + getInvitePhone();
+}
+</script>
+<script type="text/javascript" src="/static/common/js/merged-base-dialog.js"></script>
+<script>
+// 配置分享信息
+var wx_funcs = [];
+var wxShare = {
+    title: '<?php echo $shareinfo['share_title']; ?>',
+    desc: '<?php  echo $shareinfo['share_wording']; ?>',
+    link: '<?php  echo $shareinfo['share_url']; ?>',
+    imgUrl: '<?php echo $shareinfo['share_logo']; ?>'
+};
+</script>
+<script type="text/javascript" src="/static/common/js/dd.wechat.js"></script>
+</body>
+</html>

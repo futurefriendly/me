@@ -1,0 +1,32 @@
+.bombing () {
+    .animation_name(bomb);
+    .animation_duration(2s);
+    .animation_timing_function(ease-out);
+}
+
+/* Do not work under some Android phone, Lenovo A360t */
+@-webkit-keyframes bomb {
+    0% {
+        background-image: url("../../img/bomb-f1.png");
+    }
+    16.6% {
+        background-image: url("../../img/bomb-f2.png");
+    }
+    33.3% {
+        background-image: url("../../img/bomb-f3.png");
+    }
+    49.9% {
+        background-image: url("../../img/bomb-f4.png");
+    }
+    66.6% {
+        background-image: url("../../img/bomb-f5.png");
+    }
+    83.3% {
+        background-image: url("../../img/bomb-f6.png");
+    }
+    100% {
+        background-image: none;
+    }
+}
+
+

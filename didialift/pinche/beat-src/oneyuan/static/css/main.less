@@ -1,0 +1,145 @@
+html, body {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+html, body { 
+    height: 100%;
+}
+
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    background: url("../img/bk.jpg") repeat 0 0;
+    background-size: 170.6px auto;
+
+    .btn-next, .btn-prev {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .btn-prev {
+        left: 0;
+    }
+
+    .btn-next {
+        right: 0;
+    }
+
+    .prerender-layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -200%;
+
+        .bomb.bombing {
+            .bombing();
+        }
+
+        .coin-1.coin-1-godown {
+            .coinGoDown(coin-1-godown);
+        }
+
+        .coin-2.coin-2-godown {
+            .coinGoDown(coin-2-godown);
+        }
+
+        .coin-3.coin-3-godown {
+            .coinGoDown(coin-3-godown);
+        }
+
+        .coin-4.coin-4-godown {
+            .coinGoDown(coin-4-godown);
+        }
+
+        .coin-5.coin-5-godown {
+            .coinGoDown(coin-5-godown);
+        }
+
+        .lamp-shine-layer-a {
+            &.lampClean {
+                .lampClean(lampClean; 2s);
+            }
+        }
+
+    }
+
+    .input-layer ,
+    .tip-layer ,
+    .congratulation-layer ,
+    .result-layer {
+        display: none;
+    }
+
+    .logo-layer {
+        position: absolute;
+        width: 90px;
+        height: 26px;
+        top: 2px;
+        left: 5px;
+        z-index: @logo_layer_zindex;
+        background-position: center center;
+        background-size: 100% auto;
+    }
+
+    .loading-layer {
+        .position-abs();
+        z-index: @loading_layer_zindex;
+        background-position: center center;
+        background-size: 30% auto;
+        background-color: #f5bf71;
+
+        .info {
+            position: absolute;
+            height: 1rem;
+            top: 54%;
+            left: 0;
+            right: 0;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            color: #ff7404;
+            text-align: center;
+        }
+    }
+
+    .design-layer {
+        position: absolute;
+        width: 70px;
+        height: 16px;
+        right: 5px;
+        bottom: 2px;
+        z-index: @design_layer_zindex;
+        background-position: center center;
+        background-size: 100% auto;
+    }
+
+}
+
+@import "./import/variables-mixins";
+@import "./import/background";
+@import "./import/animation-jello";
+@import "./import/animation-bombing";
+@import "./import/animation-rotating";
+@import "./import/animation-shake";
+@import "./import/animation-vanishOut";
+@import "./import/animation-holeOut";
+@import "./import/animation-zoomoutToBottom";
+@import "./import/animation-zoominFromBottom";
+@import "./import/animation-zoominDown";
+@import "./import/animation-shining";
+@import "./import/animation-bounceInDown";
+@import "./import/animation-bounceInRight";
+@import "./import/animation-bounceInUp";
+@import "./import/animation-coinGoDown";
+@import "./import/animation-fade";
+@import "./import/animation-flip";
+@import "./import/animation-shadowFollow";
+@import "./import/animation-lampCleaner";
+@import "./import/scene-1";
+@import "./import/scene-2";
+@import "./import/scene-3";
+@import "./import/scene-4";
+@import "./import/scene-5";
+@import "./import/scene-6";
+

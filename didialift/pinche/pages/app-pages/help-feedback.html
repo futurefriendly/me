@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计价详情</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/merged-common-ui.css">
+    <style type="text/css">
+	    .font-orange{
+		color: #ff8903;
+		letter-spacing: 0px;
+	    }
+
+		.lf{
+			float: left;
+		}
+
+		.rt{
+			float: right;
+		}
+
+		.positionRelative{
+			position: relative;
+		}
+
+		.clearfix:after{content: ""; display: block; height:1%; clear: both; visibility:none;}
+
+		.clearfix {
+		  /* 触发 hasLayout */ 
+		  zoom: 1; 
+		}
+		.wid-per70{
+			width:70%;
+			margin: 0px auto;
+			letter-spacing: 1px;
+		}
+
+		textarea.help-feedbackDescription{
+			width: 100%;
+			border-radius: 5px;
+			webkit-border-radius:5px;
+			border:1px solid #e0e0e0;
+			height: 90px;
+			outline: none;
+			color: #cccccc;
+			padding: 10px 10px;
+			font-family: 'Microsoft YaHei', arial, sans-serif, 'Droid Sans Fallback';
+			font-size: 1.0rem
+		}
+
+
+		textarea.help-feedbackDescription::-webkit-input-placeholder
+		{
+			color: #cccccc;
+			font-size: 1.0rem
+		}
+
+		textarea.help-feedbackDescription:focus{
+			border:1px solid #ffbd66;
+		}
+
+		.grar-borrder{
+			height: 1px;
+			background-color:#ccc;
+			width: 30%
+		}
+
+		.other-road{
+			position: absolute;
+			top:-8px;
+			left: 50%;
+			margin-left:-38px;
+			color: #999
+		}
+    </style>
+</head>
+
+<body>
+
+	<div class="wid-per70">
+		    <section class="order-top">
+		        <div style="height:20px;"></div>
+		    </section>
+
+		    <section class="">
+		        <form>	 
+		            <textarea name="" class="help-feedbackDescription" placeholder="请描述您的建议" id="help-feedbackDescription" onfocus="focusKey()" onblur="BlurKey()"></textarea>
+		        </form>	
+		    </section>
+
+		    <section style="margin-top:9px">
+                <a class="btn-gray" id="btn_submit">提交</a>   
+            </section>
+
+		    <section class="clearfix positionRelative" style="margin-top:28px">  
+		    	<div class="lf grar-borrder"></div>
+		    	<div class="other-road">其他反馈途径</div>
+		    	<div class="rt grar-borrder"></div>
+            </section>
+
+            <section style="color:#999;width:148px;margin:0px auto;margin-top:22px;">  
+                <div>客服电话：<span class="font-orange">010-62222222</span></div>
+                <div style="height:3px;"></div>
+                <div>客服 QQ：<span class="font-orange">312794105</span></div>
+            </section>
+
+    </div>
+
+ <script type="text/javascript" src="http://10.10.10.184:8880/js/merged-base-dialog.js"></script>
+
+    <script>
+
+
+        	var feedBack = document.getElementById('help-feedbackDescription');
+        	    btnSub = document.getElementById('btn_submit');
+
+            function focusKey(){
+	               btnSub.className = "btn-orange"
+            }
+
+            function BlurKey(){
+            	if (feedBack.value.length>0) {
+	               btnSub.className = "btn-orange"
+	        	}else{
+	        	   btnSub.className = "btn-gray";
+	        	}
+
+            };
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var base = dd.base || {},
+                dialog = dd && dd.dialog;
+
+                //提交按钮
+                base.touch(btn_submit, function(ev) {
+                	if(feedBack.value.length==0){
+                        return;
+                	}else{
+                	    dialog.alert("活动还没开始，敬请期待");
+                        return;}
+                });
+
+            });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>北京近期出行宝典</title>
+    <style type="text/css">
+        * {padding: 0; margin: 0;}
+        img {max-width: 100%; vertical-align: top;}
+    </style>
+<body>
+	<img src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages/img/xianxing-150814/1_17bfb0b.png">
+	<img src="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages/img/xianxing-150814/2_52bc9d7.png">
+</body>
+</html>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/zepto.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/app-wx-share.js?150819"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script type="text/javascript">
+DidiMonitor.sendBeatles('xianxing-150814_sw');
+$(function(){
+
+    var shareLink = location.href
+            .replace(/[?&](token|phone)=[^&]+/g, ''),
+        shareImgUrl = 'http://static.xiaojukeji.com/pinche/beat-dist/static/stpages/img/xianxing-150814/xianxing-share-icon_cc45c15.png',
+        // shareImgUrl = 'http://static.xiaojukeji.com/api/img/i-webview-entrance.png',
+        shareTitle = '[顺风帮帮忙]北京近期出行宝典，99%的北京人看完都分享收藏了',
+        shareDesc = '顺风帮帮忙，限号不限行！顺风侠帮您汇总的最全的北京的近期出行信息。';
+    
+    initDidiShare({
+        showMoreBtn: true 
+        , shareConfig: {
+            link: shareLink 
+            , img_url: shareImgUrl
+            , title: shareTitle
+            , desc: shareDesc
+        }
+    });
+
+    initWxShare({
+        link: shareLink 
+        , img_url: shareImgUrl
+        , title: shareTitle
+        , desc: shareDesc
+    });
+
+});
+
+</script>

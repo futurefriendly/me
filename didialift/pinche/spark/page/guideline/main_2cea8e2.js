@@ -1,0 +1,1 @@
+define("page/guideline/main.js",function(n){n("dd");console.log($("#main").html())});

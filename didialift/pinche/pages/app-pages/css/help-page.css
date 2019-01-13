@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-05-08 14:13:47
+ * @version $Id$
+ */
+
+/*公用样式*/
+a{
+	text-decoration: none
+}
+
+p{
+	line-height:1.4rem;
+	font-size: 1.2rem
+}
+
+.underline{
+    border-bottom: 1px solid #ffe5d4;
+    width:69px;
+    height:17px;
+    margin-top: 15px;
+}
+
+.font-orange{
+	color: #ff8903;
+}
+
+.font-333{
+	color: #333;
+}
+
+.lf{
+	float: left;
+}
+
+.rt{
+	float: right;
+}
+
+.positionRelative{
+	position: relative;
+}
+
+.clearfix:after{content: ""; display: block; height:1%; clear: both; visibility:none;}
+.clearfix {
+  /* 触发 hasLayout */ 
+  zoom: 1; 
+}
+.wid-per70{
+	width:70%;
+	margin: 0px auto;
+	letter-spacing:0.8px;
+}
+
+.wid-per85{
+	width:85%;
+	margin: 0px auto;
+	letter-spacing:0.8px;
+	color: #878787
+}
+
+
+/*问题反馈*/
+textarea.help-feedbackDescription{
+	width: 100%;
+	border-radius: 5px;
+	webkit-border-radius:5px;
+	border:1px solid #e0e0e0;
+	height: 90px;
+	outline: none;
+	color: #cccccc;
+	padding: 10px 10px;
+	font-family: 'Microsoft YaHei', arial, sans-serif, 'Droid Sans Fallback';
+	font-size: 1.0rem
+}
+
+
+textarea.help-feedbackDescription::-webkit-input-placeholder
+{
+	color: #cccccc;
+	font-size: 1.0rem
+}
+
+textarea.help-feedbackDescription:focus{
+	border:1px solid #ffbd66;
+}
+
+.grar-borrder{
+	height: 1px;
+	background-color:#ccc;
+	width: 30%
+}
+
+.other-road{
+	position: absolute;
+	top:-8px;
+	left: 50%;
+	margin-left:-38px;
+	color: #999
+}
+
+/*问题*/
+.help-user{
+	width: 85%;
+	margin: 0px auto;
+	border: 1px solid #ff8903;
+	padding: 5px;
+	background-color:#f7f5f6;
+}
+
+.help-user-head{
+	width:56px
+}
+
+.help-user-head img{
+	width:100%;
+	border:1px solid #e0dedc;
+	border-radius: 100px;
+	padding: 0px;
+	margin: 0px;
+	display: block;
+}
+
+.help-user-information{
+	height: 40px;
+	padding-left: 10px;
+	letter-spacing: 0px;
+	padding-top:11px;
+}
+
+.help_car{
+	position: absolute;
+	top: 11px;
+	left: 38px;
+}
+
+.help_car img
+{
+	width: 30px;
+	height: 18px;
+}
+
+.help-indicate{
+	position: absolute;
+	height: 10px;
+	right:10px;
+	top:50%;
+	margin-top: -8px
+}
+
+.help-indicate img
+{
+	width: 8px;
+	height: 16px;
+	display: block;
+}
+
+.help-arrow-down img{
+	width: 19px;
+	height: 18px;
+	display: block;
+}
+
+.help-arrow-down{
+	width: 19px;
+	margin: 10px auto
+}
+
+.help-user-car{
+	font-size: 1.4rem;
+	padding:10px;
+}
+
+
+/*帮助首页*/
+.find-action ul{
+	border-radius: 2px;
+	background: #fff
+}
+
+
+.find-action ul li{
+    float: left;
+    width: 50%; 
+    text-align: center;
+    font-size: 1.4rem;
+    list-style: none
+
+}
+
+.find-action ul li.find-active{
+	border-bottom: 2px solid #ff8903;
+	 
+}
+
+.find-action ul li.find-active a{
+	color:#ff8903; 
+}
+
+.find-action ul li a{
+	height:22px;
+	margin: 7px 0px;
+	line-height: 22px;
+	display: block;
+	border-right: 1px solid #e5e5e5;
+	color: #333
+}
+
+.help-tab-content-title{
+	font-size: 1.2rem;
+	color: #999;
+	padding: 13px 0px;
+	padding-left: 4%;
+}
+
+.help-tab-content ul{
+	background:#fff;
+}
+
+
+.help-tab-content ul li a{
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	color: #333;
+	border-top: 1px solid #e5e5e5;
+	padding-left: 4%;
+	font-size: 1.4rem
+}
+
+.help-tab-content ul li:last-child a{
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.interlocution p:first-child{
+	padding-bottom:4px;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.interlocution p{
+	font-size:1.4rem;line-height:1.6rem;
+	font-size: 1.2rem
+}
+
+.body-bg{
+	background-color:#fff;
+}

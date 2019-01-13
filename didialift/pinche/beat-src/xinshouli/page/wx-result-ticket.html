@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>顺风车新手礼包</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="/static/common/css/merged-common-ui.css">
+    <link href="../static/css/didi-noviceCeremony.css" rel="stylesheet" >
+    <link rel="sharelogo" href="../static/img/share-logo.jpg">
+</head>
+
+<body class="didi-bg-f0f0f0">
+     
+     <section class="didi-banner">
+         <img src="../static/img/banner.jpg">         
+     </section>
+
+     <section class="didi-article">
+            <div style="height:2.2rem"></div>
+            <div class="didi-ticket">
+                <img src="../static/img/didi-ticket.png">
+<!--                 <div class="didi-ticket-text">
+                    <h2>免费乘车券</h2>
+                    <p>（抵20公里,限7日内使用)</p>
+                </div> -->
+            </div>
+
+
+            <div class="didi-prize">
+                <p><?php echo $wording_1; ?></p>
+                <p>（<span id="phone"><?php echo $mask_phone; ?></span>）</p>
+            </div>
+
+            <div class="didi-btn didi-share-width">
+                <p class="didi-share-text">分享链接，邀请小伙伴坐车</p>
+            <?php if ($status == '0'){ ?>
+                <p>每邀请1位，可获得<span style="color:#ff8903"><?php echo $yuan; ?>元</span>顺风车券<br/>(最多<?php echo $max_yq_get_coupon_count; ?>张)</p> 
+            <?php } else if ($status == '1') {?>
+                <p><?php echo $wording_2; ?></p>
+            <?php } ?>
+
+            </div>
+
+
+     </section>
+
+    <script type="text/javascript" src="/static/common/js/zepto.js"></script>
+    <script type="text/javascript" src="/static/common/js/app-wx-share.js"></script>
+    <script type="text/javascript">
+
+$(function(){
+    var $telphone = $('#phone'),
+        telnumber = $telphone.html().replace(/^\s*|\s*$/g, '');
+
+    $telphone.html(
+        telnumber.replace(/(.{3}).{4}(.*)/g, '$1****$2')
+    );
+
+    document.body.style.height 
+        = window.innerHeight + "px";
+
+    var shareTitle = '<?php echo $share_title; ?>',
+        shareDesc = '<?php echo $share_content; ?>',
+        shareLink = '<?php echo $share_url; ?>',
+        shareImgUrl = '<?php echo $share_pic; ?>';
+
+    initWxShare({
+        title: shareTitle,
+        desc: shareDesc,
+        link: shareLink, 
+        imgUrl: shareImgUrl 
+    });
+
+});
+    
+    </script>
+
+</body>
+</html>

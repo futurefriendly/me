@@ -1,0 +1,45 @@
+.zoomoutToBottom (@name:zoomoutToBottom; @duration:1s) {
+    .animation_name(@name);
+    .animation_duration(@duration);
+    .animation_timing_function(linear);
+    .animation_iteration_count();
+    .animation_fill_mode(forwards); 
+}
+
+@-webkit-keyframes zoomoutToBottom {
+    0%, 100% {
+        -webkit-transform-origin: center;
+    }
+
+    0% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 33%) scale(0.6, 0.6);
+    }
+}
+
+
+
+
+@-webkit-keyframes disappearToBottom {
+
+    0%, 50%, 100% {
+        -webkit-transform-origin: center;
+    }
+
+    0% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: translate(-15%, 20%) scale(.5, .5);
+    }
+
+    100% {
+        -webkit-transform: translate(-23%, 33%) scale(0, 0);
+    }
+
+}
+

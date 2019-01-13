@@ -1,0 +1,172 @@
+/**
+ * Scene 3
+ */
+
+#wrapper.scene_3 {
+
+    .lamp-shine-layer {
+        .position-abs();
+        top: 8%;
+        bottom: auto;
+        height: 100%;
+        z-index: @lamp_shine_layer_zindex;
+        background-image: url("../../img/lamp-darker.png");
+        background-position: center center;
+        background-size: 80% auto; 
+
+        &.fadeIn {
+            .fade(fadeIn);
+        }
+    }
+
+    &.scene_3_1 {
+
+        .cadeng-layer {
+            .position-abs();
+            top: -18%;
+            bottom: auto;
+            z-index: @cadeng_layer_zindex;
+            height: 100%;
+            background-position: center center;
+            background-size: 60% auto; 
+            
+            &.fadeIn {
+                .fade(fadeIn);
+            }
+
+        }
+
+        .cloth-layer {
+            visibility: hidden;
+            position: absolute;
+            top: 48%;
+            left: 30%;
+            width: 100px;
+            height: 100px;
+            z-index: @cloth_layer_zindex;
+            background-position: center center;
+            background-size: 70% auto;
+
+            /*
+            &.fadeIn {
+                .fade(fadeIn);
+            }
+            */
+        }
+
+
+        &.scene_3_2 {
+
+            .cadeng-layer {
+
+                &.jello {
+                    .jello();
+                }
+
+            }
+
+            .cloth-layer {
+                visibility: visible;
+
+                &.shake {
+                    .shake(6s; shakeY);
+                }
+
+            }
+
+            &.scene_3_3 {
+
+                .lamp-shine-layer {
+
+                    background-image: url("../../img/lamp-shine.png");
+
+                    &.lampClean {
+                        .lampClean(lampClean; 2s);
+                    }
+
+                }
+
+                .cloth-layer {
+
+                    &.shake {
+                        .shake(3s; shakeYFast);
+                    }
+
+                }
+
+                &.scene_3_4 {
+
+                    /*
+                    .lamp-shine-layer {
+
+                        background-image: url("../../img/lamp-shine.png");
+
+                        &.lampClean {
+                            .lampClean(lampCleaner; 2s);
+                        }
+
+                    }
+                    */
+
+                    &.scene_3_5 {
+
+                        .cloth-layer {
+                            display: none;
+                        }
+
+                        .star-1-layer ,
+                        .star-2-layer {
+                            position: absolute;
+                            width: 80px;
+                            height: 80px;
+                            left: 18%;
+                            top: 49%;
+                            z-index: @star_layer_zindex;
+                            background-size: 30% auto;
+                        }
+
+                        .star-2-layer {
+                            left: auto;
+                            right: -5%;
+                            top: 59%;
+                            background-size: 25% auto;
+                        }
+
+                        .ray-layer {
+                            .position-abs();
+                            z-index: @ray_layer_zindex;
+                            background-size: 100% auto; 
+                            background-position: center center;
+                            opacity: .6;
+
+                            /*
+                            &.rotating {
+                                .rotating();
+                            }
+                            */
+
+                        }
+
+                        .cadeng-layer.holeOut {
+                            .holeOut();
+                        }
+
+                        .lamp-shine-layer.shining {
+                            .shining(1s);
+                        }
+
+                    }
+
+                }
+                
+            }
+
+
+        }
+
+
+    }
+
+}
+
+

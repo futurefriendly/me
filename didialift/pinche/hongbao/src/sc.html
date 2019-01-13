@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>滴滴顺风车代金券</title>
+    <!--<link rel="stylesheet" type="text/css" href="/static/pinche/src/css/dd.common.css">
+    <link rel="stylesheet" type="text/css" href="/static/pinche/src/css/dd.ui.css">-->
+    <link rel="stylesheet" type="text/css" href="http://static.xiaojukeji.com/pinche/common/css/merged-common-ui.css">
+    <link rel="stylesheet" type="text/css" href="http://static.xiaojukeji.com/pinche/hongbao/css/dd.hongbao.css?ver=0608">
+    <style type="text/css">
+        .letter a:visited{
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="main">
+
+        <!-- 获取代金券前 -->
+        <div class="page" id="page-grab">
+            <img class="head" width="55px" height="55px">
+            <div class="bubble"></div>
+            <div class="letter">
+                <span class="title">输入手机号，立领代金券！</span>
+                <input type="tel" id="txt-phone" name="txt-phone" value="" placeholder="输入手机号" maxlength="11">
+                <a class="btn-gray" id="btnOpen">领取代金券</a>
+            </div>
+        </div>
+
+        <!--领取代金券后-->
+        <div class="page" id="page-result">
+            <img class="head">
+            <div class="bubble"></div>
+            <div class="letter">
+                <div class="coupon" id="coupon">0<em>元</em>
+                </div>
+                <span class="title">顺风车券已放入账号<em id="phone"></em></span>
+                <!-- <a class="btn-orange" name="btnDownload">下载滴滴</a> -->
+                <a class="btn-orange" href="http://static.xiaojukeji.com/didialift/hybrid/pages/reward/didi-rewardnew.html">车主接单奖不停</a>
+            </div>
+        </div>
+
+        <!-- 异常页 -->
+        <div class="page" id="page-error">
+            <img class="head">
+            <div class="bubble"></div>
+            <div class="letter">
+                <span class="title">发现更多惊喜</span>
+                <a class="btn-orange" name="btnDownload">下载滴滴</a>
+            </div>
+        </div>
+
+        <!-- others -->
+        <div class="others" id="others" style="display:none">
+            <h2 class="line-between"><div class="hr"></div><span>看朋友手气如何</span></h2>
+            <ul id='ul-list'>
+            </ul>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://static.xiaojukeji.com/pinche/common/js/merged-base-dialog.js"></script>
+    <script type="text/javascript">
+    // -------------------------------echo begin--------------
+
+    var pageno = '<?php echo $pageno;?>'; //test
+
+    var errno = '<?php echo $errno;?>';
+
+    // 代金券信息
+    var hb_info = '<?php echo $hb_info; ?>';
+
+    // 代金券主题
+    var theme_config = '<?php echo $theme_config; ?>';
+
+    // 代金券信息
+    var all_hb_info = '<?php echo $all_hb_info; ?>';
+
+    var reg=/\n|\r/;
+    if(reg.test(all_hb_info)){
+        all_hb_info=all_hb_info.replace(reg,'');
+    }
+
+    // --------------------------------------echo end------------------
+    </script>
+
+    <script type="text/javascript" src="http://static.xiaojukeji.com/pinche/hongbao/js/dd.share.js"></script>
+    <script type="text/javascript" src="http://static.xiaojukeji.com/pinche/hongbao/js/dd.hongbao.js?v20150605"></script>
+
+</body>
+
+</html>

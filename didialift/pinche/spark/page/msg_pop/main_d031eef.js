@@ -1,0 +1,1 @@
+define("page/msg_pop/main.js",function(){});

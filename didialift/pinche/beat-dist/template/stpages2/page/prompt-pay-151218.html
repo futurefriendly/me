@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>提醒乘客付款</title>
+    <link rel="stylesheet" type="style/css" href="http://static.xiaojukeji.com/pinche/beat-dist/static/stpages2/css/prompt-pay-151218_a20aab3.css">
+<body>
+    <div class="container">
+        <div id="ok_icon"></div>
+        <div id="ok_tip">乘客已收到你的支付提醒。</div>
+        <div id="extra_tip">大部分车费将会在24小时内支付，请耐心等待。</div>
+        <div id="more_tip">
+        建议和乘客友好沟通，如果多次提醒乘客支付未果，请<br>
+        点击“由平台提醒乘客支付”。我们的客服人员将为你联<br>
+        系乘客，并提醒他支付。若乘客仍恶意不支付车费，我<br>
+        们将对乘客做出封禁处理。
+        </div>
+        <div id="btn_platform_prompt">由平台提醒乘客支付</div>
+
+<script>
+
+/**
+ * 初始化平台催款按钮的状态
+ */
+var ORDERSKEY = 'prompt-pay-151218-orders';
+var BTNTEXTDISABLED = '已提交平台'; 
+
+function getOrders() {
+    var orders = localStorage.getItem(ORDERSKEY) || {};
+
+    if(orders) {
+        try {
+            orders = JSON.parse(orders);
+        }
+        catch(e) {
+            orders = {};
+        }
+    }
+    return orders;
+}
+
+function setOrders(orders) {
+    if(!orders) {
+        return;
+    }
+
+    orders = JSON.stringify(orders);
+
+    localStorage.setItem(ORDERSKEY, orders);
+}
+
+(function(){
+    var orders = getOrders(); 
+    var orderId = /[&?]orderid=([^&]+)/.test(location.href)
+            ? RegExp.$1 : '';
+    var btn = document.getElementById('btn_platform_prompt');
+
+    if(orders && orders[orderId]){
+        btn.className = 'disabled';
+        btn.innerHTML = BTNTEXTDISABLED;
+    }
+
+})();
+
+</script>
+
+</div>
+</body>
+</html>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/zepto.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/didibridge.js"></script>
+<script src="http://static.xiaojukeji.com/pinche/beat-dist/static/common/js/didi-h5-monitor.js"></script>
+<script>
+
+var testURL = 'http://10.10.8.172:8866/pinche/pay/hurry_pay/index',
+    onlineURL = 'http://wap.didialift.com/pinche/pay/hurry_pay/index',
+    isDebug = /[&?]debug=1/.test(location.href),
+    requestURL = isDebug ? testURL : onlineURL;
+
+// 发送短信催款请求
+function promptPay(token, orderId){
+    $.ajax({
+        url: requestURL 
+            + '?token=' + token
+            + '&orderid=' + orderId 
+        , dataType: 'jsonp'
+    });
+}
+
+(function(){
+    var bridge = DidiBridge,
+        _send = DidiMonitor.sendBeatles,
+        orderId = DidiMonitor.getQuery('orderid'),
+        token = DidiMonitor.getQuery('token'),
+        $btn = $('#btn_platform_prompt');
+
+    // PV日志
+    _send('prompt-pay-151218_index_sw');
+
+    // 按钮可点，并且存在订单号时，注册点击事件
+    if(!$btn.hasClass('disabled') && orderId){
+        $btn.on('click', function(e){
+            var orders = getOrders();
+            $btn.addClass('disabled')
+                .html(BTNTEXTDISABLED);
+            orders[orderId] = 1;
+            setOrders(orders);
+        });
+    }
+
+    // URL若直接带token，则不需要从Bridge获取token
+    if(token) {
+        promptPay(token, orderId);
+    }
+    // 从Bridge获取token
+    else {
+        bridge.getUserInfo(function(json){
+            var token = '';
+
+            if(typeof json == 'string') {
+                try {
+                    json = JSON.parse(json);
+                }
+                catch(e){
+                    json = {};
+                }
+            }
+
+            if(!json) json = {};
+            token = json.token;
+            promptPay(token, orderId);
+        });
+    }
+
+})();
+
+</script>
+

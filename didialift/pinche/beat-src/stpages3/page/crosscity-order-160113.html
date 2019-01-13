@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>顺风车助你回家</title>
+    <style type="text/css">
+        html, body {height: 100%;}
+        * {padding: 0; margin: 0;}
+        a img{border: none}
+        img {max-width: 100%; vertical-align: top;}
+        body{
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto;
+            position:relative;
+        }
+        .goRegis{
+        	width: 100%;
+        	height: 100%;
+        	display: inline-block;
+        }
+        .logo {
+            position: absolute;
+            top: 9%;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background-size: auto 20px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .logo.b360 {
+            background-image: url("../static/img/crosscity-order-160113/logo-didi-360.png");
+        }
+        .logo.liebao {
+            background-image: url("../static/img/crosscity-order-160113/logo-didi-liebao.png");
+        }
+        .logo.dayu {
+            background-image: url("../static/img/crosscity-order-160113/logo-didi-dayu.png");
+        }
+        img.main {
+            min-height: 407px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 3%;
+            left: 0;
+            right: 0;
+        }
+        .footer span {
+            color: #878787;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .footer div {
+            width: 50%;
+            margin: 20px auto 0;
+            border-radius: 20px;
+            background-color: #ff8903;
+            color: #fff;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<img class="main" src="../static/img/crosscity-order-160113/crosscity_main.png">
+    <div id="logo" class="logo"></div>
+    <script>
+        (function(){
+            var _from = /[&?]_from=([^&]+)/.test(location.href)
+                    ? RegExp.$1 : '';
+            document.getElementById('logo')
+                .className += ' ' + _from;
+        })();
+    </script>
+    <div class="footer">
+        <span>点击一下，马上预约</span>
+        <div>预约跨城顺风车</div>
+    </div>
+</body>
+</html>
+<script src="/static/common/js/zepto.js"></script>
+<script src="/static/common/js/didi-h5-monitor.js"></script>
+<script src="/static/common/js/app-wx-share.js"></script>
+<script type="text/javascript">
+
+$('.footer div').on('click', function(){
+    DidiMonitor.sendBeatles(
+        'crosscity-order-160113_gotoorder_ck'
+        , null
+        , true
+    );
+    setTimeout(function(){
+        if( /micromessenger/i.test(navigator.userAgent) ) {
+            location.href = 'http://static.diditaxi.com.cn/pinche/pages/openappwx.html';
+        }
+        else {
+            location.href = 'http://wap.didialift.com/pinche/activity/callNative/index';
+        }
+    }, 300);
+});
+
+DidiMonitor.sendBeatles('crosscity-order-160113_index_sw');
+
+$(function(){
+
+    var shareLink = location.href
+            .replace(/[?&](token|phone)=[^&]+/g, ''),
+        shareImgUrl = __uri("../static/img/crosscity-order-160113/icon-crosscity-share.png"),
+        shareTitle = '跨城顺风车，老乡带你回家',
+        shareDesc = '滴滴跨城顺风车，为春运回家的顺路车主和乘客提供匹配服务';
+    
+    // Fix share url
+    if(/^\/\//.test(shareImgUrl)) {
+        shareImgUrl = location.protocol + shareImgUrl;
+    }
+
+    initWxShare({
+        link: shareLink 
+        , img_url: shareImgUrl
+        , title: shareTitle
+        , desc: shareDesc
+    });
+
+});
+
+</script>

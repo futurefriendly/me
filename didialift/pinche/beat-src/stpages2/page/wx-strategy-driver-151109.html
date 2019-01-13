@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>车主标准接单攻略</title>
+    <style type="text/css">
+        * {padding: 0; margin: 0;}
+        a img{border: none}
+        img {max-width: 100%; vertical-align: top;}
+        body{text-align: center;max-width: 750px;margin: 0 auto}
+        .goRegis{
+        	width: 100%;
+        	height: 100%;
+        	display: inline-block;
+        }
+    </style>
+<body>
+	<img src="../static/img/wx-strategy-151109/main-driver_01.png">
+	<img src="../static/img/wx-strategy-151109/main-driver_02.png">
+	<img src="../static/img/wx-strategy-151109/main-driver_03.png">
+</body>
+</html>
+<script src="/static/common/js/zepto.js"></script>
+<script src="/static/common/js/didi-h5-monitor.js"></script>
+<script src="/static/common/js/app-wx-share.js"></script>
+<script type="text/javascript">
+DidiMonitor.sendBeatles('wx-strategy-driver-151109_index_sw');
+
+$(function(){
+
+    var shareLink = location.href
+            .replace(/[?&](token|phone)=[^&]+/g, ''),
+        shareImgUrl = __uri("../static/img/wx-strategy-151109/icon-wx-strategy.jpg"),
+        // shareImgUrl = 'http://static.xiaojukeji.com/api/img/i-webview-entrance.png',
+        shareTitle = '车主标准接单攻略',
+        shareDesc = '车主攻略在手，出行接单不愁。';
+    
+    initWxShare({
+        link: shareLink 
+        , img_url: shareImgUrl
+        , title: shareTitle
+        , desc: shareDesc
+    });
+
+});
+
+</script>
