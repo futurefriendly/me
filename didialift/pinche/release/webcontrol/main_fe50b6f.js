@@ -1,0 +1,1 @@
+define("webcontrol/main.js",function(t,n,e){"use strict";var o=t("webcontrol/class.js"),i=t("webcontrol/attr.js"),s=t("webcontrol/event.js"),r=o.extend(new s,i);e.exports=r.extend({init:function(t){this.initConf(t)},destroy:function(){this.off();for(var t in this)this.hasOwnProperty(t)&&delete this[t];this.destroy=function(){}}})});

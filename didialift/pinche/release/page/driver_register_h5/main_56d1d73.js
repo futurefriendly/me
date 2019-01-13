@@ -1,0 +1,1 @@
+define("page/driver_register_h5/main.js",function(e){var u=e("upload/upload.js");new u(second,{url:"/output/upload.php",filekey:"file",outputHeight:100,outputWidth:100,onSuccessUpload:function(e){e=JSON.parse(e),second.style.backgroundImage="url("+e.img+")"}})});

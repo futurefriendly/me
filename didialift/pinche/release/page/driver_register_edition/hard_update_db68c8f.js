@@ -1,0 +1,1 @@
+define("page/driver_register_edition/hard_update.js",function(i,t){var n=i("tool/tool.js");t.lessThanVersion=function(i){return n.isWidthinApp()?n.getAppVersion()<n.standardizationAppVersion(i):!1},t.alertUpdate=function(){dd.dialog.alert({tip:"你的客户端版本太旧，更新后才能进行车主认证",btn:{val:"升级客户端",handler:function(){location.replace("http://diditaxi.com.cn/api/v1/share")}}})}});

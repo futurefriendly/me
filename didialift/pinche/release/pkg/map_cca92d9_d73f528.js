@@ -1,0 +1,1 @@
+require.resourceMap({"res":{"didi-component-carchoose/iscroll-lite.js":{"pkg":"p15"},"carchoose":{"deps":["didi-component-carchoose/iscroll-lite.js"],"pkg":"p15"}},"pkg":{"p15":{"url":"http://static.xiaojukeji.com/pinche/release/pkg/carchoose_d6d70de.js"}}});

@@ -1,0 +1,387 @@
+.form {
+  display: block;
+  width: 88%;
+  margin: auto;
+}
+.upload_card {
+  padding: 12px 35px 0;
+  background-color: #f2f2f4;
+  display: none;
+}
+/**animate start**/
+.animate .upload_card {
+  position: relative;
+  display: block;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms;
+}
+.animate .form {
+  display: block;
+  position: absolute;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms;
+}
+.begin_animate .upload_card {
+  transform: translate3d(0, 100px, 0);
+  -webkit-transform: translate3d(0, 100px, 0);
+  opacity: 0;
+}
+.begin_animate .form {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.end_animate .form {
+  -webkit-transform: translate3d(0, -100px, 0);
+  opacity: 0;
+}
+.end_animate .upload_card {
+  -webkit-transform: translate3d(0, 0px, 0);
+  opacity: 1;
+}
+.ended_animate .form {
+  display: none;
+}
+.ended_animate .upload_card {
+  display: block;
+}
+/**animate end**/
+.upload_card a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.4);
+}
+.upload_title {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #666;
+}
+.upload_card ul {
+  height: 464px;
+}
+.upload_card .file_select {
+  margin: auto;
+  border-radius: 2px;
+  background: #fefefe url(http://static.xiaojukeji.com/pinche/release/page/driver_register/img/add_47ce0d2.png) no-repeat center;
+  background-size: 30px;
+  position: relative;
+  margin-top: 41px;
+  height: 175px;
+  width: 175px;
+  background: white;
+}
+.upload_card .file_select > div {
+  opacity: 0;
+}
+.upload_card .file_select .webuploader-pick {
+  opacity: 1;
+}
+/*
+.driving_licence_front,
+.driving_licence_backend{
+	height: 93px;
+	width: 50%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.driving_licence_backend{
+	border: 0px solid #f2f2f4;
+	border-left-width: 5px;
+}
+.driving_licence_front{
+	border: 0px solid #f2f2f4;
+	border-right-width: 5px;
+}
+*/
+.car_photo,
+.driving_licence_front .shadow,
+.driving_licence_backend .shadow {
+  box-shadow: 1px 1px 0px 1px rgba(7, 0, 2, 0.06);
+  -webkit-box-shadow: 1px 1px 0px 1px rgba(7, 0, 2, 0.06);
+  font-size: 1rem;
+}
+.upload_card .shadow {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100% auto;
+  background-position: center;
+  color: red;
+  height: 175px;
+}
+.driving_licence_front .shadow {
+  background-image: url(http://static.xiaojukeji.com/pinche/release/page/driver_register/img/driver_tips_f0ace2b.png);
+  background-size: 100%;
+  background-position: 50% 50%;
+}
+.driving_licence_backend .shadow {
+  background-image: url(http://static.xiaojukeji.com/pinche/release/page/driver_register/img/traver_tips_72a5219.jpg);
+  background-size: 100%;
+  background-position: 50% 50%;
+}
+.car_photo {
+  display: none;
+}
+.upload_card .select_tips {
+  height: 93px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  display: block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 1.4rem;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  top: -38px;
+}
+.photo_uploaded .select_tips {
+  /*display: none;*/
+}
+.upload_card .photo_uploaded {
+  background: #fefefe;
+}
+.register_submit {
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background: #ff8903;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 1.4rem;
+}
+
+html,
+body {
+  background: #f2f2f4;
+  max-width: 768px;
+  margin: 0 auto;
+}
+body {
+  height: auto;
+}
+/*form*/
+.form {
+  margin: 0 6%;
+  font-size: 1.2rem;
+}
+.form h2 {
+  color: #333;
+  text-align: left;
+  line-height: 36px;
+  width: 100%;
+  margin: 10px auto 0;
+  font-size: 1.4rem;
+  text-indent: 0.3em;
+  font-weight: normal;
+}
+.form li {
+  height: 40px;
+}
+.form li.bottom {
+  margin-top: -1px;
+}
+.form label {
+  position: absolute;
+  padding: 13px 10px;
+  color: #333;
+  font-size: 1.4rem;
+  line-height: 1em;
+}
+.form input[type="text"] {
+  height: 40px;
+  border: 1px solid #e5e5e5;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #666;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+}
+.form input.error {
+  color: #f2372d;
+}
+.form .top input {
+  border-radius: 6px 6px 0 0;
+}
+.form .bottom input {
+  border-radius: 0 0 6px 6px;
+}
+.form input.half {
+  width: 49.4%;
+}
+#txt_carower::-moz-placeholder,
+#txt_carower::-webkit-input-placeholder {
+  color: #ff8903;
+}
+#txt_carOne {
+  width: 35px;
+  height: 20px;
+  position: absolute;
+  display: inline-block;
+  padding-right: 5px;
+  margin-left: 92px;
+  line-height: 20px;
+  font-size: 1.2rem;
+  text-indent: -2px;
+  text-align: center;
+  border-radius: 2px;
+  font-family: 'STHeitiSC-Medium';
+  color: #666;
+  border-radius: 4px;
+  border: 1px solid #666;
+  margin-top: 9px;
+  background: url("http://static.xiaojukeji.com/pinche/release/page/driver_register/img/i-arrow-down_15c359c.png") 28px center no-repeat;
+  background-size: 6px auto;
+}
+#txt_carOne:after {
+  content: '2';
+  display: block;
+  text-indent: -9999em;
+}
+#txt_carOne[disabled] {
+  background: #ebebe4;
+}
+#btnSubmit {
+  margin: 5px auto 5px;
+}
+.form .notice {
+  color: #878787;
+  font-size: 1.2rem;
+  line-height: 36px;
+  text-align: center;
+  display: block;
+}
+.agree {
+  color: #999;
+  font-size: 1.2rem;
+  line-height: 24px;
+  text-align: center;
+  display: block;
+}
+.form .agree a {
+  color: #ff8903;
+}
+/*end form*/
+/*select*/
+.select {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #333;
+  display: none;
+  z-index: 9999;
+}
+.select .title {
+  line-height: 52px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.select .title .cancel {
+  float: left;
+  padding-left: 15px;
+  color: #999;
+  width: 60px;
+  text-align: left;
+}
+.select .title .confirm {
+  float: right;
+  padding-right: 15px;
+  color: #ff8903;
+  width: 60px;
+  text-align: right;
+}
+.select ul {
+  height: 220px;
+  overflow: scroll;
+}
+.select-carno ul {
+  padding: 44px 0;
+  height: 44px;
+  overflow: hidden;
+}
+.select li {
+  border-bottom: 1px solid #ddd;
+  height: 43px;
+  line-height: 43px;
+  padding: 0 20px;
+  text-align: center;
+}
+.select-carno li {
+  border-bottom: none;
+  height: 44px;
+  line-height: 44px;
+}
+.select li:nth-child(1) em {
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #999;
+}
+.ui-blur-top,
+.ui-blur-bottom {
+  position: absolute;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.6666667);
+  width: 50%;
+}
+.listone .ui-blur-top,
+.listone .ui-blur-bottom {
+  width: 100%;
+}
+.ui-blur-top {
+  top: 53px;
+  border-bottom: 1px solid #ddd;
+}
+.ui-blur-bottom {
+  top: 141px;
+  border-top: 1px solid #ddd;
+}
+/*select*/
+#d-wrap .confirm {
+  padding: 0;
+}
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ccc;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ccc;
+}
+:-ms-input-placeholder {
+  color: #ccc;
+}
+h2.line-between {
+  position: relative;
+  color: #878787;
+  text-align: center;
+  line-height: 36px;
+  width: 100%;
+  margin: 15px auto 5px;
+  font-size: 1.2rem;
+  font-family: 微软雅黑;
+}
+.line-between .hr {
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  top: 19px;
+}
+.line-between span {
+  background: #f2f2f4;
+  padding: 0 15px;
+  position: relative;
+  font-size: 14px;
+  color: #333;
+}

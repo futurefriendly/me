@@ -1,0 +1,24 @@
+/**
+ * 播放器容器&video
+ */
+.player {
+  position: relative;
+  overflow: hidden;
+  background-size: 100%;
+}
+.player video,
+.player object,
+.player embed {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.player .player_main,
+.player .video {
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+.player .video {
+  background-color: #000;
+}

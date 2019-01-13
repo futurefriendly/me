@@ -1,0 +1,1 @@
+define("page/recertification/notice/notice.js",function(){});

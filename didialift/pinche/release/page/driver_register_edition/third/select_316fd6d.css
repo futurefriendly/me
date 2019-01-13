@@ -1,0 +1,77 @@
+/*select*/
+.select {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #333;
+  display: none;
+  z-index: 9999;
+  left: 0;
+}
+.select .title {
+  line-height: 52px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.select .title .cancel {
+  float: left;
+  padding-left: 15px;
+  color: #999;
+  width: 60px;
+  text-align: left;
+}
+.select .title .confirm {
+  float: right;
+  padding-right: 15px;
+  color: #ff8903;
+  width: 60px;
+  text-align: right;
+}
+.select ul {
+  height: 220px;
+  overflow: scroll;
+}
+.select-carno ul {
+  padding: 44px 0;
+  height: 44px;
+  overflow: hidden;
+}
+.select li {
+  border-bottom: 1px solid #ddd;
+  height: 43px;
+  line-height: 43px;
+  padding: 0 20px;
+  text-align: center;
+}
+.select-carno li {
+  border-bottom: none;
+  height: 44px;
+  line-height: 44px;
+}
+.select li:nth-child(1) em {
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #999;
+}
+.ui-blur-top,
+.ui-blur-bottom {
+  position: absolute;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.6666667);
+  width: 50%;
+}
+.listone .ui-blur-top,
+.listone .ui-blur-bottom {
+  width: 100%;
+}
+.ui-blur-top {
+  top: 53px;
+  border-bottom: 1px solid #ddd;
+}
+.ui-blur-bottom {
+  top: 141px;
+  border-top: 1px solid #ddd;
+}

@@ -1,0 +1,1 @@
+define("conan/main.js",function(n,t,i){"use strict";var s=n("conan/class.js"),e=n("conan/attr.js"),o=n("conan/event.js"),a=s.extend(new o,e);i.exports=a.extend({init:function(n){this.initConf(n)},destroy:function(){this.off();for(var n in this)this.hasOwnProperty(n)&&delete this[n];this.destroy=function(){}}})});

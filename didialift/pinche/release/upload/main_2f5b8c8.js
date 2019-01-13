@@ -1,0 +1,1 @@
+define("upload/main.js",function(o){var n=o("upload/upload.js");new n(second,{url:"/output/upload.php",filekey:"file",outputHeight:500,outputWidth:800,onSuccessUpload:function(o){o=JSON.parse(o),second.style.backgroundImage="url("+o.img+")"},onCancelUpload:function(){},onFailedUpload:function(){}})});

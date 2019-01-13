@@ -1,0 +1,49 @@
+/**
+ * 适配
+ */
+/*如果用height 100% 在note3下不显示*/
+.weixin .inline_player .fullscreen {
+  height: 93%;
+}
+/* 微信内去掉播放器各种动画 */
+.weixin .player .slider_bar.hide,
+.weixin .player .slider_bar,
+.weixin .video_title.hide,
+.weixin .video_title,
+.weixin .play_pause_con {
+  transition: none!important;
+  -moz-transition: none!important;
+  -webkit-transition: none!important;
+}
+/* 播放器高度适配 */
+.player_scope {
+  position: relative;
+  height: 200px;
+}
+.android .inline_player .slider_bar,
+.android .show_slider_bar .slider_bar {
+  display: block;
+}
+.iphone .player video {
+  height: 1px;
+}
+@media only screen and (min-width: 384px) {
+  .player_scope {
+    height: 216px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .player_scope {
+    height: 270px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .player_scope {
+    height: 338px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .player_scope {
+    height: 432px;
+  }
+}

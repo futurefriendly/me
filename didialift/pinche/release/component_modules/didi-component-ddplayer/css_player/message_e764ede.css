@@ -1,0 +1,61 @@
+/**
+ * 消息提示层
+ */
+.player .message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: #3B3C40;
+}
+.player .inner_msg {
+  position: absolute;
+  width: 70%;
+  min-height: 70px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  max-width: 500px;
+}
+.player .msg_cont {
+  padding: 25px 10px;
+  text-align: center;
+  color: #FFF;
+}
+.player .msg_cont .msg {
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+}
+.player .msg_btns {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.player .msg_btn {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  color: #FFF;
+  background: #7C7C7C;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.player .msg_btn:only-child {
+  width: 70%;
+  min-width: 80px;
+  max-width: 250px;
+  background: #CF3232;
+}
+.player .msg_btn_b {
+  background: #CF3232;
+}
