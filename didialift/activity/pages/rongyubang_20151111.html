@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>滴滴出行</title>
+    <link rel="stylesheet" type="text/css" href="http://static.diditaxi.com.cn/webapp/css/merged-common-ui.css">
+
+    <style>
+        html,body,section{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        
+        section{
+            position: relative;
+        }
+        
+        #main{
+            width: 100%;
+        }
+
+        #share{
+            display: none;
+            position: absolute;
+            width: 81.73%;
+            left:9.685%;
+            height: 8.666vw;
+            bottom:5.7%;
+            background: url("../img-rongyubang/sharebtn.png") center / 100% 100%;
+        }
+        
+    </style>
+</head>
+<body>
+
+<section>
+    <img src="../img-rongyubang/geisiji.jpg" id="main"/>
+    <a id="share"></a>
+</section>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=46392933" charset="UTF-8"></script>
+<script src="http://static.diditaxi.com.cn/activity/js/driver-common/ddbridge.js"></script>
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function(ev) {
+        var share_data = {
+            share_url: 'http://static.diditaxi.com.cn/activity/pages/rongyubang_20151111.html?v='+Math.random(),
+            share_icon_url: 'http://static.diditaxi.com.cn/activity/img-rongyubang/shareicon.jpg',
+            share_img_url: 'http://static.diditaxi.com.cn/activity/img-rongyubang/shareicon.jpg',
+            share_title:'平凡英雄纪',
+            share_content: '每一位出租车司机师傅都是英雄',
+            share_from: "滴滴出行"
+        };
+
+        didi.initShare(share_data);
+        weixin.initShare(share_data);
+
+        if(window.DidiJSBridge){
+            var share=document.getElementById("share");
+            share.style.display="block";
+            share.addEventListener("click",function(){
+                connectDidiJSBridge(function(bridge) {
+                    if (typeof bridge === "undefined") {
+                        return;
+                    }
+                    bridge.callHandler("invoke_entrance");
+                });
+            },false);
+        }
+
+    },!1);
+
+</script>
+</body>
+</html>

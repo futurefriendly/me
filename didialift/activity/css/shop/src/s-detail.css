@@ -1,0 +1,203 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, hr, p, a, em, img, input, q, b, dl, dt, dd, ol, ul, li, form, label, canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html, body {
+    font-size: 62.5%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    font-size-adjust: none;
+    font-family: "STHeiTi-Light", 'Microsoft YaHei', arial, sans-serif, 'Droid Sans Fallback';
+}
+.img {
+    -webkit-user-select: none;
+    width: 100%;
+    position: absolute;
+}
+.img img {
+    width: 100%;
+}
+.describe {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 1.4rem;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.describe h3 {
+    padding-left: 4%;
+    float: left;
+    color: #333333;
+    font-weight: normal;
+}
+.describe span {
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/shop_icon2.png) left center no-repeat;
+    background-size: 8px 8px;
+    float: right;
+    color: #ff8903;
+    padding-right: 4%;
+    padding-left: 10px;
+}
+.main {
+    font-size: 1.4rem;
+    padding: 55% 4% 0;
+}
+.bottom {
+    height: 64px;
+}
+.content {
+    width: 100%;
+    display: -webkit-box;
+    padding-top: 10px;
+}
+.content a {
+    color: #ff8903;
+    text-decoration: none;
+}
+.content a:active {
+    text-decoration: underline;
+}
+.content p:first-child {
+    width: 25%;
+    color: #999999;
+}
+.content p:last-child {
+    width: 76%;
+    color: #666666;
+    word-break: break-all;
+}
+.btn_box {
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.btn-org {
+    cursor: default;
+    display: inline-block;
+    width: 94%;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+    background-color: #ff8703;
+}
+.btn-gray {
+    cursor: default;
+    display: inline-block;
+    width: 94%;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 10px auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+}
+
+.btn-orange {
+    cursor: default;
+    display: inline-block;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 5px;
+    background-color: #ff8a01;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn-white {
+    cursor: default;
+    display: inline-block;
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    border: .1rem solid #d7d7d7;
+    color: #666;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn-orange:active, .btn-org:active {
+    background-color: #df7800;
+}
+.btn-white:active {
+    background-color: #e9e9e9;
+}
+
+.draw {
+    display: none;
+    width: 280px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.draw_bg {
+    width: 189px;
+    height: 103px;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/draw_bg.png) center bottom no-repeat;
+    background-size: 189px 103px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.draw_box {
+    width: 51px;
+    height: 48px;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/draw_box.png) center center no-repeat;
+    background-size: 61px 58px;
+    margin: 0 auto;
+    padding-top: 50px;
+    -webkit-animation: draw 3s .2s ease both;
+}
+.draw_text {
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #666666;
+    padding-bottom: 16px;
+}
+.fix_main{
+    font-size: 1.4rem;
+    padding: 0 4%;
+}
+@-webkit-keyframes draw {
+    0% {
+        -webkit-transform: scale(0.84);
+    }
+    4%, 8% {
+        -webkit-transform: scale(0.75) rotate(-10deg);
+    }
+    12%, 20%, 28%, 36%, 44%, 52%, 60%, 68%, 76%, 84%, 92% {
+        -webkit-transform: scale(1) rotate(10deg);
+    }
+    16%, 24%, 32%, 40%, 48%, 56%, 64%, 72%, 80%, 88%, 96% {
+        -webkit-transform: scale(1) rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: scale(0.84) rotate(0);
+    }
+}

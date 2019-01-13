@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){diff_platform({android:function(){iNoBounce.disable()},ios:function(){iNoBounce.enable()}}),shareFn()},!1);

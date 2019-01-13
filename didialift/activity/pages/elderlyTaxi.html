@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <title>敬老专线</title>
+    <script>
+        !function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+    </script>
+    <style>
+        html,body,section,h3,ul,li{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            color: #333;
+        }
+        html,body{
+            min-height: 100%;
+        }
+        body{
+            background: url("http://static.diditaxi.com.cn/activity/elderly-img/bg.jpg") center / cover #FEECDF no-repeat;
+        }
+        ul,li{
+            list-style: none;
+        }
+        section,input{
+            font-size: .4375rem;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        h3{
+            font-size: .65625rem;
+            text-align: center;
+        }
+
+        section{
+            display: none;
+        }
+
+
+        #edit{
+            padding-top: 1.4rem;
+            display: none;
+        }
+
+        .edit-form{
+            margin: 1rem auto;
+            width: 8.15625rem;
+        }
+
+        input[type=text],input[type=tel],.address{
+            box-sizing: border-box;
+            width: 100%;
+            height: .96875rem;
+            vertical-align: middle;
+            border: 1px #ccc solid;
+            border-radius: .125rem;
+            background: #fff;
+            color: #000;
+        }
+
+        #nick::-webkit-input-placeholder{
+            color: #ccc;
+            font-size: .375rem;
+        }
+
+        .address{
+            height: auto;
+            padding: 0 .375rem;
+            position: relative;
+            font-size: .375rem;
+            background: #fff;
+        }
+
+        #city,#poi{
+            height: 1.09375rem;
+            font-size: .375rem;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            outline: 0;
+        }
+
+        #city{
+            display: block;
+            border-bottom: 1px #ccc solid;
+        }
+
+        #city::-webkit-input-placeholder,#poi::-webkit-input-placeholder{
+            color: #b1b1b1;
+        }
+
+        .poi{
+            position: relative;
+            padding-right: .5rem;
+        }
+
+        #empty{
+            display: none;
+            position: absolute;
+            width:.5rem;
+            height: .5rem;
+            background: #ccc;
+            border-radius: 50%;
+            top:50%;
+            margin-top: -0.25rem;
+            right: 0;
+        }
+
+        #empty::before,#empty::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            top:50%;
+            width: .2625rem;
+            height: 2px;
+            background: #fff;
+            -webkit-transform: translate(-50%,-50%) rotate(45deg);
+        }
+        #empty::after{
+            -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+        }
+
+        .suggestion{
+            display: none;
+            position: absolute;
+            border: 1px #ccc solid;
+            border-radius: 0 0 .125rem .125rem;
+            overflow: hidden;
+            width: 100%;
+            left:-1px;
+            top:2.125rem;
+        }
+
+        #sug_city{
+            top:1.09375rem;
+            margin-top: -1px;
+        }
+
+        .suggestion > li{
+            box-sizing: border-box;
+            height: 1rem;
+            line-height: 1rem;
+            border-bottom: 1px #ccc solid;
+            background: #fff;
+            padding: 0 .3125rem;
+            text-overflow: ellipsis;
+            overflow:hidden;
+            white-space: nowrap;
+            color: #666;
+        }
+
+        .suggestion > li:last-child{
+            border-bottom: 0;
+            border-radius: 0 0 .125rem .125rem;
+        }
+
+        .suggestion span{
+            color: #adadad;
+            font-size: .3125rem;
+            padding-left: .15625rem;
+        }
+
+        .suggestion li.toggle{
+            position: relative;
+        }
+
+        .toggle:before{
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            left: 50%;
+            top:50%;
+            width: .21875rem;
+            height: .21875rem;
+            border-top: 2px #ff8903 solid;
+            border-left: 2px #ff8903 solid;
+            margin: auto;
+            -webkit-transform: translate(-50%,-50%) rotate(45deg);
+            -webkit-transform-origin: 50% 25%;
+            transform: translate(-50%,-50%) rotate(45deg);
+            transform-origin: 50% 25%;
+        }
+
+        .label{
+            margin-top: .46875rem;
+            margin-bottom: .3125rem;
+        }
+
+        .label span{
+            font-size: .3125rem;
+            color: #ccc;
+        }
+
+        .error{
+            display: none;
+            margin-top: .3125rem;
+            color: #ff8919;
+            font-size: .375rem;
+        }
+
+        .btn{
+            display: inline-block;
+            box-sizing: border-box;
+            outline: 0;
+            border-radius: .1875rem;
+            text-align: center;
+            font-size: .5rem;
+            line-height: 1.375rem;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+        }
+
+        .btn-default{
+            border: 1px #e0e0e0 solid;
+            color: #333;
+        }
+        .btn-primary{
+            background: #ff8b03;
+            color: #fff;
+        }
+
+        #send{
+            width: 100%;
+            margin-top: .78125rem;
+        }
+
+        .cost-desc{
+            color: #999;
+            text-align: center;
+            margin-top: .59375rem;
+        }
+
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            z-index: 100;
+            background: rgba(0,0,0,.5);
+        }
+
+        .modal {
+            position: absolute;
+            left:50%;
+            top:50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            border-radius: .125rem;
+            box-sizing: border-box;
+            background:#fff;
+            width: 8.3125rem;
+            padding:.625rem .875rem .875rem;
+        }
+
+        .modal h3{
+            color: #666;
+        }
+
+        #msg{
+            box-sizing: border-box;
+            border-radius: inherit;
+            background: #fafafa;
+            color: #666;
+            padding: .25rem;
+            width: 6.5625rem;
+            line-height: 1.5;
+            margin: .5rem auto;
+            word-break: break-all;
+        }
+
+        .orange{
+            color: #ff8903;
+        }
+
+        .send-to{
+            color: #ffa033;
+            font-size: .59375rem;
+            text-align: center;
+            margin-top: .65625rem;
+            margin-bottom: .78125rem;
+        }
+        #modify,#confirm{
+            width: 3.1875rem;
+        }
+        #confirm{
+            float: right;
+        }
+
+        #success,#sent{
+            text-align: center;
+        }
+
+        .icon{
+            position: relative;
+            margin: 3.4375rem auto .59375rem;
+            width: 2.125rem;
+            height: 2.125rem;
+            background-color:#ff8903 ;
+            border-radius: 50%;
+        }
+
+        .icon-ok::before,.icon-ok::after{
+            content: "";
+            position: absolute;
+            width:.2rem ;
+            border-radius: 0.1rem;
+            background: #fff;
+            top: 70%;
+            left: 44%;
+            -webkit-transform-origin: center .1rem;
+            transform-origin: center .1rem;
+        }
+
+        .icon-ok::before{
+            height: 1.2rem;
+            -webkit-transform: rotate(-150deg);
+            transform: rotate(-150deg);
+        }
+
+        .icon-ok::after{
+            height:0.66rem;
+            -webkit-transform:translateX(-1px)  rotate(135deg) ;
+            transform: translateX(-1px) rotate(135deg);
+        }
+
+        .icon-warn::before,.icon-warn::after{
+            content: '';
+            position: absolute;
+            left:50%;
+            margin-left: -.17rem;
+            width: .34rem;
+            border-radius: .17rem;
+            background: #fff;
+        }
+
+        .icon-warn::before{
+            bottom: 14.7%;
+            height:.34rem;
+        }
+        .icon-warn::after{
+            top: 14.7%;
+            height:1.5rem;
+            -webkit-transform: perspective(1rem) rotateX(-20deg);
+            -webkit-transform-origin: top;
+            transform: perspective(1rem) rotateX(-20deg);
+            transform-origin: top;
+        }
+
+        .wish{
+            font-size: .375rem;
+            margin-top: 1.76rem;
+        }
+
+        .tel{
+            color: #ffa033;
+            font-size: .8125rem;
+            margin-top: .4375rem;
+        }
+
+        .thanks{
+            color: #666;
+            margin-top: .20rem;
+            margin-bottom: 1.40625rem;
+        }
+
+
+        .alert{
+            position: absolute;
+            box-sizing: border-box;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            border-radius: 0.15625rem;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            display: inline-block;
+            background: #fff;
+            font-size: .5rem;
+            padding: 6.79%;
+            width: 87.5%;
+        }
+
+        .d-icon {
+            margin: 0.15625rem 0 .375rem;
+            display: inline-block;
+            width: 1.75rem;
+            height:1.75rem;
+            border-radius: 50%;
+            background: url(http://static.xiaojukeji.com/webapp/images/i-plaint.png) center / .25rem 1.125rem no-repeat #f0f0f0;
+        }
+
+
+        #alert-content{
+            line-height: 1.5em;
+            margin-bottom: .375rem;
+        }
+
+        #close{
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+<section id="edit" style="display: block;">
+    <h3>敬老专线电话叫车服务</h3>
+    <form class="edit-form">
+        <div class="label">父母的手机号码？<span>-作为司机联系老人的方式</span></div>
+        <input type="tel" id="telephone" maxlength="11"/>
+        <div class="error" id="tel-error">请填写正确手机号</div>
+        <div class="label">设置老人的住址<span>-方便老人叫车时选择起终点</span></div>
+        <div class="address">
+            <input type="text" id="city" placeholder="选择所在城市" readonly />
+            <div class="poi">
+                <input type="text" id="poi" placeholder="请输入地址"/>
+                <a id="empty"></a>
+            </div>
+            <ul class="suggestion" id="sug_city">
+                <li data-id="1">北京</li>
+                <li data-id="4">上海</li>
+                <li data-id="12">济南</li>
+                <li data-id="11">南京</li>
+                <li data-id="13">青岛</li>
+            </ul>
+            <ul class="suggestion" id="sug_poi">
+                <li class="toggle"></li>
+            </ul>
+        </div>
+        <div class="error" id="addr-error">请填写老人的住址</div>
+        <div class="label">您的姓名？<span>-让老人知道这份孝心来自于你</span></div>
+        <input type="text" id="nick" maxlength="4" placeholder="最多4个字"/>
+        <div class="error" id="nick-error">请填写姓名</div>
+        <a class="btn btn-primary" id="send">保存并发短信告诉老人</a>
+        <div class="cost-desc">短信费用由滴滴出行承担</div>
+    </form>
+</section>
+
+<section id="success">
+    <div class="icon icon-ok"></div>
+    <h3>敬老专线定制成功 </h3>
+    <div class="wish">已发送短信告知老人，快来拨打敬老热线吧</div>
+    <div class="tel">4006165000</div>
+</section>
+
+<section id="sent">
+    <div class="icon icon-warn"></div>
+    <h3>您已发送过短信了</h3>
+    <div class="thanks">非常感谢您的参与</div>
+    <div class="tel">4006165000</div>
+</section>
+
+<section id="preview" class="overlay">
+    <div class="modal">
+        <h3>发短信告诉老人</h3>
+        <div id="msg"></div>
+        <div class="send-to">发送至:<span id="tel"></span></div>
+        <a class="btn btn-primary" id="confirm">立即发送</a>
+        <a class="btn btn-default" id="modify">返回修改</a>
+    </div>
+</section>
+
+<section id="alert" class="overlay">
+    <div class="alert">
+        <i class="d-icon"></i>
+        <div id="alert-content"></div>
+        <a class="btn btn-primary" id="close">我知道了</a>
+    </div>
+</section>
+
+<script>
+
+    var msgParams={};
+    var addressParams={};
+    var sending;
+    var msgUrl="http://api.diditaxi.com.cn/api/v2/p_sendsms";
+    var addressUrl="http://api.diditaxi.com.cn/api/v2/p_sendsms/createAddr";
+    var sugUrl="http://api.diditaxi.com.cn/api/v2/e_placesuggestion";
+
+    bind(getById("send"),"click",function(){
+        var telephone=getById("telephone").value;
+        var nick=getById("nick").value;
+        if(validateTel() & validateNick() & validateAddress()){
+            getById("tel").innerHTML=telephone;
+            getById("msg").innerHTML='<span class="orange">'+nick+'</span>\
+                    向您推荐滴滴敬老专线叫车服务，拨打4006165000 不出家门就能轻松打到出租车，从此不再路边拦车。<br/><br/>\
+                    重阳节即将到来，在这个日子里<span class="orange">'+nick+'</span>有话对您说：<span class="orange">祝您重阳节快乐，健康长寿，爱您！</span>';
+            show(getById("preview"));
+            msgParams.user= nick;
+            msgParams.phone=telephone;
+        }
+    });
+
+    bind(getById("modify"),"click",function(){
+        !sending && hide(getById("preview"));
+    });
+
+    bind(getById("confirm"),"click",function(){
+        if(sending){
+            return;
+        }
+        sending=true;
+
+        addressParams.phone=msgParams.phone;
+
+        addAddress(sendMsg);
+
+    });
+
+    bind(getById("close"),"click",function(){
+        hide(getById("alert"));
+    });
+
+
+    bind(getById("telephone"),"change",validateTel);
+    bind(getById("nick"),"change",validateNick);
+
+
+    bind(getById("nick"),"input",function(){
+        var nick=getById("nick");
+        var val=nick.value;
+        var reg=/[<|\/|\\|>]/;
+        if(reg.test(val)){
+            nick.value=val.replace(reg,"");
+        }
+    });
+
+    bind(getById("city"),"click",function(e){
+        show(getById("sug_city"));
+        hide(getById("sug_poi"));
+    });
+
+    bind(getById("sug_city"),"click",function(e){
+        var target=e.target;
+        var area_id;
+        if(target.tagName.toLowerCase()=="li"){
+            hide(getById("sug_city"));
+            area_id=target.getAttribute("data-id");
+            if(addressParams.area_id!=area_id){
+                addressParams={channel:"55237",area_id:area_id,city_name:target.innerHTML};
+                getById("city").value=addressParams.city_name;
+                getById("poi").value="";
+                getById("sug_poi").innerHTML='<li class="toggle"></li>';
+            }
+        }
+    });
+
+    bind(getById("poi"),"click",function(e){
+        if(addressParams.area_id){
+            if(getById("poi").value){
+                show(getById("sug_poi"));
+                show(getById("empty"));
+            }
+        }else{
+            getById("poi").blur();
+            alertMsg("请先选择城市");
+        }
+    });
+
+    bind(getById("poi"),"input",throttle(function(){
+        var poi=getById("poi").value;
+        if(poi){
+            show(getById("sug_poi"));
+            show(getById("empty"));
+            getPoi(addressParams.city_name,poi);
+        }else{
+            hide(getById("sug_poi"));
+            hide(getById("empty"));
+        }
+    }, 100));
+
+    bind(getById("poi"),"blur",function(){
+        setTimeout(function(){
+            var poi=getById("poi");
+            hide(getById("empty"));
+            hide(getById("sug_poi"));
+            if(addressParams.addr!=poi.value){
+                poi.value=addressParams.addr="";
+            }
+        },0);
+    });
+
+    bind(getById("empty"),"click",function(){
+        getById("poi").focus();
+        getById("poi").value="";
+        getPoi.xhr.abort();
+    });
+
+    bind(getById("sug_poi"),"click",function(e){
+        var target=e.target;
+        var address;
+        if(target.tagName.toLowerCase()=="span"){
+            target=target.parentNode;
+        }
+        if(target.tagName.toLowerCase()=="li"){
+            hide(getById("sug_poi"));
+            hide(getById("addr-error"));
+            address=target.getAttribute("data-addr");
+            if(address && addressParams.addr!=address){
+                addressParams.addr=address;
+                addressParams.lng=target.getAttribute("data-lng");
+                addressParams.lat=target.getAttribute("data-lat");
+                getById("poi").value=address;
+            }
+        }
+    });
+
+
+    function validateTel(){
+        if(/^1\d{10}$/.test(getById("telephone").value)){
+            setTimeout(function(){
+                hide(getById("tel-error"));
+            },0);
+            return true;
+        }else{
+            show(getById("tel-error"));
+            return false;
+        }
+    }
+
+    function validateNick(){
+        if(getById("nick").value){
+            setTimeout(function(){
+                hide(getById("nick-error"));
+            },0);
+            return true;
+        }else{
+            show(getById("nick-error"));
+            return false;
+        }
+    }
+
+    function validateAddress(){
+        hide(getById("sug_poi"));
+        hide(getById("sug_city"));
+        if(addressParams.area_id&&addressParams.addr){
+            hide(getById("addr-error"));
+            return true;
+        }else{
+            show(getById("addr-error"));
+            return false;
+        }
+    }
+
+    function getPoi(city,input){
+        var params={
+            city: city,
+            query:input
+        };
+        getPoi.xhr && getPoi.xhr.abort();
+        getPoi.xhr= ajax(sugUrl,"get",params,function(data){
+            if(data.errno==0){
+                renderPoi(data.result)
+            }
+        })
+    }
+
+    function renderPoi(data){
+        var html="";
+        if(data && data.length){
+            data.forEach(function(item,index){
+                html+='<li data-lng="'+item.lng+'" data-lat="'+item.lat+'" data-addr="'+item.address+'">'+item.displayname+'<span>'+item.address+'</span></li>'
+            });
+        }else {
+            html='<li>没有搜索结果</li>';
+        }
+
+        html+='<li class="toggle"></li>';
+
+        getById("sug_poi").innerHTML=html;
+    }
+
+
+    function sendMsg(){
+        ajax(msgUrl,"get",msgParams,function(data){
+            sending=false;
+            switch (data.errno){
+                case 0:
+                    hide(getById("preview"));
+                    hide(getById("edit"));
+                    show(getById("success"));
+                    break;
+                case 3:
+                case 4:
+                    hide(getById("preview"));
+                    hide(getById("edit"));
+                    show(getById("sent"));
+                    break;
+                case 5:hide(getById("preview"));alertMsg("活动已结束，感谢您的参与！");break;
+                default :alertMsg("发送失败！请稍后重试");
+            }
+        },function(){
+            sending=false;
+            alertMsg("网络错误！请稍后重试");
+        });
+    }
+
+    function addAddress(success){
+        ajax(addressUrl,"get",addressParams,function(data){
+            if(data.errno==0){
+                success();
+            }else{
+                alertMsg(data.errmsg);
+                sending=false;
+            }
+        },function(){
+            sending=false;
+            alertMsg("网络错误！请稍后重试");
+        })
+    }
+
+    function alertMsg(msg){
+        getById("alert-content").innerHTML=msg;
+        show(getById("alert"));
+    }
+
+    function getById(id){
+        return document.getElementById(id);
+    }
+
+    function bind(el,type,cb){
+        el.addEventListener(type,cb,false);
+    }
+
+    function show(el){
+        el.style.display="block";
+    }
+
+    function hide(el){
+        el.style.display="none";
+    }
+
+    function throttle(fn, operatDelay) {
+        var timer;
+        return function () {
+            var self = this, args = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn.apply(self, args);
+            }, operatDelay);
+        }
+    }
+
+
+    function ajax(url, method, params, cb,err) {
+        var xhr = new XMLHttpRequest();
+        var body;
+        var bodies = [];
+        if (params) {
+            for (var name in params) {
+                bodies.push(name + '=' + params[name]);
+            }
+            body = bodies.join('&');
+            if (method=="post") {
+                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            }else{
+                url+="?"+body;
+            }
+        }
+
+        xhr.open(method, url, true);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if(xhr.status==200){
+                    var data = xhr.responseText;
+                    try {
+                        data = JSON.parse(data);
+                    } catch (exc) {
+                    }
+                    cb&&cb(data);
+                }else{
+                    err&&err(xhr.status);
+                }
+            }
+        };
+        xhr.send(body);
+        return xhr;
+    }
+
+</script>
+
+</body>
+</html>
+<script type="text/javascript" src="http://static.diditaxi.com.cn/webapp/ddbridge.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+
+        // 分享数据
+        var shareData = {
+            share_url: 'http://static.diditaxi.com.cn/site/pages/olders-taxi/index.html?v=' + Math.random(),
+            share_icon_url: 'http://static.diditaxi.com.cn/site/pages/olders-taxi/images/share.jpg',
+            share_img_url: 'http://static.diditaxi.com.cn/site/pages/olders-taxi/images/share.jpg',
+            share_title: '父母打不到出租车怎么办？',
+            share_content: '10月20日滴滴出租车“敬老专线”正式开通，以后爸妈打车不再困难！快来告知父母吧！',
+            share_from: '滴滴出行'
+        };
+
+        if (window.didi) {
+            didi.initShare(shareData, function() {
+                console.log('分享成功');
+            });
+        }
+
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": shareData.share_icon_url,
+                    "img_width": "120",
+                    "img_height": "120",
+                    "link": shareData.share_url,
+                    "title": shareData.share_title,
+                    "desc": shareData.share_content
+                }, function(res) {
+
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": shareData.share_icon_url,
+                    "img_width": "120",
+                    "img_height": "120",
+                    "link": shareData.share_url,
+                    "title": shareData.share_title,
+                    "desc": shareData.share_content
+                }, function(res) {
+
+                });
+            });
+        });
+    }, false);
+</script>

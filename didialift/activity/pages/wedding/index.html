@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+    <title>神秘大礼</title>
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/sea.js"></script>
+    <script type="text/javascript">
+        seajs.use("demo.js?t="+new Date().getTime());
+    </script>
+</head>
+
+<body>
+    <div id="box" style="position:absolute;z-index:10;width:100%;height:100%;left:0;top:0;"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide one-slide swiper-slide-visible swiper-slide-active">
+                <div class="one-slide-1" id="one-slide-img"><img src="images/1.jpg"></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+            
+            <div class="swiper-slide two-slide">
+                <div class="slide-move slide-title" id="two-slide-img"><img src="images/2.jpg"></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+                
+            <div class="swiper-slide three-slide">
+                <div class="slide-move slide-title" id="three-slide-img"><img src=""></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+            
+            <div class="swiper-slide four-slide">
+                <div class="slide-move slide-title" id="four-slide-img"><img src=""></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+            
+            <div class="swiper-slide five-slide">
+                <div class="slide-move slide-title" id="five-slide-img"><img src=""></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+
+            <div class="swiper-slide six-slide">
+                <div class="slide-move slide-title" id="six-slide-img"><img src=""></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+
+            <div class="swiper-slide seven-slide">
+                <div class="slide-move slide-title" id="seven-slide-img"><img src=""></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+
+            <div class="swiper-slide eight-slide">
+                <div class="slide-move slide-title" id="eight-slide-img"><img src=""></div>
+                <div class="pub-btn"><img src="http://static.diditaxi.com.cn/site/pages/2014-inventory/images/pub-1.png"></div>
+            </div>
+            <div class="swiper-slide night-slide">
+                <div class="slide-move slide-title" id="night-slide-img"><img src="images/9.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <audio id="audio" src="music.mp3" style="display:none;" loop="loop"></audio>
+    <script type="text/ecmascript" src="js/idangerous.swiper-2.1.min.js"></script>
+    <script type="text/ecmascript" src="js/index.js"></script>
+    <script type="text/javascript">
+
+        //预加载
+        var three=document.querySelector("#three-slide-img img"),
+            four=document.querySelector("#four-slide-img img"),
+            five=document.querySelector("#five-slide-img img"),
+            six=document.querySelector("#six-slide-img img"),
+            seven=document.querySelector("#seven-slide-img img"),
+            eight=document.querySelector("#eight-slide-img img");
+
+            setTimeout(function(){
+                three.setAttribute("src","images/3.jpg");
+                four.setAttribute("src","images/4.jpg");
+            },2000);
+
+            setTimeout(function(){
+                five.setAttribute("src","images/5.jpg");
+                six.setAttribute("src","images/6.jpg");
+            },4000);
+
+            setTimeout(function(){
+                seven.setAttribute("src","images/7.jpg");
+                eight.setAttribute("src","images/8.jpg");
+            },5000);
+
+    </script>
+
+</body></html>

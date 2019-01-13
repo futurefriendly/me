@@ -1,0 +1,73 @@
+@charset "utf-8";
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,em,img,input,q,b,dl,dt,dd,ol,ul,li,form,label,canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-size-adjust: none;
+    /*防止横屏时字体变粗*/
+    -webkit-user-select: none;/* fuck*/
+    /*防止用户选择时弹出select，copy滋养*/
+    -webkit-touch-callout: none;
+    /*防止图片在touch时候弹出保存对话框*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /*防止input等其他被tap元素出现黑色的背景*/
+}
+html,body{
+    font-size: 62.5%;
+    /*字体为10像素*/
+    text-align: center;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%!important;
+    font-family: "STHeiTi-Light", 'Microsoft YaHei', arial, sans-serif, 'Droid Sans Fallback';
+}
+@font-face {
+ font-family: hn;
+ src:url(/static/webapp/fonts/Thin.ttf);
+}
+body{margin:0;padding:0;}
+ul,ul li{list-style:none;}
+
+section {padding: 0 3%;margin: 30px 0 0 0;}
+/*-----------title------------*/
+.title{border-top:1px solid #e5e5e5;font-size: 1.4rem;text-align: center;color:#999;height: 28px;}
+.title span{position: relative;top:-10px;display: inline-block;width:80px;background: #fff;color:#999; }
+/*-----------end title------------*/
+/*-----------tasklist------------*/
+.tasklist ul li{height: 99px;margin: 0 79px 25px 0;position: relative; }
+
+.tasklist .left{float: left;display: block;border-radius: 50%;height:87px;width: 87px;color:#fff;
+font-size: 4.1rem;display: block;position: relative;border:1px solid #e5e5e5;padding:5px;line-height: 83px;
+box-shadow: 0px 1px 0px rgba(0,0,0,0.05);}
+.tasklist .left .num{background: url("/static/activity/imgs/driver-task/bg_default.png");background-size: 100% auto;width: 87px;height: 87px;display: block;
+position: absolute;z-index: 5;font-family: hn;}
+.tasklist .underway .left .num{background: url("/static/activity/imgs/driver-task/bg_default.png");background-size: 100% auto;} 
+.tasklist .finished .left .num{background: url("/static/activity/imgs/driver-task/bg_complete.png");background-size: 100% auto;text-indent: -9999em;} 
+.tasklist .outdated .left .num{background: url("/static/activity/imgs/driver-task/bg_lose.png");background-size: 100% auto;} 
+.tasklist .left .num em{font-size: 1.4rem;font-style: normal;}
+.tasklist .finished .left .num em{}
+
+.tasklist .right{text-align: left;border-radius:  0 10px 10px 0 ;border:1px solid #e5e5e5;margin-left: 78px;
+height:81px;padding: 8px 10px 10px 27px;border-left: none;border-radius: 0 40px 40px 0;position: absolute;
+top:9px;background:#fff;box-sizing:border-box;width: 100%;box-shadow: 0px 1px 0px rgba(0,0,0,0.05);}
+.tasklist .finished .right{padding-top:16px;}
+.tasklist .right .name{font-size:2.1rem;color:#ff8903;}
+.tasklist .outdated .right .name{color:#ccc;}
+.tasklist .right .intr{font-size:1.5rem;color:#333;line-height: 1.7rem; }
+.tasklist .outdated  .right .intr{color:#ccc;}
+
+
+.tasklist .progress .full{background:#eee;height: 10px;border-radius: 5px;width: 145px;float: left;margin-top: 6px;
+    border-top: 1px solid #cccccc;}
+.tasklist .progress .full .part{height: 100%;border-radius: 5px;margin-top: -1px;}
+.tasklist .finished .progress{display: none;}
+.tasklist .underway .progress .full .part{background:#ffbb6e;
+background-image: -moz-linear-gradient(top, #f9c609, #ff8903); /* Firefox */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9c609), color-stop(1, #ff8903)); /* Saf4+, Chrome */}
+.tasklist .outdated .progress .full .part{background:#ffbb6e;
+background-image: -moz-linear-gradient(top, #ebebeb, #d3d3d3); /* Firefox */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ebebeb), color-stop(1, #d3d3d3)); /* Saf4+, Chrome */}
+
+.tasklist ol{padding-left: 2.4rem;}
+.tasklist ol li{color:#666;font-size: 1.4rem;text-align: left;line-height: 2rem;}
+/*-------end tasklist------------*/

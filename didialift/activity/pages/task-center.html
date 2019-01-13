@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="http://static.diditaxi.com.cn/webapp/css/merged-common-ui.css">
+	<title>任务中心</title>
+	<style type="text/css">
+		body{
+			overflow-y: hidden;
+		}
+		.empty{
+			text-align: center;
+			margin-top: 30%;
+		}
+		.errmsg{
+			width: 80%;
+			margin: 0 auto;
+		    text-align: center;
+		    margin-top: 2rem;
+		    font-size: 1.8rem;
+		    line-height: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="empty">
+		<img src="http://static.diditaxi.com.cn/activity/img-task-system/empty.png"/>
+	</div>
+	<div class="errmsg">这里是错误消息</div>
+	<script type="text/javascript">
+		window.addEventListener("DOMContentLoaded",function(){
+			var getQueryString = function(name) {
+		        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		        var r = window.location.search.substr(1).match(reg);
+		        if (r != null) return r[2];
+		        return "";
+		    };
+
+		    var errmsg = document.querySelector(".errmsg");
+		    var msg = getQueryString("msg")||"啊噢~~~出错啦！！！！";
+		    errmsg.innerText = decodeURI(msg);
+		},!1);
+	</script>
+</body>
+</html>

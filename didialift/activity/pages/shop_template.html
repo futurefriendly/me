@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #fff;/*背景色*/
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+    }
+    .width_50 {
+        width: 50%;
+        float: left;
+    }
+    .width_100 {
+        width: 100%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="contant" id="contant">
+ghhnh
+    </div>
+
+    <script type="text/html" id="goods_list">
+        {{each goods_list as value i}}
+        {{i}}
+            <div class="width_100">
+
+                <img src="{{value.pic_url}}" />
+            </div>
+        {{/each}}
+    </script>
+        <!-- width_50 touch ：50% && 有id
+             width_100 touch ：100% && 有id
+             width_100 ：100% && 无id-->
+
+    <!-- 隐藏域:1、商品id :goodsId [10773,10775,10771,10811,10565,10655,10553,10397,10769,10793]
+                2、专题信息config -->
+    <input type="hidden" value="<?php echo $goodsId; ?>" id="goodsId">
+    <input type="hidden" value="<?php echo $config; ?>" id="config">
+
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script type='text/javascript' src='http://static.diditaxi.com.cn/activity/js/shop/v2/s-share.js'></script>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/art-template.js"></script>
+    <!--<script type='text/javascript' src='shop_tp.js'></script>-->
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        //设置按钮的相对高度
+        var doc = document,
+            dv_main = doc.querySelector(".contant"),
+            goodEle = doc.getElementsByClassName("touch"),
+            contant = doc.getElementById("contant"),
+            goodsId = doc.getElementById("goodsId").value;
+
+        var config = {
+            "title": "vv",
+            "bg_color": "dd",
+            "is_share": "1",
+            "share_title": "dd",
+            "share_description": "dd",
+            "share_url": "dd",
+            "share_pic": "http://10.10.16.111:8041/uploads_images/alert_icon32.png",
+            "goods_pics": [
+                {
+                    "pic_type": "1",
+                    "pid": "88",
+                    "pic_url": "http://10.10.16.111:8041/uploads_images/QQ图片201507231605285.png"
+                }
+            ]
+        }
+        var dataJson = {};
+        dataJson.goods_pics = config.goods_pics;
+        var html = template('goods_list', dataJson);
+        contant.innerHTML = html;
+
+        for(var i = 0; i<goodEle.length; i++){
+
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + goodsId[i] + '&token=' + getQuerySting().token + '&lat=' + getQuerySting().lat + '&lng=' + getQuerySting().lng;
+
+            goodEle[i].setAttribute("good_id",goodsId[i]);
+            goodEle[i].setAttribute("detailUrl",_url);
+        }
+
+        touch(dv_main, function(event) {
+            if (hasClass(event.target,"touch") || hasClass(event.target.parentNode,"touch")) {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _good_id = _target.getAttribute("good_id");
+                if (_good_id) {
+                    if (getQuerySting().loc) {//在不在积分商城里面
+                        location.href = _target.getAttribute("detailUrl");
+                        return;
+                    };
+                    var isWx = false;
+                    isWx = navigator.userAgent.indexOf("MicroMessenger")!=-1 ? true : false;
+                    if (isWx) {
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage&productid="+_good_id;
+                        return;
+                    }else{
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage";
+                        return;
+                    }
+                }
+            }
+        }, false);
+
+        function hasClass(oParent, sClass){
+            if(oParent.getElementsByClassName){
+                return oParent.getElementsByClassName(sClass);
+            }
+            var aEle=oParent.getElementsByTagName('*');
+            var re=new RegExp('\\b'+sClass+'\\b');
+            var result=[];
+            for(var i=0;i<aEle.length;i++){
+                if(re.test(aEle[i].className)){
+                    result.push(aEle[i]);
+                }
+            }
+            return result;
+        }
+
+        //app分享数据
+        var shareData = {
+            share_url: "http://static.diditaxi.com.cn/activity/pages/shop_618.html?v="+Math.random(),
+            share_icon_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_618/share.jpg?v=2',
+            share_img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_618/share.jpg?v=2',
+            share_title: '滴滴积分商城【粽情一夏，礼满福多】', // 标题 todo
+            share_content: '情系端午，有积分好礼兑不停。', // 描述 todo
+            share_from: '滴滴打车'
+        };
+
+        if (window.didi) {
+            didi.initShare(shareData, function() {
+                console.log('分享成功');
+            });
+        }
+
+        //微信分享
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            var share_config = {
+                general_config:{
+                    img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_618/share.jpg?v=2',
+                    sharetitle:"滴滴积分商城【粽情一夏，礼满福多】",
+                    sharedesc:"情系端午，有积分好礼兑不停。",
+                    link:"http://static.diditaxi.com.cn/activity/pages/shop_618.html?v="+Math.random()
+                }
+            };
+
+            var obj = share_config.general_config;
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": obj.img_url,
+                    "img_width": "",
+                    "img_height": "",
+                    "link": obj.link,
+                    "title": obj.sharetitle,
+                    "desc": obj.sharedesc
+                }, function(res) {
+
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": obj.img_url,
+                        "img_width": "",
+                        "img_height": "",
+                        "link": obj.link,
+                        "title": obj.sharetitle,
+                        "desc": obj.sharedesc
+                    }, function(res) {
+                });
+            });
+        });
+
+    }, false);
+    </script>
+</body>
+
+</html>

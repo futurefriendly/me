@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>出租车司机原来也可以这么有范！</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<div id="touch-wrap">
+    <section id="page0" class="first">
+        <img src="img/text1.png" id="text1"/>
+        <img src="img/fan.png" id="fan"/>
+        <img src="img/car.png" id="car"/>
+        <img src="img/text8.png" id="text8"/>
+        <img src="img/arrow.png" id="arrow"/>
+        <img src="img/logo.png" id="logo"/>
+        <span id="num"></span>
+        <div id="loading">
+            <span>Loading...</span>
+            <div id="bar"><div id="process"></div></div>
+            <p id="loading-tip">他们是保障交通正常运转的<br/>“动力齿轮”</p>
+        </div>
+    </section>
+    <section id="page1">
+        <img src="img/p1.png" id="p1" class="ease-in driver"/>
+        <img src="img/text4.png" id="text4" class="ease-in text"/>
+        <img src="img/moko.png" id="moko"/>
+    </section>
+    <section id="page2">
+        <img src="img/p2.png" id="p2" class="ease-in driver"/>
+        <img src="img/text5.png" id="text5" class="ease-in text"/>
+    </section>
+    <section id="page3">
+        <img src="img/p3.png" id="p3" class="ease-in driver"/>
+        <img src="img/text6.png" id="text6" class="ease-in text"/>
+    </section>
+</div>
+
+<section id="select-label">
+    <img src="img/bg2.jpg" class="bg2"/>
+    <img src="img/text7.png" id="text7"/>
+    <div id="labels">
+        <table>
+            <tr>
+                <td><a id="label-huoditu">
+                    <img src="img/labels/1.png"/>
+                    <img src="img/people/huoditu.jpg"/>
+                </a></td>
+                <td><a id="label-doubi">
+                    <img src="img/labels/2.png"/>
+                    <img src="img/people/doubi.jpg"/>
+                </a></td>
+                <td><a id="label-kanye">
+                    <img src="img/labels/3.png"/>
+                    <img src="img/people/kanye.jpg"/>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a id="label-kalaok">
+                    <img src="img/labels/4.png"/>
+                    <img src="img/people/kalaok.jpg"/>
+                </a></td>
+                <td><a id="label-quanchengtong">
+                    <img src="img/labels/5.png"/>
+                    <img src="img/people/quanchengtong.jpg"/>
+                </a></td>
+                <td><a id="label-guojihua">
+                    <img src="img/labels/6.png"/>
+                    <img src="img/people/guojihua.jpg"/>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a id="label-shijinbumei">
+                    <img src="img/labels/7.png"/>
+                    <img src="img/people/shijinbumei.jpg"/>
+                </a></td>
+                <td><a id="label-aojiao">
+                    <img src="img/labels/8.png"/>
+                    <img src="img/people/aojiao.jpg"/>
+                </a></td>
+                <td><a id="label-pinglunyuan">
+                    <img src="img/labels/9.png"/>
+                    <img src="img/people/pinglunyuan.jpg"/>
+                </a></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <a id="submit-label">&nbsp;</a>
+</section>
+
+<section id="lucky-draw">
+    <img src="img/bg2.jpg" class="bg2"/>
+    <img src="img/text2.png" id="text2"/>
+    <div id="rank"></div>
+    <div id="xk">
+        <img src="img/xk.png" />
+        <span id="huoditu"></span>
+        <span id="kanye"></span>
+        <span id="doubi"></span>
+        <span id="quanchengtong"></span>
+    </div>
+    <img src="img/text3.png" id="text3"/>
+    <a id="share">&nbsp;</a>
+</section>
+
+<section class="overlay" id="alert">
+    <div class="alert">
+        <i class="icon-warn"></i>
+        <div id="alert-content"></div>
+        <a class="btn" id="close">我知道了</a>
+    </div>
+</section>
+
+
+<section class="overlay" id="share-tip">
+    <img src="img/share.png" id="share-icon"/>
+</section>
+
+<a id="switch">&nbsp;</a>
+
+<audio id="audio" src="music.mp3" autoplay="autoplay" style="display: none;" loop="loop"></audio>
+
+<div style="display: none;">
+    <img src="img/bg2.jpg"/>
+    <img src="img/border.png"/>
+    <img src="img/btn1.png"/>
+    <img src="img/btn2.png"/>
+    <img src="img/btn3.png"/>
+    <img src="img/btn4.png"/>
+    <img src="img/off.png"/>
+    <img src="http://static.xiaojukeji.com/webapp/images/i-plaint.png"/>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=46392933" charset="UTF-8"></script>
+
+</body>
+</html>

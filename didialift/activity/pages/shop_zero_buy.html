@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #ec8a41;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: #ec8a41;
+    }
+    .item {
+        width: 50%;
+        float: left;
+    }
+    .line {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_zero_buy/zero_buy_01.jpg" />
+        </div>
+        <div class="item" itemid="8159">
+            <img src="../img-mall/shop_zero_buy/zero_buy_02.jpg" />
+        </div>
+        <div class="item" itemid="8163">
+            <img src="../img-mall/shop_zero_buy/zero_buy_03.jpg" />
+        </div>
+        <div class="item" itemid="8167">
+            <img src="../img-mall/shop_zero_buy/zero_buy_04.jpg" />
+        </div>
+        <div class="item" itemid="8169">
+            <img src="../img-mall/shop_zero_buy/zero_buy_05.jpg" />
+        </div>
+        <div class="item" itemid="8171">
+            <img src="../img-mall/shop_zero_buy/zero_buy_06.jpg" />
+        </div>
+        <div class="item" itemid="8173">
+            <img src="../img-mall/shop_zero_buy/zero_buy_07.jpg" />
+        </div>
+        <div class="item" itemid="8175">
+            <img src="../img-mall/shop_zero_buy/zero_buy_08.jpg" />
+        </div>
+        <div class="item" itemid="7969">
+            <img src="../img-mall/shop_zero_buy/zero_buy_09.jpg" />
+        </div>
+        <div class="item" itemid="8177">
+            <img src="../img-mall/shop_zero_buy/zero_buy_10.jpg" />
+        </div>
+        <div class="item" itemid="8179">
+            <img src="../img-mall/shop_zero_buy/zero_buy_11.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_zero_buy/zero_buy_12.jpg" />
+        </div>
+    </div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            screenHeight = window.screen.height,
+            dv_main = _document.querySelector(".contant");
+
+        //get url params
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r[2];
+            return "";
+        }
+
+        function returnUrl(id) {
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + id + '&token=' + getQueryString("token") + '&lat=' + getQueryString("lat") + '&lng=' + getQueryString("lng");
+            return _url;
+        }
+
+        touch(dv_main, function(event) {
+            if (event.target.className == "item" || event.target.parentNode.className == "item") {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    if (getQueryString("loc")) {
+                        location.href = returnUrl(_itemid);
+                        return;
+                    };
+                    var isWx = false;
+                    isWx = navigator.userAgent.indexOf("MicroMessenger")!=-1 ? true : false;
+                    if (isWx) {
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage&productid="+_itemid;
+                        return;
+                    }else{
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage";
+                        return;
+                    }    
+                }
+            }
+        }, false);
+        var dv_click=document.getElementById('btn');
+        touch(dv_click, function(event) {
+            if (getQueryString("loc")) {
+                location.href='http://imall.diditaxi.com.cn/imall/index?token=' + getQueryString("token") + '&lat=' + getQueryString("lat") + '&lng=' + getQueryString("lng");
+            }else{
+                location.href="http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage";
+            }   
+        }, false);
+        //微信分享
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            var share_config = {
+                general_config:{
+                    img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_zero_buy/share.jpg',
+                    sharetitle:"寒流来袭，滴滴积分商城热情不减，0元购全场包邮",
+                    sharedesc:"有积分任性兑，我买网0元购，热辣开场。",
+                    link:"http://static.diditaxi.com.cn/activity/pages/shop_zero_buy.html?v="+Math.random()
+                }
+            };
+
+            var obj = share_config.general_config;
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {              
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": obj.img_url,
+                    "img_width": "",
+                    "img_height": "",
+                    "link": obj.link,
+                    "title": obj.sharetitle,
+                    "desc": obj.sharedesc               
+                }, function(res) {
+                    
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {     
+                WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": obj.img_url,
+                        "img_width": "",
+                        "img_height": "",
+                        "link": obj.link,
+                        "title": obj.sharetitle,
+                        "desc": obj.sharedesc
+                    }, function(res) {        
+                });
+            });
+        });
+
+    }, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>滴滴游戏中心</title>
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    body{
+        background: #fffff3;
+    }
+    #content{
+        padding-bottom: 5rem;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    #footer{
+        width: 100%;
+        height: 5rem;
+        position: fixed;
+        bottom: 0;
+        background-color: #fffff3; 
+    }
+    #btn{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 1rem;
+        outline: none;
+        -webkit-outline: none;
+        -webkit-tap-highlight-color: #fffff3;
+        -webkit-tap-highlight-transparent: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <img src="../imgs/game_fight_weixin/game_fight_weixin_01.png">
+        <img src="../imgs/game_fight_weixin/game_fight_weixin_02.png">
+        <img src="../imgs/game_fight_weixin/game_fight_weixin_03.png">
+    </div>
+    <div id="footer">
+        <img src="../imgs/game_fight_weixin/game_fight_weixin_04.png" id="btn">   
+    </div>
+
+    <script type="text/javascript" src="http://diditaxi.com.cn/activity/hongbao/static/webapp/didi.min.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded',function() {
+        var html=document.getElementsByTagName('html')[0],
+            cliW=document.body.clientWidth,
+            num=cliW/320;
+        html.style.fontSize=12*num+"px";
+
+        var btn=document.getElementById('btn');
+        document.addEventListener('WeixinJSBridgeReady', function(){
+            //打开滴滴app
+            var diff_platform = function(opts){
+                if ((navigator.userAgent.match(/(Android)/i))) {
+                    opts.android && opts.android();
+                }else if((navigator.userAgent.match(/(iPhone|iPod|ios|iPad)/i))){
+                    opts.ios && opts.ios();
+                }else if((navigator.userAgent.match(/(Windows phone)/i))){
+                    opts.wp && opts.wp();
+                }else{
+                    opts.others && opts.others();
+                }
+            }
+            var params = null;
+            diff_platform({
+                ios:function(){
+                    params = {
+                        "packageName":"com.xiaojukeji.didi",
+                        "packageUrl":"diditaxi:passenger",
+                        "downloadUrl":"https://itunes.apple.com/cn/app/di-di-da-che-zhi-jian-shang/id554499054?ls=1&mt=8"
+                    };
+                },
+                android:function(){
+                    params = {
+                        "packageName":"com.sdu.didi.psnger",
+                        "packageUrl":"didipasnger://didi_apk_intalled_scheme",
+                        "downloadUrl":"http://dldir1.qq.com/diditaxi/apk/didi_psngr_999.apk"
+                    };
+                }
+            });
+        
+            btn.addEventListener("click",function(ev){
+                //检测是否安装了滴滴app
+                //collectLog(h_openid,phone_num,'&logflag=gain_app_didi_'+currentPlatform);
+                window.setTimeout(function(){
+                    WeixinJSBridge.invoke('getInstallState', params, function(e) {
+                        //alert(JSON.stringify(e));
+                        var msg = e.err_msg;
+                        if(msg.indexOf("get_install_state:yes") > -1) {  
+                            window.location.href = params.packageUrl; //检测出已经安装滴滴app则打开微信app
+                        }else{
+                            window.location.href = params.downloadUrl; //下载滴滴app
+                        }
+                    });
+                },100);
+
+            },false);
+        });
+        //分享相关
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            var share_config = {
+                general_config:{
+                    img_url: 'http://static.diditaxi.com.cn/activity/imgs/game_fight/share.png',
+                    sharetitle:"滴滴游戏中心安卓首发 免费抢出租车券啦！",
+                    sharedesc:"无需下载，随点随玩，最高8元出租车券任性送！",
+                    link:"http://static.diditaxi.com.cn/activity/pages/game_fight_weixin.html"
+                }
+            };
+
+            var obj = share_config.general_config;
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+                
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": obj.img_url,
+                    "img_width": "",
+                    "img_height": "",
+                    "link": obj.link,
+                    "title": obj.sharetitle,
+                    "desc": obj.sharedesc               
+                }, function(res) {
+                    
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+                
+                WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": obj.img_url,
+                        "img_width": "",
+                        "img_height": "",
+                        "link": obj.link,
+                        "title": obj.sharetitle,
+                        "desc": obj.sharedesc
+                    }, function(res) {
+                        
+                });
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>

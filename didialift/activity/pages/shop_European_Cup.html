@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: #ffffff;
+    }
+    .item {
+        
+    }
+    .line {
+        width: 100%;
+    }
+    .table{
+        width: 93%;
+        margin: 0 auto;
+        background-color: #f5f5f5;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th,td{
+        border: 1px solid #d9d9d9;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+        color: #898989;
+        font-size: 0.8rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_European_Cup/the_European_Cup_01.png" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_European_Cup/the_European_Cup_02.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_European_Cup/the_European_Cup_04.jpg" />
+        </div>
+        <div class="table" itemid="" >
+            <table>
+                <thead>
+                    <tr>
+                        <th style="color:#000000;line-height:2.0rem;"  width="13%">让球</th>
+                        <th>胜</th>
+                        <th>平</th>
+                        <th>负</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>     
+                        <td><div class="item" itemid="4042"><img src="../img-mall/shop_European_Cup/the_European_Cup_05.jpg"></div></td>
+                        <td><div class="item" itemid="4041"><img src="../img-mall/shop_European_Cup/the_European_Cup_06.jpg"></div></td>
+                        <td><div class="item" itemid="4039"><img src="../img-mall/shop_European_Cup/the_European_Cup_07.jpg"></div></td>
+                    </tr>
+                    <tr>
+                        <td>+1</td>
+                        <td><div class="item" itemid="4051"><img src="../img-mall/shop_European_Cup/the_European_Cup_08.jpg"></div></td>
+                        <td><div class="item" itemid="4049"><img src="../img-mall/shop_European_Cup/the_European_Cup_09.jpg"></div></td>
+                        <td><div class="item" itemid="4045"><img src="../img-mall/shop_European_Cup/the_European_Cup_10.jpg"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_European_Cup/the_European_Cup_11.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_European_Cup/the_European_Cup_12.jpg" />
+        </div>
+    </div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            screenHeight = window.screen.height,
+            dv_main = _document.querySelector(".contant");
+
+        //get url params
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r[2];
+            return "";
+        }
+
+        function returnUrl(id) {
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + id + '&token=' + getQueryString("token") + '&lat=' + getQueryString("lat") + '&lng=' + getQueryString("lng");
+            return _url;
+        }
+
+        touch(dv_main, function(event) {
+            if (event.target.className == "item" || event.target.parentNode.className == "item") {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    location.href = returnUrl(_itemid);
+                }
+            }
+        }, false);
+
+    }, false);
+    </script>
+</body>
+
+</html>

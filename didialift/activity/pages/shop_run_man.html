@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #f5f5f5;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: #ec8a41;
+    }
+    .item {
+        width: 50%;
+        float: left;
+    }
+    .item_no{
+        width: 50%;
+        float: left;
+    }
+    .line {
+        width: 100%;
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="line">
+            <img src="../img-mall/run_man/run_man_01.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/run_man/run_man_02.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_03.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_04.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_05.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_06.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_07.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_08.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/run_man/run_man_09.jpg" />
+        </div>
+        <div class="item_no">
+            <img src="../img-mall/run_man/run_man_10.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/run_man/run_man_11.jpg" />
+        </div>
+    </div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script type='text/javascript' src='http://static.diditaxi.com.cn/webapp/ddbridge.js'></script>
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            dv_main = _document.querySelector(".contant");
+
+        function hasClass(oParent, sClass){
+            if(oParent.getElementsByClassName){
+                return oParent.getElementsByClassName(sClass);
+            }
+            var aEle=oParent.getElementsByTagName('*');
+            var re=new RegExp('\\b'+sClass+'\\b');
+            var result=[];
+            for(var i=0;i<aEle.length;i++){
+                if(re.test(aEle[i].className)){
+                    result.push(aEle[i]);
+                }
+            }
+            return result;
+        }
+
+        //每次改商品只需要改一下数组里面的值即可
+        var goodId = [9187,9177,9191,9183,9181,9165,9193];
+
+        var goodEle = document.getElementsByClassName("item");
+        for(var i = 0; i<goodEle.length; i++){
+
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + goodId[i] + '&token=' + getQuerySting().token + '&lat=' + getQuerySting().lat + '&lng=' + getQuerySting().lng;
+
+            goodEle[i].setAttribute("itemid",goodId[i]);
+            goodEle[i].setAttribute("detailUrl",_url);
+        }
+
+        touch(dv_main, function(event) {
+            if (hasClass(event.target,"item") || hasClass(event.target.parentNode,"item")) {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    if (getQuerySting().loc) {//在不在积分商城里面
+                        location.href = _target.getAttribute("detailUrl");
+                        return;
+                    };
+                    var isWx = false;
+                    isWx = navigator.userAgent.indexOf("MicroMessenger")!=-1 ? true : false;
+                    if (isWx) {
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage&productid="+_itemid;
+                        return;
+                    }else{
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage";
+                        return;
+                    }    
+                }
+            }
+        }, false);
+        
+        // 分享数据
+        var shareData = {
+            share_url: 'http://static.diditaxi.com.cn/activity/pages/shop_run_man.html', // 分享出去后用户点开所指向的链接地址，比如填写http://www.baidu.com 那分享出去别的用户点击进来会显示百度的页面，一定要加http://或https://前缀
+            share_icon_url: 'http://static.xiaojukeji.com/activity/img-mall/run_man/share.jpg', // 分享的出去后所显示的图标的链接   ，如下图所示的2
+
+            share_img_url: 'http://diditaxi.com.cn/share/images/na_landing_kuhang/02.png', //分享的大图  （不必理会）    
+            share_title: '滴滴打车欢乐周五-猜《跑男》赢5元出租车券', // 分享出去时所显示的标题             如下图所示的1
+            share_content: '本期谁最先被撕？速来积分商城与小伙伴一起竞猜？', // 分享出去时所显示的描述           如下图所示的3   （分享到朋友圈时描述是不会显示的）
+            share_from: '滴滴打车' // 分享来源，非必填,默认为滴滴打车
+        };
+
+        if (window.didi) {
+            didi.initShare(shareData, function() {
+                console.log('分享成功');
+            });
+        }
+        //微信分享
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            var share_config = {
+                general_config:{
+                    img_url: 'http://static.diditaxi.com.cn/activity/img-mall/run_man/share.jpg',
+                    sharetitle:"滴滴打车欢乐周五-猜《跑男》赢5元出租车券",
+                    sharedesc:"本期谁最先被撕？速来积分商城与小伙伴一起竞猜？",
+                    link:"http://static.diditaxi.com.cn/activity/pages/shop_run_man.html?v="+Math.random()
+                }
+            };
+
+            var obj = share_config.general_config;
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {              
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": obj.img_url,
+                    "img_width": "",
+                    "img_height": "",
+                    "link": obj.link,
+                    "title": obj.sharetitle,
+                    "desc": obj.sharedesc               
+                }, function(res) {
+                    
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {     
+                WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": obj.img_url,
+                        "img_width": "",
+                        "img_height": "",
+                        "link": obj.link,
+                        "title": obj.sharetitle,
+                        "desc": obj.sharedesc
+                    }, function(res) {        
+                });
+            });
+        });
+
+    }, false);
+    </script>
+</body>
+
+</html>

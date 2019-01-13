@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>测测万圣节你会遇到什么“鬼”事？</title>
+
+    <style>
+        html,body,section,p{
+            padding: 0;
+            margin: 0;
+        }
+        html,body,section{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background: url("img/bg.jpg") center / 100% 100% no-repeat fixed;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .mirror{
+            transform:matrix(-1,0,0,1,0,0);
+            -webkit-transform:matrix(-1,0,0,1,0,0);
+        }
+
+        #touch-wrap{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #touch-wrap section{
+            position: absolute;
+            top:0;
+            -webkit-transform: translate3d(0,100%,0);
+            transform: translate3d(0,100%,0);
+            -webkit-transition: -webkit-transform ease-out .5s;
+            transition: transform ease-out .5s;
+        }
+
+        #touch-wrap section.top{
+            -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+        }
+        #touch-wrap section.cur{
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            z-index: 10;
+        }
+
+        .fade{
+            opacity:0;
+            transition: opacity .7s .8s;
+            -webkit-transition: opacity .7s .8s;
+        }
+        #touch-wrap section.cur .fade{
+            opacity:1;
+        }
+        section img{position: absolute;}
+
+        #page0{
+            background: url("img/cover.jpg") center / cover no-repeat;
+        }
+
+        #tree{
+            left:11%;
+            top: 62vw;
+            width: 72.34%;
+        }
+        #bat1{
+            left: 21.1%;
+            top:60vw;
+            width: 12.8%;
+        }
+        #bat2{
+            right: 12.5%;
+            top:13.75vw;
+            width: 21.88%;
+        }
+
+        #ghost1{
+            left: 17.34%;
+            top: 79.5vw;
+            width: 21%;
+        }
+        #ghost2{
+            right: 27.7%;
+            top: 81vw;
+            width: 32.8%;
+        }
+        #text1{
+            left: 25%;
+            top:14vw;
+            width: 50%;
+        }
+
+
+        #net{
+            top:10.63vw;
+            width: 86%;
+            left: 7%;
+        }
+        #ghost3{
+            top:77.7vw;
+            left: 64.38%;
+            width: 33%;
+        }
+        .text{
+            width: 100%;
+            left: 0;
+            top: 118vw;
+        }
+
+
+        #drink{
+            top:0;
+            left:0;
+            width: 100%;
+        }
+
+        #ghost4{
+            width: 33%;
+            top: 22.8vw;
+            right: 10%;
+        }
+
+
+        #av{
+            width: 91%;
+            left: 6.25%;
+            top:15.3vw;
+        }
+
+        #ghost5{
+            width: 26.25%;
+            top: 44.375vw;
+            right: 17.6%;
+        }
+
+        #how{
+            width: 78%;
+            left: 11%;
+            top:23%;
+        }
+
+        #ghost6{
+            width: 21.25%;
+            top:31%;
+            left: 44%;
+        }
+        #ghost7{
+            width: 24.5%;
+            top:21.4%;
+            right: 16.1%;
+        }
+        #ghost8{
+            width: 33.4%;
+            top:11.4%;
+            left: 28%;
+        }
+
+        #text5{
+            top: 80vw;
+        }
+
+        #card{
+            display: none;
+        }
+        #tlp{
+            width: 98%;
+            left: 2%;
+            top:1vw;
+        }
+        #links{
+            position: absolute;
+            left: 10vw;
+            top:54.47vw;
+            width:90%;
+        }
+        #links a{
+            display: block;
+            float: left;
+            width: 16.87vw;
+            height: 30vw;
+            margin-right: 3.4vw;
+        }
+
+        #switch{
+            position: fixed;
+            top:10px;
+            z-index: 50;
+            right: 10px;
+            width: 9.1vw;
+            height: 9.1vw;
+            background: url("img/on.png") center / cover;
+        }
+        #switch.off{
+            width: 9.1vw;
+            height: 9.1vw;
+            background: url("img/off.png") center / cover;
+        }
+
+        .overlay{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: rgba(0,0,0,.8);
+        }
+
+        .overlay.cur{
+            display: block;
+        }
+
+
+        #kp{
+            perspective: 500px;
+            -webkit-perspective: 500px;
+        }
+        .cur .modal{
+            -webkit-animation: flipInX 1.4s;
+            animation: flipInX 1.4s;
+        }
+
+        .modal{
+            position: absolute;
+            width: 77.66%;
+            height: 124vw;
+            left: 11.17%;
+            top:50%;
+            margin-top: -62vw;
+            border-radius: 3px;
+            background: url("img/kp.jpg") center / cover no-repeat;
+        }
+
+        .btn{
+            display: block;
+            margin: auto;
+            font-size: 5vw;
+            width: 52.34vw;
+            height: 12.5vw;
+            border-radius: 2px;
+            line-height: 12.5vw;
+            text-align: center;
+        }
+
+        #entry{
+            color: #e4cba3;
+            background: #5e2c06;
+            margin-top: 76.25vw;
+        }
+        #share{
+            color:#fae9cd;
+            background: #e47513;
+            margin-top: 3.125vw;
+        }
+
+        #share-icon{
+            right: 0;
+            top:0;
+            width: 26.56%;
+        }
+
+        #logo{
+            width: 56.9%;
+            left: 22%;
+            bottom: 6.6%;
+        }
+
+        #detail{
+            display: none;
+            position: static;
+            height: auto;
+            width: 78.75%;
+            margin: auto;
+            font-size: 0;
+            padding: 10% 0;
+        }
+
+        #detail img{
+            position: static;
+            width: 100%;
+        }
+
+        #detail .btn{
+            color: #eaddcb;
+            background: #5e2c06;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .title{
+            margin: 8.4vw 0;
+        }
+
+        input{
+            box-sizing: border-box;
+            padding-left: 5.625vw;
+            border: 1px #8a5f37 solid;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 5vw;
+            height: 12.5vw;
+            margin-bottom: 4.68vw;
+            outline: 0;
+        }
+        input:hover,input:focus{
+            border-color: #992c07;
+        }
+
+        ::-webkit-input-placeholder{
+            color: #eaddcb;
+        }
+
+        #success{
+            text-align: center;
+            display: none;
+        }
+
+        #success img{
+            width: 21.1%;
+            margin-top: -4vw;
+            margin-bottom:2vw;
+        }
+        #success-tip{
+            font-size: 7.8125vw;
+            margin-bottom: 5vw;
+            padding-left: 1em;
+            color: #b95036;
+        }
+
+        .desc{
+            font-size: 4.1vw;
+            color: #333;
+            line-height: 2;
+            text-align: left;
+        }
+
+        .red{
+            color: #992c07;
+        }
+
+
+        .alert{
+            position: absolute;
+            box-sizing: border-box;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            border-radius: 4px;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            display: inline-block;
+            background: #fff;
+            font-size: 5vw;
+            padding: 6.79%;
+            width: 87.5%;
+        }
+
+
+
+        .icon-warn {
+            position: relative;
+            margin: 1.5625vw 3.75vw;
+            display: inline-block;
+            width: 17.5vw;
+            height:17.5vw;
+            border-radius: 50%;
+            background: url(http://static.xiaojukeji.com/webapp/images/i-plaint.png) center / 2.5vw 11.25vw no-repeat #f0f0f0;
+        }
+
+
+        #alert-content{
+            line-height: 15vw;
+            margin-bottom: 3.75vw;
+        }
+
+        #close{
+            width: 100%;
+            background: #ff8b03;
+            color: #fff;
+        }
+
+        @-webkit-keyframes flipInX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(90deg);
+                transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+
+            40% {
+                -webkit-transform: perspective(400px) rotateX(-10deg);
+                transform: perspective(400px) rotateX(-10deg);
+            }
+
+            70% {
+                -webkit-transform: perspective(400px) rotateX(10deg);
+                transform: perspective(400px) rotateX(10deg);
+            }
+
+            100% {
+                -webkit-transform: perspective(400px) rotateX(0deg);
+                transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flipInX {
+            0% {
+                -webkit-transform: perspective(400px) rotateX(90deg);
+                transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+
+            40% {
+                -webkit-transform: perspective(400px) rotateX(-10deg);
+                transform: perspective(400px) rotateX(-10deg);
+            }
+
+            70% {
+                -webkit-transform: perspective(400px) rotateX(10deg);
+                transform: perspective(400px) rotateX(10deg);
+            }
+
+            100% {
+                -webkit-transform: perspective(400px) rotateX(0deg);
+                transform: perspective(400px) rotateX(0deg);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="touch-wrap">
+    <section id="page0" class="cur"></section>
+    <section id="page1">
+        <img src="img/tree.png" id="tree"/>
+        <img src="img/bat.png" id="bat1" class="mirror"/>
+        <img src="img/bat.png" id="bat2"/>
+        <div class="fade">
+            <img src="img/ghost.png" id="ghost1"/>
+            <img src="img/ghost.png" id="ghost2"/>
+            <img src="img/text1.png" id="text1"/>
+        </div>
+    </section>
+    <section id="page2">
+        <img src="img/net.png" id="net"/>
+        <div class="fade">
+            <img src="img/ghost2.png" id="ghost3"/>
+            <img src="img/text2.png" class="text"/>
+        </div>
+    </section>
+    <section id="page3">
+        <img src="img/drink.png" id="drink"/>
+        <div class="fade">
+            <img src="img/ghost.png" id="ghost4"/>
+            <img src="img/text3.png" class="text"/>
+        </div>
+    </section>
+    <section id="page4">
+        <img src="img/av.png" id="av"/>
+        <div class="fade">
+            <img src="img/ghost3.png" id="ghost5"/>
+            <img src="img/text4.png" class="text"/>
+        </div>
+    </section>
+    <section id="page5">
+        <img src="img/how.png" id="how"/>
+        <div class="fade">
+            <img src="img/ghost.png" id="ghost6"/>
+            <img src="img/ghost.png" id="ghost7" class="mirror"/>
+            <img src="img/ghost2.png" id="ghost8" class="mirror"/>
+            <img src="img/text5.png" class="text" id="text5"/>
+        </div>
+    </section>
+</div>
+
+<section id="card">
+    <img src="img/tlp.png" id="tlp"/>
+    <div id="links">
+        <a>&nbsp;</a>
+        <a>&nbsp;</a>
+        <a>&nbsp;</a>
+        <a>&nbsp;</a>
+    </div>
+</section>
+
+<section id="detail">
+    <img src="img/title.png"/>
+    <img src="img/bm.png" class="title"/>
+    <div id="input">
+        <input type="text" placeholder="请输入姓名" id="name" maxlength="4"/>
+        <input type="tel" placeholder="请输入手机号码" id="phone" maxlength="11"/>
+        <a class="btn" id="sign">报名免费得门票</a>
+    </div>
+    <div id="success">
+        <img src="img/success.png"/><br/>
+        <div id="success-tip">恭喜您报名成功！</div>
+        <p class="desc">若您幸运获得门票，会有相关工作人员与您电话确认，感谢参与！</p>
+    </div>
+    <img src="img/xq.png" class="title"/>
+    <p class="desc">
+        <span class="red">活动时间：</span>2015年10月31日20:00-0:00 <br/>
+        <span class="red">活动地点：</span>麻雀瓦舍（北京工人体育场内88号楼美高美酒吧一层）<br/>
+        <span class="red">活动形式：</span>现场知名乐队演出、面部彩妆、最佳cosplay评选、抽奖互动<br/>
+        <span class="red">参与方式：</span>上方输入姓名及联系方式，我们将随机抽取200名幸运用户，发送邀约短信
+    </p>
+    <img src="img/sm.png" class="title"/>
+    <p class="desc">
+        1.<span class="red">活动仅限北京地区</span>，报名截止时间为<span class="red">2015年10月29日18:00</span>，参与用户可于2015年10月30日查看“滴滴出租车服务号”，回复<span class="red">“万圣节”</span>查看报名筛选情况。幸运用户可获得<span class="red">免费门票、免费酒水一份、免费现场彩妆</span>。<br/>
+        2.当天请尽量<span class="red">奇装异服</span>，着装突出可获得惊喜奖品。<br/>
+        3.当天凡是使用<span class="red">滴滴出租车</span>到达现场的用户，凭叫车记录均可领取精美大礼包一份。<br/>
+        4.活动的最终解释权由<span class="red">滴滴出行</span>所有。
+    </p>
+    <img src="img/border.png" class="title"/>
+    <a class="btn" id="share1">邀请好友一起来参加</a>
+</section>
+
+<section class="overlay" id="kp">
+    <div class="modal">
+        <a class="btn" id="entry">Party入口</a>
+        <a class="btn" id="share">分享好友</a>
+    </div>
+</section>
+
+<section class="overlay" id="alert">
+    <div class="alert">
+        <i class="icon-warn"></i>
+        <div id="alert-content"></div>
+        <a class="btn" id="close">我知道了</a>
+    </div>
+</section>
+
+<section class="overlay" id="share-tip">
+    <img src="img/share.png" id="share-icon"/>
+    <img src="img/logo.png" id="logo"/>
+</section>
+<a id="switch">&nbsp;</a>
+<audio id="audio" src="music.mp3" autoplay="autoplay" style="display: none;" loop="loop"></audio>
+<script>
+    var pageIndex=0;
+    var pageCount=5;
+    var stop=false;
+
+    onSwipe(getById("touch-wrap"),function(dir){
+        if(stop){
+            return;
+        }
+        if(dir=="up" && pageIndex==pageCount){
+            hide(getById("touch-wrap"));
+            show(getById("card"));
+        }else if(dir=="up" && pageIndex<pageCount){
+
+            getById("page"+pageIndex).className="top";
+            pageIndex++;
+            getById("page"+pageIndex).className="cur";
+
+        }else if(dir=="down" && pageIndex>0){
+            getById("page"+pageIndex).className="";
+            pageIndex--;
+            getById("page"+pageIndex).className="cur";
+
+        }
+    });
+
+    bind(getById("links"),"click",function(e){
+        if(e.target.tagName.toLowerCase()=="a"){
+            getById("kp").className="overlay cur";
+            stop=true;
+        }
+    });
+
+    bind(getById("entry"),"click",function(e){
+        show(getById("detail"));
+        hide(getById("kp"));
+        hide(getById("card"));
+    });
+
+    bind(getById("share"),"click",function(e){
+        show(getById("share-tip"));
+    });
+
+    bind(getById("sign"),"click",function(e){
+        var phone=getById("phone").value;
+        var name=getById("name").value;
+        if(!name){
+            alertMsg("请输入姓名");
+            return;
+        }
+        if(!/^1\d{10}$/.test(phone)){
+            alertMsg("请输入正确的手机号");
+            return;
+        }
+        new Image().src="http://static.diditaxi.com.cn/activity/pages/halloween/index.html?name="+name+"&phone="+phone;
+        hide(getById("input"));
+        show(getById("success"));
+    });
+
+    bind(getById("share1"),"click",function(e){
+        show(getById("share-tip"));
+    });
+
+    bind(getById("share-tip"),"click",function(e){
+        hide(getById("share-tip"));
+    });
+
+    bind(getById("close"),"click",function(){
+        hide(getById("alert"));
+    });
+
+    bind(getById("switch"),"click",function(){
+        var switcher=getById("switch");
+        var audio=getById("audio");
+        if(switcher.className === "off"){
+            switcher.className="";
+            audio.play();
+        }else{
+            switcher.className="off";
+            audio.pause();
+        }
+    });
+
+    function alertMsg(msg){
+        getById("alert-content").innerHTML=msg;
+        show(getById("alert"));
+    }
+
+    function getById(id){
+        return document.getElementById(id);
+    }
+
+    function bind(el,type,cb){
+        el.addEventListener(type,cb,false);
+    }
+
+    function show(el){
+        el.style.display="block";
+    }
+
+    function hide(el){
+        el.style.display="none";
+    }
+
+
+
+
+    function onSwipe(el,cb) {
+        var touch = {},firstTouch,swipeTimeout;
+
+        function swipeDirection(x1, x2, y1, y2) {
+            return Math.abs(x1 - x2) >=
+            Math.abs(y1 - y2) ? (x1 - x2 > 0 ? 'left' : 'right') : (y1 - y2 > 0 ? 'up' : 'down')
+        }
+
+        bind(el, "touchstart", function (e) {
+            e.preventDefault();
+            firstTouch = e.touches[0];
+            if (e.touches && e.touches.length === 1 && touch.x2) {
+                touch.x2 = undefined;
+                touch.y2 = undefined;
+            }
+            touch.x1 = firstTouch.pageX;
+            touch.y1 = firstTouch.pageY;
+        });
+
+        bind(el, 'touchmove', function (e) {
+            firstTouch = e.touches[0];
+            touch.x2 = firstTouch.pageX;
+            touch.y2 = firstTouch.pageY;
+        });
+
+        bind(el, 'touchend', function (e) {
+            if ((touch.x2 && Math.abs(touch.x1 - touch.x2) > 30) ||
+                    (touch.y2 && Math.abs(touch.y1 - touch.y2) > 30)){
+                swipeTimeout = setTimeout(function () {
+                    cb((swipeDirection(touch.x1, touch.x2, touch.y1, touch.y2)));
+                    touch = {}
+                }, 0)
+            }
+
+        });
+
+        bind(el,'touchcancel', function(){
+            clearTimeout(swipeTimeout);
+        });
+
+    }
+</script>
+<script type="text/javascript" src="http://static.diditaxi.com.cn/webapp/ddbridge.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+
+        // 分享数据
+        var shareData = {
+            share_url: 'http://static.diditaxi.com.cn/activity/pages/halloween/index.html?v=' + Math.random(),
+            share_icon_url: 'http://static.diditaxi.com.cn/activity/pages/halloween/img/icon.jpg',
+            share_img_url: 'http://static.diditaxi.com.cn/activity/pages/halloween/img/icon.jpg',
+            share_title: '测测万圣节你会遇到什么“鬼”事？',
+            share_content: '［占卜屋］欢迎光临万圣节占卜主题屋，幽魅之夜，群鬼出没，快来测试你将会遇上什么“鬼”事？',
+            share_from: '滴滴出行'
+        };
+
+        if (window.didi) {
+            didi.initShare(shareData, function() {
+                console.log('分享成功');
+            });
+        }
+
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": shareData.share_icon_url,
+                    "img_width": "120",
+                    "img_height": "120",
+                    "link": shareData.share_url,
+                    "title": shareData.share_title,
+                    "desc": shareData.share_content
+                }, function(res) {
+
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {
+
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "img_url": shareData.share_icon_url,
+                    "img_width": "120",
+                    "img_height": "120",
+                    "link": shareData.share_url,
+                    "title": shareData.share_title,
+                    "desc": shareData.share_content
+                }, function(res) {
+
+                });
+            });
+        });
+    }, false);
+</script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=46392933" charset="UTF-8"></script>
+</body>
+</html>

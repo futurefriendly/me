@@ -1,0 +1,470 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, hr, p, a, em, img, input, q, b, dl, dt, dd, ol, ul, li, form, label, canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html, body {
+    font-size: 62.5%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ebebeb;
+    font-size-adjust: none;
+    font-family: "STHeiTi-Light", 'Microsoft YaHei', arial, sans-serif, 'Droid Sans Fallback';
+    position: relative;
+}
+/* 背景部分 */
+
+.head {
+    width: 100%;
+    position: relative;
+}
+.head {
+    background: url("../../imgs-pinklove/bg.png") left top no-repeat;
+    background-size: 100%;
+    padding-top: 7%;
+}
+/* 头像内容部分 */
+.head_msg{
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.draw{
+    width: 66px; 
+    height:66px;
+    border-radius: 50%;
+}
+.head_name {
+    height: 26px;
+    line-height: 26px;
+    font-size: 1.4rem;
+    color: #421f0b;
+    padding-top: 3px;   
+}
+.head_text{
+    color:#666666;
+    font-size: 1.0rem;
+}
+
+
+/* 信封部分 */
+.mail {
+    background-size: 86%;
+    padding-top: 63%;
+}
+.mail .defaultbg {
+    width: 85%;
+    position: absolute;
+    top: 45%;
+    height: 100px;
+    left: 7.5%;
+    background: #fd90bd;
+    z-index: 1;
+}
+.mail .enveloper {
+    background: url("../../imgs-pinklove/mailer.png") center top no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    height: 50%;
+    left: 0;
+    background-size: 100%;
+    z-index: 3;
+}
+.mail .enveloper .state {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    text-align: center;
+    font-size: 1.0rem;
+    color: #ffebf2;
+}
+.mail .enveloper .state p {
+    height: 1.3rem;
+    line-height: 1.3rem;
+}
+.mail .paper {
+    background: url("../../imgs-pinklove/pager.png") center top no-repeat;
+    width: 85%;
+    height: 130px;
+    position: absolute;
+    background-size: 98%;
+    top: 45%;
+    left: 7.5%;
+    z-index: 2;
+}
+/* 信纸信息部分 */
+
+.message{
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left:0;
+    top: 25px;
+}
+.header{
+    width: 71%;
+    margin: 0 auto;
+    font-size: 0;
+}
+.header img{
+    width: 35px;
+    vertical-align: middle;
+    margin:0 3px;
+}
+.name{
+    display: inline-block;
+    height:35px;
+    line-height: 35px;
+    font-size: 1.4rem;
+    color: #421f0b;
+    vertical-align: middle;
+}
+.send{
+    text-align: left;
+}
+.receive{
+    text-align: right;
+    margin-top: 6px;
+}
+
+.content{
+    width:66%;
+    height:45px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 20px;
+    font-size: 1.4rem;
+    color: #421f0b;
+}
+/*  */
+.mail .triangle {
+    background: url("../../imgs-pinklove/triangle.png") center top no-repeat;
+    width: 85%;
+    height: 30%;
+    position: absolute;
+    background-size: 100%;
+    top: 45%;
+    left: 7.5%;
+    z-index: 6;
+}
+.mail .candle {
+    background: url("../../imgs-pinklove/candle.png") center top no-repeat;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    background-size: 100%;
+    left: 37%;
+    top: 55%;
+    z-index: 10;
+}
+
+/* 下面输入框，按钮 */
+.foot{
+    text-align: center;
+    font-size: 1.6rem;
+    position: relative;
+    top: -30px;
+}
+
+.tel {
+    -webkit-appearance:none;
+    -webkit-user-select: text;
+    width: 80%;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    color: #999;
+    background-color:#fff;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.tel_bg {
+    -webkit-appearance:none;
+    -webkit-user-select: text;
+    width: 80%;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    color: #999;
+    background-color:#ebebeb;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.openticket {
+    width: 85%;
+    height: 40px;
+    background: #f887b3;
+    border-radius: 7px;
+    border: 1px solid #e97ba8;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 16px;
+    color: #FFF;       
+    line-height: 40px;
+}
+.openticket_grey{
+    width: 85%;
+    height: 40px;
+    background:#dadada;
+    border-radius: 7px;
+    border: 1px solid #d7d7d7;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 16px;
+    color: #c4c4c4;       
+    line-height: 40px;
+}
+
+.openticket:active{
+    background: #e2729e;
+    border: 1px solid #d66895;
+}
+
+/* 按钮 */
+
+.hide {
+    display: none;
+}
+
+.transmit {
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 6px;
+    border: 1px #e97ba8 solid;
+    background-color: #f98fb9;
+    color: #fff;
+    margin-top: 13px;
+}
+
+.gain_ticket {
+    width: 86%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    position: relative;
+    top: -30px;
+}
+.gain_ticket .options {
+    overflow: hidden;
+}
+.gain_ticket .white {
+    width: 48%;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 6px;
+    border: 1px #e3e3e3 solid;
+    background-color: #ffffff;
+    color: #999999;
+}
+.gain_ticket .white:active {
+    background-color: #f9f9f9;
+}
+.gain_ticket .down {
+    float: left;
+}
+.gain_ticket .bask {
+    float: right;
+}
+.gain_ticket .transmit {
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 6px;
+    border: 1px #e97ba8 solid;
+    background-color: #f98fb9;
+    color: #fff;
+    margin-top: 13px;
+}
+.gain_ticket .transmit:active {
+    border: 1px #d66895 solid;
+    background-color: #e2729e;
+}
+.request {
+    width: 100%;
+    height: 41px;
+    line-height: 38px;
+    border-radius: 6px;
+    border: 1px #e3e3e3 solid;
+    background-color: #ebebeb;
+    color: #999999;
+}
+.request .phone-no {
+    width: 95%;
+    height: 95%;
+    -webkit-outline: none;
+    outline: none;
+    line-height: 100%;
+    text-align: center;
+    color: #999;
+    background: #ebebeb;
+    font-size: 80%;
+}
+/*animation*/
+
+@-webkit-keyframes turnLetter {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        -webkit-transform-origin: left top;
+        z-index: 6;
+    }
+    25% {
+        -webkit-transform: rotateX(45deg);
+        -webkit-transform-origin: left top;
+        z-index: 6;
+    }
+    50% {
+        -webkit-transform: rotateX(100deg);
+        -webkit-transform-origin: left top;
+        z-index: 6;
+    }
+    75% {
+        -webkit-transform: rotateX(135deg);
+        -webkit-transform-origin: left top;
+        z-index: 6;
+    }
+    100% {
+        -webkit-transform: rotateX(180deg);
+        -webkit-transform-origin: left top;
+        z-index: 1;
+    }
+}
+.letter-top-hover {
+    -webkit-animation-name: turnLetter;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    /*-webkit-transform: rotateX(180deg);*/
+    
+    -webkit-transform-origin: 100% 100%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .letter-top-hover {
+        -webkit-animation-name: turnLetter;
+        -webkit-animation-duration: 0.4s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-play-state: running;
+        -webkit-transform: rotateX(180deg);
+        -webkit-transform-origin: left top;
+    }
+}
+@-webkit-keyframes letterOut {
+    0% {
+        height: 150px;
+        top: 40%;
+        z-index: 2;
+    }
+    25% {
+        height: 180px;
+        top: 30%;
+        z-index: 2;
+    }
+    50% {
+        height: 200px;
+        top: 20%;
+        z-index: 2;
+    }
+    75% {
+        height: 220px;
+        top: 10%;
+        z-index: 2;
+    }
+    100% {
+        height: 230px;
+        top: 3%;
+        z-index: 2;
+    }
+}
+.letter-out {
+    -webkit-animation-name: letterOut;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    z-index: 2;
+}
+@-webkit-keyframes candleDown {
+    /*0% {
+        top: 55%;
+    }
+    25% {
+        top: 60%;
+        z-index: 100;
+        -webkit-transform: rotateX(-5deg);
+        -webkit-transform-origin: 20% 40% 100px;
+    }
+    35% {
+        top: 65%;
+        left: 30%;
+        z-index: 100;
+        -webkit-transform: rotateX(-10deg);
+        -webkit-transform-origin: 20% 40% 100px;
+    }
+    50% {
+        top: 75%;
+        left: 32%;
+        z-index: 100;
+        -webkit-transform: rotateX(-20deg);
+        -webkit-transform-origin: 20% 40% 100px;
+    }
+    75% {
+        top: 85%;
+        left: 30%;
+        z-index: 100;
+        -webkit-transform: rotateX(-40deg);
+        -webkit-transform-origin: 20% 40% 100px;
+    }
+    100% {
+        top: 105%;
+        left: 28%;
+        z-index: 100;
+        -webkit-transform: rotateX(-55deg);
+        -webkit-transform-origin: 20% 40% 100px;
+    }*/
+    
+    0% {
+        opacity: 1.0;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.candle-down {
+    -webkit-animation-name: candleDown;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}

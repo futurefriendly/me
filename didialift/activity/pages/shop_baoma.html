@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #cc1430;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: ;
+    }
+    .item {
+        width: 100%;
+    }
+    .line {
+        width: 100%;
+    }
+    #divShare {
+        top: 0;
+        position: fixed;
+        background-position: center;
+        background-size: cover;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-image: url('http://static.diditaxi.com.cn/webapp/images/mask-share.png');
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_baoma/baoma_01.jpg" />
+        </div>
+        <div class="item line" itemid="" id="linkShare">
+            <img src="../img-mall/shop_baoma/baoma_02.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_baoma/baoma_03.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_baoma/baoma_04.jpg" />
+        </div>
+        <div class="item" itemid="10015">
+            <img src="../img-mall/shop_baoma/baoma_05.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_baoma/baoma_06.jpg" />
+        </div>
+        <div class="item line" itemid="" id="go_third">
+            <img src="../img-mall/shop_baoma/baoma_07.jpg" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/shop_baoma/baoma_08.jpg" />
+        </div>
+    </div>
+    <div class="share" id="divShare"></div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <!--<script type='text/javascript' src="http://static.diditaxi.com.cn/webapp/ddbridge.js"></script>-->
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            screenHeight = window.screen.height,
+            dv_main = _document.querySelector(".contant");
+
+        //get url params
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r[2];
+            return "";
+        }
+
+        function returnUrl(id) {
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + id + '&token=' + getQueryString("token") + '&lat=' + getQueryString("lat") + '&lng=' + getQueryString("lng");
+            return _url;
+        }
+
+        touch(dv_main, function(event) {
+            if (event.target.className == "item" || event.target.parentNode.className == "item") {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    if (getQueryString("loc")) {
+                        location.href = returnUrl(_itemid);
+                        return;
+                    };
+                    var isWx = false;
+                    isWx = navigator.userAgent.indexOf("MicroMessenger")!=-1 ? true : false;
+                    if (isWx) {
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage&productid="+_itemid;
+                        return;
+                    }else{
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage";
+                        return;
+                    }    
+                }
+            }
+        }, false);
+        
+        //微信分享
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            var share_config = {
+                general_config:{
+                    img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_baoma/share.jpg',
+                    sharetitle:"万万没想到0元抽宝马X1，梦想还是要有的【滴滴携手易车出品】",
+                    sharedesc:"滴滴积分商城100积分抽宝马X1，立即参与，分享活动后中奖率更高哦~",
+                    link:"http://static.diditaxi.com.cn/activity/pages/shop_baoma.html?v="+Math.random()
+                }
+            };
+
+            var obj = share_config.general_config;
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {              
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": obj.img_url,
+                    "img_width": "",
+                    "img_height": "",
+                    "link": obj.link,
+                    "title": obj.sharetitle,
+                    "desc": obj.sharedesc               
+                }, function(res) {
+                    
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {     
+                WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": obj.img_url,
+                        "img_width": "",
+                        "img_height": "",
+                        "link": obj.link,
+                        "title": obj.sharetitle,
+                        "desc": obj.sharedesc
+                    }, function(res) {        
+                });
+            });
+        });
+
+        //app分享
+        (function(window) {
+            var linkShare = document.getElementById('linkShare');
+            // 连接DidiJSBridge
+            var connectDidiJSBridge = function(callback) {
+                if (window.DidiJSBridge) {
+                    callback(DidiJSBridge);
+                } else {
+                    document.addEventListener('DidiJSBridgeReady', function() {
+                        //alert('这是DIDIJSBridge' + DidiJSBridge);
+                        callback(DidiJSBridge);
+                    }, false);
+                }
+            };
+
+            var shareData = {
+                share_url: "http://static.diditaxi.com.cn/activity/pages/shop_baoma.html", // 分享出去的URL
+                share_icon_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_baoma/share.jpg', // 分享⼩图icon
+                share_img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_baoma/share.jpg', // 分享⼤图
+                share_title: '万万没想到0元抽宝马X1，梦想还是要有的【滴滴携手易车出品】',
+                share_content: '滴滴积分商城100积分抽宝马X1，立即参与，分享活动后中奖率更高哦~',
+                share_from: 'native' // 分享来源，便于做统计
+            };
+            // 操作入口的配置信息
+            var entranceCfg = {
+                entrance: { // ⼊⼝本⾝的icon可定制，不限于微信的右上⾓三个点
+                    icon: ''
+                },
+                buttons: [ {
+                        type: 'share_weixin_timeline',
+                        name: '微信朋友圈',
+                        data: {
+                            share_url: shareData.share_url, // 分享出去的URL
+                            share_icon_url: shareData.share_icon_url, // 分享⼩图icon
+                            share_img_url: shareData.share_icon_url, // 分享⼤图
+                            share_title: shareData.share_title,
+                            share_content: shareData.share_content,
+                            share_from: shareData.share_from // 分享来源，便于做统计
+                        },
+                        callback: function() {}
+                    }, {
+                        type: 'share_weixin_appmsg',
+                        name: '微信好友',
+                        data: {
+                            share_url: shareData.share_url, // 分享出去的URL
+                            share_icon_url: shareData.share_icon_url, // 分享⼩图icon
+                            share_img_url: shareData.share_icon_url, // 分享⼤图
+                            share_title: shareData.share_title,
+                            share_content: shareData.share_content,
+                            share_from: shareData.share_from // 分享来源，便于做统计
+                        },
+                        callback: function() {}
+                    }
+                    //, {
+                    //     type: 'web_redirect', // ⾃定义的按钮
+                    //     name: '打⻋券使⽤规则',
+                    //     icon: 'http://static.diditaxi.com.cn/webapp/images/driver.jpg',
+                    //     redirect_url: 'http://www.baidu.com'
+                    //}
+                ]
+            };
+            // 执行连接DidiJSBridge
+            connectDidiJSBridge(function(bridge) {
+                if (typeof bridge === 'undefined') {
+                    //alert('还没有这个DidiJSBridge对象，吧啦吧啦啦');
+                    return;
+                }
+                // use bridge object
+                bridge.callHandler('init_entrance', JSON.stringify(entranceCfg)); // 初始入口
+
+                linkShare.addEventListener("touchend", function(e) {
+                    if (typeof bridge === 'undefined') {
+                        //alert('别坑我啊⼤哥，JSBridge对象⽊有加载成功啊.');
+                        return;
+                    }            
+                    // console.log(it.method);
+                    bridge.callHandler("invoke_entrance");
+                }, false);
+            });
+
+        })(window, undefined);
+
+        var dv_click=document.getElementById('linkShare');
+        var divShare=document.getElementById('divShare');
+        touch(dv_click, function(event) {
+            var isWx = false;
+            isWx = navigator.userAgent.indexOf("MicroMessenger")!=-1 ? true : false;
+            if (isWx) {
+                divShare.style.display = "block";
+                return;
+            }else{
+                /*alert('只支持微信和APP内分享');*/
+            }    
+        }, false);
+        divShare.addEventListener("touchstart", function(ev) {
+            divShare.style.display = "none";
+        }, false);
+
+        var goThird = document.getElementById('go_third');
+        touch(goThird,function(){
+            location.href="http://dl.ycapp.yiche.com/y10001";
+        });
+    }, false);
+    </script>
+</body>
+
+</html>

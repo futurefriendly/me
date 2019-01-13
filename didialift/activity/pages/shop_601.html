@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: #f5f5f5;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: #ec8a41;
+    }
+    .item {
+        width: 50%;
+        float: left;
+    }
+    .line {
+        width: 100%;
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="line">
+            <img src="../img-mall/shop_601/shop_601_01.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/shop_601/shop_601_02.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_03.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_04.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_05.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_06.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/shop_601/shop_601_07.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_08.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_09.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_10.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_11.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/shop_601/shop_601_12.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_13.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_14.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_15.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_16.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/shop_601/shop_601_17.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_18.jpg" />
+        </div>
+        <div class="item">
+            <img src="../img-mall/shop_601/shop_601_19.jpg" />
+        </div>
+        <div class="line">
+            <img src="../img-mall/shop_601/shop_601_20.jpg" />
+        </div>
+    </div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script type='text/javascript' src='http://static.diditaxi.com.cn/activity/js/shop/v2/s-share.js'></script>
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            dv_main = _document.querySelector(".contant");
+
+        function hasClass(oParent, sClass){
+            if(oParent.getElementsByClassName){
+                return oParent.getElementsByClassName(sClass);
+            }
+            var aEle=oParent.getElementsByTagName('*');
+            var re=new RegExp('\\b'+sClass+'\\b');
+            var result=[];
+            for(var i=0;i<aEle.length;i++){
+                if(re.test(aEle[i].className)){
+                    result.push(aEle[i]);
+                }
+            }
+            return result;
+        }
+
+        //每次改商品只需要改一下数组里面的值即可
+        var goodId = [9603,9515,9347,9451,9605,9311,9593,9445,9575,9591,9589,9587,9595,9459];
+
+        var goodEle = document.getElementsByClassName("item");
+        for(var i = 0; i<goodEle.length; i++){
+
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + goodId[i] + '&token=' + getQuerySting().token + '&lat=' + getQuerySting().lat + '&lng=' + getQuerySting().lng;
+
+            goodEle[i].setAttribute("itemid",goodId[i]);
+            goodEle[i].setAttribute("detailUrl",_url);
+        }
+
+        touch(dv_main, function(event) {
+            if (hasClass(event.target,"item") || hasClass(event.target.parentNode,"item")) {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    if (getQuerySting().loc) {//在不在积分商城里面
+                        location.href = _target.getAttribute("detailUrl");
+                        return;
+                    };
+                    var isWx = false;
+                    isWx = navigator.userAgent.indexOf("MicroMessenger")!=-1 ? true : false;
+                    if (isWx) {
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage&productid="+_itemid;
+                        return;
+                    }else{
+                        location.href = "http://pay.xiaojukeji.com/api/v2/weixinapi?page=middlepage";
+                        return;
+                    }    
+                }
+            }
+        }, false);
+
+        //app分享数据
+        var shareData = {
+            share_url: "http://static.diditaxi.com.cn/activity/pages/shop_601.html?v="+Math.random(),
+            share_icon_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_601/share.jpg?v=2', 
+            share_img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_601/share.jpg?v=2', 
+            share_title: '再不陪TA玩耍，TA就长大啦！来滴滴积分商城兑份礼物陪TA玩！', // 标题 todo
+            share_content: '滴滴积分商城6.1儿童节欢乐有礼。', // 描述 todo
+            share_from: '滴滴打车'
+        };
+
+        if (window.didi) {
+            didi.initShare(shareData, function() {
+                console.log('分享成功');
+            });
+        }
+
+        //微信分享
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            var share_config = {
+                general_config:{
+                    img_url: 'http://static.diditaxi.com.cn/activity/img-mall/shop_601/share.jpg?v=2',
+                    sharetitle:"再不陪TA玩耍，TA就长大啦！来滴滴积分商城兑份礼物陪TA玩！",
+                    sharedesc:"滴滴积分商城6.1儿童节欢乐有礼。",
+                    link:"http://static.diditaxi.com.cn/activity/pages/shop_601.html?v="+Math.random()
+                }
+            };
+
+            var obj = share_config.general_config;
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function(argv) {              
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "wx69b6673576ec5a65",
+                    "img_url": obj.img_url,
+                    "img_width": "",
+                    "img_height": "",
+                    "link": obj.link,
+                    "title": obj.sharetitle,
+                    "desc": obj.sharedesc               
+                }, function(res) {
+                    
+                });
+            });
+
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function(argv) {     
+                WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": obj.img_url,
+                        "img_width": "",
+                        "img_height": "",
+                        "link": obj.link,
+                        "title": obj.sharetitle,
+                        "desc": obj.sharedesc
+                    }, function(res) {        
+                });
+            });
+        });
+
+    }, false);
+    </script>
+</body>
+
+</html>

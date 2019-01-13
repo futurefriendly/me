@@ -1,0 +1,376 @@
+body {
+	background: #efefef;
+	font-family: 黑体;
+	width: 100%;
+}
+.page-body {
+	width: 100%;
+}
+
+/*任务列表页*/
+.banner {
+	width: 100%;
+	height: 5.5rem;
+	background: url('../img/banner-yellow.png');
+	background-repeat: repeat-x;
+	line-height: 1.5rem;
+	text-align: center;
+	padding-top: 4rem;
+}
+.banner .sign {
+	color: #efefef;
+	font-size: 1.2rem;
+}
+.banner .amount {
+	color: #fff;
+	font-size: 3rem;
+}
+.banner .watch-detail {
+	color: #efefef;
+	font-size: 1.2rem;
+	font-weight: lighter;
+}
+.tab {
+	width: 100%;
+	height: 4rem;
+	background: #FFF;
+	line-height: 4rem;
+	text-align: center;
+}
+.tab li {
+	list-style: none;
+	float: left;
+	width: 50%;
+	font-size: 1.2rem;
+	font-weight: lighter;
+	color: #3a3a3a;
+	-webkit-box-sizing: border-box;
+	border-bottom: 0.3rem solid #fff;
+	box-shadow: 0px 1px 0px rgba(204, 204, 204, 0.5);
+}
+.tab .current {
+	color: #ff8903;
+	border-bottom: 0.3rem solid #ff8903;
+}
+.task-item {
+	width: 100%;
+	background: #FFF;
+	height: 9.5rem;
+	margin-top: 1rem;
+	border-top: 1px solid #f3f3f3;
+	border-bottom: 1px solid #f3f3f3;
+	position: relative;
+}
+.task-tag {
+	position: absolute;
+}
+.task-tag img {
+	width: 3rem;
+}
+.task-title {
+	padding-left: 2.5rem;
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.2rem;
+}
+.task-content {
+	width: 90%;
+	margin: 0 auto;
+	height: 5rem;
+}
+.task-content>div {
+	float: left;
+}
+.task-gift {
+	width: 6rem;
+	height: 3rem;
+	color: #ff8903;
+	font-size: 2rem;
+	font-weight: bolder;
+	font-style: italic;
+	line-height: 3rem;
+	word-break: break-all;
+}
+.task-gift .sign {
+	font-size: 1.4rem;
+	font-style: normal;
+}
+.task-gift .number {
+	font-size: 3rem;
+}
+.task-require {
+	padding-left: 1rem;
+}
+.task-require>div {
+	height: 3.5rem;
+	font-size: 1rem;
+	font-weight: lighter;
+	color: #9c9c9c;
+}
+.task-botton {
+	width: 6rem;
+	position: absolute;
+	right: 5%;
+	top: 3rem;
+	text-align: center;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: .5rem;
+	font-size: 1.3rem;
+}
+.task-progress {
+	width: 90%;
+	background-color: #e8e8e8;
+	border-radius: 0.3rem;
+	height: 0.5rem;
+	margin: 0 auto;
+	text-align: left;
+}
+.task-progress-img {
+	background: url("../img/progress.png");
+	width: 0;
+	height: 0.5rem;
+	border-radius: 0.5rem;
+	-webkit-transition: all 0.8s ease-in;
+	transition: all 0.8s ease-in;
+}
+.task-count {
+	width: 10rem;
+	word-break: break-all;
+	height: 4rem;
+	overflow: hidden;
+}
+.task-overed {
+	height: 3.5rem;
+	line-height: 3.5rem;
+	color: #737373;
+	font-size: 1.2rem;
+	font-weight: lighter;
+}
+.task-overed span {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background: url('../img/clock.png') no-repeat;
+	background-size: 100%;
+	margin-right: 1rem;
+}
+.task-overed>div {
+	width: 90%;
+	margin: 0 auto;
+}
+.hidden {
+	display: none;
+}
+.empty {
+	text-align: center;
+	font-size: 1.4rem;
+	min-height: 20rem;
+}
+.empty img {
+	width: 30%;
+}
+.task-stage {
+	width: 90%;
+	margin: 0 auto;
+	height: 1.5rem;
+	position: relative;
+}
+.task-stage span {
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	min-width: 3rem;
+}
+
+/*奖励详情*/
+.givend-task {
+	background-image: url('../img/givend.png');
+	background-repeat: no-repeat;
+	background-size: 30%;
+	background-position: 95%;
+}
+.un-givend-task {
+	background-image: url('../img/un-give.png');
+	background-repeat: no-repeat;
+	background-size: 30%;
+	background-position: 95%;
+}
+.outtime-task {
+	background-image: url('../img/outtime.png');
+	background-repeat: no-repeat;
+	background-size: 30%;
+	background-position: 95%;
+}
+
+/*已结束页*/
+.task-list-overed .task-item {
+	height: 7.5rem;
+}
+.task-time-title {
+	width: 30%;
+	margin: 0 auto;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	border-radius: 0.2rem;
+	color: #f4f4f4;
+	background: #ddd;
+	font-size: 1.2rem;
+	margin-top: 1rem;
+}
+
+/*任务详情*/
+.task-item-detail .task-item:first-child {
+	height: 15.5rem;
+}
+.task-item-detail .task-item {
+	height: auto;
+}
+.task-item-detail .task-detail {
+	border-top: 1px solid #ddd;
+	margin-top: 1rem;
+	height: 6rem;
+	text-align: center;
+}
+.task-item-detail .task-detail ul {
+	height: 100%;
+	text-align: center;
+}
+.task-item-detail .task-detail li {
+	/*float: left;*/
+	display: inline-block;
+	text-align: center;
+	list-style: none;
+	height: 4rem;
+	line-height: 3rem;
+	width: 32%;
+	font-size: 1.1rem;
+	margin-top: 1rem;
+}
+.progress_special>li{
+	height: 5rem;
+	line-height: 4rem;
+}
+.unfold-detail{
+	line-height: 3rem;
+	text-align: right;
+	color: #ffad6c;
+	font-size: 1rem;
+	width: 90%;
+	margin: 0 auto;
+	list-style: none;
+}
+.progress_special_key{
+	display: inline-block;
+	width: 24%;
+	text-align: center;
+}
+.progress_special_extend{
+height:6rem;line-height:5rem;border-bottom:1px solid #ddd;border-right:1px solid #ddd;
+}
+.progress_special_extend_other{
+	background:#fafafa;border-bottom:1px solid #e9e9e9;
+}
+.progress_special_value{
+	display: inline-block;
+	width: 74%;
+	border-right: none;
+}
+.progress_special_value li{
+	list-style: none;
+}
+.progress_special_value div{
+	width: 100%;
+}
+.progress_special_value div li{
+	display: inline-block;
+	width: 30%;
+}
+.task-item-detail {
+	background: #efefef;
+}
+.task-detail>li:first-child {
+	border-right: 1px solid #f4f4f4;
+}
+.task-detail>li:last-child {
+	border-left: 1px solid #f4f4f4;
+}
+.task-detail .task-number {
+	display: block;
+	font-size: 1.4rem;
+	color: #666;
+	font-weight: bolder;
+	height: 1.5rem;
+}
+.haveget {
+	margin-top: 0.1rem;
+	background: #FFF;
+	text-align: center;
+	height: 100%;
+	line-height: 3.5rem;
+}
+.haveget .btn-orange {
+	font-size: 1.6rem;
+	width: 95%;
+	border-radius: 0.5rem;
+	margin: 0 auto;
+	height: 4rem;
+	line-height: 4rem;
+	margin-bottom: 2rem;
+}
+.haveget .btn-gray {
+	font-size: 1.6rem;
+	width: 95%;
+	border-radius: 0.5rem;
+	margin: 0 auto;
+	height: 4rem;
+	line-height: 4rem;
+	margin-bottom: 2rem;
+}
+.icon-list {
+	background: url("../img/list.png") no-repeat;
+	background-size: 1rem 1rem;
+	width: 2rem;
+	height: 1rem;
+	display: inline-block;
+}
+.icon-menu {
+	background: url("../img/menu.png") no-repeat;
+	background-size: 1rem 1rem;
+	width: 2rem;
+	height: 1rem;
+	display: inline-block;
+}
+.icon-browser {
+	background: url("../img/browser.png") no-repeat;
+	background-size: 1rem 1rem;
+	width: 2rem;
+	height: 1rem;
+	display: inline-block;
+}
+.detail-title {
+	font-size: 1.4rem;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+.detail-content {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+.detail-content li {
+	list-style: none;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	width: 90%;
+}
+
+
+.loading {
+        width: 100%;
+        height: 50px;
+        background: url(../img/loading.gif) center center no-repeat;
+        background-size: 20px 20px;
+    }

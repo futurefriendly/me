@@ -1,0 +1,161 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, hr, p, a, em, img, input, q, b, dl, dt, dd, ol, ul, li, form, label, canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none
+}
+html, body {
+    font-size: 62.5%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-size-adjust: none;
+    font-family: "STHeiTi-Light", 'Microsoft YaHei', arial, sans-serif, 'Droid Sans Fallback'
+}
+.list {
+    width: 100%;
+    border-bottom: 1px #e6e6e6 solid;
+    display: inline-block;
+    position: relative
+}
+.border {
+    height: 81px;
+    line-height: 81px;
+    display: -webkit-box;
+    border: 3px #fff solid
+}
+.border:active {
+    border: 3px #f2f2f2 solid
+}
+.picture {
+    -webkit-user-select: none;
+    width: 32%;
+    text-align: center;
+    padding-top: 12px
+}
+.picture img {
+    width: 75px;
+    height: 51px;
+    border-radius: 5px
+}
+.content {
+    width: 61%;
+    padding-top: 11px;
+    color: #666;
+    font-size: 1.2rem
+}
+.content li {
+    height: 19px;
+    line-height: 19px
+}
+.content li:nth-child(1) {
+    height: 19px;
+    line-height: 19px;
+    font-size: 1.4rem;
+    font-weight: 100
+}
+.content span {
+    display: inline-block
+}
+.orange {
+    color: #ff8903;
+    font-weight: normal
+}
+.gray {
+    color: #898989;
+    font-weight: normal
+}
+.win {
+    color: #666;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/win.png) left center no-repeat;
+    background-size: 18px 18px;
+    padding-left: 22px;
+    font-weight: 100
+}
+.content_count {
+    color: #ccc;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/shop_icon.png) 8px center no-repeat;
+    background-size: 8px 8px;
+    padding-left: 18px;
+    position: absolute
+}
+.jump {
+    width: 7%;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/jump.png) center center no-repeat;
+    background-size: 8px 14px
+}
+.new {
+    -webkit-animation: fadeOutDown 2s .2s ease both
+}
+@-webkit-keyframes fadeOutDown {
+    0% {
+        background-color: #fffeee
+    }
+    80% {
+        background-color: #fffeee
+    }
+    100% {
+        background-color: #fff
+    }
+}
+.new_border {
+    -webkit-animation: fadeOutDownBor 2s .2s ease both
+}
+@-webkit-keyframes fadeOutDownBor {
+    0% {
+        border-color: #fffeee
+    }
+    80% {
+        border-color: #fffeee
+    }
+    100% {
+        border-color: #fff
+    }
+}
+.footer {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 1.2rem
+}
+.foo_loading {
+    display: none;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/loading_2.gif) left center no-repeat;
+    background-size: 25px 25px;
+    padding-left: 30px;
+    color: #999
+}
+.foo_more {
+    display: none;
+    color: #ff8903
+}
+.foo_no {
+    display: none;
+    color: #999
+}
+.noRecord {
+    display: none;
+    padding-top: 33px
+}
+.img {
+    width: 100%;
+    height: 58px;
+    background: url(http://static.diditaxi.com.cn/activity/img-mall/no_record.png) center center no-repeat;
+    background-size: 58px 58px
+}
+.text {
+    width: 100%;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #999
+}
+.content .hide {
+    display: none
+}

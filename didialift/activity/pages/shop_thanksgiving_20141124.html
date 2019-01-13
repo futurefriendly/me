@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: #eee;
+    }
+    .item {
+        width: 48.7%;
+        display: inline-block;
+    }
+    .line {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="item line" itemid="">
+            <img src="../img-mall/thankgiving/thankgiving01.png" />
+        </div>
+        <div class="item" itemid="237">
+            <img src="../img-mall/thankgiving/thankgiving02.png" />
+        </div>
+        <div class="item" itemid="233">
+            <img src="../img-mall/thankgiving/thankgiving03.png" />
+        </div>
+        <div class="item" itemid="243">
+            <img src="../img-mall/thankgiving/thankgiving04.png" />
+        </div>
+        <div class="item" itemid="229">
+            <img src="../img-mall/thankgiving/thankgiving05.png" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/thankgiving/thankgiving06.png" />
+        </div>
+        <div class="item" itemid="244">
+            <img src="../img-mall/thankgiving/thankgiving07.png" />
+        </div>
+        <div class="item" itemid="245">
+            <img src="../img-mall/thankgiving/thankgiving08.png" />
+        </div>
+        <div class="item" itemid="234">
+            <img src="../img-mall/thankgiving/thankgiving09.png" />
+        </div>
+        <div class="item" itemid="225">
+            <img src="../img-mall/thankgiving/thankgiving10.png" />
+        </div>
+        <div class="item" itemid="238">
+            <img src="../img-mall/thankgiving/thankgiving11.png" />
+        </div>
+        <div class="item" itemid="236">
+            <img src="../img-mall/thankgiving/thankgiving12.png" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/thankgiving/thankgiving13.png" />
+        </div>
+        <div class="item" itemid="231">
+            <img src="../img-mall/thankgiving/thankgiving14.png" />
+        </div>
+        <div class="item" itemid="241">
+            <img src="../img-mall/thankgiving/thankgiving15.png" />
+        </div>
+        <div class="item" itemid="242">
+            <img src="../img-mall/thankgiving/thankgiving16.png" />
+        </div>
+        <div class="item" itemid="230">
+            <img src="../img-mall/thankgiving/thankgiving17.png" />
+        </div>
+        <div class="item line" itemid="">
+            <img src="../img-mall/thankgiving/thankgiving18.png" />
+        </div>
+    </div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            screenHeight = window.screen.height,
+            dv_main = _document.querySelector(".contant");
+
+        //get url params
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r[2];
+            return "";
+        }
+
+        function returnUrl(id) {
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + id + '&token=' + getQueryString("token") + '&lat=' + getQueryString("lat") + '&lng=' + getQueryString("lng");
+            return _url;
+        }
+
+        touch(dv_main, function(event) {
+            if (event.target.className == "item" || event.target.parentNode.className == "item") {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    location.href = returnUrl(_itemid);
+                }
+            }
+        }, false);
+
+    }, false);
+    </script>
+</body>
+
+</html>

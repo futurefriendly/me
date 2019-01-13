@@ -1,0 +1,649 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 1.5;
+	-webkit-touch-callout: none;
+	width: 100%;
+	height: 100%;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+}
+.swiper-slide {
+	background-size: 100%;
+	width: 100%;
+	background: #f4e100;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+.swiper-slide img {
+	width: 100%;
+}
+
+/* 第九页动画end */
+
+/* 跳动图标动画 */
+@-webkit-keyframes passdown {
+	0% {
+		bottom: 4%;
+	}
+	12% {
+		bottom: 3.8%;
+	}
+	24% {
+		bottom: 3.6%;
+	}
+	38% {
+		bottom: 3.4%;
+	}
+	50% {
+		bottom: 3.2%;
+	}
+	62% {
+		bottom: 3.4%;
+	}
+	75% {
+		bottom: 3.6%;
+	}
+	88% {
+		bottom: 3.8%;
+	}
+	100% {
+		bottom: 4%;
+	}
+}
+.pub-btn {
+	position: absolute;
+	width: 10%;
+	left: 45%;
+	bottom: 4%;
+	-webkit-animation-name: passdown;
+	-webkit-animation-duration: 1.3s;
+	-webkit-animation-iteration-count: infinite;
+}
+#playmusic{
+	position: absolute;
+	z-index: 20;
+	right: 10px;
+	top: 10px;
+}
+#playmusic img{
+	width: 30px;
+}
+
+
+/*===============================第一张动画开始===============================*/
+.one-slide-1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30%;
+}
+.one-slide-2 {
+	position: absolute;
+	width: 30%;
+	right: 0;
+	bottom: -1%;
+}
+.one-slide-3 {
+	position: absolute;
+	left: 0;
+	bottom: -85%;
+	width: 60%;
+}
+.slide-move .one-slide-3 {
+	bottom: -1%;
+	-webkit-transition: all 0.3s ease-in 1.5s;
+}
+.one-slide-4 {
+	position: absolute;
+	left: 1rem;
+	bottom: 1rem;
+	width: 40%;
+}
+.one-slide-5 {
+	position: absolute;
+	left: 6rem;
+	top: 2.5rem;
+	width: 70%;
+}
+
+/*===============================第一张动画结束===============================*/
+.two-slide-1 {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 35%;
+}
+
+/*===============================第三张动画开始===============================*/
+.three-slide-1 {
+	position: absolute;
+	width: 80%;
+	left: -80%;
+	bottom: 1%;
+}
+.slide-move .three-slide-1 {
+	left: 0;
+	-webkit-transition: all 0.3s ease-in;
+}
+.three-slide-2 {
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	top: 100%;
+}
+.slide-move .three-slide-2 {
+	top: 1%;
+	-webkit-transition: all 0.5s ease-in 0.3s;
+}
+.three-slide-3 {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 100%;
+}
+.slide-move .three-slide-3 {
+	top: 5%;
+	-webkit-transition: all 0.5s ease-in 0.7s;
+}
+.three-slide-4 {
+	position: absolute;
+	width: 65%;
+	left: 22%;
+	top: 15%;
+	opacity: 0;
+}
+.slide-move .three-slide-4 {
+	opacity: 1;
+	-webkit-transition: all 0.5s ease-in 1.2s;
+}
+
+/*===============================第三张动画结束===============================*/
+
+/*===============================第四页动画开始===============================*/
+.four-slide-1 {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	bottom: -70%;
+}
+.slide-move .four-slide-1 {
+	bottom: -1%;
+	-webkit-transition: all 0.3s ease-in;
+}
+.four-slide-2 {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 100%;
+}
+.slide-move .four-slide-2 {
+	top: 2%;
+	-webkit-transition: all 0.5s ease-in 0.3s;
+}
+.four-slide-3 {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 100%;
+}
+.slide-move .four-slide-3 {
+	top: 8%;
+	-webkit-transition: all 0.5s ease-in 0.7s;
+}
+.four-slide-4 {
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	top: 18%;
+	opacity: 0;
+}
+.slide-move .four-slide-4 {
+	opacity: 1;
+	-webkit-transition: all 0.5s ease-in 1.2s;
+}
+
+/*===============================第四页动画结束===========================*/
+
+/*===============================第五页动画开始===========================*/
+.five-slide-1 {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: -100%;
+}
+.slide-move .five-slide-1 {
+	top: 0;
+	-webkit-transition: all 0.3s ease-in;
+}
+.five-slide-2 {
+	position: absolute;
+	width: 80%;
+	left: 8%;
+	top: 100%;
+}
+.slide-move .five-slide-2 {
+	top: 50%;
+	-webkit-transition: all 0.5s ease-in 0.3s;
+}
+.five-slide-3 {
+	position: absolute;
+	width: 40%;
+	left: 30%;
+	top: 100%;
+}
+.slide-move .five-slide-3 {
+	top: 88%;
+	-webkit-transition: all 0.5s ease-in 1s;
+}
+/*.slide-move .five-slide-31 {
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+	-webkit-transition: all 0.5s ease-in 1.5s;
+}*/
+.five-slide-4 {
+	position: absolute;
+	width: 55%;
+	left: 23%;
+	top: 63%;
+	opacity: 0;
+}
+.slide-move .five-slide-4 {
+	opacity: 1;
+	-webkit-transition: all 0.5s ease-in 1.5s;
+}
+/*.slide-move .five-slide-41 {
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+	-webkit-transition: all 0.5s ease-in 2s;
+}*/
+
+/*===============================第五页动画结束===========================*/
+.six-slide-1 {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 40%;
+}
+
+/*===============================第七页动画结束===========================*/
+.seven-slide-1 {
+	position: absolute;
+	width: 75%;
+	left: -75%;
+	top: 3%;
+}
+.slide-move .seven-slide-1 {
+	left: 12%;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.seven-slide-2 {
+	position: absolute;
+	width: 80%;
+	left: 100%;
+	top: 25%;
+}
+.slide-move .seven-slide-2 {
+	left: 10%;
+	-webkit-transition: all 0.3s ease-in 0.3s;
+}
+.seven-slide-3 {
+	position: absolute;
+	width: 80%;
+	left: -80%;
+	top: 45%;
+}
+.slide-move .seven-slide-3 {
+	left: 15%;
+	-webkit-transition: all 0.3s ease-in 0.6s;
+}
+.seven-slide-4 {
+	position: absolute;
+	width: 80%;
+	left: 100%;
+	top: 70%;
+}
+.slide-move .seven-slide-4 {
+	left: 10%;
+	-webkit-transition: all 0.3s ease-in 0.9s;
+}
+
+/*===============================第七页动画结束===========================*/
+
+/*===============================第八页动画开始===========================*/
+.eight-slide-1 {
+	position: absolute;
+	width: 60%;
+	left: -60%;
+	top: 5%;
+}
+.slide-move .eight-slide-1 {
+	left: 12%;
+	-webkit-transition: all 0.3s ease-in;
+}
+.eight-slide-2 {
+	position: absolute;
+	width: 45%;
+	left: 100%;
+	top: 32%;
+}
+.slide-move .eight-slide-2 {
+	left: 12%;
+	-webkit-transition: all 0.3s ease-in 0.3s;
+}
+.eight-slide-3 {
+	position: absolute;
+	width: 35%;
+	left: -35%;
+	top: 30%;
+}
+.slide-move .eight-slide-3 {
+	left: 60%;
+	-webkit-transition: all 0.3s ease-in 0.6s;
+}
+.eight-slide-4 {
+	position: absolute;
+	width: 35%;
+	left: -35%;
+	top: 50%;
+}
+.slide-move .eight-slide-4 {
+	left: 60%;
+	-webkit-transition: all 0.3s ease-in 0.9s;
+}
+.eight-slide-5 {
+	position: absolute;
+	width: 80%;
+	left: 100%;
+	top: 75%;
+}
+.slide-move .eight-slide-5 {
+	left: 10%;
+	-webkit-transition: all 0.3s ease-in 1.2s;
+}
+
+/*===============================第八页动画结束===========================*/
+
+/*===============================第九页动画开始===========================*/
+.nine-slide-1 {
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	top: -20%;
+}
+.slide-move .nine-slide-1 {
+	top: 5%;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.nine-slide-2 {
+	position: absolute;
+	width: 45%;
+	left: -45%;
+	top: 20%;
+}
+.slide-move .nine-slide-2 {
+	left: 10%;
+	-webkit-transition: all 0.3s ease-in 0.3s;
+}
+.nine-slide-3 {
+	position: absolute;
+	width: 45%;
+	left: 100%;
+	top: 55%;
+}
+.slide-move .nine-slide-3 {
+	left: 45%;
+	-webkit-transition: all 0.3s ease-in 0.3s;
+}
+
+/*===============================第九页动画结束===========================*/
+.ten-slide-1 {
+	width: 80%;
+	top: 3%;
+	left: 10%;
+	position: absolute;
+}
+.ten-slide-2 {
+	width: 40%;
+	bottom: 1%;
+	left: 30%;
+	position: absolute;
+}
+#d-wall {
+	opacity: 1;
+	background: #FFF;
+}
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2) {
+
+	/* 兼容iphone 4 */
+	.swiper-slide {
+		width: 320px;
+		height: 480px;
+	}
+	.one-slide-2 {
+		bottom: -1.5%;
+	}
+	.one-slide-3 {
+		position: absolute;
+		left: 0;
+		bottom: -50%;
+		width: 55%;
+	}
+	.slide-move .one-slide-3 {
+		bottom: -1.5%;
+		-webkit-transition: all 0.3s ease-in 0.5s;
+	}
+	.one-slide-4 {
+		position: absolute;
+		left: 1rem;
+		bottom: 1rem;
+		width: 40%;
+	}
+	.one-slide-5 {
+		position: absolute;
+		left: 7rem;
+		top: 2rem;
+		width: 60%;
+	}
+	.three-slide-1 {
+		position: absolute;
+		width: 70%;
+		left: -70%;
+		bottom: 0;
+	}
+	.slide-move .three-slide-1 {
+		left: 0;
+		-webkit-transition: all 0.3s ease-in;
+	}
+	.three-slide-2 {
+		position: absolute;
+		width: 80%;
+		left: 10%;
+		top: 100%;
+	}
+	.slide-move .three-slide-2 {
+		top: 1%;
+		-webkit-transition: all 0.5s ease-in 0.3s;
+	}
+	.three-slide-3 {
+		position: absolute;
+		width: 45%;
+		left: 23%;
+		top: 100%;
+	}
+	.slide-move .three-slide-3 {
+		top: 5%;
+		-webkit-transition: all 0.5s ease-in 0.7s;
+	}
+	.three-slide-4 {
+		position: absolute;
+		width: 65%;
+		left: 20%;
+		top: 15%;
+		opacity: 0;
+	}
+	.slide-move .three-slide-4 {
+		opacity: 1;
+		-webkit-transition: all 0.5s ease-in 1.2s;
+	}
+	.four-slide-1 {
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		bottom: -70%;
+	}
+	.slide-move .four-slide-1 {
+		bottom: -1%;
+		-webkit-transition: all 0.3s ease-in;
+	}
+	.four-slide-2 {
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		top: 100%;
+	}
+	.slide-move .four-slide-2 {
+		top: 0;
+		-webkit-transition: all 0.5s ease-in 0.3s;
+	}
+	.four-slide-3 {
+		position: absolute;
+		width: 45%;
+		left: 27%;
+		top: 100%;
+	}
+	.slide-move .four-slide-3 {
+		top: 5%;
+		-webkit-transition: all 0.5s ease-in 0.7s;
+	}
+	.four-slide-4 {
+		position: absolute;
+		width: 65%;
+		left: 19%;
+		top: 15%;
+		opacity: 0;
+	}
+	.five-slide-1 {
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		top: -100%;
+	}
+	.slide-move .five-slide-1 {
+		top: -5%;
+		-webkit-transition: all 0.3s ease-in;
+	}
+	.five-slide-2 {
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		top: 100%;
+	}
+	.slide-move .five-slide-2 {
+		top: 45%;
+		-webkit-transition: all 0.5s ease-in 0.3s;
+	}
+	.five-slide-3 {
+		position: absolute;
+		width: 35%;
+		left: 32%;
+		top: 100%;
+	}
+	.slide-move .five-slide-3 {
+		top: 90%;
+		-webkit-transition: all 0.5s ease-in 1s;
+	}
+	.five-slide-4 {
+		position: absolute;
+		width: 55%;
+		left: 23%;
+		top: 60%;
+		opacity: 0;
+	}
+	.slide-move .five-slide-4 {
+		opacity: 1;
+		-webkit-transition: all 0.5s ease-in 1.5s;
+	}
+	.seven-slide-1 {
+		position: absolute;
+		width: 70%;
+		left: -75%;
+		top: 0;
+	}
+	.slide-move .seven-slide-1 {
+		left: 12%;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+	.seven-slide-2 {
+		position: absolute;
+		width: 70%;
+		left: 100%;
+		top: 22%;
+	}
+	.slide-move .seven-slide-2 {
+		left: 10%;
+		-webkit-transition: all 0.3s ease-in 0.3s;
+	}
+	.seven-slide-3 {
+		position: absolute;
+		width: 70%;
+		left: -80%;
+		top: 42.5%;
+	}
+	.slide-move .seven-slide-3 {
+		left: 15%;
+		-webkit-transition: all 0.3s ease-in 0.6s;
+	}
+	.seven-slide-4 {
+		position: absolute;
+		width: 70%;
+		left: 100%;
+		top: 62.5%;
+	}
+	.slide-move .seven-slide-4 {
+		left: 10%;
+		-webkit-transition: all 0.3s ease-in 0.9s;
+	}
+
+	/*===============================第七页动画结束===========================*/
+
+	/*===============================第八页动画开始===========================*/
+	.eight-slide-1 {
+		position: absolute;
+		width: 60%;
+		left: -60%;
+		top: 0;
+	}
+	.nine-slide-2 {
+		position: absolute;
+		width: 40%;
+		left: -45%;
+		top: 20%;
+	}
+	.nine-slide-3 {
+		position: absolute;
+		width: 40%;
+		left: 100%;
+		top: 55%;
+	}
+	.slide-move .nine-slide-3 {
+		left: 47%;
+		-webkit-transition: all 0.3s ease-in 0.3s;
+	}
+	.ten-slide-1 {
+		width: 70%;
+		top: 0%;
+		left: 15%;
+		position: absolute;
+	}
+}

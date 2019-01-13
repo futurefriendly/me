@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(247,247,240);
+        }
+        section{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        section li{
+            width: 90%;
+            line-height: 30px;
+            color: #333;
+            padding: 0 5%;
+        }
+        hgroup{
+            width: 90%;
+            padding: 10% 5% 0 5%;
+        }
+        hgroup h2{
+            font-size: 20px;
+        }
+        hgroup p{
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        img{
+            margin-top: 40px;
+        }
+        .btn-pass{
+            width: 90%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: inline-block;
+            background-color: #f28b00;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+        .btn-cancel{
+            width: 90%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            display: inline-block;
+            background-color: #ffffff;
+            color: #999;
+            border: 1px solid #999999;
+            font-size: 16px;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <hgroup>
+        <h2>高峰时段</h2>
+        <p>周围叫单乘客较多，司机较少的情况下提高车费会有司机更快接单</p>
+    </hgroup>
+    <img src="images/1.png">
+    <!--<section>-->
+        <!--<ul id="list">-->
+            <!--<li>第一次：<span>100</span></li>-->
+            <!--<li>第一次：<span>100</span></li>-->
+            <!--<li>第一次：<span>100</span></li>-->
+            <!--<li>第一次：<span>100</span></li>-->
+        <!--</ul>-->
+    <!--</section>-->
+    <a class="btn-pass">现在叫车</a>
+    <a class="btn-cancel">过会儿再叫</a>
+</body>
+</html>
+<script>
+    var list = document.getElementById('list');
+    var lists = list.getElementsByTagName('li');
+    var delayTime = 0;
+    [].forEach.call(lists, function(item){
+        delayTime += .1;
+        item.style.webkitAnimationDelay = delayTime + 's';
+        item.className = 'animated fadeInUp';
+    });
+</script>

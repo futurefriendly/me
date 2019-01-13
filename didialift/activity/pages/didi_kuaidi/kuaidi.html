@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>快的一夏</title>
+</head>
+	<link rel="stylesheet" href="http://static.diditaxi.com.cn/webapp/css/merged-common-ui.css">
+</head>
+	<style>
+		html,
+		body{
+			margin: 0;
+			padding: 0;
+			background:#fff;
+		}
+		img {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: auto;
+		}
+		.group{
+			width:100%;
+			overflow:hidden;
+		}
+		.group img{
+			display:block;
+		}
+		.group-a{
+			width:80%;
+			padding:0 10%;
+			overflow:hidden;
+			padding-bottom:3px;
+			background:#f1f9fc;
+		}
+		.a-line{
+			width:100%;
+			display:block;
+			overflow:hidden;
+			font-size:14px;
+			line-height:35px;
+			text-align:center;
+			background:#f77a1c;
+			font-weight:bold;
+			display:block;
+			height:34px;
+			color:#fff;
+			border-radius:5px;
+			-webkit-box-shadow:0 2px 2px rgba(0,0,0,.3);
+			text-decoration:none;
+		}
+		.a-line:hover{
+			background:#f9700a;
+		}
+		.a-line:active{
+			background:#f9700a;
+		}
+		.a-line span{
+			font-weight:normal;
+		}
+		.a-line.disabled{
+			background:#C9C9C9;
+		}
+		.a-line.disabled:hover{
+			background:#AAA;
+		}
+		.a-line.disabled:active{
+			background:#AAA;
+		}
+    </style>
+
+<body>
+	<div class="group">
+        <img src="kuaidi-img/kuaidi_1.jpg">
+        <img src="kuaidi-img/kuaidi_2.jpg">
+        <img src="kuaidi-img/kuaidi_3.jpg">
+        <img src="kuaidi-img/kuaidi_4.jpg">
+    </div>
+	<div class="group-a">
+        <a id="js-click" class="a-line" ishref="http://dc.tt/AXqp">点我领<span>“冰爽柳橙汁”</span>打车券</a>
+    </div>
+    <div class="group">
+        <img src="kuaidi-img/kuaidi_6.jpg">
+        <img src="kuaidi-img/kuaidi_7.jpg">
+        <img src="kuaidi-img/kuaidi_8.jpg">
+        <img src="kuaidi-img/kuaidi_9.jpg">
+    </div>
+	
+</body>
+</html>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=46392933" charset="UTF-8"></script>
+<script src="http://static.diditaxi.com.cn/webapp/js/merged-base-dialog.js"></script>
+<script>
+	(function(){
+		var date = new Date(),
+			hour = parseInt(date.getHours()),
+			clikcA = document.getElementById('js-click'),
+			thisHref = clikcA.getAttribute('ishref');
+		if(hour >= 11 && hour <= 14){
+			clikcA.className = 'a-line';
+			clikcA.href = thisHref;	
+		}
+		else{
+			clikcA.className = 'a-line disabled';	
+		}
+		
+		clikcA.addEventListener('click', function(){
+			if(this.className == 'a-line disabled'){
+				dd.dialog.alert('红包仅限11:00-15:00开放领取！')	
+			}	
+		});
+		
+	})()
+</script>

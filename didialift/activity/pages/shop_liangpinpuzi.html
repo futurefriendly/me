@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+    <title>积分商城</title>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    .contant {
+        width: 100%;
+        overflow: hidden;
+        background: #fa700b;
+    }
+    .item {
+        width: 48.7%;
+        display: inline-block;
+    }
+    .line {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contant">
+        <div class="item line" itemid="">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_01.jpg" />
+        </div>
+        <div class="item" itemid="1844">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_02.jpg" />
+        </div>
+        <div class="item" itemid="1848">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_03.jpg" />
+        </div>
+        <div class="item" itemid="1851">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_04.jpg" />
+        </div>
+        <div class="item" itemid="1852">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_05.jpg" />
+        </div>
+        <div class="item" itemid="1855">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_06.jpg" />
+        </div>
+        <div class="item" itemid="1857">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_07.jpg" />
+        </div>
+        <div class="item" itemid="1859">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_08.jpg" />
+        </div>
+        <div class="item" itemid="1862">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_09.jpg" />
+        </div>
+        <div class="item  line" itemid="">
+            <img src="../img-mall/liangpinpuzi/liangpinpuzi_10.jpg" />
+        </div>
+    </div>
+    <script type="text/javascript" src="http://static.diditaxi.com.cn/activity/lib/didi.jbase.js"></script>
+    <script>
+    addEventListener("load", function() {
+        //设置按钮的相对高度
+        var _document = document,
+            screenHeight = window.screen.height,
+            dv_main = _document.querySelector(".contant");
+
+        //get url params
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return r[2];
+            return "";
+        }
+
+        function returnUrl(id) {
+            var _url = 'http://diditaxi.com.cn/imall/detail?id=' + id + '&token=' + getQueryString("token") + '&lat=' + getQueryString("lat") + '&lng=' + getQueryString("lng");
+            return _url;
+        }
+
+        touch(dv_main, function(event) {
+            if (event.target.className == "item" || event.target.parentNode.className == "item") {
+                var _target = event.target.nodeName == "DIV" ? event.target : event.target.parentNode;
+                var _itemid = _target.getAttribute("itemid");
+                if (_itemid) {
+                    location.href = returnUrl(_itemid);
+                }
+            }
+        }, false);
+
+    }, false);
+    </script>
+</body>
+
+</html>
