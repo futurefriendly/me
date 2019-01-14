@@ -272,6 +272,8 @@ p{ margin-bottom:.625rem; text-align:justify; font-family:Georgia, serif}
 blockquote{ padding:2em; font-family:Georgia, serif}
 .container{ position:relative; max-width:1020px; margin:0 4%;}
 
+.lg_only{ display:none;}
+
 .plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .5s;}
 .leaf{ position:relative; width:11px; height:11px;}
 
@@ -409,6 +411,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 }
 
 @media (min-width:600px){
+.lg_only{ display:block;}
 .paper{ max-width:90%}
 blockquote{ margin-right:1rem;}
 .pubwrap{ position:relative;}
@@ -477,7 +480,7 @@ nav .leaf .l_a .in:after{ display:none}
 .showcase .c1 .phone .d2{ width:64px; height:6px; background:#ddd; border-radius:3px; top:46px; left:50%; margin-left:-32px}
 .showcase .c1 .phone .d3{ width:8px; height:8px; background:#ddd; border-radius:4px; top:20px; left:50%; margin-left:-4px}
 .showcase .c1 .phone .d4{ width:12px; height:12px; background:#ddd; border-radius:6px;top:43px; left:120px}
-.showcase .c2{ padding-top:110px;}
+.showcase .c2{ padding-top:100px;}
 
 #cnzz:before{ position:absolute; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
   transform:translateY(-100%);
@@ -882,6 +885,7 @@ $(function(){
             </div>
             <div class="c2 clearfix">
               <p><span class="tx_up">Operational Pages of DiDi Hitch Mobile: </span><br>We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</p>
+              <p class="lg_only">Tap or drag the content on the PHONE area to preview more if you are using a desktop browser.</p>
               <h3 class="mt20"><strong>Transport During The Spring Festival<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>December 2016</strong></p>
               <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/invitation2016.html">Play</a></p>
