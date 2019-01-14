@@ -55,8 +55,8 @@ img{ vertical-align:top; max-width:100%}
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-envelope:before {
-  content: "\e900";
+.icon-envelop:before {
+  content: "\e945";
 }
 .icon-wechat:before {
   content: "\e901";
@@ -167,6 +167,16 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .tx_24{ font-size:1.5rem}
 
 .tx_up{ text-transform:uppercase;}
+
+::-webkit-input-placeholder { color:#aaa;}
+
+.inputTxt,
+.inputArea{ padding:.5rem 1rem; border:#000 1px solid; background:#fff; color:#666; vertical-align:middle}
+
+.inputTxt:focus,
+.inputArea:focus{}
+
+.inputArea{ line-height:1.8}
 
 /* 布局
 ----------------------------------------------------------------*/
@@ -379,7 +389,14 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .paper .main p:first-child{ text-indent:0}
 .paper .main:first-letter{ font-size:400%; line-height:1; margin-right:.1em; float:left;}
 
+.contactform input{ width:100%; box-sizing:border-box;}
+.contactform textarea{ width:100%; height:12rem; box-sizing:border-box;}
+
 @media screen and (min-width:600px){
+
+.contactform input{ width:30rem; max-width:80%}
+.contactform textarea{ width:30rem; max-width:80%; height:12rem;}
+
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
 }
 
@@ -589,7 +606,7 @@ $(function(){
 <a data-scroll href="#7"><span class="icon-html-five mr5"></span>Animation</a><br>
 <a data-scroll href="#8"><span class="icon-html-five mr5"></span>Make Websites</a><br>
 <a data-scroll href="#9"><span class="icon-html-five mr5"></span>Build Tools</a><br>
-<a data-scroll href="#0"><span class="icon-envelope mr5"></span>Get In Touch</a><br>
+<a data-scroll href="#0"><span class="icon-envelop mr5"></span>Get In Touch</a><br>
 </div>
 <div class="leaf">
 	<div class="l_a"><div class="in"></div></div>
@@ -960,16 +977,23 @@ $(function(){
 		</div>
 		<span><span class="icon-leaf"></span> Get in Touch</span>
 	</h2>
-	<ul>
+  <div class="contactform mt20">
+    <form method="POST" action="https://formspree.io/bienfantaisie@gmail.com">
+      <p><input type="email" name="email" class="inputTxt" placeholder="Your Email" maxlength="100" /></p>
+      <p><textarea name="message" cols="30" rows="10" class="inputArea" placeholder="Message" maxlength="2000"></textarea></p>
+      <p><button type="submit" class="btn">Send Message</button></p>
+    </form>
+  </div>
+	<!-- <ul>
     <li class="mb0">
       <a href="mailto:bienfantaisie@gmail.com">
-        <span class="icon-envelope"></span><span class="ml5">EMAIL: bienfantaisie@gmail.com</span>
+        <span class="icon-envelop"></span><span class="ml5">EMAIL: bienfantaisie@gmail.com</span>
       </a></li>
     <li class="mb0 pt10">
       <a href="https://www.linkedin.com/in/bennychak/">
         <span class="icon-linkedin"></span><span class="ml5">LinkedIn: bennychak</span>
       </a></li>
-	</ul>
+	</ul> -->
 	</div>
 	</div>
 	</div>
