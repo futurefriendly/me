@@ -259,25 +259,25 @@ blockquote{ background:#f4f4f4; padding:2em; font-family:Georgia, serif}
 .plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .5s;}
 .leaf{ position:relative; width:11px; height:11px;}
 
-.leaf .a,
-.leaf .b,
-.leaf .d{ position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
-.leaf .b{ transform:rotateZ(120deg);}
-.leaf .d{ transform:rotateZ(240deg);}
+.leaf .l_a,
+.leaf .l_b,
+.leaf .l_c{ position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
+.leaf .l_b{ transform:rotateZ(120deg);}
+.leaf .l_c{ transform:rotateZ(240deg);}
 .leaf .in{ position:relative; width:9px; height:9px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
 .leaf .in:after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:0; border-top:#000 1px solid; transform:rotate(45deg); transform-origin:3px 0;}
-.leaf .a .in{ transform:scale(1.25) translateZ(60px);}
-.leaf .b .in{ transform:scale(1.25) translateZ(60px);}
-.leaf .d .in{ transform:scale(1.25) translateZ(60px);}
+.leaf .l_a .in{ transform:scale(1.25) translateZ(60px);}
+.leaf .l_b .in{ transform:scale(1.25) translateZ(60px);}
+.leaf .l_c .in{ transform:scale(1.25) translateZ(60px);}
 
 .e_plant_logo{ display:block; position:absolute; left:0; top:0; height:80px; width:80px;  transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
 .e_plant_logo .leaf{ width:80px; height:80px;
 	animation:plant_logo 60s ease-in-out infinite;
 	transform-origin:0 0;
 }
-.e_plant_logo .leaf .a,
-.e_plant_logo .leaf .b,
-.e_plant_logo .leaf .d{ width:80px; height:80px;}
+.e_plant_logo .leaf .l_a,
+.e_plant_logo .leaf .l_b,
+.e_plant_logo .leaf .l_c{ width:80px; height:80px;}
 .e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
 .e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
 
@@ -285,9 +285,9 @@ h2 .plant{ display:none}
 
 .e_plant_act{ position:absolute; left:0}
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
-.e_plant_act .leaf .a:hover .in,
-.e_plant_act .leaf .b:hover .in,
-.e_plant_act .leaf .d:hover .in{ transform:rotateZ(10deg);}
+.e_plant_act .leaf .l_a:hover .in,
+.e_plant_act .leaf .l_b:hover .in,
+.e_plant_act .leaf .l_c:hover .in{ transform:rotateZ(10deg);}
 
 @keyframes plant_logo{
 	0%{transform:rotateZ(0deg);}
@@ -391,7 +391,7 @@ blockquote{ margin-right:1rem;}
 .pubimg{ text-align:left; float:left; margin-right:1.25rem;}
 .pubimg:hover img{ transform:perspective(1000px) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
 .pubimg img{ width:auto; height:15rem; transition:all .5s ease;}
-.pubtxt{ padding-top:.625rem; margin-top:0;}
+.pubtxt{ padding-top:.625rem; padding-bottom:6rem; margin-top:0;}
 .pubtxt p{ line-height:2em}
 .pubtxt .btm{ position:absolute; bottom:.625rem;}
 .sampletext{}
@@ -411,13 +411,13 @@ h2{ padding-left:0; font-size:1.8rem; letter-spacing:.06em}
 h3 + p{ font-size:1rem}
 .e_plant_logo{ position:absolute; padding:100px 0 0 10px;}
 .btn,.btn2{ display:inline-block;}
-.btn{ margin-top:0}
+.btn,
 .btn2{ margin-top:.3rem}
 .bottom{ position:absolute; bottom:0; right:0; right:-3rem; bottom:-2.7rem; display:block; margin-top:0; width:6rem; text-align:center;}
 .bottom .leaf{ display:block; margin:0 auto;}
-.bottom .leaf .a{ transform:rotate(45deg); transform-origin:center center}
-.bottom .leaf .a .in{ background:none;}
-.bottom .leaf .a .in:after{ display:none}
+.bottom .leaf .l_a{ transform:rotate(45deg); transform-origin:center center}
+.bottom .leaf .l_a .in{ background:none;}
+.bottom .leaf .l_a .in:after{ display:none}
 .bottom a{ padding:.625rem 0; color:#000; width:6.25rem; white-space:nowrap;}
 footer{ margin-top:4rem;}
 li img{ margin-left:0; margin-right:0}
@@ -437,9 +437,9 @@ li img{ margin-left:0; margin-right:0}
 h1{ padding:80px 0 .5em;}
 nav{ display:block;}
 nav .leaf{ display:block; margin:-8px 0 0 -115px}
-nav .leaf .a{ transform:rotate(45deg); transform-origin:center center}
-nav .leaf .a .in{ background:none;}
-nav .leaf .a .in:after{ display:none}
+nav .leaf .l_a{ transform:rotate(45deg); transform-origin:center center}
+nav .leaf .l_a .in{ background:none;}
+nav .leaf .l_a .in:after{ display:none}
 
 .showcase .inner{ width:auto}
 
@@ -593,7 +593,7 @@ $(function(){
 <a data-scroll href="#0"><span class="icon-envelope mr5"></span>Get In Touch</a><br>
 </div>
 <div class="leaf">
-	<div class="a"><div class="in"></div></div>
+	<div class="l_a"><div class="in"></div></div>
 </div>
 </nav>
 
@@ -601,19 +601,18 @@ $(function(){
 	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
 	<h1>Dongfang's Portfolio</h1>
 	<blockquote>
-		<p class="mb0"><span class="f">Dōngfāng</span> is a craftsman with a cross-knowledge background located in Beijing. As a "user-centered, content-oriented, device-adapted" interaction designer or UI developer who is passionate about Web, he used to work for Tencent, Alibaba and DiDi Chuxing group.</p>
-		<!-- <p>Recent years, I have paid his attention in Content Strategy area. The <i>“Future Friendly Web Design thinking”</i> which was established by Jeremy Keith and friends was selected by DONGFANG as the core methodology, it means that “Content First”, “Mobile First” and “Orbital Content” should be considered as the most important and significant rules in the design process.</p>
-		<p class="mb0 mt20">
+		<p>Dōngfāng is a craftsman with a cross-knowledge background located in Beijing. As a "user-centered, content-oriented, device-adapted" interaction designer or UI developer who is passionate about Web, he used to work for Tencent, Alibaba and DiDi Chuxing group.</p>
+		<p class="mb0">
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-en.pdf">Download Resume</a>
 			<a class="btn" target="_blank" href="http://futurefriendly.cn/me/zhai-resume-cn.pdf">查看中文简历</a>
-		</p> -->
+		</p>
 	</blockquote>
   <section>
     <a id="1"></a>
     <h2>
       <div class="plant e_plant_act">
         <div class="leaf">
-          <div class="a"><div class="in"></div></div>
+          <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
       <span><span class="icon-leaf"></span> Overview</span>
@@ -636,7 +635,7 @@ $(function(){
     <h2>
       <div class="plant e_plant_act">
         <div class="leaf">
-          <div class="a"><div class="in"></div></div>
+          <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
       <span><span class="icon-leaf"></span> Micro-fiction</span></h2>
@@ -665,7 +664,7 @@ $(function(){
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
-  				<div class="a"><div class="in"></div></div>
+  				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
   		<span><span class="icon-leaf"></span> Translation</span>
@@ -732,7 +731,7 @@ $(function(){
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
-  				<div class="a"><div class="in"></div></div>
+  				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
   		<span><span class="icon-leaf"></span> Keynotes</span>
@@ -769,7 +768,7 @@ $(function(){
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
-  				<div class="a"><div class="in"></div></div>
+  				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
   		<span><span class="icon-leaf"></span> Design System<span></h2>
@@ -793,7 +792,7 @@ $(function(){
     <h2>
       <div class="plant e_plant_act">
         <div class="leaf">
-          <div class="a"><div class="in"></div></div>
+          <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
       <span><span class="icon-leaf"></span> Interaction</span></h2>
@@ -834,7 +833,7 @@ $(function(){
     <h2>
       <div class="plant e_plant_act">
         <div class="leaf">
-          <div class="a"><div class="in"></div></div>
+          <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
       <span><span class="icon-leaf"></span> Animation</span>
@@ -882,7 +881,7 @@ $(function(){
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
-  				<div class="a"><div class="in"></div></div>
+  				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
   		<span><span class="icon-leaf"></span> Make Websites</span></h2>
@@ -910,7 +909,7 @@ $(function(){
   	<h2>
   		<div class="plant e_plant_act">
   			<div class="leaf">
-  				<div class="a"><div class="in"></div></div>
+  				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
   		<span><span class="icon-leaf"></span> Build Tools</span></h2>
@@ -932,7 +931,7 @@ $(function(){
 
 	<div class="bottom">
 		<div class="leaf">
-			<div class="a"><div class="in"></div></div>
+			<div class="l_a"><div class="in"></div></div>
 		</div>
 		<a href="#">back to top</a>
 	</div>
@@ -941,9 +940,9 @@ $(function(){
 
 <div class="plant e_plant_act e_plant_logo">
 	<div class="leaf">
-		<div class="a"><div class="in"></div></div>
-		<div class="b"><div class="in"></div></div>
-		<div class="d"><div class="in"></div></div>
+		<div class="l_a"><div class="in"></div></div>
+		<div class="l_b"><div class="in"></div></div>
+		<div class="l_c"><div class="in"></div></div>
 	</div>
 </div>
 
@@ -956,7 +955,7 @@ $(function(){
 	<h2>
 		<div class="plant e_plant_act">
 			<div class="leaf">
-				<div class="a"><div class="in"></div></div>
+				<div class="l_a"><div class="in"></div></div>
 			</div>
 		</div>
 		<span><span class="icon-leaf"></span> Get in Touch</span>
