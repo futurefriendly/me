@@ -339,17 +339,10 @@ li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem 
 
 .showcase{ width:100%; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;}
 .showcase .inner{}
+
 .showcase .c1{ display:none; float:left; padding-left:20px; padding-bottom:20px; padding-top:1.5rem; margin-right:50px}
-.showcase .c1 .phone{ position:relative; border-radius:50px; padding:90px 20px; box-shadow:#ddd 5px 5px 30px; overflow:hidden;}
+.showcase .c1 .phone{ position:relative; overflow:hidden;}
 .showcase .c1 .phone iframe{ border:#000 2px solid;}
-.showcase .c1 .phone .d1,
-.showcase .c1 .phone .d2,
-.showcase .c1 .phone .d3,
-.showcase .c1 .phone .d4{ position:absolute; display:block}
-.showcase .c1 .phone .d1{ width:50px; height:50px; border:#ddd 2px solid; bottom:20px; left:50%; margin-left:-25px; border-radius:26px}
-.showcase .c1 .phone .d2{ width:64px; height:6px; background:#ddd; border-radius:3px; top:46px; left:50%; margin-left:-32px}
-.showcase .c1 .phone .d3{ width:8px; height:8px; background:#ddd; border-radius:4px; top:20px; left:50%; margin-left:-4px}
-.showcase .c1 .phone .d4{ width:12px; height:12px; background:#ddd; border-radius:6px;top:43px; left:120px}
 .showcase .c2{ overflow:hidden;}
 
 i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
@@ -391,14 +384,6 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .option{display:block; text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
 }
 
-@media (max-width:599px){
-.showcase .c1 .phone{ padding:0;border-radius:0; box-shadow:none}
-.showcase .c1 .phone .d1,
-.showcase .c1 .phone .d2,
-.showcase .c1 .phone .d3,
-.showcase .c1 .phone .d4{ display:none}
-.showcase .c2{ padding-top:0}
-}
 @media (min-width:600px){
 .paper{ padding:3% 10% 0 0;}
 blockquote{ margin-right:1rem;}
@@ -445,8 +430,6 @@ li img{ margin-left:0; margin-right:0}
 .singleimg:after{ display:none;}
 
 .li_weishi{ margin-top:-5rem}
-
-.showcase .c1{ display:block;}
 }
 
 @media (min-width:1240px){
@@ -459,6 +442,18 @@ nav .leaf .a .in{ background:none;}
 nav .leaf .a .in:after{ display:none}
 
 .showcase .inner{ width:auto}
+
+.showcase .c1{ display:block;}
+.showcase .c1 .phone{ border-radius:50px; padding:90px 20px; box-shadow:#ddd 5px 5px 30px;}
+.showcase .c1 .phone .d1,
+.showcase .c1 .phone .d2,
+.showcase .c1 .phone .d3,
+.showcase .c1 .phone .d4{ position:absolute; display:block}
+.showcase .c1 .phone .d1{ width:50px; height:50px; border:#ddd 2px solid; bottom:20px; left:50%; margin-left:-25px; border-radius:26px}
+.showcase .c1 .phone .d2{ width:64px; height:6px; background:#ddd; border-radius:3px; top:46px; left:50%; margin-left:-32px}
+.showcase .c1 .phone .d3{ width:8px; height:8px; background:#ddd; border-radius:4px; top:20px; left:50%; margin-left:-4px}
+.showcase .c1 .phone .d4{ width:12px; height:12px; background:#ddd; border-radius:6px;top:43px; left:120px}
+.showcase .c2{ padding-top:110px;}
 
 #cnzz:before{ position:absolute; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
   transform:translateY(-100%);
@@ -541,7 +536,7 @@ function textsize(n,o){
 
 $(function(){
   $('.f_play').on(tapend,function(){
-      $(this).attr('target',(windowW > 599)?'h5stage':'_blank');
+      $(this).attr('target',(windowW > 1239)?'h5stage':'_blank');
   });
 });
 </script>
@@ -592,7 +587,7 @@ $(function(){
 <a data-scroll href="#4"><span class="icon-slideshare mr5"></span>Keynotes</a><br>
 <a data-scroll href="#5"><span class="icon-html-five mr5"></span>Design System</a><br>
 <a data-scroll href="#6"><span class="icon-html-five mr5"></span>Interaction</a><br>
-<!-- <a data-scroll href="#7"><span class="icon-html-five mr5"></span>Animation</a><br> -->
+<a data-scroll href="#7"><span class="icon-html-five mr5"></span>Animation</a><br>
 <a data-scroll href="#8"><span class="icon-html-five mr5"></span>Make Websites</a><br>
 <a data-scroll href="#9"><span class="icon-html-five mr5"></span>Build Tools</a><br>
 <a data-scroll href="#0"><span class="icon-wechat mr5"></span>Get In Touch</a><br>
@@ -834,7 +829,7 @@ $(function(){
       </li>
     </ul>
   </section>
-  <!-- <section>
+  <section>
     <a id="7"></a>
     <h2>
       <div class="plant e_plant_act">
@@ -849,7 +844,6 @@ $(function(){
         <h3><strong>DiDi Hitch<span class="icon-html-five ml10"></span></strong></h3>
         <p><strong>2015 - 2016, DIDI CHUXING</strong></p>
         <p><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
-        <p><span class="tx_up">Operational Pages of DiDi Hitch Mobile: </span>We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</p>
         <div class="showcase clearfix">
           <div class="inner">
             <div class="c1 clearfix">
@@ -862,26 +856,27 @@ $(function(){
               </div>
             </div>
             <div class="c2 clearfix">
+              <p><span class="tx_up">Operational Pages of DiDi Hitch Mobile: </span><br>We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</p>
               <h3 class="mt20"><strong>Transport During The Spring Festival<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>December 2016</strong></p>
               <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/invitation2016.html">Play</a></p>
               <h3 class="mt20"><strong>Users' Trip Data on The 1<sup>st</sup> Anniversary Show<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>June 2016</strong></p>
               <p><a class="btn2 f_play" href="http://futurefriendly.cn/ds/page/startrek2016.html">Play</a></p>
-              <h3 class="mt20"><strong>Love Stories on The Road<span class="icon-html-five ml10"></span></strong></h3>
+              <!-- <h3 class="mt20"><strong>Love Stories on The Road<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>March 2016</strong></p>
               <p>"Cross My Mind" (Twin Forks, 2014), Time Signature 4/4, 91bpm<span class="icon-music ml10"></span></p>
               <p><a class="btn2 f_play" href="http://www.futurefriendly.cn/me/didialift/pinche/staticpage/romance2016.html">Play</a></p>
               <h3 class="mt20"><strong>Hitch Man, Take Turns to Be Driver<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>August 2015</strong></p>
               <p>"Come and Get Your Love" (Redbone, 1973), Time Signature 4/4, 108bpm<span class="icon-music ml10"></span></p>
-              <p><a class="btn2 f_play" href="http://www.futurefriendly.cn/me/didialift/pinche/staticpage/pop.html">Play</a></p>
+              <p><a class="btn2 f_play" href="http://www.futurefriendly.cn/me/didialift/pinche/staticpage/pop.html">Play</a></p> -->
             </div>
           </div>
         </div>
       </li>
     </ul>
-  </section> -->
+  </section>
 	<section>
   	<a id="8"></a>
   	<h2>
