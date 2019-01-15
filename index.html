@@ -146,7 +146,7 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .btn2:active,
 .btn2:visited{ color:#fff;}
 .btn,
-.btn2{ display:block; text-align:center; margin-top:.625rem; border-radius:.25rem; vertical-align:top; border:none; cursor:pointer; font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
+.btn2{ display:block; width:100%; box-sizing:border-box; text-align:center; margin-top:.625rem; border-radius:.25rem; vertical-align:top; border:none; cursor:pointer; font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
 .btn,
 .btn:active,
 .btn:hover{ padding:.5rem 1.25rem;
@@ -437,9 +437,7 @@ h1{ font-size:3.5rem; text-align:left; padding:50px 0 .5em;}
 h2{ padding-left:0; font-size:1.8rem; letter-spacing:.06em}
 h3 + p{ font-size:1rem}
 .e_plant_logo{ position:absolute; padding:100px 0 0 10px;}
-.btn,.btn2{ display:inline-block;}
-.btn,
-.btn2{ margin-top:.3rem}
+.btn,.btn2{ display:inline-block; margin-top:.3rem; width:auto;}
 .bottom{ position:absolute; bottom:0; right:0; right:-3rem; bottom:-3rem; display:block; margin-top:0; width:6rem; text-align:center;}
 .bottom .leaf{ display:block; margin:0 auto;}
 .bottom .leaf .l_a{ transform:rotate(45deg); transform-origin:center center}
