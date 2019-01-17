@@ -268,7 +268,13 @@ a.c_a1:active{ color:#366}
 a.c_a2{ color:#366}
 a.c_a2:active{ color:#366}
 
-body{ border-top:#000 .3rem solid; background:#fff;}
+body{ background:#fff;}
+
+.loadbar{ position:fixed; z-index:1; top:0; left:0; right:0; width:100%; overflow:hidden; background-color:#000;}
+#loadbar{ display:block; width:110%; height:.3rem; background-color:#fff;
+  transform:translateX(-100%);
+}
+
 p{ margin-bottom:.625rem; font-family:Georgia, serif}
 blockquote{ padding:2em; font-family:Georgia, serif}
 .container{ position:relative; max-width:1020px; margin:0 4%;}
@@ -289,7 +295,7 @@ blockquote{ padding:2em; font-family:Georgia, serif}
 .leaf .l_b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .l_c .in{ transform:scale(1.25) translateZ(60px);}
 
-.e_plant_logo{ display:block; position:absolute; left:0; top:0; height:80px; width:80px;  transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
+.e_plant_logo{ display:block; position:absolute; z-index:3; left:0; top:0; height:80px; width:80px;  transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
 .e_plant_logo .leaf{ width:80px; height:80px;
 	animation:plant_logo 60s ease-in-out infinite;
 	transform-origin:0 0;
@@ -376,11 +382,22 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
 
-nav{ display:none; position:fixed; top:0; opacity:0; transform:translateY(-100%); z-index:1; transition:all .5s ease; line-height:1.3em}
-nav .ins{ width:220px; margin-left:-110px; padding-left:1em; padding-bottom:1em; border-left:#000 1px solid; transition:all .5s ease;}
-nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap;}
-.scroll nav{ transform:translateY(0); opacity:1;}
+nav{ display:none; opacity:0; position:fixed; top:0; z-index:2; line-height:1.3em;
+  transform:translateY(-100%);
+  transition:all .5s ease;
+}
+nav .ins{ width:220px; margin-left:-110px; padding-left:1em; padding-bottom:1em; border-left:#000 1px solid; overflow:hidden;
+}
+nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap;
+  transform:translateX(-120%);
+  transition:transform .5s ease;
+  transition-delay:.8s;
+}
+.scroll nav{ opacity:1;
+  transform:translateY(0);
+}
 .scroll nav .ins{ padding-top:1rem;}
+.scroll nav .ins a{ transform:translateX(0);}
 
 .singleimg{ position:relative;}
 .singleimg:before{ content:''; position:absolute; z-index:1; left:0; top:0; height:100%; width:5px;
@@ -430,7 +447,7 @@ section:hover{ z-index:1; position:relative;}
 .f_zoom{ position:relative; transition:transform ease .3s; transform-origin:50% 0; background-color:#fff}
 .f_zoom:hover{ transform:scale(2); z-index:1}
 .e_plant_act{ position:static;}
-.container{ margin:0 auto;}
+.container{ margin:0 auto; padding-bottom:5rem}
 .content{ position:relative; margin-right:3.5rem; padding-left:130px; border-right:#000 1px solid;}
 section,
 .section{ margin-right:1rem}
@@ -445,7 +462,8 @@ h3 + p{ font-size:1rem}
 .bottom .leaf .l_a .in{ background:none;}
 .bottom .leaf .l_a .in:after{ display:none}
 .bottom a{ padding:.625rem 0; color:#000; width:6.25rem; white-space:nowrap;}
-footer{ margin-top:5rem;}
+footer{}
+footer .container{ padding-bottom:0}
 li img{ margin-left:0; margin-right:0}
 .semiul li{ width:100%; float:left;}
 .semiul li img{ width:24rem; max-width:100%}
@@ -521,16 +539,23 @@ var hastouch = 'ontouchstart' in window,
 var scrollPos = 0;
 var windowH = $(window).height();
 var windowW = $(window).width();
+var documentH = 0;
+var pct = 0;
 
 function onScroll(){
 
-    scrollPos = Math.floor($(document).scrollTop() - 50);
+    scrollPos = Math.floor($(document).scrollTop());
 
-    if (scrollPos > 240){
+    if (scrollPos > 290){
     	$("body").addClass('scroll');
     }else{
     	$("body").removeClass('scroll');
     }
+    documentH = $(document).height();
+    pct = 100 - scrollPos / documentH * 100 + '%';
+    $("#loadbar").css({
+      'transform':'translateX(-' + pct + ')'
+    });
 
 }
 
@@ -570,7 +595,7 @@ $(function(){
 });
 </script>
 </head>
-<body>
+<body ontouchstart="">
 <style>
 /*.tears{ display:none; position:absolute; right:-10vh; top:100vh; width:700px; height:400px; transform:rotateZ(-45deg);}
 .tear{ width:100px; height:100px; float:left; margin:5px; opacity:.1;
@@ -1019,5 +1044,6 @@ $(function(){
 <div style="text-align:center">
   <script type="text/javascript" src="http://tajs.qq.com/stats?sId=53540232" charset="UTF-8"></script> 
 </div>
+<div class="loadbar"><span id="loadbar"></span></div>
 </body>
 </html>
