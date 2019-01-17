@@ -540,9 +540,16 @@ footer{ display:none;}
 }
 </style>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.min.js?config=TeX-AMS_CHTML"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script> -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
 <script>
+
 var hastouch = 'ontouchstart' in window,
     tapend = hastouch?'touchend':'click';
 
@@ -781,10 +788,12 @@ $(function(){
           <p class="tx_cm">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
   					<div class="col">
-  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->For this example, we’ll visualize one of the most important findings in modern physics—Hubble’s law. According to that law, the universe is expanding, and as a result, the speed at which we perceive distant galaxies to be moving varies according to their distance from us. More precisely, Hubble’s law proposes that the variation, or shift, in this speed is a linear function of distance. To visualize the law, we can chart the speed variation (known as red shift velocity) versus distance for several galaxies. If Hubble is right, the chart should look like a line. For our data, we’ll use galaxies and clusters from Hubble’s original 1929 paper but updated with current values for distance and red shift velocities. (p. 224; ch. 7).</p>
+  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->We haven’t specified the ranges of the x- and y-scales, but assume for now that each ranges from 0 to 100. The starting x-value of 12.5, therefore, is 12.5 percent of the full range. When we convert that value to polar coordinates, the result will be 12.5 percent of the full 360°. That’s 45°, or π/4. The x-value extends another 25 percent, so the final x-value adds another 90°, or π/2, to the starting value. For the y-values, our scales take the square root and map the results to the domain from 0 to 250 (maxRadius). The initial value of 10, therefore, is divided by 100 (for the range) and transformed to 0.1 × 250, or 79. The final value of 10 + 30 results in a radius of 0.4 × 25 0, or 158. That’s the process that creates an SVG for each data value. (p. 256; ch. 7).</p>
   					</div>
   					<div class="col">
-  						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> -->在本例中，我们将把现代物理学最重要的发现之一——哈勃定律——的效果用可视化实现出来。根据此定律，宇宙是无限延展的，由此，我们所能感知到的遥远的星系的移动速度，随着它距离我们的距离的变化而变化。更准确地说，哈勃定律提出，对于这一速度的任何的变化和转移，都与距离呈线性函数关系。为了更直观地观察这一定律，我们可以将速度的变化（也被称作是“红移光谱速度”）和几个星体之间的距离的关系制成图表。如果哈勃定律是正确的，那么这个图表看上去应该就是一条直线。而对于我们的数据来说，我们要使用的，是来自于哈勃于1929年发表的初版的论文，但又根据各星体距离和红移光谱速度而随时更新的即时值。 (第232页; 第7章).</p>
+  						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> -->
+\(ax^2 + bx + c = 0\)
+                我们尚未定义x和y轴的取值范围，现在我们假设它们的范围都是从0至100。x值初始为12.5，对于取值范围为100的x轴来说，这个x值的起始点其实也就是整个x轴范围的12.5%。当我们把这一个值转换成极坐标的时候，结果将会转换为360°的12.5%，也就是45°，或者π/4。随后，x值在直角坐标系内递增了25%，换成极坐标的显示方法，x值即又递增了90°，或者π/2。另一方面，对于y值来说，直角坐标系内的值将会以开平方根的方法转换为极坐标，并在0到250的范围内（maxRadius）取值。因为y值的初始值等于10，即10/100*100%=10%（0.1），因此，y值的极坐标会转换为&radic;0.1×250≈79。而对于y轴上递增的30，我们要和之前初始的10合并计算，即将(10+30)/100×100%=40%（0.4）的值转换为极坐标，计算方法是&radic;0.4×250≈158。这就是为每个数据值建立SVG的全部处理过程。 (第268页; 第7章).</p>
   					</div>
   				</div>
   			</div>
