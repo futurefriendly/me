@@ -11,7 +11,7 @@
 body,img{ margin:0;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td,header,footer,nav,section{margin:0;padding:0}
 html,body{}
-html{overflow-y:scroll; -webkit-overflow-scrolling: touch; background-color:#000}
+html{overflow-y:scroll; -webkit-overflow-scrolling: touch; background-color:#000;}
 header,footer,nav,section{ display: block;}
 table{border-collapse:collapse;border-spacing:0}
 img,video{border:0; max-width:100%; vertical-align:top}
@@ -250,6 +250,12 @@ body .pl0{ padding-left:0!important}
   background-size:3vw 3vw;
   background-attachment:fixed;
 }
+.bg_belt_dark{
+  background-image:linear-gradient(45deg, #000 0, #000 25%, #fff 25%, #fff 50%, #000 50%, #000 75%, #fff 75%, #fff);
+  background-size:3rem 3rem;
+  background-size:3vw 3vw;
+  background-attachment:fixed;
+}
 
 /* 链接色
 ----------------------------------------------------------------*/
@@ -384,7 +390,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
 
 nav{ display:none; position:fixed; top:0; z-index:1; line-height:1.3em;
-  transform:translateY(-100%);
+  transform:translateY(-110%);
   transition:all .5s ease;
 }
 nav .ins{ width:220px; margin-left:-110px; padding-left:1em; padding-bottom:1em; border-left:#000 1px solid; overflow:hidden;
