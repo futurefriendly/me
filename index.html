@@ -11,7 +11,7 @@
 body,img{ margin:0;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td,header,footer,nav,section{margin:0;padding:0}
 html,body{}
-html{overflow-y:scroll; -webkit-overflow-scrolling: touch; background-color:#000;}
+html{}
 header,footer,nav,section{ display: block;}
 table{border-collapse:collapse;border-spacing:0}
 img,video{border:0; max-width:100%; vertical-align:top}
@@ -393,21 +393,21 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
 
 nav{ display:none; position:fixed; top:0; z-index:1; line-height:1.3em;
-  transform:translateY(-110%);
-  transition:all .5s ease;
+  transform:translateY(-200%);
+  transition:all .8s ease;
 }
 nav .ins{ width:220px; margin-left:-110px; padding-left:1em; padding-bottom:1em; border-left:#000 1px solid; overflow:hidden;
 }
 nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap;
-  transform:translateX(-120%);
-  transition:transform .5s ease;
+   transform:perspective(100px) rotateX(-90deg);
+  transition:transform .8s ease;
   transition-delay:.8s;
 }
 .scroll nav{
   transform:translateY(0);
 }
 .scroll nav .ins{ padding-top:1rem;}
-.scroll nav .ins a{ transform:translateX(0);}
+.scroll nav .ins a{ transform:perspective(100px) rotateX(0);}
 
 .singleimg{ position:relative;}
 .singleimg:before{ content:''; position:absolute; z-index:1; left:0; top:0; height:100%; width:5px;
@@ -573,6 +573,7 @@ window.onscroll = function(){
   onScroll();
 };
 window.onload = function(){
+  onScroll();
   windowH = $(window).height();
   windowW = $(window).width();
 }
