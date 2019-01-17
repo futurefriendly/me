@@ -336,7 +336,7 @@ h2 .plant{ display:none}
 .bottom .leaf{ display:none}
 .bottom a{ display:block; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem;}
 
-.sampletext{ margin-top:.626rem; font-weight:100}
+.sampletext{ margin-top:1rem; font-weight:100}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
 .sampletext .text .col{ border-left:#f4f4f4 4px solid; padding-left:1rem; overflow:hidden; font-size:.875rem; font-weight:400;
 	box-sizing:border-box;
@@ -785,11 +785,11 @@ $(function(){
           <p class="tx_cm">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
   					<div class="col">
-  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->We haven’t specified the ranges of the `x`- and `y`-scales, but assume for now that each ranges from `0` to `100`. The starting `x`-value of `12.5`, therefore, is `12.5` percent of the full range. When we convert that value to polar coordinates, the result will be `12.5` percent of the full `360`&deg;. That’s `45`&deg;, or `pi / 4`. The `x`-value extends another 25 percent, so the final `x`-value adds another `90`&deg;, or `pi / 2`, to the starting value. For the `y`-values, our scales take the square root and map the results to the domain from `0` to `250` (<code>maxRadius</code>). The initial value of `10`, therefore, is divided by `100` (for the range) and transformed to `sqrt 0.1 × 250`, or `79`. The final value of `10 + 30` results in a radius of `sqrt 0.4 × 250`, or `158`. That’s the process that creates an SVG for each data value. (p. 256; ch. 7).</p>
+  						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->We haven’t specified the ranges of the `x`- and `y`-scales, but assume for now that each ranges from `0` to `100`. The starting `x`-value of `12.5`, therefore, is `12.5` percent of the full range. When we convert that value to polar coordinates, the result will be `12.5` percent of the full `360`&deg;. That’s `45`&deg;, or `pi / 4`. The `x`-value extends another 25 percent, so the final `x`-value adds another `90`&deg;, or `pi / 2`, to the starting value. For the `y`-values, our scales take the square root and map the results to the domain from `0` to `250` (<code>maxRadius</code>). The initial value of `10`, therefore, is divided by `100` (for the range) and transformed to `sqrt 0.1 times 250`, or `79`. The final value of `10 + 30` results in a radius of `sqrt 0.4 times 250`, or `158`. That’s the process that creates an SVG for each data value. (p. 256; ch. 7).</p>
   					</div>
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/dvj.jpg" /> -->
-                我们尚未定义`x`和`y`轴的取值范围，现在我们假设它们的范围都是从`0`至`100`。`x`值初始为`12.5`，对于取值范围为`100`的`x`轴来说，这个`x`值的起始点其实也就是整个`x`轴范围的`12.5%`。当我们把这一个值转换成极坐标的时候，结果将会转换为`360`&deg;的`12.5%`，也就是`45`&deg;，或者`pi / 4`。随后，`x`值在直角坐标系内递增了`25%`，换成极坐标的显示方法，`x`值即又递增了`90`&deg;，或者`pi/2`。另一方面，对于`y`值来说，直角坐标系内的值将会以开平方根的方法转换为极坐标，并在`0`到`250`的范围内（<code>maxRadius</code>）取值。因为`y`值的初始值等于`10`，即`10/100 times 100%=10%`（`0.1`），因此，`y`值的极坐标会转换为`0.1 times 250 ~~ 79`。而对于`y`轴上递增的`30`，我们要和之前初始的`10`合并计算，即将`(10+30)/100 times 100% = 40%`（`0.4`）的值转换为极坐标，计算方法是`sqrt 0.4 times 250 ~~ 158`。这就是为每个数据值建立SVG的全部处理过程。 (第268页; 第7章).</p>
+                我们尚未定义`x`和`y`轴的取值范围，现在我们假设它们的范围都是从`0`至`100`。`x`值初始为`12.5`，对于取值范围为`100`的`x`轴来说，这个`x`值的起始点其实也就是整个`x`轴范围的`12.5%`。当我们把这一个值转换成极坐标的时候，结果将会转换为`360`&deg;的`12.5%`，也就是`45`&deg;，或者`pi / 4`。随后，`x`值在直角坐标系内递增了`25%`，换成极坐标的显示方法，`x`值即又递增了`90`&deg;，或者`pi/2`。另一方面，对于`y`值来说，直角坐标系内的值将会以开平方根的方法转换为极坐标，并在`0`到`250`的范围内（<code>maxRadius</code>）取值。因为`y`值的初始值等于`10`，即`10/100 times 100%=10%`（`0.1`），因此，`y`值的极坐标会转换为`sqrt 0.1 times 250 ~~ 79`。而对于`y`轴上递增的`30`，我们要和之前初始的`10`合并计算，即将`(10+30)/100 times 100% = 40%`（`0.4`）的值转换为极坐标，计算方法是`sqrt 0.4 times 250 ~~ 158`。这就是为每个数据值建立SVG的全部处理过程。 (第268页; 第7章).</p>
   					</div>
   				</div>
   			</div>
