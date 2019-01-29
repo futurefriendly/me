@@ -344,9 +344,9 @@ h2 .plant{ display:none}
 .bottom .leaf{ display:none}
 .bottom a{ display:block; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem;}
 
-.sampletext{ margin-top:1rem; font-weight:100}
+.sampletext{ margin-top:1.5rem; font-weight:100; color:#242424;}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
-.sampletext .text .col{ border-left:#f4f4f4 4px solid; padding-left:1rem; overflow:hidden; font-size:.875rem; font-weight:400;
+.sampletext .text .col{ padding-left:5%; padding-right:5%; overflow:hidden; font-size:.875rem; font-weight:400;
 	box-sizing:border-box;
 }
 .sampletext .text .col:last-child{ margin-top:.626rem}
@@ -393,7 +393,7 @@ li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem 
 i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; padding:1px .8rem; border-radius:.2rem; font-size:.75rem; font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 
-.pubwrap{}
+.pubwrap{ padding-top:1.5rem}
 .pubimg{ text-align:center}
 .pubimg img{ width:80%; margin:0; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 2px 2px 4px; -webkit-filter:brightness(98%); background:#fff}
 .pubimg img{ margin-right:.625rem}
@@ -465,8 +465,8 @@ blockquote{ margin-right:1rem; padding:2rem;}
 .pubtxt .btm{ position:absolute; bottom:.625rem;}
 .sampletext{}
 .sampletext .text{}
-.sampletext .text .col{ width:50%; float:left; padding-right:1rem;}
-.sampletext .text .col:last-child{ margin-top:0; padding-right:0}
+.sampletext .text .col{ width:50%; float:left; padding-left:0; padding-right:1rem; text-align:justify;}
+.sampletext .text .col:last-child{ margin-top:0; padding-left:1rem; padding-right:0}
 section:hover{ z-index:1; position:relative;}
 .f_zoom{ position:relative; transition:transform ease .3s; transform-origin:50% 0; background-color:#fff}
 .f_zoom:hover{ transform:scale(2); z-index:1}
@@ -709,7 +709,7 @@ $(function(){
             <img src="./assets/cdm.svg" alt="Image of Craft Development Map" />
           </div>
         </div>
-        <p class="mt10"><a target="_blank" href="./assets/cdm.svg" class="btn">View it in a new window</a></p>
+        <p class="mt10"><a target="_blank" href="./assets/cdm.svg" class="btn2">View it in a new window</a></p>
       </li>
     </ul>
   </section>
@@ -724,11 +724,9 @@ $(function(){
       <span><span class="icon-quill"></span> Micro-fiction</span></h2>
     <ul>
       <li>
-        <h3><strong>A.I.</strong></h3>
-        <p><strong>2019, THE 45<sup>th</sup> YOUTH LITERARY AWARD OF MERIT</strong></p>
-        <p><label>Creative Writing</label></p>
         <div class="paper">
           <div class="topic"><strong>A.I.</strong></div>
+          <p style="text-align:center">(THE 45<sup>th</sup> YOUTH LITERARY AWARD OF MERIT IN 2019)</p>
           <div class="main">
             <p>In the first year, my dear, you said: "Draw a peacock with blue feathers for me." I said ok, then I did it. </p>
             <p>In the second year, you said: "Draw a peacock." I said ok, I did it, with blue feathers. </p>
@@ -763,8 +761,8 @@ $(function(){
             </h3>	
             <p class="mt10 tx_geo" style="line-height:1.5em">POST & TELECOM PRESS (2017). <br>TRANSLATED FROM: GUSTAFSON, A. (2016). ADAPTIVE WEB DESIGN (SECOND EDITION).</p>
   					<div class="btm">
-  						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn">View comments on JD.com</a>
-  						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn">E-book on epubit.com</a>
+  						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">View comments on JD.com</a>
+  						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
   					</div>
   				</div>
   			</div>
@@ -790,8 +788,8 @@ $(function(){
             </h3>
             <p class="mt10 tx_geo" style="line-height:1.5em">POST & TELECOM PRESS (2017).<br>TRANSLATED FROM: THOMAS, S. A. (2015). DATA VISUALIZATION WITH JAVASCRIPT.</p>
   					<div class="btm">
-  						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn">View comments on JD.com</a>
-  						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn">E-book on epubit.com</a>
+  						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
+  						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
   					</div>
   				</div>
   			</div>
@@ -825,25 +823,25 @@ $(function(){
         <h3><strong>From Voice & Tone to Content Strategy</strong></h3>
         <p><strong>2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
         <p>I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</p>
-				<p class="mt15"><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn">View it online</a></p>
+				<p class="mt15"><a target="_blank" href="http://futurefriendly.cn/share/voiceandtone.html" class="btn2">View it online</a></p>
 			</li>
 			<!-- <li>
         <h3><strong>The Overview of Web Design</strong></h3>
         <p><strong>2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
         <p>Considering most designers in DiDi's design team were more familiar with the mobile platform than desktop, This presentation focus on mobile: how to present a graceful web page on mobile devices? how to take the advantage of adaptivity for web pages? what is the design trend in recent years? In the end, I reviewed some concepts that frequently be discussed by UI developers.</p>
-				<p class="mt15"><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn">Chinese version online</a></p>
+				<p class="mt15"><a target="_blank" href="http://futurefriendly.cn/share/webdesign.html" class="btn2">Chinese version online</a></p>
 			</li> -->
 			<li>
         <h3><strong>Future Friendly Web Design</strong></h3>
         <p><strong>2015, <span class="logo_tencent">TENCENT INC.</span></strong></p>
         <p>This keynote is for junior designers of Tencent online media group. Here I introduced some fantastic shares by great designers around the world, sorted the core concepts and principles of Future Friendly Web Design, listed some designers, books, and resources about FFLY.</p>
-				<p class="mt15"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View English version</a> <a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/ss-47442322">简体中文PPT</a></p>
+				<p class="mt15"><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/en-47442366">View English version</a> <a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/ss-47442322">简体中文PPT</a></p>
 			</li>
 			<!-- <li>
         <h3><strong>Responsive Web Design: Rebuild as Design</strong></h3>
         <p><strong>2013, <span class="logo_tencent">TENCENT INC.</span></strong></p>
         <p>Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? With the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</p>
-				<p class="mt15"><a class="btn" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">Chinese version on slideshare</a></p>
+				<p class="mt15"><a class="btn2" target="_blank" href="https://www.slideshare.net/bienfantaisie/webrebuild-as-design">Chinese version on slideshare</a></p>
 			</li> -->
 		</ul>
 	</section>
@@ -867,7 +865,7 @@ $(function(){
             <img src="./assets/designsystem.png" />
           </div>
         </div>
-  			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn">View it online</a></div>
+  			<div><a target="_blank" href="http://futurefriendly.cn/ds/page/guideline.html" class="btn2">View it online</a></div>
   		</li>
   	</ul>
 	</section>
@@ -982,9 +980,9 @@ $(function(){
           </div>
         </div>
   			<div>
-  				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn">Visit newsen.pku.edu.cn</a>
-  				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn">Draft 1</a>
-  				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn">Draft 2</a>
+  				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
+  				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015/" class="btn2">Draft 1</a>
+  				<a target="_blank" href="http://futurefriendly.cn/pku-en-2015b/" class="btn2">Draft 2</a>
   			</div>
   		</li>
   	</ul>
@@ -1009,7 +1007,7 @@ $(function(){
             <img src="./assets/csstool.png" />
           </div>
         </div>
-  			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn">Try it online</a></div>
+  			<div><a target="_blank" href="http://futurefriendly.cn/ufoanimate/" class="btn2">Try it online</a></div>
   		</li>
   	</ul>
 	</section>
