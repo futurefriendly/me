@@ -283,6 +283,8 @@ a.c_a1:active{ color:#366}
 a.c_a2{ color:#366}
 a.c_a2:active{ color:#366}
 
+.c_dark{ color:#242424}
+
 body{ background:#fff;}
 
 .email:after{ content:"bienfantaisie@gmail.com";}
@@ -344,7 +346,7 @@ h2 .plant{ display:none}
 .bottom .leaf{ display:none}
 .bottom a{ display:block; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem;}
 
-.sampletext{ margin-top:1.5rem; font-weight:100; color:#242424;}
+.sampletext{ margin-top:1.5rem; font-weight:100;}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
 .sampletext .text .col{ padding-left:5%; padding-right:5%; overflow:hidden; font-size:.875rem; font-weight:400;
 	box-sizing:border-box;
@@ -371,8 +373,8 @@ h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, A
 section,
 .section{ padding-top:1rem;}
 h2{/* padding-left:3rem;*/ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
-h3{ font-size:1.25rem; color:#666}
-h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; font-size:.875rem}
+h3{ font-size:1.25rem; color:#242424}
+h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; font-size:.875rem; color:#242424}
 ul{}
 li{ padding-top:1rem; margin-bottom:.3rem}
 li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ /*border-radius:.125rem;*/}
@@ -428,7 +430,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .singleimg img,
 .singleimg svg{ box-sizing:border-box; width:255%; max-width:255%; border-left:transparent 10px solid; border-right:transparent 10px solid;}
 
-.paper{ font-family:Georgia, serif; padding:3% 5%; color:#242424;/* background-image:url(./assets/kite.svg); background-position:right center; background-size: 20rem; background-repeat:no-repeat;*/}
+.paper{ font-family:Georgia, serif; padding:3% 5%; /* background-image:url(./assets/kite.svg); background-position:right center; background-size: 20rem; background-repeat:no-repeat;*/}
 .paper .topic{ font-size:2.4em; text-align:center;}
 .paper .main{ line-height:2em}
 .paper .main p{ text-indent:1em}
@@ -455,7 +457,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 @media (min-width:600px){
 .lg_only{ display:block;}
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
-blockquote{ margin-right:1rem; padding:2rem;}
+blockquote{ margin-right:1.6rem; padding:2rem;}
 .pubwrap{ position:relative;}
 .pubimg{ text-align:left; float:left; margin-right:1.25rem;}
 .pubimg:hover img{ transform:perspective(1000px) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
@@ -474,7 +476,7 @@ section:hover{ z-index:1; position:relative;}
 .container{ margin:0 auto; padding-bottom:5rem}
 .content{ position:relative; margin-right:3.5rem; padding-left:130px; border-right:#000 1px solid;}
 section,
-.section{ margin-right:1rem}
+.section{ margin-right:1.6rem}
 h1{ font-size:3.7rem; text-align:left; padding:50px 0 .5em;}
 h2{ padding-left:0; font-size:1.8rem; letter-spacing:.06em}
 h3 + p{ font-size:1rem}
@@ -725,8 +727,8 @@ $(function(){
     <ul>
       <li>
         <div class="paper">
-          <div class="topic"><strong>A.I.</strong></div>
-          <p style="text-align:center">(THE 45<sup>th</sup> YOUTH LITERARY AWARD OF MERIT IN 2019)</p>
+          <div class="topic c_dark"><strong>A.I.</strong></div>
+          <p class="c_dark" style="text-align:center"><strong><span class="icon-trophy mr5"></span>THE 45<sup>th</sup> YOUTH LITERARY AWARD OF MERIT IN 2019</strong></p>
           <div class="main">
             <p>In the first year, my dear, you said: "Draw a peacock with blue feathers for me." I said ok, then I did it. </p>
             <p>In the second year, you said: "Draw a peacock." I said ok, I did it, with blue feathers. </p>
@@ -756,10 +758,10 @@ $(function(){
   				<div class="pubimg clearfix" style="background:url(./assets/awd-en.svg) center center no-repeat; background-size:contain"><img src="./assets/awd-thin.svg" class="ml10" alt="image of Adaptive Web Design in Chinese" />
   				</div>
   				<div class="pubtxt">
-            <h3 class="tx_l">
+            <h3 class="tx_l c_dark">
             <strong>渐进增强：跨平台用户体验设计</strong>
             </h3>	
-            <p class="mt10 tx_geo" style="line-height:1.5em">POST & TELECOM PRESS (2017). <br>TRANSLATED FROM: GUSTAFSON, A. (2016). ADAPTIVE WEB DESIGN (SECOND EDITION).</p>
+            <p class="mt10 tx_geo c_dark" style="line-height:1.5em">POST & TELECOM PRESS (2017). <br>TRANSLATED FROM: GUSTAFSON, A. (2016). ADAPTIVE WEB DESIGN (SECOND EDITION).</p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
@@ -767,7 +769,7 @@ $(function(){
   				</div>
   			</div>
   			<div class="sampletext clearfix">
-          <p class="tx_cm">SAMPLE PARAGRAPH:</p>
+          <p class="tx_cm c_dark">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> -->He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent. (p. 93; ch. 4).</p>
@@ -783,10 +785,10 @@ $(function(){
   				<div class="pubimg clearfix" style="background:url(./assets/dvj-en.png) center center no-repeat; background-size:contain"><img class="ml10" src="./assets/dvj.png" alt="image of Data Visualization with JavaScript in Chinese" />
   				</div>
   				<div class="pubtxt">
-            <h3 class="tx_l">
+            <h3 class="tx_l c_dark">
               <strong>JavaScript数据可视化编程</strong>
             </h3>
-            <p class="mt10 tx_geo" style="line-height:1.5em">POST & TELECOM PRESS (2017).<br>TRANSLATED FROM: THOMAS, S. A. (2015). DATA VISUALIZATION WITH JAVASCRIPT.</p>
+            <p class="mt10 tx_geo c_dark" style="line-height:1.5em">POST & TELECOM PRESS (2017).<br>TRANSLATED FROM: THOMAS, S. A. (2015). DATA VISUALIZATION WITH JAVASCRIPT.</p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
@@ -794,7 +796,7 @@ $(function(){
   				</div>
   			</div>
   			<div class="sampletext clearfix">
-          <p class="tx_cm">SAMPLE PARAGRAPH:</p>
+          <p class="tx_cm c_dark">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->We haven’t specified the ranges of the `x`- and `y`-scales, but assume for now that each ranges from 0 to 100. The starting `x`-value of 12.5, therefore, is 12.5 percent of the full range. When we convert that value to polar coordinates, the result will be 12.5 percent of the full 360&deg;. That’s 45&deg;, or `pi \/ 4`. The `x`-value extends another 25 percent, so the final `x`-value adds another 90&deg;, or `pi \/ 2`, to the starting value. For the `y`-values, our scales take the square root and map the results to the domain from 0 to 250 (<code>maxRadius</code>). The initial value of 10, therefore, is divided by 100 (for the range) and transformed to `sqrt 0.1 times 250`, or 79. The final value of `10 + 30` results in a radius of `sqrt 0.4 times 250`, or 158. That’s the process that creates an SVG for each data value. (p. 256; ch. 7).</p>
