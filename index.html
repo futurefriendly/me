@@ -106,8 +106,8 @@ img{ vertical-align:top; max-width:100%}
 .icon-magic:before {
   content: "\f0d0";
 }
-.icon-embed2:before {
-  content: "\ea80";
+.icon-embed:before {
+  content: "\ea7f";
 }
 
 @font-face {
@@ -568,7 +568,8 @@ footer{ display:none;}
 .cn .paper{ font-family:Pingfang, sans-serif;}
 .cn .paper .topic{ font-size:2rem}
 .cn .paper strong{ font-weight:400}
-.cn nav .ins a{ font-family:Pingfang, sans-serif; font-weight:400; font-size:.875rem}
+.cn nav .ins a,
+.cn .bottom a{ font-family:Pingfang, sans-serif; font-weight:400; font-size:.875rem}
 </style>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
@@ -688,8 +689,8 @@ $(function(){
 <a data-scroll href="#designsystem"><span class="icon-magic mr5"></span><span data-lang="la_5">Design System</span></a><br>
 <a data-scroll href="#interaction"><span class="icon-magic mr5"></span><span data-lang="la_6">Interaction</span></a><br>
 <a data-scroll href="#animation"><span class="icon-magic mr5"></span><span data-lang="la_7">Animation</span></a><br>
-<a data-scroll href="#makewebsites"><span class="icon-embed2 mr5"></span><span data-lang="la_8">Make Websites</span></a><br>
-<a data-scroll href="#buildtools"><span class="icon-embed2 mr5"></span><span data-lang="la_9">Build Tools</span></a><br>
+<a data-scroll href="#makewebsites"><span class="icon-embed mr5"></span><span data-lang="la_8">Make Websites</span></a><br>
+<a data-scroll href="#buildtools"><span class="icon-embed mr5"></span><span data-lang="la_9">Build Tools</span></a><br>
 <a data-scroll href="#getintouch"><span class="icon-envelop mr5"></span><span data-lang="la_10">Get In Touch</span></a><br>
 </div>
 <div class="leaf">
@@ -699,7 +700,7 @@ $(function(){
 
 <article class="content">
 	<div class="option">
-    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">简体中文</a><span id="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a></span><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
+    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">简体中文</a><span id="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;" data-lang="la_88">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline" data-lang="la_89">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;" data-lang="la_90">A</a></span><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
   </div>
 	<h1 data-lang="la_11">Dongfang</h1>
 	<blockquote>
@@ -738,7 +739,7 @@ $(function(){
             </table>
           </div>
         </div>
-        <p class="mt10"><a target="_blank" href="./assets/cdm.svg" class="btn2">View it in a new window</a></p>
+        <p class="mt10"><a target="_blank" href="./assets/cdm.svg" class="btn2" data-lang="la_76">View it in a new window</a></p>
       </li>
     </ul>
   </section>
@@ -755,7 +756,7 @@ $(function(){
       <li>
         <div class="paper">
           <div class="topic c_dark"><strong data-lang="la_20">A.I.</strong></div>
-          <p class="c_dark" style="text-align:center"><strong><span class="icon-trophy mr5"></span><span data-lang="la_21">THE 45</span><sup><span data-lang="la_22">th</span></sup><a target="_blank" href="http://ylaa.org.hk/"><span data-lang="la_23"> YOUTH LITERARY AWARD</span></a><span data-lang="la_24"> OF MERIT IN 2019</span></strong></p>
+          <p class="c_dark" style="text-align:center"><strong><span class="icon-trophy mr5"></span><span data-lang="la_21">THE 45<sup>th</sup> <a target="_blank" href="http://ylaa.org.hk/">YOUTH LITERARY AWARD</a> OF MERIT IN 2019</span></strong></p>
           <div class="main">
             <p data-lang="la_25">In the first year, my dear, you said: "Draw a peacock with blue feathers for me." I said ok, then I did it. </p>
             <p data-lang="la_26">In the second year, you said: "Draw a peacock." I said ok, I did it, with blue feathers. </p>
@@ -791,8 +792,8 @@ $(function(){
             </h3>	
             <p class="mt10 tx_geo c_dark" style="line-height:1.5em"><span data-lang="la_32">POST & TELECOM PRESS (2017).</span> <br><span data-lang="la_33">TRANSLATED FROM: GUSTAFSON, A. (2016). ADAPTIVE WEB DESIGN (SECOND EDITION).</span></p>
   					<div class="btm">
-  						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">View comments on JD.com</a>
-  						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
+  						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2" data-lang="la_77">View comments on JD.com</a>
+  						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2" data-lang="la_78">E-book on epubit.com</a>
   					</div>
   				</div>
   			</div>
@@ -819,8 +820,8 @@ $(function(){
             </h3>
             <p class="mt10 tx_geo c_dark" style="line-height:1.5em"><span data-lang="la_32">POST & TELECOM PRESS (2017).</span><br><span data-lang="la_35">TRANSLATED FROM: THOMAS, S. A. (2015). DATA VISUALIZATION WITH JAVASCRIPT.</span></p>
   					<div class="btm">
-  						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
-  						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
+  						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2" data-lang="la_77">View comments on JD.com</a>
+  						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2"data-lang="la_78">E-book on epubit.com</a>
   					</div>
   				</div>
   			</div>
@@ -854,7 +855,7 @@ $(function(){
         <h3><strong data-lang="la_36">From Voice & Tone to Content Strategy</strong></h3>
         <p><strong>2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
         <p data-lang="la_37">I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</p>
-				<p class="mt15"><a target="_blank" href="https://noti.st/bennychak/y3xCwa/from-voice-tone-to-content-strategy" class="btn2">View it online</a></p>
+				<p class="mt15"><a target="_blank" href="https://noti.st/bennychak/y3xCwa/from-voice-tone-to-content-strategy" class="btn2" data-lang="la_79">View it online</a></p>
 			</li>
 			<li>
         <h3><strong data-lang="la_38">The Overview of Web Design</strong></h3>
@@ -863,7 +864,7 @@ $(function(){
         <!-- <div class="slidewrap">
           <iframe src="https://noti.st/bennychak/msjAAY/embed" frameborder="0" allowfullscreen></iframe>
         </div> -->
-				<p class="mt15"><a target="_blank" href="https://noti.st/bennychak/msjAAY/the-overview-of-web-design" class="btn2">View it online</a></p>
+				<p class="mt15"><a target="_blank" href="https://noti.st/bennychak/msjAAY/the-overview-of-web-design" class="btn2" data-lang="la_79">View it online</a></p>
 			</li>
 			<li>
         <h3><strong data-lang="la_40">Future Friendly Web Design</strong></h3>
@@ -872,13 +873,13 @@ $(function(){
         <!-- <div class="slidewrap">
           <iframe src="https://noti.st/bennychak/AyceW2/embed" frameborder="0" allowfullscreen></iframe>
         </div> -->
-				<p class="mt15"><a class="btn2" target="_blank" href="https://noti.st/bennychak/AyceW2/">In English</a> <a class="btn2" target="_blank" href="https://noti.st/bennychak/1WAlvM/">In Simplify Chinese</a></p>
+				<p class="mt15"><a class="btn2" target="_blank" href="https://noti.st/bennychak/AyceW2/" data-lang="la_80">In English</a> <a class="btn2" target="_blank" href="https://noti.st/bennychak/1WAlvM/" data-lang="la_81">In Simplify Chinese</a></p>
 			</li>
 			<li>
         <h3><strong data-lang="la_42">Responsive Web Design: Rebuild as Design</strong></h3>
         <p><strong>2013, <span class="logo_tencent">TENCENT INC.</span></strong></p>
         <p data-lang="la_43">Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? With the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</p>
-				<p class="mt15"><a class="btn2" target="_blank" href="https://noti.st/bennychak/AZ0MI9/responsive-web-design-rebuild-as-design">View it online</a></p>
+				<p class="mt15"><a class="btn2" target="_blank" href="https://noti.st/bennychak/AZ0MI9/responsive-web-design-rebuild-as-design" data-lang="la_79">View it online</a></p>
 			</li>
 		</ul>
 	</section>
@@ -914,7 +915,7 @@ $(function(){
             </table>
           </div>
         </div>
-  			<div><a target="_blank" href="//futurefriendly.cn/ds/page/guideline.html" class="btn2">View it online</a></div>
+  			<div><a target="_blank" href="//futurefriendly.cn/ds/page/guideline.html" class="btn2" data-lang="la_79">View it online</a></div>
   		</li>
   	</ul>
 	</section>
@@ -1030,16 +1031,12 @@ $(function(){
             <div class="c2 clearfix">
               <p><span class="tx_up" data-lang="la_61">Operational Pages of DiDi Hitch Mobile: </span><br><span data-lang="la_62">We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</span></p>
               <p class="lg_only" data-lang="la_63">Tap or drag the content on the PHONE area to preview more if you are using a desktop browser.</p>
-              <h3 class="mt20"><strong><span data-lang="la_64">Transport During The Spring Festival</span><span class="icon-html-five ml10"></span></strong></h3>
+              <h3 class="mt20"><strong><span data-lang="la_64">Transport During The Spring Festival</span><span class="icon-html-five ml5"></span></strong></h3>
               <p><strong data-lang="la_65">December 2016</strong></p>
-              <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/invitation2016.html">Display</a></p>
-              <!-- <h3 class="mt20"><strong>Trip Data on The 1<sup>st</sup> Anniversary Show<span class="icon-html-five ml10"></span></strong></h3>
-              <p><strong>June 2016</strong></p>
-              <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/startrek2016.html">Display</a></p> -->
-              <h3 class="mt20"><strong><span data-lang="la_66">Hitch Man, Take Turns to Be Driver</span><span class="icon-html-five ml10"></span></strong></h3>
-              <p><strong data-lang="la_67">August 2015</strong></p>
-              <p><span data-lang="la_68">"Come and Get Your Love" (Redbone, 1973), Time Signature 4/4, 108bpm</span><span class="icon-music ml10"></span></p>
-              <p><a class="btn2 f_play" href="./pop/pop.html">Display</a></p>
+              <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/invitation2016.html" data-lang="la_82">Display</a></p>
+              <h3 class="mt20"><strong><span data-lang="la_66">Trip Data on The 1<sup>st</sup> Anniversary Show</span><span class="icon-html-five ml5"></span></strong></h3>
+              <p><strong data-lang="la_69">June 2016</strong></p>
+              <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/startrek2016.html" data-lang="la_82">Display</a></p>
             </div>
           </div>
         </div>
@@ -1054,13 +1051,13 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-embed2"></span> <span data-lang="la_8">Make Websites</span></span></h2>
+  		<span><span class="icon-embed"></span> <span data-lang="la_8">Make Websites</span></span></h2>
   	<ul>
   		<li>
-  			<h3><strong>The International Official Website of Peking University</strong></h3>
+  			<h3><strong data-lang="la_70">The International Official Website of Peking University</strong></h3>
         <p><strong>2015, <span class="logo_pku">Peking University</span></strong></p>
         <p><label data-lang="la_48">Interaction Design</label> <label data-lang="la_52">Front-end Development</label></p>
-        <p>The International Official Portal Website of Peking University has made its debut on November 20<sup>th</sup> 2015. This new responsive site is designed with "Future-Friendly Design" thinking, applied bootstrap grid system, and support IE7+ browser.</p>
+        <p><span data-lang="la_71">The International Official Portal Website of Peking University has made its debut on November 20<sup>th</sup> 2015. This new responsive site is designed with "Future-Friendly Design" thinking, applied bootstrap grid system, and support IE7+ browser.</span></p>
         <div class="singleimg">
           <div class="inner">
             <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
@@ -1084,9 +1081,9 @@ $(function(){
           </div>
         </div>
   			<div>
-  				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn2">Visit newsen.pku.edu.cn</a>
-  				<a target="_blank" href="//www.futurefriendly.cn/pku-en-2015/" class="btn2">Draft 1</a>
-  				<a target="_blank" href="//www.futurefriendly.cn/pku-en-2015b/" class="btn2">Draft 2</a>
+  				<a target="_blank" href="http://newsen.pku.edu.cn" class="btn2" data-lang="la_83">Visit newsen.pku.edu.cn</a>
+  				<a target="_blank" href="//www.futurefriendly.cn/pku-en-2015/" class="btn2" data-lang="la_84">Draft 1</a>
+  				<a target="_blank" href="//www.futurefriendly.cn/pku-en-2015b/" class="btn2" data-lang="la_85">Draft 2</a>
   			</div>
   		</li>
   	</ul>
@@ -1099,13 +1096,13 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-embed2"></span> <span data-lang="la_9">Build Tools</span></span></h2>
+  		<span><span class="icon-embed"></span> <span data-lang="la_9">Build Tools</span></span></h2>
   	<ul>
   		<li>
-  			<h3><strong>UFO Animate, A CSS Animation Tool</strong></h3>
-        <p><strong>2016, PERSONAL PROJECT</strong></p>
+  			<h3><strong data-lang="la_72">UFO Animate</strong></h3>
+        <p><strong>2016, <span data-lang="la_73">PERSONAL PROJECT</span></strong></p>
         <p><label data-lang="la_45">UI Design</label> <label data-lang="la_52">Front-end Development</label> <label data-lang="la_53">Localization</label></p>
-        <p>UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Depends on your system language settings, English and Simplify Chinese are supported.</p>
+        <p data-lang="la_74">UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Depends on your system language settings, English and Simplify Chinese are supported.</p>
         <div class="singleimg">
           <div class="inner">
             <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
@@ -1115,7 +1112,7 @@ $(function(){
             </table>
           </div>
         </div>
-  			<div><a target="_blank" href="//www.futurefriendly.cn/ufoanimate/" class="btn2">Try it online</a></div>
+  			<div><a target="_blank" href="//www.futurefriendly.cn/ufoanimate/" class="btn2" data-lang="la_86">Try it online</a></div>
   		</li>
   	</ul>
 	</section>
@@ -1124,7 +1121,7 @@ $(function(){
 		<div class="leaf">
 			<div class="l_a"><div class="in"></div></div>
 		</div>
-		<a href="#">back to top</a>
+		<a href="#" data-lang="la_87">back to top</a>
 	</div>
 
 </article>
@@ -1151,12 +1148,12 @@ $(function(){
 		</div>
 		<span><span class="icon-envelop"></span> <span data-lang="la_10">Get in Touch</span></span>
 	</h2>
-  <p class="mb0 mt10">Feel free to contact me at <u><span class="email"></span></u></p>
+  <p class="mb0 mt10"><span data-lang="la_75">Feel free to contact me at </span><u><span class="email"></span></u></p>
   <div class="contactform mt10">
     <form method="POST" action="https://formspree.io/bienfantaisie@gmail.com">
       <p><input type="email" required name="_replyto" class="inputTxt" placeholder="Your Email" maxlength="100" /></p>
       <p><textarea name="message" required cols="30" rows="10" class="inputArea" placeholder="Message" maxlength="2000"></textarea></p>
-      <p><button type="submit" class="btn">Send message to me</button></p>
+      <p><button type="submit" class="btn" data-lang="la_91">Send message to me</button></p>
     </form>
   </div>
 	<!-- <ul>
@@ -1190,7 +1187,7 @@ function checklang(){
 function switchlang(bl){
 
   var lang = {
-    la_1 : ['我的擅长领域','Overview'],
+    la_1 : ['我擅长的领域','Overview'],
     la_2 : ['文学写作样章','Micro-Fiction'],
     la_3 : ['技术翻译样章','Translation'],
     la_4 : ['设计知识分享','Keynotes'],
@@ -1201,19 +1198,16 @@ function switchlang(bl){
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
     la_11 : ['Dongfang','Dongfang'],
-    la_12 : ['你好！欢迎莅临本网页。我叫东方，常住北京，是一名中文和互联网交叉背景的Web设计师。','Welcome! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing. As a UX designer or UI developer who is passionate about Web design and writing, he used to work for Tencent, Alibaba and DiDi Chuxing group.'],
+    la_12 : ['你好！欢迎莅临本网页。我叫东方，常住北京，中文和互联网交叉背景。香港教育大学文学硕士。曾在腾讯、阿里巴巴、滴滴出行等公司任交互设计师。','Welcome! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing. As a UX designer or UI developer who is passionate about Web design and writing, he used to work for Tencent, Alibaba and DiDi Chuxing group.'],
     la_13 : ['我可以为个人或组织提供以下帮助：','Dōngfāng can provide you with the following helps\:'],
     la_14 : ['一、制作一个适应所有浏览器的响应式网站。','1) Design consultation of making a responsive website\;'],
     la_15 : ['二、移动应用的交互设计。','2) Interaction design for mobile application\;'],
     la_16 : ['三、英译中的技术翻译。','3) Technical translation, from English to Chinese\;'],
     la_17 : ['四、简体和繁體中文的软件本地化工作。','4) Copy localization, both of Mandarin and Cantonese\;'],
     la_18 : ['五、讲授图画书的选择和鉴赏课程。','5) Giving lessons on how to read a children\'s picture book\.'],
-    la_19 : ['为了方便快速了解，下图是我的和设计工作有关的知识结构。以往我的经验已在图上分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
+    la_19 : ['为了方便快速了解，下图是我的和设计工作有关的知识结构。以往的经验已在图上分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
     la_20 : ['人工智能','A\.I\.'],
-    la_21 : ['第45届','THE 45'],
-    la_22 : ['','th'],
-    la_23 : ['「青年文學獎」',' YOUTH LITERARY AWARD'],
-    la_24 : ['小小说组优异奖 (2019)',' OF MERIT IN 2019'],
+    la_21 : ['第45届\<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\"\>「青年文學獎」\<\/a\>小小说组优异奖 (2019)','THE 45\<sup\>th\<\/sup\> \<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\/\"\>YOUTH LITERARY AWARD\<\/a\> OF MERIT IN 2019'],
     la_25 : ['第一年，亲爱的，你说「替我画一只蓝羽毛的孔雀。」我说好的，画出来了。','In the first year\, my dear\, you said\: \"Draw a peacock with blue feathers for me\.\" I said ok\, then I did it\.'],
     la_26 : ['第二年，你说：「画一只孔雀。」我说好的，画出来了，蓝羽毛的。','In the second year\, you said\: \"Draw a peacock\.\" I said ok\, I did it\, with blue feathers\.'],
     la_27 : ['第三年，你说要画一只鸟，我说好的，画出来了一只蓝羽毛的孔雀。你说「你知道我想画孔雀，真贴心。」','In the third year\, you said you want to draw a bird\. I said ok\, then drew a peacock with blue feathers\. You said\: \"You do know what I want is to draw peacocks\, really sweet\.\"'],
@@ -1253,11 +1247,32 @@ function switchlang(bl){
     la_61 : ['滴滴顺风车的端外运营页面：','Operational Pages of DiDi Hitch Mobile: '],
     la_62 : ['我们相信共享是优雅而美好的，所以我们在运营页面的设计上尽量雕琢细节。除了视觉设计，声音和动效也是我们重视的设计元素。如果一个运营页面同时具备动画和背景音乐，我们会将动画的单位时长和音乐节拍进行对位，使动画和音乐的节奏保持统一。','We believe in Sharing because it is of rock and sexy\. Therefore\, we should keep harmony between background music and the animation rhythm if a web page contains those elements\. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat\.'],
     la_63 : ['如果你使用的是桌面浏览器，不妨在手机区域内尝试下点按或拖拽操作，以便预览完整动画。','Tap or drag the content on the PHONE area to preview more if you are using a desktop browser\.'],
-    la_64 : ['轻春运·空座共享计划','Transport During The Spring Festival'],
+    la_64 : ['轻春运：空座共享计划','Transport During The Spring Festival'],
     la_65 : ['2016年12月','December 2016'],
-    la_66 : ['召唤顺风侠，为出行而战','Hitch Man\, Take Turns to Be Driver'],
-    la_67 : ['2015年8月','August 2015'],
-    la_68 : ['《Come and Get Your Love》\(Redbone\, 1973\)，节拍4\/4，速度108bpm','\"Come and Get Your Love\" \(Redbone\, 1973\)\, Time Signature 4\/4\, 108bpm']
+    la_66 : ['顺风飞船一周年大数据','Trip Data on The 1\<sup\>st\<\/sup\> Anniversary Show'],
+    la_69 : ['2016年6月','June 2016'],
+    la_70 : ['北京大学官方网站（国际版）','The International Official Website of Peking University'],
+    la_71 : ['北京大学官方网站（国际版）于2015年11月20日改版上线。网站基于「面向未来的友好设计」设计思想，应用栅格布局和响应式设计方法，向前兼容IE7浏览器。','The International Official Portal Website of Peking University has made its debut on November 20\<sup\>th\<\/sup\> 2015\. This new responsive site is designed with \"Future-Friendly Design\" thinking\, applied bootstrap grid system\, and support IE7+ browser\.'],
+    la_72 : ['UFO Animate','UFO Animate'],
+    la_73 : ['个人项目','PERSONAL PROJECT'],
+    la_74 : ['UFO Animate 是一个用来快速预览CSS动画效果的在线工具，支持中文和英文两种操作界面。','UFO Animate is a CSS animation system that can quickly build CSS animation effects visually\. Depends on your system language settings\, English and Simplify Chinese are supported\.'],
+    la_75 : ['邮件地址：','Feel free to contact me at '],
+    la_76 : ['在新窗口中查看大图','View it in a new window'],
+    la_77 : ['去京东看读者评论','View comments on JD.com'],
+    la_78 : ['去epubit.com看电子书','E-book on epubit.com'],
+    la_79 : ['在线查看','View it online'],
+    la_80 : ['英文版链接','In English'],
+    la_81 : ['简体中文版链接','In Simplify Chinese'],
+    la_82 : ['查看并播放','Display'],
+    la_83 : ['访问 newsen.pku.edu.cn','Visit newsen.pku.edu.cn'],
+    la_84 : ['飞机稿1号','Draft 1'],
+    la_85 : ['飞机稿2号','Draft 2'],
+    la_86 : ['在线试用','Try it online'],
+    la_87 : ['回到顶部','back to top'],
+    la_88 : ['小','A'],
+    la_89 : ['中','A'],
+    la_90 : ['大','A'],
+    la_91 : ['发送邮件','Send message to me']
   };
   var thislang = '';
          
