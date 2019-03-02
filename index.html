@@ -296,7 +296,7 @@ body{ background:#fff;}
 .scroll #loadbar{}
 
 p{ margin-bottom:.625rem; font-family:Georgia, serif}
-blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4}
+blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4;}
 .container{ position:relative; max-width:1020px; margin:0 4%;}
 
 .lg_only{ display:none;}
@@ -439,8 +439,8 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .paper .topic{ font-size:2.4em; text-align:center;}
 .paper .main{ line-height:2em; padding-top:1rem}
 .paper .main p{ text-indent:1em}
-.paper .main p:first-child{ text-indent:0}
-.paper .main p:first-child:first-letter{ font-size:400%; line-height:1; margin-right:.1em; float:left;}
+.en .paper .main p:first-child{ text-indent:0}
+.en .paper .main p:first-child:first-letter{ font-size:400%; line-height:1; margin-right:.1em; float:left;}
 
 .contactform input{ width:100%; box-sizing:border-box;}
 .contactform textarea{ width:100%; height:12rem; box-sizing:border-box;}
@@ -560,6 +560,15 @@ li img{}
 li .qr{ display:inline-block;}
 footer{ display:none;}
 }
+
+/* language */
+.cn h1{ font-family:Pingfang, sans-serif; font-weight:600}
+.cn h2{ font-family:Pingfang, sans-serif; font-weight:600}
+.cn p{ font-family:Pingfang, sans-serif;}
+.cn .paper{ font-family:Pingfang, sans-serif;}
+.cn .paper .topic{ font-size:2rem}
+.cn .paper strong{ font-weight:400}
+.cn nav .ins a{ font-family:Pingfang, sans-serif; font-weight:400; font-size:.875rem}
 </style>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
@@ -672,16 +681,16 @@ $(function(){
 
 <nav>
 <div class="ins">
-<a data-scroll href="#overview"><span class="icon-pie-chart mr5"></span>Overview</a><br>
-<a data-scroll href="#microfiction"><span class="icon-quill mr5"></span>Micro-fiction</a><br>
-<a data-scroll href="#translation"><span class="icon-quill mr5"></span>Translation</a><br>
-<a data-scroll href="#keynotes"><span class="icon-quill mr5"></span>Keynotes</a><br>
-<a data-scroll href="#designsystem"><span class="icon-magic mr5"></span>Design System</a><br>
-<a data-scroll href="#interaction"><span class="icon-magic mr5"></span>Interaction</a><br>
-<a data-scroll href="#animation"><span class="icon-magic mr5"></span>Animation</a><br>
-<a data-scroll href="#makewebsites"><span class="icon-embed2 mr5"></span>Make Websites</a><br>
-<a data-scroll href="#buildtools"><span class="icon-embed2 mr5"></span>Build Tools</a><br>
-<a data-scroll href="#getintouch"><span class="icon-envelop mr5"></span>Get In Touch</a><br>
+<a data-scroll href="#overview"><span class="icon-pie-chart mr5"></span><span data-lang="la_1">Overview</span></a><br>
+<a data-scroll href="#microfiction"><span class="icon-quill mr5"></span><span data-lang="la_2">Micro-fiction</span></a><br>
+<a data-scroll href="#translation"><span class="icon-quill mr5"></span><span data-lang="la_3">Translation</span></a><br>
+<a data-scroll href="#keynotes"><span class="icon-quill mr5"></span><span data-lang="la_4">Keynotes</span></a><br>
+<a data-scroll href="#designsystem"><span class="icon-magic mr5"></span><span data-lang="la_5">Design System</span></a><br>
+<a data-scroll href="#interaction"><span class="icon-magic mr5"></span><span data-lang="la_6">Interaction</span></a><br>
+<a data-scroll href="#animation"><span class="icon-magic mr5"></span><span data-lang="la_7">Animation</span></a><br>
+<a data-scroll href="#makewebsites"><span class="icon-embed2 mr5"></span><span data-lang="la_8">Make Websites</span></a><br>
+<a data-scroll href="#buildtools"><span class="icon-embed2 mr5"></span><span data-lang="la_9">Build Tools</span></a><br>
+<a data-scroll href="#getintouch"><span class="icon-envelop mr5"></span><span data-lang="la_10">Get In Touch</span></a><br>
 </div>
 <div class="leaf">
 	<div class="l_a"><div class="in"></div></div>
@@ -689,10 +698,12 @@ $(function(){
 </nav>
 
 <article class="content">
-	<div id="option" class="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a></div>
-	<h1>Dongfang</h1>
+	<div class="option">
+    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">简体中文</a><span id="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;">A</a></span><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
+  </div>
+	<h1 data-lang="la_11">Dongfang</h1>
 	<blockquote>
-		<p class="mb0">Dōngfāng is a craftsman with a cross-knowledge background located in Beijing. As a UX designer or UI developer who is passionate about Web design and writing, he used to work for Tencent, Alibaba and DiDi Chuxing group.</p>
+		<p class="mb0" data-lang="la_12">Welcome! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing. As a UX designer or UI developer who is passionate about Web design and writing, he used to work for Tencent, Alibaba and DiDi Chuxing group.</p>
 		<!-- <p class="mb0">
 			<a class="btn" target="_blank" href="https://designer.futurefriendly.cn/zhai-resume-en.pdf">Download Resume</a>
 			<a class="btn" target="_blank" href="https://designer.futurefriendly.cn/zhai-resume-cn.pdf">查看中文简历</a>
@@ -706,18 +717,18 @@ $(function(){
           <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
-      <span><span class="icon-pie-chart"></span> Overview</span>
+      <span><span class="icon-pie-chart"></span> <span data-lang="la_1">Overview</span></span>
     </h2>
     <ul class="clearfix">
       <li>
-        <p><span class="tx_up">Dōngfāng can provide you with the following helps:</span>
-          <br>1) Design consultation of making a responsive website;
-          <br>2) Interaction design for mobile application;
-          <br>3) Technical translation, from English to Chinese;
-          <br>4) Copy localization, both of Mandarin and Cantonese;
-          <br>5) Giving lessons on how to read a children's picture book.</p>
+        <p><span class="tx_up" data-lang="la_13">Dōngfāng can provide you with the following helps:</span>
+          <br><span data-lang="la_14">1) Design consultation of making a responsive website;</span>
+          <br><span data-lang="la_15">2) Interaction design for mobile application;</span>
+          <br><span data-lang="la_16">3) Technical translation, from English to Chinese;</span>
+          <br><span data-lang="la_17">4) Copy localization, both of Mandarin and Cantonese;</span>
+          <br><span data-lang="la_18">5) Giving lessons on how to read a children's picture book.</span></p>
 
-        <p class="tx_geo">The picture below depicts Dōngfāng's knowledge structure about design, past experience is listed in it by relevance.</p>
+        <p class="tx_geo" data-lang="la_19">The picture below depicts Dōngfāng's knowledge structure about design, past experience is listed in it by relevance.</p>
         <div class="singleimg">
           <div class="inner">
             <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
@@ -739,20 +750,20 @@ $(function(){
           <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
-      <span><span class="icon-quill"></span> Micro-fiction</span></h2>
+      <span><span class="icon-quill"></span> <span data-lang="la_2">Micro-fiction</span></span></h2>
     <ul>
       <li>
         <div class="paper">
-          <div class="topic c_dark"><strong>A.I.</strong></div>
-          <p class="c_dark" style="text-align:center"><strong><span class="icon-trophy mr5"></span>THE 45<sup>th</sup> <a target="_blank" href="http://ylaa.org.hk/">YOUTH LITERARY AWARD</a> OF MERIT IN 2019</strong></p>
+          <div class="topic c_dark"><strong data-lang="la_20">A.I.</strong></div>
+          <p class="c_dark" style="text-align:center"><strong><span class="icon-trophy mr5"></span><span data-lang="la_21">THE 45</span><sup><span data-lang="la_22">th</span></sup><a target="_blank" href="http://ylaa.org.hk/"><span data-lang="la_23"> YOUTH LITERARY AWARD</span></a><span data-lang="la_24"> OF MERIT IN 2019</span></strong></p>
           <div class="main">
-            <p>In the first year, my dear, you said: "Draw a peacock with blue feathers for me." I said ok, then I did it. </p>
-            <p>In the second year, you said: "Draw a peacock." I said ok, I did it, with blue feathers. </p>
-            <p>In the third year, you said you want to draw a bird. I said ok, then drew a peacock with blue feathers. You said: "You do know what I want is to draw peacocks, really sweet." </p>
-            <p>In the fourth year, you said you want a picture. I satisfied you. You said: "How do you know I want a BIRD?" </p>
-            <p>In the fifth year, you said "Let There Be Bird" in a bad mood. I painted for you. Then you said: "I'm really happy." </p>
-            <p>In the sixth year, I painted for you, you said "Haha". </p>
-            <p class="mb0">Last year, I did the same for you. You hurt me. I could not understand you, my dear.</p>
+            <p data-lang="la_25">In the first year, my dear, you said: "Draw a peacock with blue feathers for me." I said ok, then I did it. </p>
+            <p data-lang="la_26">In the second year, you said: "Draw a peacock." I said ok, I did it, with blue feathers. </p>
+            <p data-lang="la_27">In the third year, you said you want to draw a bird. I said ok, then drew a peacock with blue feathers. You said: "You do know what I want is to draw peacocks, really sweet." </p>
+            <p data-lang="la_28">In the fourth year, you said you want a picture. I satisfied you. You said: "How do you know I want a BIRD?" </p>
+            <p data-lang="la_29">In the fifth year, you said "Let There Be Bird" in a bad mood. I painted for you. Then you said: "I'm really happy." </p>
+            <p data-lang="la_30">In the sixth year, I painted for you, you said "Haha". </p>
+            <p data-lang="la_31" class="mb0">Last year, I did the same for you. You hurt me. I could not understand you, my dear.</p>
           </div>
         </div>
       </li>
@@ -766,7 +777,7 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-quill"></span> Translation</span>
+  		<span><span class="icon-quill"></span> <span data-lang="la_3">Translation</span></span>
   	</h2>
   	<ul>
   		<li>
@@ -778,7 +789,7 @@ $(function(){
             <h3 class="tx_l c_dark">
             <strong>渐进增强：跨平台用户体验设计</strong>
             </h3>	
-            <p class="mt10 tx_geo c_dark" style="line-height:1.5em">POST & TELECOM PRESS (2017). <br>TRANSLATED FROM: GUSTAFSON, A. (2016). ADAPTIVE WEB DESIGN (SECOND EDITION).</p>
+            <p class="mt10 tx_geo c_dark" style="line-height:1.5em"><span data-lang="la_32">POST & TELECOM PRESS (2017).</span> <br><span data-lang="la_33">TRANSLATED FROM: GUSTAFSON, A. (2016). ADAPTIVE WEB DESIGN (SECOND EDITION).</span></p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12140642.html" class="btn2">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/1093" class="btn2">E-book on epubit.com</a>
@@ -786,13 +797,13 @@ $(function(){
   				</div>
   			</div>
   			<div class="sampletext clearfix">
-          <p class="tx_cm c_dark">SAMPLE PARAGRAPH:</p>
+          <p class="tx_cm c_dark" data-lang="la_34">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> -->He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent. (p. 93; ch. 4).</p>
   					</div>
   					<div class="col">
-  						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> -->从美国居民使用的操作系统来看，Windows 操作系统的占有率从93.5% 跌落到了72.4%，毋庸置疑，这些份额主要是被Apple 公司的OSX 和iOS 操作系统，以及Google 的Android 操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200%到400%的高速增长，2008年移动设备的使用率还不足0.1%，而在2012 年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008 年诞生的Chrome 浏览器的迅速普及，Jason 毫无意外地看到了IE 浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。 (第79页; 第4章).</p>
+  						<p><!-- <img class="lozad" data-src="./assets/awd.jpg" /> -->从美国居民使用的操作系统来看，Windows操作系统的占有率从93.5%跌落到了72.4%，毋庸置疑，这些份额主要是被Apple公司的OSX和iOS操作系统，以及Google的Android操作系统蚕食掉的。不出意料，他在文章中表示，移动设备（包括平板电脑）的使用率，逐年保持着200%到400%的高速增长，2008年移动设备的使用率还不足0.1%，而在2012年，这个数字已经上涨为6.2%。考虑到Windows 的式微，移动设备的崛起，以及2008年诞生的Chrome浏览器的迅速普及，Jason毫无意外地看到了 IE浏览器那摧枯拉朽般的份额下跌，从占市场支配地位的75.5%，腰斩至是年的37%。(第79页; 第4章).</p>
   					</div>
   				</div>
   			</div>
@@ -806,7 +817,7 @@ $(function(){
             <h3 class="tx_l c_dark">
               <strong>JavaScript数据可视化编程</strong>
             </h3>
-            <p class="mt10 tx_geo c_dark" style="line-height:1.5em">POST & TELECOM PRESS (2017).<br>TRANSLATED FROM: THOMAS, S. A. (2015). DATA VISUALIZATION WITH JAVASCRIPT.</p>
+            <p class="mt10 tx_geo c_dark" style="line-height:1.5em"><span data-lang="la_32">POST & TELECOM PRESS (2017).</span><br><span data-lang="la_35">TRANSLATED FROM: THOMAS, S. A. (2015). DATA VISUALIZATION WITH JAVASCRIPT.</span></p>
   					<div class="btm">
   						<a target="_blank" href="https://item.jd.com/12161926.html" class="btn2">View comments on JD.com</a>
   						<a target="_blank" href="https://www.epubit.com/book/detail/6542" class="btn2">E-book on epubit.com</a>
@@ -814,7 +825,7 @@ $(function(){
   				</div>
   			</div>
   			<div class="sampletext clearfix">
-          <p class="tx_cm c_dark">SAMPLE PARAGRAPH:</p>
+          <p class="tx_cm c_dark" data-lang="la_34">SAMPLE PARAGRAPH:</p>
   				<div class="text clearfix">
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->We haven’t specified the ranges of the x- and y-scales, but assume for now that each ranges from 0 to 100. The starting x-value of 12.5, therefore, is 12.5 percent of the full range. When we convert that value to polar coordinates, the result will be 12.5 percent of the full 360&deg;. That’s 45&deg;, or &pi;/4. The x-value extends another 25 percent, so the final x-value adds another 90&deg;, or &pi;/2, to the starting value. For the y-values, our scales take the square root and map the results to the domain from 0 to 250 (<code>maxRadius</code>). The initial value of 10, therefore, is divided by 100 (for the range) and transformed to `sqrt 0.1` &times; 250, or 79. The final value of 10+30 results in a radius of `sqrt 0.4` &times; 250, or 158. That’s the process that creates an SVG for each data value. (p. 256; ch. 7).</p>
@@ -836,37 +847,37 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-quill"></span> Keynotes</span>
+  		<span><span class="icon-quill"></span> <span data-lang="la_4">Keynotes</span></span>
     </h2>
 		<ul class="semiul clearfix">
 			<li>
-        <h3><strong>From Voice & Tone to Content Strategy (情感化内容策略)</strong></h3>
+        <h3><strong data-lang="la_36">From Voice & Tone to Content Strategy</strong></h3>
         <p><strong>2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
-        <p>I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</p>
+        <p data-lang="la_37">I introduced two types of content guideline to DiDi Hitch's design team members: Uber's "Copy Style" and MailChimp's "Voice & Tone". At the same time, the essential principles of Content Strategy were also mentioned in this presentation.</p>
 				<p class="mt15"><a target="_blank" href="https://noti.st/bennychak/y3xCwa/from-voice-tone-to-content-strategy" class="btn2">View it online</a></p>
 			</li>
 			<li>
-        <h3><strong>The Overview of Web Design (Web设计基础)</strong></h3>
+        <h3><strong data-lang="la_38">The Overview of Web Design</strong></h3>
         <p><strong>2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
-        <p>Considering most designers in DiDi's design team were more familiar with the mobile platform than desktop, This presentation focus on mobile: how to present a graceful web page on mobile devices? how to take the advantage of adaptivity for web pages? what is the design trend in recent years? In the end, I reviewed some concepts that frequently be discussed by UI developers.</p>
+        <p data-lang="la_39">Considering most designers in DiDi's design team were more familiar with the mobile platform than desktop, This presentation focus on mobile: how to present a graceful web page on mobile devices? how to take the advantage of adaptivity for web pages? what is the design trend in recent years? In the end, I reviewed some concepts that frequently be discussed by UI developers.</p>
         <!-- <div class="slidewrap">
           <iframe src="https://noti.st/bennychak/msjAAY/embed" frameborder="0" allowfullscreen></iframe>
         </div> -->
 				<p class="mt15"><a target="_blank" href="https://noti.st/bennychak/msjAAY/the-overview-of-web-design" class="btn2">View it online</a></p>
 			</li>
 			<li>
-        <h3><strong>Future Friendly Web Design (面向未来的友好设计)</strong></h3>
+        <h3><strong data-lang="la_40">Future Friendly Web Design</strong></h3>
         <p><strong>2015, <span class="logo_tencent">TENCENT INC.</span></strong></p>
-        <p>This keynote is for junior designers of Tencent online media group. Here I introduced some fantastic shares by great designers around the world, sorted the core concepts and principles of Future Friendly Web Design, listed some designers, books, and resources about FFLY.</p>
+        <p data-lang="la_41">This keynote is for junior designers of Tencent online media group. Here I introduced some fantastic shares by great designers around the world, sorted the core concepts and principles of Future Friendly Web Design, listed some designers, books, and resources about FFLY.</p>
         <!-- <div class="slidewrap">
           <iframe src="https://noti.st/bennychak/AyceW2/embed" frameborder="0" allowfullscreen></iframe>
         </div> -->
 				<p class="mt15"><a class="btn2" target="_blank" href="https://noti.st/bennychak/AyceW2/">In English</a> <a class="btn2" target="_blank" href="https://noti.st/bennychak/1WAlvM/">In Simplify Chinese</a></p>
 			</li>
 			<li>
-        <h3><strong>Responsive Web Design: Rebuild as Design (响应式设计)</strong></h3>
+        <h3><strong data-lang="la_42">Responsive Web Design: Rebuild as Design</strong></h3>
         <p><strong>2013, <span class="logo_tencent">TENCENT INC.</span></strong></p>
-        <p>Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? With the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</p>
+        <p data-lang="la_43">Responsive Web Design combines design style and tech solution together. In this live speak which was for 200 audiences of 3 cities, I addressed the best practices of responsive web design: how to deal with the increasing development of mobile devices and resolutions? With the rules, methods and new design workflow evolution, performance would be considered as a significant part of our design process.</p>
 				<p class="mt15"><a class="btn2" target="_blank" href="https://noti.st/bennychak/AZ0MI9/responsive-web-design-rebuild-as-design">View it online</a></p>
 			</li>
 		</ul>
@@ -879,14 +890,14 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-magic"></span> Design System<span>
+  		<span><span class="icon-magic"></span> <span data-lang="la_5">Design System</span><span>
     </h2>
   	<ul>
   		<li>
-  			<h3><strong>DiDi Hitch</strong></h3>
+  			<h3><strong data-lang="la_44">DiDi Hitch</strong></h3>
         <p><strong>2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
-        <p><label>UI Design</label> <label>UI Development</label></p>
-        <p>Firstly, this design system serves Web products of DiDi Hitch, including the built-in webview and the operational activity web pages. Secondly, this design system serves UX designer and front-end developer. It is both a front-end guideline and a UI component library.</p>
+        <p><label data-lang="la_45">UI Design</label> <label data-lang="la_46">UI Development</label></p>
+        <p data-lang="la_54">Firstly, this design system serves Web products of DiDi Hitch, including the built-in webserver and the operational activity web pages. Secondly, this design system serves UX designer and front-end developer. It is both a front-end guideline and a UI component library.</p>
         <div class="singleimg">
           <div class="inner">
             <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
@@ -915,14 +926,14 @@ $(function(){
           <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
-      <span><span class="icon-magic"></span> Interaction</span></h2>
+      <span><span class="icon-magic"></span> <span data-lang="la_6">Interaction</span></span></h2>
     <ul>
       <li>
-        <h3><strong>DiDi Hitch</strong></h3>
+        <h3><strong data-lang="la_44">DiDi Hitch</strong></h3>
         <p><strong>2015 - 2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
-        <p><label>Prototyping</label> <label>Interaction Design</label></p>
-        <p><span class="tx_up">The Survey Page After A Hitch Journey: </span>After the trip, we will collect passengers' evaluation data on his or her driver to help us continuously improve the quality of our services. The survey page is divided into a real-name part and an anonymous part. The driver client will see a positive evaluation written by the passenger, and the negative evaluation written by the passenger will be submitted directly to the backend system anonymously as evidence, we will use that data to analyze whether a driver is good enough. </p>
-        <p>For fast-paced iterations, 70% of DiDi client's UI was implemented in webview mode, no exception this page was.</p>
+        <p><label data-lang="la_47">Prototyping</label> <label data-lang="la_48">Interaction Design</label></p>
+        <p><span class="tx_up" data-lang="la_55">The Survey Page After A Hitch Journey: </span><span data-lang="la_56">After the trip, we will collect passengers' evaluation data on his or her driver to help us continuously improve the quality of our services. The survey page is divided into a real-name part and an anonymous part. The driver client will see a positive evaluation written by the passenger, and the negative evaluation written by the passenger will be submitted directly to the backend system anonymously as evidence, we will use that data to analyze whether a driver is good enough.</span></p>
+        <p data-lang="la_57">For fast-paced iterations, 70% of DiDi client's UI was implemented by webserver way, no exception this page was.</p>
         <div class="singleimg">
           <div class="inner">
             <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
@@ -948,13 +959,13 @@ $(function(){
         <h3><strong>A Promotion Activity: Do Task, Share 10 Million - 运营活动：完成任务赢1000万现金 </strong></h3>
         <p>2016, <span class="logo_didi">DiDi Chuxing</span>, iOS/Android</p>
         <p><img src="./assets/didi_show.png" /></p>
-        <div><label>Prototyping</label> <label>Interaction Design</label></div>
+        <div><label data-lang="la_47">Prototyping</label> <label data-lang="la_48">Interaction Design</label></div>
       </li> -->
       <li class="li_weishi">
-        <h3><strong>Weishi APP</strong></h3>
+        <h3><strong data-lang="la_58">Weishi APP</strong></h3>
         <p><strong>2014 - 2015, <span class="logo_tencent">TENCENT INC.</span></strong></p>
-        <p><label>Prototyping</label> <label>Interaction Design</label></p>
-        <p><span class="tx_up">Interaction of Forwarding A Video: </span>Weishi was a Vine-like short video sharing App. In this project, considering the difference between iOS and Android platform, we applied different design strategies for them. For example, on the iOS platform, we combined "share" and "forward" operations into the iOS-only actionsheet to reduce the number of buttons visible on the video page.</p>
+        <p><label data-lang="la_47">Prototyping</label> <label data-lang="la_48">Interaction Design</label></p>
+        <p><span class="tx_up" data-lang="la_59">Interaction of Forwarding A Video: </span><span data-lang="la_60">Weishi was a Vine-like short video sharing App. In this project, considering the difference between iOS and Android platform, we applied different design strategies for them. For example, on the iOS platform, we combined "share" and "forward" operations into the iOS-only actionsheet to reduce the number of buttons visible on the video page.</span></p>
         <div class="singleimg">
           <div class="inner">
             <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
@@ -998,13 +1009,13 @@ $(function(){
           <div class="l_a"><div class="in"></div></div>
         </div>
       </div>
-      <span><span class="icon-magic"></span> Animation</span>
+      <span><span class="icon-magic"></span> <span data-lang="la_7">Animation</span></span>
     </h2>
     <ul>
       <li>
-        <h3><strong>DiDi Hitch</strong></h3>
+        <h3><strong data-lang="la_44">DiDi Hitch</strong></h3>
         <p><strong>2015 - 2016, <span class="logo_didi">DiDi Chuxing</span></strong></p>
-        <p><label>Brainstorming</label> <label>Storyboarding</label> <label>Motion Design</label> <label>UI Development</label></p>
+        <p><label data-lang="la_49">Brainstorming</label> <label data-lang="la_50">Storyboarding</label> <label data-lang="la_51">Motion Design</label> <label data-lang="la_46">UI Development</label></p>
         <div class="showcase clearfix">
           <div class="inner">
             <div class="c1 clearfix">
@@ -1017,22 +1028,18 @@ $(function(){
               </div>
             </div>
             <div class="c2 clearfix">
-              <p><span class="tx_up">Operational Pages of DiDi Hitch Mobile: </span><br>We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</p>
-              <p class="lg_only">Tap or drag the content on the PHONE area to preview more if you are using a desktop browser.</p>
-              <h3 class="mt20"><strong>Transport During The Spring Festival<span class="icon-html-five ml10"></span></strong></h3>
-              <p><strong>December 2016</strong></p>
+              <p><span class="tx_up" data-lang="la_61">Operational Pages of DiDi Hitch Mobile: </span><br><span data-lang="la_62">We believe in Sharing because it is of rock and sexy. Therefore, we should keep harmony between background music and the animation rhythm if a web page contains those elements. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat.</span></p>
+              <p class="lg_only" data-lang="la_63">Tap or drag the content on the PHONE area to preview more if you are using a desktop browser.</p>
+              <h3 class="mt20"><strong><span data-lang="la_64">Transport During The Spring Festival</span><span class="icon-html-five ml10"></span></strong></h3>
+              <p><strong data-lang="la_65">December 2016</strong></p>
               <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/invitation2016.html">Display</a></p>
-              <h3 class="mt20"><strong>Trip Data on The 1<sup>st</sup> Anniversary Show<span class="icon-html-five ml10"></span></strong></h3>
+              <!-- <h3 class="mt20"><strong>Trip Data on The 1<sup>st</sup> Anniversary Show<span class="icon-html-five ml10"></span></strong></h3>
               <p><strong>June 2016</strong></p>
-              <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/startrek2016.html">Display</a></p>
-              <!-- <h3 class="mt20"><strong>Love Stories on The Road<span class="icon-html-five ml10"></span></strong></h3>
-              <p><strong>March 2016</strong></p>
-              <p>"Cross My Mind" (Twin Forks, 2014), Time Signature 4/4, 91bpm<span class="icon-music ml10"></span></p>
-              <p><a class="btn2 f_play" href="//www.futurefriendly.cn/me/didialift/pinche/staticpage/romance2016.html">Play</a></p>
-              <h3 class="mt20"><strong>Hitch Man, Take Turns to Be Driver<span class="icon-html-five ml10"></span></strong></h3>
-              <p><strong>August 2015</strong></p>
-              <p>"Come and Get Your Love" (Redbone, 1973), Time Signature 4/4, 108bpm<span class="icon-music ml10"></span></p>
-              <p><a class="btn2 f_play" href="//www.futurefriendly.cn/me/didialift/pinche/staticpage/pop.html">Play</a></p> -->
+              <p><a class="btn2 f_play" href="//futurefriendly.cn/ds/page/startrek2016.html">Display</a></p> -->
+              <h3 class="mt20"><strong><span data-lang="la_66">Hitch Man, Take Turns to Be Driver</span><span class="icon-html-five ml10"></span></strong></h3>
+              <p><strong data-lang="la_67">August 2015</strong></p>
+              <p><span data-lang="la_68">"Come and Get Your Love" (Redbone, 1973), Time Signature 4/4, 108bpm</span><span class="icon-music ml10"></span></p>
+              <p><a class="btn2 f_play" href="http://static.xiaojukeji.com/pinche/staticpage/pop.html">Display</a></p>
             </div>
           </div>
         </div>
@@ -1047,12 +1054,12 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-embed2"></span> Make Websites</span></h2>
+  		<span><span class="icon-embed2"></span> <span data-lang="la_8">Make Websites</span></span></h2>
   	<ul>
   		<li>
   			<h3><strong>The International Official Website of Peking University</strong></h3>
         <p><strong>2015, <span class="logo_pku">Peking University</span></strong></p>
-        <p><label>Interaction Design</label> <label>Front-end Development</label></p>
+        <p><label data-lang="la_48">Interaction Design</label> <label data-lang="la_52">Front-end Development</label></p>
         <p>The International Official Portal Website of Peking University has made its debut on November 20<sup>th</sup> 2015. This new responsive site is designed with "Future-Friendly Design" thinking, applied bootstrap grid system, and support IE7+ browser.</p>
         <div class="singleimg">
           <div class="inner">
@@ -1092,12 +1099,12 @@ $(function(){
   				<div class="l_a"><div class="in"></div></div>
   			</div>
   		</div>
-  		<span><span class="icon-embed2"></span> Build Tools</span></h2>
+  		<span><span class="icon-embed2"></span> <span data-lang="la_9">Build Tools</span></span></h2>
   	<ul>
   		<li>
   			<h3><strong>UFO Animate, A CSS Animation Tool</strong></h3>
         <p><strong>2016, PERSONAL PROJECT</strong></p>
-        <p><label>UI Design</label> <label>Front-end Development</label> <label>Localization</label></p>
+        <p><label data-lang="la_45">UI Design</label> <label data-lang="la_52">Front-end Development</label> <label data-lang="la_53">Localization</label></p>
         <p>UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Depends on your system language settings, English and Simplify Chinese are supported.</p>
         <div class="singleimg">
           <div class="inner">
@@ -1142,7 +1149,7 @@ $(function(){
 				<div class="l_a"><div class="in"></div></div>
 			</div>
 		</div>
-		<span><span class="icon-envelop"></span> Get in Touch</span>
+		<span><span class="icon-envelop"></span> <span data-lang="la_10">Get in Touch</span></span>
 	</h2>
   <p class="mb0 mt10">Feel free to contact me at <u><span class="email"></span></u></p>
   <div class="contactform mt10">
@@ -1166,13 +1173,148 @@ $(function(){
 	</div>
 	</div>
 </footer>
+<script>
+// language detection start
+
+function checklang(){
+  
+    /* get browser default lang */    
+    if (navigator.userLanguage) {
+        baseLang = navigator.userLanguage.substring(0,2).toLowerCase();    
+    } else {    
+        baseLang = navigator.language.substring(0,2).toLowerCase();    
+    }
+    switchlang(baseLang);
+}
+
+function switchlang(bl){
+
+  var lang = {
+    la_1 : ['我的擅长领域','Overview'],
+    la_2 : ['文学写作样章','Micro-Fiction'],
+    la_3 : ['技术翻译样章','Translation'],
+    la_4 : ['设计知识分享','Keynotes'],
+    la_5 : ['体系规范建设','Design System'],
+    la_6 : ['交互原型设计','Interaction'],
+    la_7 : ['网页动效设计','Animation'],
+    la_8 : ['网站设计制作','Make Websites'],
+    la_9 : ['设计工具开发','Build Tools'],
+    la_10 : ['我的联系方式','Get in Touch'],
+    la_11 : ['Dongfang','Dongfang'],
+    la_12 : ['你好！欢迎莅临本网页。我叫东方，常住北京，是一名中文和互联网交叉背景的Web设计师。','Welcome! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing. As a UX designer or UI developer who is passionate about Web design and writing, he used to work for Tencent, Alibaba and DiDi Chuxing group.'],
+    la_13 : ['我可以为个人或组织提供以下帮助：','Dōngfāng can provide you with the following helps\:'],
+    la_14 : ['一、制作一个适应所有浏览器的响应式网站。','1) Design consultation of making a responsive website\;'],
+    la_15 : ['二、移动应用的交互设计。','2) Interaction design for mobile application\;'],
+    la_16 : ['三、英译中的技术翻译。','3) Technical translation, from English to Chinese\;'],
+    la_17 : ['四、简体和繁體中文的软件本地化工作。','4) Copy localization, both of Mandarin and Cantonese\;'],
+    la_18 : ['五、讲授图画书的选择和鉴赏课程。','5) Giving lessons on how to read a children\'s picture book\.'],
+    la_19 : ['为了方便快速了解，下图是我的和设计工作有关的知识结构。以往我的经验已在图上分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
+    la_20 : ['人工智能','A\.I\.'],
+    la_21 : ['第45届','THE 45'],
+    la_22 : ['','th'],
+    la_23 : ['「青年文學獎」',' YOUTH LITERARY AWARD'],
+    la_24 : ['小小说组优异奖 (2019)',' OF MERIT IN 2019'],
+    la_25 : ['第一年，亲爱的，你说「替我画一只蓝羽毛的孔雀。」我说好的，画出来了。','In the first year\, my dear\, you said\: \"Draw a peacock with blue feathers for me\.\" I said ok\, then I did it\.'],
+    la_26 : ['第二年，你说：「画一只孔雀。」我说好的，画出来了，蓝羽毛的。','In the second year\, you said\: \"Draw a peacock\.\" I said ok\, I did it\, with blue feathers\.'],
+    la_27 : ['第三年，你说要画一只鸟，我说好的，画出来了一只蓝羽毛的孔雀。你说「你知道我想画孔雀，真贴心。」','In the third year\, you said you want to draw a bird\. I said ok\, then drew a peacock with blue feathers\. You said\: \"You do know what I want is to draw peacocks\, really sweet\.\"'],
+    la_28 : ['第四年，你说想画画，我画出来了，你说「你怎么知道我想要一只鸟？」','In the fourth year\, you said you want a picture\. I satisfied you\. You said\: \"How do you know I want a BIRD\?\"'],
+    la_29 : ['第五年，你心情不好，说：「要有鸟。」我画画给你看，然后你说：「好开心。」','In the fifth year\, you said \"Let There Be Bird\" in a bad mood\. I painted for you\. Then you said\: \"I\'m really happy\.\"'],
+    la_30 : ['第六年，我画画给你看，你说「嘿嘿。」','In the sixth year\, I painted for you\, you said \"Haha\"\.'],
+    la_31 : ['第七年，我画画给你看，你揍了我。我觉得我不懂你。','Last year\, I did the same for you\. You hurt me\. I could not understand you\, my dear\.'],
+    la_32 : ['人民邮电出版社 (2017)','POST \& TELECOM PRESS \(2017\)\.'],
+    la_33 : ['译自《ADAPTIVE WEB DESIGN\: CRAFTING RICH EXPERIENCES WITH PROGRESSIVE ENHANCEMENT \(第2版\)》，原作者 AARON GUSTAFSON','TRANSLATED FROM\: GUSTAFSON\, A\. \(2016\)\. ADAPTIVE WEB DESIGN \(SECOND EDITION\)\.'],
+    la_34 : ['翻译样章：','SAMPLE PARAGRAPH\:'],
+    la_35 : ['译自《DATA VISUALIZATION WITH JAVASCRIPT》，原作者 STEPHEN A\. THOMAS','TRANSLATED FROM\: THOMAS\, S\. A\. \(2015\)\. DATA VISUALIZATION WITH JAVASCRIPT\.'],
+    la_36 : ['情感化内容策略','From Voice & Tone to Content Strategy'],
+    la_37 : ['在滴滴顺风车设计团队内部分享了两种内容设计规范，UBER 的 \"Copy Style\" 和 MAILCHIMP 的 \"Voice \& Tone\"。同时介绍了内容策略的一些基本原则。','I introduced two types of content guideline to DiDi Hitch\'s design team members: Uber\'s \"Copy Style\" and MailChimp\'s \"Voice \& Tone\"\. At the same time\, the essential principles of Content Strategy were also mentioned in this presentation\.'],
+    la_38 : ['Web设计基础','The Overview of Web Design'],
+    la_39 : ['考虑到滴滴的设计师以移动设计背景为主，此分享从H5的概念开始，讲述了移动网页的设计特点，如何在设计中考虑移动设备的适应性，以及近年来的Web设计趋势等等。','Considering most designers in DiDi\'s design team were more familiar with the mobile platform than desktop\, This presentation focus on mobile\: how to present a graceful web page on mobile devices\? how to take the advantage of adaptivity for web pages\? what is the design trend in recent years\? In the end\, I reviewed some concepts that frequently be discussed by UI developers\.'],
+    la_40 : ['面向未来的友好设计','Future Friendly Web Design'],
+    la_41 : ['在腾讯网络媒体事业部内部的分享。介绍了近年来的设计趋势和田纳西州Web设计师们提出的「面向未来的友好设计」的设计概念。介绍了一些已经出版或引进的设计图书和资源，讲了这些设计资源彼此之间的脉络联系。','This keynote is for junior designers of Tencent online media group\. Here I introduced some fantastic shares by great designers around the world\, sorted the core concepts and principles of Future Friendly Web Design\, listed some designers\, books\, and resources about FFLY\.'],
+    la_42 : ['响应式设计','Responsive Web Design\: Rebuild as Design'],
+    la_43 : ['响应式设计将设计风格和技术解决方案结合在了一起。分享中涉及了响应式设计的实践经验，设计原则，以及改进工作流程，将性能纳入设计考虑的思考。这场分享以直播形式，面向腾讯北京、上海、深圳分公司的约200名设计师。','Responsive Web Design combines design style and tech solution together\. In this live speak which was for 200 audiences of 3 cities\, I addressed the best practices of responsive web design\: how to deal with the increasing development of mobile devices and resolutions\? With the rules\, methods and new design workflow evolution\, performance would be considered as a significant part of our design process\.'],
+    la_44 : ['滴滴顺风车','DiDi Hitch'],
+    la_45 : ['用户界面设计','UI Design'],
+    la_46 : ['用户界面开发','UI Development'],
+    la_47 : ['产品原型设计','Prototyping'],
+    la_48 : ['交互设计','Interaction Design'],
+    la_49 : ['组织头脑风暴','Brainstorming'],
+    la_50 : ['故事板设计','Storyboarding'],
+    la_51 : ['动效设计','Motion Design'],
+    la_52 : ['前端开发','Front-end Development'],
+    la_53 : ['本地化','Localization'],
+    la_54 : ['首先，这份设计规范服务于滴滴顺风车的Web产品，既包含APP中以webserver方式引入的部分，也包含供社交平台传播的H5页面。其次，这份设计规范服务于滴滴顺风车的用户体验设计师和前端开发工程师，既是UI开发规范，也是一个交互组件库。','Firstly\, this design system serves Web products of DiDi Hitch\, including the built-in webserver and the operational activity web pages\. Secondly\, this design system serves UX designer and front-end developer\. It is both a front-end guideline and a UI component library\.'],
+    la_55 : ['订单完成后的用户评价页面：','The Survey Page After A Hitch Journey\: '],
+    la_56 : ['订单结束后，滴滴顺风车会通过此页面收集乘客和车主对本次行程的主观感受，这些数据将作为我们持续提升平台质量，优化产品细节的参考。评价页分为实名和匿名两部分。车主和乘客双方可以看到彼此以实名方式给出的正面评价，而双方的负面评价我们会以匿名方式提交给系统，作为双方信任值的评价标准之一。','After the trip\, we will collect passengers\' evaluation data on his or her driver to help us continuously improve the quality of our services\. The survey page is divided into a real-name part and an anonymous part\. The driver client will see a positive evaluation written by the passenger\, and the negative evaluation written by the passenger will be submitted directly to the backend system anonymously as evidence\, we will use that data to analyze whether a driver is good enough\.'],
+    la_57 : ['为了方便快速迭代和数据更新，滴滴顺风车项目中，70%的UI元素以webserver方式实现。','For fast-paced iterations, 70\% of DiDi client\'s UI was implemented by webserver way\, no exception this page was\.'],
+    la_58 : ['腾讯微视 (早期版本)','Weishi APP (Early Version)'],
+    la_59 : ['转发视频：','Interaction of Forwarding A Video: '],
+    la_60 : ['网络媒体事业部早期立项的「微视」是一个8秒短视频分享平台。考虑到iOS和Android操作系统的操作习惯不同，我们将两个平台上面的交互设计做了差异化处理。举例来说，我们在iOS平台的类ActionSheet组件上面合并了「分享」和「转发」操作，减少了视频详情页中可见的操作按钮数量。','Weishi was a Vine-like short video sharing App\. In this project\, considering the difference between iOS and Android platform\, we applied different design strategies for them\. For example\, on the iOS platform\, we combined \"share\" and \"forward\" operations into the iOS-only actionsheet to reduce the number of buttons visible on the video page\.'],
+    la_61 : ['滴滴顺风车的端外运营页面：','Operational Pages of DiDi Hitch Mobile: '],
+    la_62 : ['我们相信共享是优雅而美好的，所以我们在运营页面的设计上尽量雕琢细节。除了视觉设计，声音和动效也是我们重视的设计元素。如果一个运营页面同时具备动画和背景音乐，我们会将动画的单位时长和音乐节拍进行对位，使动画和音乐的节奏保持统一。','We believe in Sharing because it is of rock and sexy\. Therefore\, we should keep harmony between background music and the animation rhythm if a web page contains those elements\. The value of animation-duration in the source code should be strictly tuned to be equal to an integer multiple of one beat\.'],
+    la_63 : ['如果你使用的是桌面浏览器，不妨在手机区域内尝试下点按或拖拽操作，以便预览完整动画。','Tap or drag the content on the PHONE area to preview more if you are using a desktop browser\.'],
+    la_64 : ['轻春运·空座共享计划','Transport During The Spring Festival'],
+    la_65 : ['2016年12月','December 2016'],
+    la_66 : ['召唤顺风侠，为出行而战','Hitch Man\, Take Turns to Be Driver'],
+    la_67 : ['2015年8月','August 2015'],
+    la_68 : ['《Come and Get Your Love》\(Redbone\, 1973\)，节拍4\/4，速度108bpm','\"Come and Get Your Love\" \(Redbone\, 1973\)\, Time Signature 4\/4\, 108bpm']
+  };
+  var thislang = '';
+         
+    /* language match */   
+    switch(bl)
+    {      
+        case "en":
+            /* english */
+            $('[data-lang]').each(function(){
+              thislang = $(this).data('lang')
+              $(this).html(eval('lang.' + thislang)[1]);
+            });
+            $('#langs').text('简体中文');
+            $('body').removeClass('cn').addClass('en');
+            break;
+        case "zh":
+            /* 简体中文 */
+            $('[data-lang]').each(function(){
+              thislang = $(this).data('lang');
+              $(this).html(eval('lang.' + thislang)[0]);
+            });
+            $('#langs').text('English');
+            $('body').removeClass('en').addClass('cn');
+            break;
+        default:
+            /* default no match */   
+    }   
+}
+
+function handleSwitchlang(){
+  if($('#langs').text() == 'English'){
+    switchlang('en')
+  }else{
+    switchlang('zh')
+  }
+}
+// language detection end
+
+$(function(){
+  checklang();
+
+  $('#langs').click(function(){
+    handleSwitchlang();
+    return false;
+  });
+});
+
+</script>
 <div id="cnzz" style=" position:absolute; right:0; top:0;">
 <div style="opacity:0">
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275874278'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1275874278%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275874278'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1275874278%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
 </div>
 </div>
 <div style="text-align:center">
-  <script type="text/javascript" src="//tajs.qq.com/stats?sId=53540232" charset="UTF-8"></script> 
+<script type="text/javascript" src="//tajs.qq.com/stats?sId=53540232" charset="UTF-8"></script> 
 </div>
 <div class="loadbar"><span id="loadbar"></span></div>
 </body>
