@@ -700,7 +700,7 @@ $(function(){
 
 <article class="content">
 	<div class="option">
-    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">简体中文</a><span id="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;" data-lang="la_88">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline" data-lang="la_89">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;" data-lang="la_90">A</a></span><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
+    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">切换为简体中文</a><span id="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;" data-lang="la_88">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline" data-lang="la_89">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;" data-lang="la_90">A</a></span><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
   </div>
 	<h1 data-lang="la_11">Dongfang</h1>
 	<blockquote>
@@ -1285,7 +1285,7 @@ function switchlang(bl){
               thislang = $(this).data('lang')
               $(this).html(eval('lang.' + thislang)[1]);
             });
-            $('#langs').text('简体中文');
+            $('#langs').text('切换为简体中文');
             $('body').removeClass('cn').addClass('en');
             break;
         case "zh":
@@ -1294,7 +1294,7 @@ function switchlang(bl){
               thislang = $(this).data('lang');
               $(this).html(eval('lang.' + thislang)[0]);
             });
-            $('#langs').text('English');
+            $('#langs').text('Change to English');
             $('body').removeClass('en').addClass('cn');
             break;
         default:
@@ -1303,7 +1303,7 @@ function switchlang(bl){
 }
 
 function handleSwitchlang(){
-  if($('#langs').text() == 'English'){
+  if($('#langs').text() == 'Change to English'){
     switchlang('en')
   }else{
     switchlang('zh')
