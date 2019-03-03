@@ -24,7 +24,7 @@ body{ font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 input,textarea,select,button{ outline: none; resize:none; font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 input,textarea{ font-family:Georgia, serif;}
 button{line-height:2;white-space:nowrap;vertical-align:middle;cursor:pointer}
-strong{font-weight:800}
+strong{font-weight:400}
 a{ text-decoration: none; outline: none; cursor: pointer;}
 a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
 a:hover{ text-decoration:none;}
@@ -295,7 +295,7 @@ body{ background:#fff;}
 }
 .scroll #loadbar{}
 
-p{ margin-bottom:.625rem; font-family:Georgia, serif}
+p{ margin-bottom:1rem; font-family:Georgia, serif}
 blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4;}
 .container{ position:relative; max-width:1020px; margin:0 4%;}
 
@@ -406,7 +406,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubimg img{ width:50%; margin:0; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 2px 2px 4px; -webkit-filter:brightness(98%); background:#fff}
 .pubimg img{ margin-right:.625rem}
 .pubimg img:first-child{ margin-right:0}
-.pubtxt{ margin-top:.625rem; overflow:hidden;}
+.pubtxt{ margin-top:1rem; overflow:hidden;}
 
 nav{ display:none; position:fixed; top:0; z-index:1; line-height:1.3em;
   transform:translateY(-200%);
@@ -805,7 +805,7 @@ $(function(){
   				</div>
   			</div>
   			<div class="sampletext clearfix">
-          <p class="tx_cm c_dark" data-lang="la_34">SAMPLE PARAGRAPH:</p>
+          <p class="tx_cm c_dark"><strong data-lang="la_34">SAMPLE PARAGRAPH:</strong></p>
   				<div class="text clearfix">
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/awd-en.jpg" /> -->He found that OS-wise, Windows use had dropped from 93.5 percent to 72.4 percent, no doubt because of the rise of Apple’s OS X and iOS as well as Google’s Android operating system. As you’d likely expect, he found that mobile usage (including tablets) had grown year over year at a rate of 200 to 400 percent from a paltry 0.1 percent in 2008 to 6.2 percent in 2012. Couple the decline of Windows with the rise of mobile and the launch of Chrome (which came out in 2008) and it’s no wonder Jason also saw a sharp decline in Internet Explorer’s numbers: Internet Explorer dropped from a dominant position, bringing 75.5 percent of their visits, to a mere 37 percent. (p. 93; ch. 4).</p>
@@ -833,7 +833,7 @@ $(function(){
   				</div>
   			</div>
   			<div class="sampletext clearfix">
-          <p class="tx_cm c_dark" data-lang="la_34">SAMPLE PARAGRAPH:</p>
+          <p class="tx_cm c_dark"><strong data-lang="la_34">SAMPLE PARAGRAPH:</strong></p>
   				<div class="text clearfix">
   					<div class="col">
   						<p><!-- <img class="lozad" data-src="./assets/dvj-en.jpg" /> -->We haven’t specified the ranges of the x- and y-scales, but assume for now that each ranges from 0 to 100. The starting x-value of 12.5, therefore, is 12.5 percent of the full range. When we convert that value to polar coordinates, the result will be 12.5 percent of the full 360&deg;. That’s 45&deg;, or &pi;/4. The x-value extends another 25 percent, so the final x-value adds another 90&deg;, or &pi;/2, to the starting value. For the y-values, our scales take the square root and map the results to the domain from 0 to 250 (<code>maxRadius</code>). The initial value of 10, therefore, is divided by 100 (for the range) and transformed to `sqrt 0.1` &times; 250, or 79. The final value of 10+30 results in a radius of `sqrt 0.4` &times; 250, or 158. That’s the process that creates an SVG for each data value. (p. 256; ch. 7).</p>
@@ -1155,8 +1155,10 @@ $(function(){
 		</div>
 		<span><span class="icon-envelop"></span> <span data-lang="la_10">Get in Touch</span></span>
 	</h2>
-  <p class="mb0 mt10"><span data-lang="la_75">Feel free to contact me at </span><u><span class="email"></span></u></p>
-  <div class="contactform mt10">
+  <p class="mb0 mt20">
+    <span data-lang="la_92">Click <a target="_blank" href="https://www.linkedin.com/in/bennychak/">HERE</a> to visit my profile via LinkedIn, </span><br><span data-lang="la_75">or also feel free to contact me at <u><span class="email"></span></u>.</span>
+  </p>
+  <div class="contactform mt20">
     <form method="POST" action="https://formspree.io/bienfantaisie@gmail.com">
       <p><input type="email" required name="_replyto" class="inputTxt" placeholder="Your Email" maxlength="100" /></p>
       <p><textarea name="message" required cols="30" rows="10" class="inputArea" placeholder="Message" maxlength="2000"></textarea></p>
@@ -1205,7 +1207,7 @@ function switchlang(bl){
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
     la_11 : ['Dongfang','Dongfang'],
-    la_12 : ['你好！欢迎并感谢莅临本网页。我叫东方，常住北京，中文和互联网交叉背景。香港教育大学文学硕士。9年互联网行业经验，曾在腾讯、滴滴出行等公司任交互设计师。','Welcome\! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing\. As a UX designer or UI developer who is passionate about Web design and writing\, he holds a master degree of arts from the Education University of Hong Kong\, and used to work for Tencent and DiDi Chuxing group for years\.'],
+    la_12 : ['你好！欢迎并感谢莅临本网页。我叫东方，常住北京，中文和互联网交叉背景。香港教育大学文学硕士。9年互联网从业经验，曾在腾讯、滴滴出行等公司任交互设计师。','Welcome\! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing\. As a UX designer or UI developer who is passionate about Web design and writing\, he holds a master degree of arts from the Education University of Hong Kong\, and used to work for Tencent and DiDi Chuxing group for years\.'],
     la_13 : ['我乐于为个人或组织提供以下帮助：','Dōngfāng can provide you with the following helps\:'],
     la_14 : ['一、手工制作定制化的响应式设计网站。','1) Design consultation of making a responsive website\;'],
     la_15 : ['二、为基于iOS或Android平台的移动应用做交互设计。','2) Interaction design for mobile application\;'],
@@ -1227,11 +1229,11 @@ function switchlang(bl){
     la_34 : ['翻译样章：','SAMPLE PARAGRAPH\:'],
     la_35 : ['译自《DATA VISUALIZATION WITH JAVASCRIPT》，原作者 STEPHEN A\. THOMAS','TRANSLATED FROM\: THOMAS\, S\. A\. \(2015\)\. DATA VISUALIZATION WITH JAVASCRIPT\.'],
     la_36 : ['情感化内容策略','From Voice & Tone to Content Strategy'],
-    la_37 : ['在滴滴顺风车设计团队内部分享了两种内容设计规范，UBER 的 \"Copy Style\" 和 MAILCHIMP 的 \"Voice \& Tone\"。同时介绍了内容策略的一些基本原则。','I introduced two types of content guideline to DiDi Hitch\'s design team members: Uber\'s \"Copy Style\" and MailChimp\'s \"Voice \& Tone\"\. At the same time\, the essential principles of Content Strategy were also mentioned in this presentation\.'],
+    la_37 : ['这次分享在滴滴顺风车设计团队内部讨论了两类内容设计规范，UBER 的 \"Copy Style\" 和 MAILCHIMP 的 \"Voice \& Tone\"。同时涉及了内容策略的一些基本原则。','I introduced two types of content guideline to DiDi Hitch\'s design team members: Uber\'s \"Copy Style\" and MailChimp\'s \"Voice \& Tone\"\. At the same time\, the essential principles of Content Strategy were also mentioned in this presentation\.'],
     la_38 : ['Web设计基础','The Overview of Web Design'],
     la_39 : ['考虑到滴滴的设计师以移动设计背景为主，此分享从H5的概念开始，讲述了移动网页的设计特点，如何在设计中考虑移动设备的适应性，以及近年来的Web设计趋势等等。','Considering most designers in DiDi\'s design team were more familiar with the mobile platform than desktop\, This presentation focus on mobile\: how to present a graceful web page on mobile devices\? how to take the advantage of adaptivity for web pages\? what is the design trend in recent years\? In the end\, I reviewed some concepts that frequently be discussed by UI developers\.'],
     la_40 : ['面向未来的友好设计','Future Friendly Web Design'],
-    la_41 : ['在腾讯网络媒体事业部内部的分享。介绍了近年来的设计趋势和田纳西州Web设计师们提出的「面向未来的友好设计」的设计概念。介绍了一些已经出版或引进的设计图书和资源，讲了这些设计资源彼此之间的脉络联系。','This keynote is for junior designers of Tencent online media group\. Here I introduced some fantastic shares by great designers around the world\, sorted the core concepts and principles of Future Friendly Web Design\, listed some designers\, books\, and resources about FFLY\.'],
+    la_41 : ['在腾讯网络媒体事业部内部的分享。介绍了近年来的设计趋势和「面向未来的友好设计」的设计概念。介绍了一些已经出版或引进的设计图书和资源，讲了这些设计资源彼此之间的脉络联系。','This keynote is for junior designers of Tencent online media group\. Here I introduced some fantastic shares by great designers around the world\, sorted the core concepts and principles of Future Friendly Web Design\, listed some designers\, books\, and resources about FFLY\.'],
     la_42 : ['响应式设计','Responsive Web Design\: Rebuild as Design'],
     la_43 : ['响应式设计将设计风格和技术解决方案结合在了一起。分享中涉及了响应式设计的实践经验，设计原则，以及改进工作流程，将性能纳入设计考虑的思考。这场分享以直播形式，面向腾讯北京、上海、深圳分公司的约200名设计师。','Responsive Web Design combines design style and tech solution together\. In this live speak which was for 200 audiences of 3 cities\, I addressed the best practices of responsive web design\: how to deal with the increasing development of mobile devices and resolutions\? With the rules\, methods and new design workflow evolution\, performance would be considered as a significant part of our design process\.'],
     la_44 : ['滴滴顺风车','DiDi Hitch'],
@@ -1263,7 +1265,7 @@ function switchlang(bl){
     la_72 : ['UFO Animate','UFO Animate'],
     la_73 : ['个人项目','PERSONAL PROJECT'],
     la_74 : ['UFO Animate 是一个用来快速预览CSS动画效果的在线工具，支持中文和英文两种语言的操作界面。','UFO Animate is a CSS animation system that can quickly build CSS animation effects visually\. Depends on your system language settings\, English and Simplify Chinese are supported\.'],
-    la_75 : ['欢迎邮件联系 ','Feel free to contact me at '],
+    la_75 : ['或者邮件联系 \<u\>\<span class\=\"email\"\>\<\/span\>\<\/u\>。','or also feel free to contact me at \<u\>\<span class\=\"email\"\>\<\/span\>\<\/u\>\.'],
     la_76 : ['在新窗口中查看大图','View it in a new window'],
     la_77 : ['去京东看读者评论','View comments on JD.com'],
     la_78 : ['去epubit.com看电子书','E-book on epubit.com'],
@@ -1279,7 +1281,8 @@ function switchlang(bl){
     la_88 : ['小','A'],
     la_89 : ['中','A'],
     la_90 : ['大','A'],
-    la_91 : ['发送邮件','Send message to me']
+    la_91 : ['发送邮件','Send message to me'],
+    la_92 : ['\<a target\=\"_blank\" href\=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>点击这里\<\/a\> 访问我的领英主页，','Click \<a target\=\"_blank\" href=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>HERE\<\/a\> to visit my profile via LinkedIn\, ']
   };
   var thislang = '';
          
@@ -1301,7 +1304,7 @@ function switchlang(bl){
               thislang = $(this).data('lang');
               $(this).html(eval('lang.' + thislang)[0]);
             });
-            $('#langs').text('Change to English');
+            $('#langs').text('To English');
             $('body').removeClass('en').addClass('cn');
             break;
         default:
@@ -1310,7 +1313,7 @@ function switchlang(bl){
 }
 
 function handleSwitchlang(){
-  if($('#langs').text() == 'Change to English'){
+  if($('#langs').text() == 'To English'){
     switchlang('en')
   }else{
     switchlang('zh')
