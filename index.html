@@ -323,7 +323,7 @@ h2 .plant{ display:none}
 .e_plant_act .leaf .l_b:hover .in,
 .e_plant_act .leaf .l_c:hover .in{ transform:rotateZ(10deg);}
 
-.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:8rem; height:80px; width:80px; transform:perspective(400px) rotateX(40deg) rotateZ(-10deg); padding:0;}
+.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:8rem; height:80px; width:80px; transform:perspective(400px) rotateX(40deg) rotateZ(0deg); padding:0;}
 .e_plant_logo .leaf{ width:80px; height:80px;
   animation:plant_logo 60s ease-in-out infinite;
   transform-origin:0 0;
@@ -554,6 +554,7 @@ footer{ height:100%;}
 
 @media print{
 body{ border-top:none}
+.option{ display:none;}
 blockquote{ border:#666 1px solid;}
 .content{ border-right:none;}
 .btn,
