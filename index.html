@@ -315,17 +315,6 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4;}
 .leaf .l_b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .l_c .in{ transform:scale(1.25) translateZ(60px);}
 
-.e_plant_logo{ display:block; position:absolute; z-index:3; left:0; top:0; height:80px; width:80px;  transform:perspective(400px) rotateX(45deg) rotateZ(10deg)}
-.e_plant_logo .leaf{ width:80px; height:80px;
-	animation:plant_logo 60s ease-in-out infinite;
-	transform-origin:0 0;
-}
-.e_plant_logo .leaf .l_a,
-.e_plant_logo .leaf .l_b,
-.e_plant_logo .leaf .l_c{ width:80px; height:80px;}
-.e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
-.e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
-
 h2 .plant{ display:none}
 
 .e_plant_act{ position:absolute; left:0}
@@ -334,12 +323,23 @@ h2 .plant{ display:none}
 .e_plant_act .leaf .l_b:hover .in,
 .e_plant_act .leaf .l_c:hover .in{ transform:rotateZ(10deg);}
 
+.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:8rem; height:80px; width:80px; transform:perspective(400px) rotateX(45deg) rotateZ(10deg); padding:0;}
+.e_plant_logo .leaf{ width:80px; height:80px;
+  animation:plant_logo 60s ease-in-out infinite;
+  transform-origin:0 0;
+}
+.e_plant_logo .leaf .l_a,
+.e_plant_logo .leaf .l_b,
+.e_plant_logo .leaf .l_c{ width:80px; height:80px;}
+.e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
+.e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
+
 @keyframes plant_logo{
-	0%{transform:rotateZ(0deg);}
-	25%{transform:rotateZ(120deg);}
-	50%{transform:rotateZ(0deg);}
-	75%{transform:rotateZ(-120deg);}
-	100%{transform:rotateZ(0deg);}
+  0%{transform:rotateZ(0deg);}
+  25%{transform:rotateZ(120deg);}
+  50%{transform:rotateZ(0deg);}
+  75%{transform:rotateZ(-120deg);}
+  100%{transform:rotateZ(0deg);}
 }
 
 .bottom{ margin-top:1rem; text-align:center;}
@@ -354,7 +354,9 @@ h2 .plant{ display:none}
 .sampletext .text .col:last-child{ margin-top:.626rem}
 .sampletext .text .col p{ margin-bottom:0}
 
-.option{ display:none}
+.option{ display:block; padding:.75rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
+.option_txtsize,
+.option_printer{ display:none}
 .icon {
   display: inline-block;
   width: 1rem;
@@ -369,7 +371,7 @@ footer .container{ position:relative; height:100%}
 footer .content{ position:relative; height:100%; border-right:none; display:flex;display:flex;align-items: center;}
 footer .content .section{ width:100%; padding-bottom:10%}
 h1,h2{ color:#000}
-h1{ text-align:right; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding:32px 0 .5em; line-height:1em; letter-spacing:.12em; text-transform:uppercase;}
+h1{ text-align:center; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding:13rem 0 3rem; line-height:1em; letter-spacing:.12em; text-transform:uppercase;}
 section,
 .section{ padding-top:1rem;}
 h2{/* padding-left:3rem;*/ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
@@ -456,7 +458,9 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .contactform input{ width:30rem; max-width:80%}
 .contactform textarea{ width:30rem; max-width:80%; height:12rem;}
 
-.option{display:block; text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
+.option{ text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0;}
+.option_txtsize,
+.option_printer{ display:inline;}
 }
 
 @media (min-width:600px){
@@ -478,15 +482,18 @@ blockquote{ margin-right:1.6rem; padding:2rem;}
 section:hover{ z-index:1; position:relative;}
 .f_zoom{ position:relative; transition:transform ease .3s; transform-origin:50% 0; background-color:#fff}
 .f_zoom:hover{ transform:scale(2); z-index:1}
+
 .e_plant_act{ position:static;}
+.e_plant_logo{ position:absolute; left:0; top:0; margin-left:0; padding:100px 0 0 10px; z-index:1;}
+
 .container{ margin:0 auto; padding-bottom:5rem}
 .content{ position:relative; margin-right:3.5rem; padding-left:130px; border-right:#000 1px solid;}
 section,
 .section{ margin-right:1.6rem}
-h1{ font-size:3.7rem; text-align:left; padding:50px 0 .5em;}
+h1{ font-size:3.7rem; text-align:left; padding:50px 0 .5em}
 h2{ padding-left:0; font-size:1.8rem; letter-spacing:.06em}
 h3 + p{ font-size:1rem}
-.e_plant_logo{ position:absolute; padding:100px 0 0 10px; z-index:1;}
+
 .btn,.btn2{ display:inline-block; margin-top:.3rem; width:auto;}
 .bottom{ position:absolute; bottom:0; right:0; right:-3rem; bottom:-3rem; display:block; margin-top:0; width:6rem; text-align:center;}
 .bottom .leaf{ display:block; margin:0 auto;}
@@ -629,9 +636,9 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 
 function textsize(n,o){
 	document.getElementById('root').style = 'font-size:' + n + 'px';
-	document.getElementById('option').childNodes[0].style = 'text-decoration:none';
-	document.getElementById('option').childNodes[1].style = 'text-decoration:none';
-	document.getElementById('option').childNodes[2].style = 'text-decoration:none';
+	document.getElementById('option_txtsize').childNodes[0].style = 'text-decoration:none';
+	document.getElementById('option_txtsize').childNodes[1].style = 'text-decoration:none';
+	document.getElementById('option_txtsize').childNodes[2].style = 'text-decoration:none';
 	o.style = 'text-decoration:underline';
 }
 
@@ -700,7 +707,7 @@ $(function(){
 
 <article class="content">
 	<div class="option">
-    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">切换为简体中文</a><span id="option"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;" data-lang="la_88">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline" data-lang="la_89">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;" data-lang="la_90">A</a></span><a class="ml10" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
+    <a id="langs" class="mr10" href="javascript:;" style="letter-spacing:0">切换为简体中文</a><span class="option_txtsize" id="option_txtsize"><a title="smaller font size" onclick="textsize(14,this);" class="tx_12 ml5" href="javascript:;" data-lang="la_88">A</a><a title="default font size" onclick="textsize(16,this);" class="tx_16 ml5" href="javascript:;" style="text-decoration:underline" data-lang="la_89">A</a><a title="larger font size" onclick="textsize(22,this);" class="tx_20 ml5" href="javascript:;" data-lang="la_90">A</a></span><a class="ml10 option_printer" title="Print This Page" href="javascript:window:print();"><span class="icon-printer"></span></a>
   </div>
 	<h1 data-lang="la_11">Dongfang</h1>
 	<blockquote>
