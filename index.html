@@ -323,10 +323,11 @@ h2 .plant{ display:none}
 .e_plant_act .leaf .l_b:hover .in,
 .e_plant_act .leaf .l_c:hover .in{ transform:rotateZ(10deg);}
 
-.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:8rem; height:80px; width:80px; transform:perspective(400px) rotateX(45deg) rotateZ(10deg); padding:0;}
+.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:8rem; height:80px; width:80px; transform:perspective(400px) rotateX(40deg) rotateZ(-10deg); padding:0;}
 .e_plant_logo .leaf{ width:80px; height:80px;
   animation:plant_logo 60s ease-in-out infinite;
   transform-origin:0 0;
+  animation-fill-mode: both;
 }
 .e_plant_logo .leaf .l_a,
 .e_plant_logo .leaf .l_b,
@@ -335,11 +336,11 @@ h2 .plant{ display:none}
 .e_plant_logo .leaf .in:after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
 
 @keyframes plant_logo{
-  0%{transform:rotateZ(0deg);}
-  25%{transform:rotateZ(120deg);}
-  50%{transform:rotateZ(0deg);}
-  75%{transform:rotateZ(-120deg);}
-  100%{transform:rotateZ(0deg);}
+  0%{transform:rotateZ(-15deg);}
+  25%{transform:rotateZ(105deg);}
+  50%{transform:rotateZ(-15deg);}
+  75%{transform:rotateZ(-135deg);}
+  100%{transform:rotateZ(-15deg);}
 }
 
 .bottom{ margin-top:1rem; text-align:center;}
@@ -402,7 +403,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 
 .pubwrap{ padding-top:1.5rem}
 .pubimg{ text-align:center;}
-.pubimg img{ width:80%; margin:0; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 2px 2px 4px; -webkit-filter:brightness(98%); background:#fff}
+.pubimg img{ width:50%; margin:0; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 2px 2px 4px; -webkit-filter:brightness(98%); background:#fff}
 .pubimg img{ margin-right:.625rem}
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:.625rem; overflow:hidden;}
@@ -484,7 +485,7 @@ section:hover{ z-index:1; position:relative;}
 .f_zoom:hover{ transform:scale(2); z-index:1}
 
 .e_plant_act{ position:static;}
-.e_plant_logo{ position:absolute; left:0; top:0; margin-left:0; padding:100px 0 0 10px; z-index:1;}
+.e_plant_logo{ position:absolute; left:0; top:0; margin-left:0; padding:100px 0 0 10px; z-index:1; transform:perspective(400px) rotateX(40deg) rotateZ(20deg);}
 
 .container{ margin:0 auto; padding-bottom:5rem}
 .content{ position:relative; margin-right:3.5rem; padding-left:130px; border-right:#000 1px solid;}
@@ -737,14 +738,12 @@ $(function(){
           <br><span data-lang="la_18">5) Giving lessons on how to read a children's picture book.</span></p>
 
         <p class="tx_geo" data-lang="la_19">The picture below depicts Dōngfāng's knowledge structure about design, past experience is listed in it by relevance.</p>
-        <div class="singleimg">
-          <div class="inner">
-            <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-              <tr>
-                <td valign="top"><img src="./assets/cdm.svg" alt="Image of Craft Development Map" style="box-shadow:none" /></td>
-              </tr>
-            </table>
-          </div>
+        <div class="mt10">
+          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
+            <tr>
+              <td valign="top"><img src="./assets/cdm.svg" alt="Image of Craft Development Map" style="box-shadow:none; margin-top:0; margin-bottom:0" /></td>
+            </tr>
+          </table>
         </div>
         <p class="mt10"><a target="_blank" href="./assets/cdm.svg" class="btn2" data-lang="la_76">View it in a new window</a></p>
       </li>
