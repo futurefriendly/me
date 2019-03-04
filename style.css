@@ -388,9 +388,6 @@ li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem 
 i{ font-family:Circular Std Book Italic,Helvetica Neue, Helvetica,Arial,sans-serif;}
 label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; padding:1px .8rem; border-radius:.2rem; font-size:.75rem; font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 
-.slidewrap{ position:relative; width:100%; height:0; padding-top:75%;}
-.slidewrap iframe{ position:absolute; width:100%; height:100%; left:0; top:0}
-
 .pubwrap{ padding-top:1.5rem}
 .pubimg{ text-align:center;}
 .pubimg img{ width:50%; margin:0; border-radius:0; display:inline-block; vertical-align:top; box-shadow:rgba(0,0,0,.1) 2px 2px 4px; -webkit-filter:brightness(98%); background:#fff}
@@ -459,6 +456,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 
 .option_txtsize,
 .option_printer{ display:inline;}
+
 }
 
 @media screen and (min-width:800px){
@@ -467,7 +465,6 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 }
 
 @media (min-width:800px){
-.slidewrap{ left:10%; width:80%; padding-top:60%;}
 .lg_only{ display:block;}
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
 blockquote{ margin-right:1.6rem; padding:2rem;}
