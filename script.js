@@ -116,6 +116,7 @@ function switchlang(bl){
             });
             $('#langs').text('切换为简体中文');
             $('body').removeClass('cn').addClass('en');
+            $('#root').attr('lang','en');
             break;
         case "zh":
             /* 简体中文 */
@@ -125,6 +126,7 @@ function switchlang(bl){
             });
             $('#langs').text('To English');
             $('body').removeClass('en').addClass('cn');
+            $('#root').attr('lang','zh-cn');
             break;
         default:
             /* default no match */   
