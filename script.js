@@ -32,7 +32,7 @@ function switchlang(bl){
     la_16 : ['三、高质量技术翻译或文学翻译（英译中）。','3) Technical translation, from English to Chinese\;'],
     la_17 : ['四、简体和繁體中文的软件本地化工作。','4) Copy localization, both of Mandarin and Cantonese\;'],
     la_18 : ['五、讲授图画书的选择和鉴赏课程。','5) Giving lessons on how to read a children\'s picture book\.'],
-    la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图上分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
+    la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图中分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
     la_20 : ['人工智能','A\.I\.'],
     la_21 : ['第45届\<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\"\>「青年文學獎」\<\/a\>小小说组优异奖 (2019)','THE 45\<sup\>th\<\/sup\> \<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\/\"\>YOUTH LITERARY AWARD\<\/a\> OF MERIT IN 2019'],
     la_25 : ['第一年，亲爱的，你说「替我画一只蓝羽毛的孔雀。」我说好的，画出来了。','In the first year\, my dear\, you said\: \"Draw a peacock with blue feathers for me\.\" I said ok\, then I did it\.'],
