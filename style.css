@@ -572,6 +572,7 @@ footer{ height:100%;}
 @media print{
 body{ border-top:none}
 .option{ display:none;}
+.summary .avatar{ margin-right:5%}
 blockquote{ border:#666 1px solid;}
 .content{ border-right:none;}
 .btn,
