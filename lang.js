@@ -15,7 +15,7 @@ function switchlang(bl){
 
   var lang = {
     la_1 : ['我擅长的领域','Overview'],
-    la_2 : ['文学写作样章','Micro-Fiction'],
+    la_2 : ['文字写作样章','Writing'],
     la_3 : ['技术翻译样章','Translation'],
     la_4 : ['设计分享交流','Keynotes'],
     la_5 : ['规范体系建设','Design System'],
@@ -34,13 +34,13 @@ function switchlang(bl){
     la_18 : ['五、讲授图画书的选择和鉴赏课程。','5) Giving lessons on how to read a children\'s picture book\.'],
     la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图中分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
     la_20 : ['人工智能','A\.I\.'],
-    la_21 : ['第45届\<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\"\>「青年文學獎」\<\/a\>小小说组优异奖 (2019)','THE 45\<sup\>th\<\/sup\> \<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\/\"\>YOUTH LITERARY AWARD\<\/a\> OF MERIT IN 2019'],
-    la_25 : ['第一年，亲爱的，你说「替我画一只蓝羽毛的孔雀。」我说好的，画出来了。','In the first year\, my dear\, you said\: \"Draw a peacock with blue feathers for me\.\" I said ok\, then I did it\.'],
-    la_26 : ['第二年，你说：「画一只孔雀。」我说好的，画出来了，蓝羽毛的。','In the second year\, you said\: \"Draw a peacock\.\" I said ok\, I did it\, with blue feathers\.'],
-    la_27 : ['第三年，你说要画一只鸟，我说好的，画出来了一只蓝羽毛的孔雀。你说「你知道我想画孔雀，真贴心。」','In the third year\, you said you want to draw a bird\. I said ok\, then drew a peacock with blue feathers\. You said\: \"You do know what I want is to draw peacocks\, really sweet\.\"'],
-    la_28 : ['第四年，你说想画画，我画出来了，你说「你怎么知道我想要一只鸟？」','In the fourth year\, you said you want a picture\. I satisfied you\. You said\: \"How do you know I want a BIRD\?\"'],
-    la_29 : ['第五年，你心情不好，说：「要有鸟。」我画画给你看，然后你说：「好开心。」','In the fifth year\, you said \"Let There Be Bird\" in a bad mood\. I painted for you\. Then you said\: \"I\'m really happy\.\"'],
-    la_30 : ['第六年，我画画给你看，你说「嘿嘿。」','In the sixth year\, I painted for you\, you said \"Haha\"\.'],
+    la_21 : ['2019，第45届\<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\"\>「青年文學獎」\<\/a\>小小说组优异奖','2019\, THE 45\<sup\>th\<\/sup\> \<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\/\"\>YOUTH LITERARY AWARD\<\/a\> OF MERIT'],
+    la_25 : ['第一年，亲爱的，你说「替我画一只蓝羽毛的孔雀。」我说好的，画出来了。','In the first year\, my dear\, you said\: \<i\>\"Draw a peacock with blue feathers for me\.\"\<\/i\> I said ok\, then I did it\.'],
+    la_26 : ['第二年，你说：「画一只孔雀。」我说好的，画出来了，蓝羽毛的。','In the second year\, you said\: \<i\>\"Draw a peacock\.\"\<\/i\> I said ok\, I did it\, with blue feathers\.'],
+    la_27 : ['第三年，你说要画一只鸟，我说好的，画出来了一只蓝羽毛的孔雀。你说「你知道我想画孔雀，真贴心。」','In the third year\, you said you want to draw a bird\. I said ok\, then drew a peacock with blue feathers\. You said\: \<i\>\"You do know what I want is to draw peacocks\, really sweet\.\"\<\/i\>'],
+    la_28 : ['第四年，你说想画画，我画出来了，你说「你怎么知道我想要一只鸟？」','In the fourth year\, you said you want a picture\. I satisfied you\. You said\: \<i\>\"How do you know I want a BIRD\?\"\<\/i\>'],
+    la_29 : ['第五年，你心情不好，说：「要有鸟。」我画画给你看，然后你说：「好开心。」','In the fifth year\, you said \<i\>\"Let There Be Bird\"\<\/i\> in a bad mood\. I painted for you\. Then you said\: \<i\>\"I\'m really happy\.\"\<\/i\>'],
+    la_30 : ['第六年，我画画给你看，你说「嘿嘿。」','In the sixth year\, I painted for you\, you said \<i\>\"Haha\"\<\/i\>\.'],
     la_31 : ['第七年，我画画给你看，你揍了我。我觉得我不懂你。','Last year\, I did the same for you\. You hurt me\. I could not understand you\, my dear\.'],
     la_32 : ['人民邮电出版社 (2017)','POST \& TELECOM PRESS \(2017\)\.'],
     la_33 : ['译自《ADAPTIVE WEB DESIGN\: CRAFTING RICH EXPERIENCES WITH PROGRESSIVE ENHANCEMENT \(第2版\)》，原作者 AARON GUSTAFSON','TRANSLATED FROM\: GUSTAFSON\, A\. \(2016\)\. ADAPTIVE WEB DESIGN \(SECOND EDITION\)\.'],
@@ -101,7 +101,17 @@ function switchlang(bl){
     la_90 : ['大','A'],
     la_91 : ['发送邮件','Send message to me'],
     la_92 : ['\<a target\=\"_blank\" href\=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>点击这里\<\/a\> 访问我的领英主页，','Click \<a target\=\"_blank\" href=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>HERE\<\/a\> to visit my profile via LinkedIn\, '],
-    la_93 : ['\<img src\=\"\.\/assets\/cdm_cn\.svg\" alt\=\"设计知识结构\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>','\<img src\=\"\.\/assets\/cdm\.svg\" alt\=\"Image of Craft Development Map\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>']
+    la_93 : ['\<img src\=\"\.\/assets\/cdm_cn\.svg\" alt\=\"设计知识结构\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>','\<img src\=\"\.\/assets\/cdm\.svg\" alt\=\"Image of Craft Development Map\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>'],
+    la_94 : ['小小说样章','Micro-fiction'],
+    la_95 : ['散文样章','An Essay Sample'],
+    la_96 : ['展开全文','Show More'],
+    la_97 : ['……','...'],
+    la_98 : ['如何理解香港的本土意识','How to Understand Hong Kong\'s Local Consciousness'],
+    la_99 : ['和北京、上海等城市不同，香港的自我意识是在英国的帮助下建立起来的。在50年代和70年代，香港分别吸收了大量移民，这些移民操着客家话、上海话、北方方言以及广东话，其中并没有任何一种所谓香港本土居民的语言，英语是唯一的官话。','Unlike other cities such as Beijing and Shanghai\, Hong Kong\'s self-awareness was established with the help of the United Kingdom\. In the 1950s and 1970s\, Hong Kong absorbed a large number of immigrants who spoke Hakka\, Wu dialect\, Mandarin and Cantonese\. There is no such thing as \"Hong Kong dialect\"\. English is the only official language\.'],
+    la_100 : ['六七暴动后，英政府意识到华人的不团结会影响到殖民地的投资收益，所以强制采用广东话作为香港人使用中文的规范。香港今年关于汉语和广东话孰为母语的争论，在外省人看来似乎是白马非马乎的怪论，但在香港人看来是有必要的。因香港的中文传统是英国人帮助建立起来的，他若要在1997之后找到自己屹立于汉族文化之林的文化根源，就必须回望广东话是如何成为这个地区的官方语言的历史。有些人至今在公共场合挥舞龙狮旗帜，这里面包含两种人，一种是反贼，另一种是通过对1967年的致敬，去试图找到香港文化在中华文化圈的定位。在内地看，香港人是一种自我隔离的自负；在香港本地看，这却是一种文化定位模糊的自卑，这便是香港文化的吊诡。','After the 1967 leftist riots\, the British government realized that it would reduce the investment income of the colonies if the Chinese people were not united\. Therefore\, they forced Hong Kong residents to study and use Cantonese in a unified manner\. In the perspective of foreigners\, the debate of \<i\>\"Which is the mother tongue, Chinese or Cantonese\?\"\<\/i\> seems strange\. However\, this question seems necessary for Hong Kong people\. As the Chinese tradition of Hong Kong was established with the help of the British\, if Hong Kong needs to find its own cultural roots and confidence after 1997\, it must re-examine its history\, that is how Cantonese became the region\'s official language\. In recent years\, we could see some people waved the Dragon and Lion Flag in public\. Half of them want to express their dissatisfaction with the Chinese government in this way\. The other half just attempt to discover the uniqueness of local culture in Hong Kong by commemorating 1967\. From the perspective of the Mainland\, Hong Kong people are both self-isolated and conceited\. In Hong Kong\, this is a kind of inferiority with a vague cultural orientation\. This is a strange aspect of Hong Kong culture\.'],
+    la_101 : ['1985年，北京的刘索拉在《你别无选择》里说：「去找找看。」这句话说出了改革开放中成长的一代人的心声。而在70年代的香港，西西在《我城》里说：「这个城市里，每天总有这些那些，和我们默然道别。」','In 1985\, the Beijinger Liu Sola said \<i\>\"Go look for it\"\<\/i\> in her book "You Have No Choice". This sentence tells the voice of a generation that grew up in the wave of the Chinese Economic Reform\. However\, In Hong Kong in the 1970s\, Xi Xi said in her book \"My City\"\: \<i\>\"In this city\, there are always these and those things\, say goodbye to us in silence\.\"\<\/i\>'],
+    la_102 : ['北京是一座向前看的城市，因为它厚重的文化积淀给予了人们充足的自信。英子的皇城根，骆驼祥子的茶馆，冯小刚溜着鸟回敬不懂礼貌的游客：「叫大爷。」奥运会时候带红袖箍的大爷大妈人人学英文，家里开公交的二伯二叔依然一碗卤煮，一盆麻小。相反，香港是一座向后看的城市，它的文化太短了，现代主义？那是台湾的事，星岛日报？那是南来文人的阵地。许地山来了，叶灵凤来了，刘以鬯来了，陶里来了，大家带来了四面八方的文化。都说乡愁是一枚小小的邮票，写信的时候，收信人地址很重要，寄信人地址？想写就写一写吧。','Beijing is a forward-looking city because its rich cultural heritage gives people plenty of confidence\. Yingzi\'s memory of the old Beijing\; the Rickshaw Boy\'s Teahouse\; Feng Xiaogang replied to the impolite visitors in a hutong\: \<i\>\"You should call me Uncle\"\<\/i\>\. During the 2008 Olympic Games\, even every elderly security officer who was wearing a red cuff was learning English\; the uncle of the bus driver still ate a bowl of fried noodles and a spicy crayfish\. On the contrary\, Hong Kong is a backward-looking city\. Its culture is too short\, modernism\? That is the matter of Taiwan\. Sing Tao Daily\? That is the position of the southbound literati\. Xu Dishan came\, Ling-feng Yeh came\, Liu Yichang came\, Taoli came, and all of them brought different cultures from different directions\. It is said that the homesickness is a small stamp\. While someone was writing a letter\, the address of the addressee is important\, the address of the sender\? If you really want to write\, just write it\.'],
+    la_103 : ['香港文化之源在哪里呢？小思老师将香港文化历史装进了档案袋，标志着向七十年代之前寻找的行为告一段落。2018年香港书展上推出了西西研究资料，煌煌四巨册。那麦理浩总督管辖的亚洲四小龙之一，才是本地文化信心的起源，才是国人更能懂得的香港。','Where is the source of Hong Kong culture\? Professor Xiao Si put Hong Kong\'s cultural history into the portfolio\, marked the end of the search in the 1970s\. In the 2018 Hong Kong Book Fair\, a set of four books on Xi Xi literature research was launched\. Perhaps\, one of the Four Asian Tigers under the management of Governor MacLehose is the origin of local cultural confidence\, and it is surely a better Hong Kong imagination that Chinese people could understand\.']
   };
   var thislang = '';
          

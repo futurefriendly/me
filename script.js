@@ -55,7 +55,12 @@ function textsize(n,o){
 }
 
 $(function(){
+
   $('.f_play').on(tapend,function(){
-      $(this).attr('target',(windowW > 1239)?'h5stage':'_blank');
+    $(this).attr('target',(windowW > 1239)?'h5stage':'_blank');
+  });
+
+  $('.f_expand').on(tapend,function(){
+    $(this).parents('.f_sm').hide().siblings('.hid').show();
   });
 });
