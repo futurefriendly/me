@@ -102,7 +102,7 @@ function switchlang(bl){
     la_91 : ['发送邮件','Send message to me'],
     la_92 : ['\<a target\=\"_blank\" href\=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>点击这里\<\/a\> 访问我的领英主页，','Click \<a target\=\"_blank\" href=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>HERE\<\/a\> to visit my profile via LinkedIn\, '],
     la_93 : ['\<img src\=\"\.\/assets\/cdm_cn\.svg\" alt\=\"设计知识结构\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>','\<img src\=\"\.\/assets\/cdm\.svg\" alt\=\"Image of Craft Development Map\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>'],
-    la_94 : ['小小说样章','Micro-fiction'],
+    la_94 : ['小说样章','Micro-fiction'],
     la_95 : ['散文样章','An Essay Sample'],
     la_96 : ['展开全文','Show More'],
     la_97 : ['……','...'],
