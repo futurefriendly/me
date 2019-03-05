@@ -103,6 +103,7 @@ function switchlang(bl){
     la_92 : ['\<a target\=\"_blank\" href\=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>点击这里\<\/a\> 访问我的领英主页，','Click \<a target\=\"_blank\" href=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>HERE\<\/a\> to visit my profile via LinkedIn\, '],
     la_93 : ['\<img src\=\"\.\/assets\/cdm_cn\.svg\" alt\=\"设计知识结构\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>','\<img src\=\"\.\/assets\/cdm\.svg\" alt\=\"Image of Craft Development Map\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>'],
     la_94 : ['2018年8月，845字','2018, 568 words'],
+    la_95 : ['版权 2018-2019 \&copy\;futurefriendly\.cn\, 保留所有权利，包括以任何形式复制本网站或其中部分内容的权利。\<br\>有关信息，请咨询内容发布者。','Copyright 2018-2019 \&copy\;futurefriendly\.cn\, all rights reserved\, including the right to reproduce this site or portions thereof in any form whatsoever\. \<br\>For information\, address the content publisher\.'],
     la_96 : ['展开全文','Show More'],
     la_97 : ['……','...'],
     la_98 : ['如何理解香港的本土意识','How to Understand Hong Kong\'s Local Consciousness'],
