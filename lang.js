@@ -104,7 +104,7 @@ function switchlang(bl){
     la_93 : ['\<img src\=\"\.\/assets\/cdm_cn\.svg\" alt\=\"设计知识结构\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>','\<img src\=\"\.\/assets\/cdm\.svg\" alt\=\"Image of Craft Development Map\" style\=\"box-shadow\:none\; margin-top\:0\; margin-bottom\:0\" \/\>'],
     la_94 : ['2018年8月，845字','2018, 568 words'],
     la_95 : ['版权 2018-2019 \&copy\;futurefriendly\.cn\, 保留所有权利，包括以任何形式复制本网站或其中部分内容的权利。\<br\>有关信息，请咨询内容发布者。','Copyright 2018-2019 \&copy\;futurefriendly\.cn\, all rights reserved\, including the right to reproduce this site or portions thereof in any form whatsoever\. \<br\>For information\, address the content publisher\.'],
-    la_96 : ['展开全文','Show More'],
+    la_96 : ['展开全文 \&raquo\;','Full Text \&raquo\;'],
     la_97 : ['……','...'],
     la_98 : ['如何理解香港的本土意识','How to Understand Hong Kong\'s Local Consciousness'],
     la_99 : ['和北京、上海等城市不同，香港的自我意识是在英国的帮助下建立起来的。在50年代和70年代，香港分别吸收了大量移民，这些移民操着客家话、上海话、北方方言以及广东话，其中并没有任何一种所谓香港本土居民的语言，英语是唯一的官话。','Unlike other cities such as Beijing and Shanghai\, Hong Kong\'s self-awareness was established with the help of the United Kingdom\. In the 1950s and 1970s\, Hong Kong absorbed a large number of immigrants who spoke Hakka\, Wu dialect\, Mandarin and Cantonese\. There is no such thing as \"Hong Kong dialect\"\. English is the only official language\.'],
