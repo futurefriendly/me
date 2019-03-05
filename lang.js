@@ -15,7 +15,7 @@ function switchlang(bl){
 
   var lang = {
     la_1 : ['我擅长的领域','Overview'],
-    la_2 : ['文字写作样章','Writing'],
+    la_2 : ['文字写作样章','Creative Writing'],
     la_3 : ['技术翻译样章','Translation'],
     la_4 : ['设计分享交流','Keynotes'],
     la_5 : ['规范体系建设','Design System'],
