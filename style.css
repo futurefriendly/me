@@ -377,7 +377,7 @@ li{ padding-top:1rem; margin-bottom:.3rem}
 li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ /*border-radius:.125rem;*/}
 
 .summary{ background-color:#f4f4f4;}
-.summary .avatar{ display:block; width:100%; margin:auto;}
+.summary .avatar{ width:100%; margin:auto; display:block; overflow:hidden;}
 .summary blockquote{ overflow:hidden;}
 
 .semiul li{ padding-bottom:1rem}
@@ -468,8 +468,25 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .option_txtsize,
 .option_printer{ display:inline;}
 
-.summary{ display:flex;display:flex;align-items: center; padding:3%; border-radius:50rem 0 0 50rem}
-.summary .avatar{ width:26%; float:left;}
+.summary{ padding:3%; border-radius:50rem 0 0 50rem;
+  display:-webkit-flex;
+  display:-moz-flex;
+  display:-o-flex;
+  display:-ms-flex;
+  display:flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.summary .avatar{ width:26%;
+  -webkit-flex-shrink:0;
+  -moz-flex-shrink:0;
+  -o-flex-shrink:0;
+  -ms-flex-shrink:0;
+  flex-shrink:0;
+}
 .summary blockquote{ padding:0 0 0 3%;}
 
 }
