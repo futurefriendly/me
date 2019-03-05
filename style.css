@@ -376,6 +376,10 @@ ul{}
 li{ padding-top:1rem; margin-bottom:.3rem}
 li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ /*border-radius:.125rem;*/}
 
+.summary{ background-color:#f4f4f4;}
+.summary .avatar{ display:block; width:100%; margin:auto;}
+.summary blockquote{ overflow:hidden;}
+
 .semiul li{ padding-bottom:1rem}
 .semiul li:last-child{ padding-bottom:0}
 .semiul li img{ width:100%; max-width:26rem;}
@@ -448,6 +452,10 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 @media (min-width:480px){
 
 .btn,.btn2{ display:inline-block; margin-top:.3rem; width:auto;}
+
+.summary{ padding:5%}
+.summary .avatar{ width:50%; border-radius:50%;}
+.summary blockquote{ padding:5% 0 0;}
 }
 
 @media (min-width:600px){
@@ -460,6 +468,10 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .option_txtsize,
 .option_printer{ display:inline;}
 
+.summary{ display:flex;display:flex;align-items: center; padding:3%; border-radius:50rem 0 0 50rem}
+.summary .avatar{ width:26%; float:left;}
+.summary blockquote{ padding:0 0 0 3%;}
+
 }
 
 @media screen and (min-width:800px){
@@ -470,7 +482,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 @media (min-width:800px){
 .lg_only{ display:block;}
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
-blockquote{ margin-right:1.6rem; padding:2rem;}
+blockquote{ padding:2rem;}
 .pubwrap{ position:relative;}
 .pubimg{ text-align:left; float:left; margin-right:1.25rem;}
 .pubimg:hover img{ transform:perspective(1000px) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
@@ -541,6 +553,10 @@ nav .leaf .l_a .in:after{ display:none}
 .showcase .c2{ padding-top:90px;}
 
 footer{ height:100%;}
+
+.summary{}
+.summary .avatar{ width:20%;}
+.summary blockquote{}
 
 #cnzz:before{ position:absolute; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
   transform:translateY(-100%);
