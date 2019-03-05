@@ -10,7 +10,9 @@ address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:nor
 ol,ul{list-style:none}
 caption,th{text-align:left}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
-body{ font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
+body{ font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
 input,textarea,select,button{ outline: none; resize:none; font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 input,textarea{ font-family:Georgia, serif;}
 button{line-height:2;white-space:nowrap;vertical-align:middle;cursor:pointer}
