@@ -42,7 +42,7 @@ function switchlang(bl){
     la_29 : ['第五年，你心情不好，说：「要有鸟。」我画画给你看，然后你说：「好开心。」','In the fifth year\, you said \<i\>\"Let There Be Bird\"\<\/i\> in a bad mood\. I painted for you\. Then you said\: \<i\>\"I\'m really happy\.\"\<\/i\>'],
     la_30 : ['第六年，我画画给你看，你说「嘿嘿。」','In the sixth year\, I painted for you\, you said \<i\>\"Haha\"\<\/i\>\.'],
     la_31 : ['第七年，我画画给你看，你揍了我。我觉得我不懂你。','Last year\, I did the same for you\. You hurt me\. I could not understand you\, my dear\.'],
-    la_32 : ['人民邮电出版社 (2017)','POST \& TELECOM PRESS \(2017\)\.'],
+    la_32 : ['2017，人民邮电出版社','2017\, POST & TELECOM PRESS'],
     la_33 : ['译自《ADAPTIVE WEB DESIGN\: CRAFTING RICH EXPERIENCES WITH PROGRESSIVE ENHANCEMENT \(第2版\)》，原作者 AARON GUSTAFSON','TRANSLATED FROM\: GUSTAFSON\, A\. \(2016\)\. ADAPTIVE WEB DESIGN \(SECOND EDITION\)\.'],
     la_34 : ['翻译样章：','SAMPLE PARAGRAPH\:'],
     la_35 : ['译自《DATA VISUALIZATION WITH JAVASCRIPT》，原作者 STEPHEN A\. THOMAS','TRANSLATED FROM\: THOMAS\, S\. A\. \(2015\)\. DATA VISUALIZATION WITH JAVASCRIPT\.'],
