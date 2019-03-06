@@ -14,7 +14,7 @@ body{ font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;
   -webkit-text-size-adjust:100%;
 }
 input,textarea,select,button{ outline: none; resize:none; font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
-input,textarea{ font-family:Georgia, serif;}
+input,textarea{ font-family:Georgia, serif; box-shadow:none}
 .cn input,
 .cn textarea{ font-family:Pingfang, sans-serif;}
 button{line-height:2;white-space:nowrap;vertical-align:middle;cursor:pointer}
