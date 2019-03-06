@@ -126,6 +126,8 @@ function switchlang(bl){
               $(this).html(eval('lang.' + thislang)[1]);
             });
             $('#langs').text('切换为简体中文');
+            $('.contactform [name=_replyto]').attr('placeholder','Your Email');
+            $('.contactform [name=message]').attr('placeholder','Message');
             $('body').removeClass('cn').addClass('en');
             $('#root').attr('lang','en');
             break;
@@ -136,6 +138,8 @@ function switchlang(bl){
               $(this).html(eval('lang.' + thislang)[0]);
             });
             $('#langs').text('To English');
+            $('.contactform [name=_replyto]').attr('placeholder','你的邮箱地址');
+            $('.contactform [name=message]').attr('placeholder','邮件内容');
             $('body').removeClass('en').addClass('cn');
             $('#root').attr('lang','zh-cn');
             break;
