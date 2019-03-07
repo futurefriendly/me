@@ -24,7 +24,7 @@ function switchlang(bl){
     la_8 : ['网站设计制作','Make Websites'],
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
-    la_11 : ['Dongfang','Dongfang'],
+    la_11 : ['DONGFANG','DONGFANG'],
     la_12 : ['你好！欢迎并感谢莅临本网页。我叫东方，常住北京，中文和互联网交叉背景。香港教育大学文学硕士。曾在腾讯、滴滴出行等公司任交互设计师。','WELCOME\! Dōngfāng is a craftsman with a cross-knowledge background located in Beijing\. As a UX designer or UI developer who is passionate about Web design and writing\, he holds a master degree of arts from the Education University of Hong Kong\, and used to work for Tencent and DiDi Chuxing group for years\.'],
     la_13 : ['我乐于为个人或组织提供以下帮助：','Dōngfāng can provide you with the following helps\:'],
     la_14 : ['一、手工制作定制化的响应式设计网站。','1) Design consultation of making a responsive website\;'],
