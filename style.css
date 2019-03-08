@@ -23,6 +23,7 @@ a{ text-decoration: none; outline: none; cursor: pointer;}
 a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
 a:hover{ text-decoration:none;}
 img{ vertical-align:top; max-width:100%}
+hr{ height:2px; width:25%; display:block; margin:4rem auto 1rem; padding:0; background-color:#ddd; border:none; border-radius:2px}
 
 .mjx-chtml{outline:none}
 
