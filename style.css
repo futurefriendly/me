@@ -150,9 +150,18 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .btn2:link,
 .btn2:hover,
 .btn2:active,
-.btn2:visited{ color:#fff;}
+.btn2:visited,
+.btn3,
+.btn3:link,
+.btn3:hover,
+.btn3:active,
+.btn3:visited{ color:#fff;}
 .btn,
-.btn2{ display:block; width:100%; box-sizing:border-box; text-align:center; margin-top:.625rem; line-height:1.5rem; border-radius:0 1rem 1rem 1rem; vertical-align:top; border:none; cursor:pointer; font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
+.btn2,
+.btn3{ display:block; width:100%; box-sizing:border-box; text-align:center; margin-top:.625rem; line-height:1.5rem; border-radius:0 1rem 1rem 1rem; vertical-align:top; border:none; cursor:pointer; font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-appearance:none; appearance:none; background:rgb(255, 90, 95);}
+
+.btn3{ background:#00a699; }
+
 .btn,
 .btn:active,
 .btn:hover{ padding:.5rem 1.25rem;
@@ -161,6 +170,11 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .btn2,
 .btn2:active,
 .btn2:hover{ padding:.375rem 1.25rem;
+    font-size:.75rem;
+}
+.btn3,
+.btn3:active,
+.btn3:hover{ padding:.375rem 1.25rem;
     font-size:.75rem;
 }
 
@@ -461,7 +475,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 
 @media (min-width:480px){
 
-.btn,.btn2{ display:inline-block; margin-top:.3rem; width:auto;}
+.btn,.btn2,.btn3{ display:inline-block; margin-top:.3rem; width:auto;}
 
 .summary{ padding:5%; border-radius:0 1rem 1rem 1rem;}
 .summary .avatar{ position:relative; width:50%; border-radius:50%; border:#fff 3px solid; box-shadow:rgba(0,0,0,.1) 0 0 3px}
