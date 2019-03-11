@@ -310,11 +310,11 @@ body{ background:#fff;}
 
 p{ margin-bottom:1rem; font-family:Georgia, serif}
 blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4;}
-.container{ position:relative; max-width:1020px; margin:0 4%;}
+.container{ position:relative;}
 
 .lg_only{ display:none;}
 
-.plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg); transition:all ease .3s;}
+.plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg)}
 .leaf{ position:relative; width:11px; height:11px;}
 
 .leaf .l_a,
@@ -336,7 +336,7 @@ h2 .plant{ display:none}
 .e_plant_act .leaf .l_b:hover .in,
 .e_plant_act .leaf .l_c:hover .in{ transform:rotateZ(10deg);}
 
-.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:8rem; height:80px; width:80px; transform:perspective(400px) rotateX(40deg) rotateZ(0deg); padding:0;}
+.e_plant_logo{ display:block; position:absolute; z-index:3; left:50%; top:3rem; height:80px; width:80px; transform:perspective(400px) rotateX(40deg) rotateZ(0deg); padding:0;}
 .e_plant_logo .leaf{ width:80px; height:80px;
   animation:plant_logo 60s ease-in-out infinite;
   transform-origin:0 0;
@@ -356,10 +356,6 @@ h2 .plant{ display:none}
   100%{transform:rotateZ(-15deg);}
 }
 
-.bottom{ margin-top:1rem; text-align:center;}
-.bottom .leaf{ display:none}
-.bottom a{ display:block; text-transform:uppercase; letter-spacing:.12em; font-size:.75rem;}
-
 .sampletext{ margin-top:1.5rem; font-weight:100;}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
 .sampletext .text .col{ padding-left:5%; padding-right:5%; overflow:hidden; font-size:.875rem; font-weight:400;
@@ -368,7 +364,7 @@ h2 .plant{ display:none}
 .sampletext .text .col:last-child{ margin-top:.626rem}
 .sampletext .text .col p{ margin-bottom:0}
 
-.option{ display:block; padding:.75rem 1rem 0 0; letter-spacing:.12em; text-transform:uppercase;}
+.option{ display:block; text-align:right; padding:.75rem 0 0 0; letter-spacing:.12em; text-transform:uppercase;}
 .option_txtsize,
 .option_printer{ display:none}
 .icon {
@@ -385,15 +381,18 @@ footer .container{ position:relative; height:100%}
 footer .content{ position:relative; height:100%; border-right:none; display:flex;display:flex;align-items: center;}
 footer .content .section{ width:100%; padding-bottom:10%}
 h1,h2{ color:#000}
-h1{ text-align:center; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding:13rem 0 3rem; line-height:1em; letter-spacing:.12em; text-transform:uppercase;}
+h1{ text-align:center; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding:10rem 0 3rem; line-height:1em; letter-spacing:.12em; text-transform:uppercase;}
 section,
-.section{ padding-top:1rem;}
-h2{/* padding-left:3rem;*/ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
+.section{ padding-top:1rem; padding:0 4%;}
+section > .inner,
+.section > .inner{ max-width:960px; margin:0 auto;}
+
+h2{ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
 h3{ font-size:1.25rem; color:#242424}
 h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; font-size:.875rem; color:#242424}
 ul{}
 li{ padding-top:1rem; margin-bottom:.3rem}
-li img{ display:block; margin:.625rem auto;/* box-shadow:rgba(0,0,0,.2) 0 .1rem .2rem;*/ /*border-radius:.125rem;*/}
+li img{ display:block; margin:.625rem auto;}
 
 .summary{ background-color:#f4f4f4;}
 .summary .avatar{ width:100%; margin:auto; display:block; overflow:hidden;}
@@ -426,11 +425,14 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:1rem; overflow:hidden;}
 
-nav{ display:none; position:fixed; top:0; z-index:1; line-height:1.3em;
+.navwrap{ display:none; position:fixed; top:0; z-index:1; width:100%; left:0; right:0}
+.navwrap .inner{ padding-left:15rem;}
+.navwrap .sec{ position:relative; max-width:960px; margin:0 auto;}
+nav{ position:absolute; line-height:1.3em; left:0; margin-left:-14rem;
   transform:translateY(-200%);
   transition:all .8s ease;
 }
-nav .ins{ width:220px; margin-left:-110px; padding-left:1em; padding-bottom:1em; border-left:#000 1px solid; overflow:hidden;
+nav .ins{ width:13rem; padding-left:1rem; padding-bottom:1rem; border-left:#000 1px solid; overflow:hidden;
 }
 nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap;
    transform:perspective(100px) rotateX(-90deg);
@@ -456,7 +458,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .singleimg .tbimg td{ padding:10px; vertical-align:top}
 .singleimg .tbimg thead td{ padding-bottom:0}
 
-.paper{ font-family:Georgia, serif; padding:3% 5%; /* background-image:url(./assets/kite.svg); background-position:right center; background-size: 20rem; background-repeat:no-repeat;*/}
+.paper{ font-family:Georgia, serif; padding:3% 5%;}
 .paper .topic{ font-size:2em; line-height:1.5em; text-align:center;}
 .cn .paper .topic{ font-size:1.5em;}
 .paper .main{ line-height:2em; padding-top:1rem}
@@ -518,7 +520,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 
 @media screen and (min-width:800px){
 
-.option{ text-align:right; font-size:.875rem; padding:.5rem 1rem 0 0;}
+.option{ font-size:.875rem; padding:.5rem 1rem 0 0;}
 }
 
 @media (min-width:800px){
@@ -548,27 +550,21 @@ blockquote{ padding:2rem;}
 .sampletext .text{}
 .sampletext .text .col{ width:50%; float:left; padding-left:0; padding-right:1rem; text-align:justify;}
 .sampletext .text .col:last-child{ margin-top:0; padding-left:1rem; padding-right:0}
-section:hover{ z-index:1; position:relative;}
+
 .f_zoom{ position:relative; transition:transform ease .3s; transform-origin:50% 0; background-color:#fff}
 .f_zoom:hover{ transform:scale(2); z-index:1}
 
 .e_plant_act{ position:static;}
-.e_plant_logo{ position:absolute; left:0; top:0; margin-left:0; padding:100px 0 0 10px; z-index:1; transform:perspective(400px) rotateX(40deg) rotateZ(20deg);}
+.e_plant_logo{ position:absolute; left:-130px; top:0; padding:100px 0 0 10px; z-index:1; transform:perspective(400px) rotateX(40deg) rotateZ(20deg);}
 
 .container{ margin:0 auto; padding-bottom:5rem}
-.content{ position:relative; margin-right:3.5rem; padding-left:130px; border-right:#000 1px solid;}
+.content{ position:relative;}
 section,
-.section{ margin-right:1.6rem}
+.section{ padding-left:15rem; padding-right:1rem}
 h1{ font-size:3.7rem; text-align:left; padding:50px 0 .5em}
 h2{ padding-left:0; font-size:1.8rem; letter-spacing:.06em}
 h3 + p{ font-size:1rem}
 
-.bottom{ position:absolute; bottom:0; right:0; right:-3rem; bottom:-3rem; display:block; margin-top:0; width:6rem; text-align:center;}
-.bottom .leaf{ display:block; margin:0 auto;}
-.bottom .leaf .l_a{ transform:rotate(45deg); transform-origin:center center}
-.bottom .leaf .l_a .in{ background:none;}
-.bottom .leaf .l_a .in:after{ display:none}
-.bottom a{ padding:.625rem 0; width:6.25rem; white-space:nowrap;}
 footer{}
 footer .container{ padding-bottom:0}
 li img{ margin-left:0; margin-right:0}
@@ -582,14 +578,15 @@ li img{ margin-left:0; margin-right:0}
 
 .li_weishi{ margin-top:-5rem}
 
-.summary{ border-radius:0 0 0 2rem;}
+.summary{ border-radius:0 2rem 2rem 2rem;}
 }
 
 @media (min-width:1240px){
-.e_plant_logo{ padding:150px 0 0 10px;}
+.e_plant_logo{ padding:120px 0 0 10px;}
 h1{ padding:75px 0 .7em; font-size:4.6rem;}
-nav{ display:block;}
-nav .leaf{ display:block; margin:-8px 0 0 -115px}
+.navwrap{ display:block; }
+nav{}
+nav .leaf{ display:block; margin:-8px 0 0 -5px}
 nav .leaf .l_a{ transform:rotate(45deg); transform-origin:center center}
 nav .leaf .l_a .in{ background:none;}
 nav .leaf .l_a .in:after{ display:none}
@@ -597,7 +594,7 @@ nav .leaf .l_a .in:after{ display:none}
 .showcase .inner{ width:auto}
 
 .showcase .c1{ display:block;}
-.showcase .c1 .phone{ border-radius:50px; padding:90px 20px; box-shadow:rgba(0,0,0,.1) 6px 6px 30px;}
+.showcase .c1 .phone{ border-radius:50px; padding:90px 20px; background-color:#fff; box-shadow:rgba(0,0,0,.1) 6px 6px 30px;}
 .showcase .c1 .phone .d1,
 .showcase .c1 .phone .d2,
 .showcase .c1 .phone .d3,
@@ -614,7 +611,7 @@ footer{ height:100%;}
 .summary .avatar{ width:20%;}
 .summary blockquote{}
 
-#cnzz:before{ position:absolute; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
+#cnzz:before{ position:absolute; left:1rem; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
   transform:translateY(-100%);
   opacity:0;
   transition:all .5s ease;
@@ -637,7 +634,6 @@ blockquote{ border:#666 1px solid;}
 .btn2:after{ content:": url(" attr(href) "); "; border-bottom:#666 1px solid;}
 label{ border-color:#666}
 li,section,.section{page-break-inside: avoid;}
-.bottom{ display:none}
 li img{}
 .semiul li img{ display:block}
 li .qr{ display:inline-block;}
@@ -650,5 +646,4 @@ footer{ display:none;}
 .cn .paper{ font-family:Pingfang, sans-serif;}
 .cn .paper .topic{}
 .cn .paper strong{ font-weight:400}
-.cn nav .ins a,
-.cn .bottom a{ font-family:Pingfang, sans-serif; font-weight:400; font-size:.875rem}
+.cn nav .ins a{ font-family:Pingfang, sans-serif; font-weight:400; font-size:.875rem}

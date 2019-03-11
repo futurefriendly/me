@@ -90,7 +90,6 @@ function switchlang(bl){
     la_84 : ['飞机稿1号','Draft 1'],
     la_85 : ['飞机稿2号','Draft 2'],
     la_86 : ['在线试用','Try it online'],
-    la_87 : ['回到顶部','back to top'],
     la_88 : ['小','A'],
     la_89 : ['中','A'],
     la_90 : ['大','A'],
