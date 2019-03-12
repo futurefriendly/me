@@ -536,7 +536,7 @@ blockquote{ padding:2rem;}
 .e_pubwrap_book .pubimg img{ transition:all .5s ease;}
 .pubimg .slidewrap{ width:20rem}
 .pubtxt{ margin-top:0;}
-.e_pubwrap_book .pubtxt{ padding-top:.625rem; padding-bottom:6rem;}
+.e_pubwrap_book .pubtxt{ padding-top:.625rem; padding-bottom:5rem;}
 
 .pubtxt p{ line-height:2em}
 .pubtxt .btm{ position:absolute; bottom:0;}
@@ -572,8 +572,8 @@ blockquote{ padding:2rem;}
 section,
 .section{ padding-left:15rem; padding-right:1rem}
 h1{ z-index:1; font-size:3.7rem; text-align:left; padding:50px 0 .5em}
-h2{ padding-left:0; font-size:2.7rem; letter-spacing:.06em}
-h3{ font-size:2rem; }
+h2{ padding-left:0; font-size:2.7rem; line-height:1.5em; letter-spacing:.06em}
+h3{ font-size:1.8rem; line-height:1.5em}
 h3 + p{ font-size:1rem}
 
 footer{}
