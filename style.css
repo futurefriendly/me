@@ -457,7 +457,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .singleimg .tbimg thead td{ padding-bottom:0}
 
 .paper{ font-family:Georgia, serif; padding:3% 5%;}
-.paper .topic{ font-size:2em; line-height:1.5em; text-align:center;}
+.paper .topic{ font-size:2em; line-height:1.5em; margin-bottom:1rem; text-align:center;}
 .cn .paper .topic{ font-size:1.5em;}
 .paper .main{ line-height:2em; padding-top:1rem}
 .paper .main p{ text-indent:1em}
