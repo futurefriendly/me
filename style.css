@@ -522,6 +522,9 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 }
 
 @media (min-width:800px){
+.btn2,
+.btn2:active,
+.btn2:hover{ padding:.75rem 1.5rem; border-radius:0 1.5rem 1.5rem 1.5rem; margin-top:1rem; margin-right:.3rem; font-size:.875rem}
 .lg_only{ display:block;}
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
 blockquote{ padding:2rem;}
