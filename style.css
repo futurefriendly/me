@@ -422,7 +422,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubimg img{ width:90%; margin:0; border-radius:0; display:inline-block; vertical-align:top; background:#fff}
 .pubimg img{ margin-right:.625rem}
 .pubimg .slidewrap{ width:100%}
-.e_pubwrap_book .pubimg img{ width:50%;}
+.e_pubwrap_book .pubimg img{ width:50%; background:#f9f9f9;}
 .pubimg img:first-child{ margin-right:0}
 .pubtxt{ margin-top:1rem; overflow:hidden;}
 
@@ -536,9 +536,9 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
 blockquote{ padding:2rem;}
 .pubwrap{ position:relative;}
-.pubimg{ padding-top:.625rem; text-align:left; float:left; margin-right:1.25rem;}
+.pubimg{ text-align:left; float:left; margin-right:1.25rem;}
 
-.e_pubwrap_book .pubimg{}
+.e_pubwrap_book .pubimg{ background-color:#f9f9f9;}
 
 .f_dropcover:hover img{ transform:perspective(1000px) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
 .pubimg img,
@@ -546,7 +546,7 @@ blockquote{ padding:2rem;}
 .e_pubwrap_book .pubimg img{ transition:all .5s ease;}
 .pubimg .slidewrap{ width:20rem}
 .pubtxt{ margin-top:0;}
-.e_pubwrap_book .pubtxt{ padding-top:.625rem; padding-bottom:5rem;}
+.e_pubwrap_book .pubtxt{ padding-bottom:7rem;}
 
 .pubtxt p{ line-height:2em}
 .pubtxt .btm{ position:absolute; bottom:0;}
