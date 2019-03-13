@@ -446,7 +446,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .scroll nav .ins{ padding-top:1rem;}
 .scroll nav .ins a{ transform:perspective(100px) rotateX(0);}
 
-.singleimg{ position:relative;}
+.singleimg{ position:relative; margin-left:-4%; margin-right:-4%}
 .singleimg::before{ content:''; position:absolute; z-index:1; left:0; top:0; height:100%; width:5px;
   background-image:linear-gradient(90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
 }
@@ -454,7 +454,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
   background-image:linear-gradient(-90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
 }
 .singleimg .inner{ box-sizing:border-box; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
-.singleimg .tbimg{ box-sizing:border-box; width:150%; max-width:150%}
+.singleimg .tbimg{ box-sizing:border-box; width:180%; max-width:180%}
 .singleimg .tbimg img{ box-sizing:border-box; margin-top:0}
 .singleimg .tbimg td{ padding:.5rem; vertical-align:top}
 .singleimg .tbimg thead td{ padding-bottom:0}
@@ -593,7 +593,7 @@ li img{ margin-left:0; margin-right:0}
 .semiul li{ width:100%; float:left;}
 .semiul li img{ width:24rem; max-width:100%}
 
-.singleimg .tbimg{ width:100%; max-width:100%; border:none;}
+.singleimg .tbimg{ width:100%; max-width:100%; border:none; margin-left:0; margin-right:0}
 .singleimg .tbimg td{}
 .singleimg::before,
 .singleimg::after{ display:none;}
@@ -712,9 +712,7 @@ hr{ display:none }
 .theme_3 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
 .theme_3 .quote::before{ color:rgba(255,255,255,.8)}
 
-.theme_4{ padding-top:10%;
-  background-image:linear-gradient(3deg, #01579B 0, #01579B 90%, transparent 90%, transparent);
-}
+.theme_4{ background-color:#01579B}
 .theme_4 h1,
 .theme_4 h2,
 .theme_4 h3,
@@ -725,7 +723,9 @@ hr{ display:none }
 .theme_4 .quote::before{ color:rgba(255,255,255,.8)}
 
 @media screen and (min-width:1240px){
-  .theme_4{ padding-top:8%;}
+  .theme_4{ padding-top:8%; background-color:transparent;
+    background-image:linear-gradient(3deg, #01579B 0, #01579B 90%, transparent 90%, transparent);
+  }
 }
 
 /*.tbimg img{
