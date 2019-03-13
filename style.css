@@ -746,3 +746,9 @@ hr{ display:none }
     background-image:linear-gradient(-3deg, #f5f5f5 0, #f5f5f5 90%, transparent 90%, transparent);
   }
 }
+
+/* nav contrast color */
+.f_dark_bg nav .ins{ border-left-color:#fff }
+.f_dark_bg nav .ins a{ color:#fff;}
+.f_dark_bg nav .ins a:hover{ color:#FFEB3B;}
+.f_dark_bg nav .leaf .in{ border-color:#fff; }

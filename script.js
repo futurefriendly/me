@@ -15,7 +15,23 @@ function onScroll(){
     	$("body").addClass('scroll');
     }else{
     	$("body").removeClass('scroll');
+    };
+
+    if (scrollPos > 1600){
+      $("body").addClass('f_dark_bg');
+    }else{
+      $("body").removeClass('f_dark_bg');
+    };
+    if(scrollPos > 4700){
+      $("body").removeClass('f_dark_bg');
+    };
+    if(scrollPos > 8600){
+      $("body").addClass('f_dark_bg');
     }
+    if(scrollPos > 9600){
+      $("body").removeClass('f_dark_bg');
+    };
+
     documentH = $(document).height();
     pct = 100 - scrollPos / documentH * 100 + '%';
     $("#loadbar").css({
