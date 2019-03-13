@@ -530,7 +530,7 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .btn2:hover{ padding:.75rem 1.5rem; border-radius:0 1.5rem 1.5rem 1.5rem; margin-top:1rem; margin-right:.3rem; font-size:.875rem}
 
 .quote{ padding-left:3rem; padding-top:1rem;}
-.quote:::before{ position:absolute; margin-left:-3rem; margin-top:-1.5rem; font-family:'icomoon'; color:rgba(0,0,0,.8); font-size:2rem; content: "\e977";}
+.quote::before{ position:absolute; margin-left:-3rem; margin-top:-1.5rem; font-family:'icomoon'; color:rgba(0,0,0,.8); font-size:2rem; content: "\e977";}
 .quote p:last-child{ margin-bottom:0}
 
 .lg_only{ display:block;}
