@@ -104,6 +104,9 @@ hr{ height:2px; width:25%; display:block; margin:4rem auto 1rem; padding:0; back
 .icon-embed:before {
   content: "\ea7f";
 }
+.icon-quotes-left:before {
+  content: "\e977";
+}
 
 .icon-logo_tencent:before {
   content: "\e900";
@@ -525,6 +528,10 @@ nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-t
 .btn2,
 .btn2:active,
 .btn2:hover{ padding:.75rem 1.5rem; border-radius:0 1.5rem 1.5rem 1.5rem; margin-top:1rem; margin-right:.3rem; font-size:.875rem}
+
+.quote{ padding-left:3rem; padding-top:1rem;}
+.quote:before{ position:absolute; margin-left:-3rem; margin-top:-1.5rem; font-family:'icomoon'; color:rgba(0,0,0,.8); font-size:2rem; content: "\e977";}
+
 .lg_only{ display:block;}
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
 blockquote{ padding:2rem;}
@@ -668,7 +675,7 @@ hr{ display:none }
 
 /* https://material.io/design/color/the-color-system.html#tools-for-picking-colors */
 
-.theme_1{ background:#E65100 url(./assets/theme_bg1.jpg) center center no-repeat; background-size:cover; background-attachment:fixed;}
+.theme_1{ background-color:#E65100; }
 .theme_1 h1,
 .theme_1 h2,
 .theme_1 h3,
@@ -676,10 +683,16 @@ hr{ display:none }
 .theme_1 p{ color:rgba(255,255,255,.8);}
 .theme_1 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
 .theme_1 .btn3{ background:#6D4C41; }
+.theme_1 .quote:before{ color:rgba(255,255,255,.8)}
 
 /*.theme_1 p{ color:rgba(0,0,0,.8);}
 .theme_1 p label{ background:rgba(255,255,255,.3); border:none; color:rgba(0,0,0,.8);}
 */
+
+@media screen and (min-width:480px){
+  .theme_1{ background:#E65100 url(./assets/theme_bg1.jpg) left top no-repeat; background-size:cover; background-attachment:fixed;}
+}
+
 .theme_2{ background-color:#DCE775}
 .theme_2 h1,
 .theme_2 h2,
@@ -696,3 +709,26 @@ hr{ display:none }
 .theme_3 .c_dark{ color:#fff;}
 .theme_3 p{ color:rgba(255,255,255,.8);}
 .theme_3 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
+.theme_3 .quote:before{ color:rgba(255,255,255,.8)}
+
+.theme_4{ padding-top:10%;
+  background-image:linear-gradient(3deg, #01579B 0, #01579B 90%, transparent 90%, transparent);
+}
+.theme_4 h1,
+.theme_4 h2,
+.theme_4 h3,
+.theme_4 .c_dark{ color:#fff;}
+.theme_4 p{ color:rgba(255,255,255,.8);}
+.theme_4 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
+.theme_4 .btn3{ background:#6D4C41; }
+.theme_4 .quote:before{ color:rgba(255,255,255,.8)}
+
+@media screen and (min-width:1240px){
+  .theme_4{ padding-top:8%;}
+}
+
+/*.tbimg img{
+    border-width:12px;
+    -webkit-border-image:url(./assets/border_s.png) 24 24 stretch;
+    border-style:solid;
+}*/
