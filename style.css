@@ -321,8 +321,8 @@ body{ background:#fff;}
 }
 .scroll #loadbar{}
 
-p{ margin-bottom:1rem; font-family:Georgia, serif}
-blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4;}
+p{ margin-bottom:1rem; font-family:Georgia, serif; word-wrap:break-word; overflow-wrap:break-word;}
+blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; word-wrap:break-word; overflow-wrap:break-word;}
 .container{ position:relative;}
 
 .lg_only{ display:none;}
@@ -655,7 +655,7 @@ body{ border-top:none}
 blockquote{ border:#666 1px solid;}
 .content{ border-right:none;}
 .btn,
-.btn2{ border-radius:0; padding:0; text-align:left; word-wrap:break-word; word-break:break-all;}
+.btn2{ border-radius:0; padding:0; text-align:left; word-wrap:break-word; overflow-wrap:break-word; word-break:break-all;}
 .btn::after,
 .btn2::after{ content:": url(" attr(href) "); "; border-bottom:#666 1px solid;}
 label{ border-color:#666}
