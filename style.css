@@ -336,7 +336,7 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; wo
 .leaf .l_b{ transform:rotateZ(120deg);}
 .leaf .l_c{ transform:rotateZ(240deg);}
 .leaf .in{ position:relative; display:inline-block; vertical-align:top; width:9px; height:9px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 1px 50%;}
-.leaf .in::after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:1px; background-color:#000; transform:rotate(45deg); transform-origin:3px 0; border-radius:50%}
+.leaf .in::after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:1px; background-color:#000; transform:rotate(45deg); transform-origin:3px 0; border-radius:0 50% 50% 0}
 .leaf .l_a .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .l_b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .l_c .in{ transform:scale(1.25) translateZ(60px);}
@@ -608,7 +608,7 @@ li img{ margin-left:0; margin-right:0}
 h1{ padding:75px 0 .7em; font-size:5.2rem;}
 .navwrap{ display:block; }
 nav{}
-nav .leaf{ position:absolute; bottom:-10px; display:block; transform:rotate(45deg); transform-origin:0 0;
+nav .leaf{ position:absolute; bottom:-9px; display:block; transform:rotate(45deg); transform-origin:0 0;
   transition:transform .5s ease;
 }
 nav .leaf .l_a{}
