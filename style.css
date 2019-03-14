@@ -430,11 +430,12 @@ nav{ position:absolute; line-height:1.3em; left:0; margin-left:-14rem;
 }
 nav .ins{ width:13rem; padding-left:1rem; padding-bottom:2rem; border-left:#000 1px solid; overflow:hidden;
 }
-nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap;
-   transform:perspective(100px) rotateX(-90deg);
+nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap; opacity:.8;
+  transform:perspective(100px) rotateX(-90deg);
   transition:transform .8s ease;
   transition-delay:.8s;
 }
+nav .ins a:hover{ opacity:1}
 .scroll nav{
   transform:translateY(0);
 }
