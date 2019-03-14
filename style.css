@@ -727,7 +727,7 @@ hr{ display:none }
 .theme_4 .quote::before{ color:rgba(255,255,255,.8)}
 
 @media screen and (min-width:1240px){
-  .theme_4{ padding-top:5%;
+  .theme_4{ padding-top:4rem;
     clip-path:polygon(0 0, 100% 6%, 100% 100%, 0 100%);
   }
 }
@@ -743,7 +743,7 @@ hr{ display:none }
 .theme_5 .quote::before{ color:rgba(0,0,0,.8)}
 
 @media screen and (min-width:1240px){
-  .theme_5{ padding-top:10%;
+  .theme_5{ padding-top:9rem;
     clip-path:polygon(0 6%, 100% 0, 100% 100%, 0 100%);
   }
 }
