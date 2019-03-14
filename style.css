@@ -603,7 +603,6 @@ li img{ margin-left:0; margin-right:0}
 @media (min-width:1240px){
 
 .li_pend{ margin-top:-5rem}
-.li_pend2{ margin-top:-10rem}
 
 .e_plant_logo{ padding:120px 0 0 10px;}
 h1{ padding:75px 0 .7em; font-size:5.2rem;}
@@ -728,8 +727,8 @@ hr{ display:none }
 .theme_4 .quote::before{ color:rgba(255,255,255,.8)}
 
 @media screen and (min-width:1240px){
-  .theme_4{ padding-top:10%; background-color:transparent;
-    background-image:linear-gradient(3deg, #039BE5 0, #039BE5 90%, transparent 90%, transparent);
+  .theme_4{ padding-top:5%;
+    clip-path:polygon(0 0, 100% 6%, 100% 100%, 0 100%);
   }
 }
 
@@ -744,8 +743,8 @@ hr{ display:none }
 .theme_5 .quote::before{ color:rgba(0,0,0,.8)}
 
 @media screen and (min-width:1240px){
-  .theme_5{ padding-top:18%; background-color:transparent;
-    background-image:linear-gradient(-3deg, #f5f5f5 0, #f5f5f5 90%, transparent 90%, transparent);
+  .theme_5{ padding-top:10%;
+    clip-path:polygon(0 6%, 100% 0, 100% 100%, 0 100%);
   }
 }
 
