@@ -332,16 +332,14 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4;}
 
 .leaf .l_a,
 .leaf .l_b,
-.leaf .l_c{ position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
+.leaf .l_c{ display:inline-block; vertical-align:top; position:absolute; left:0; top:0; width:11px; height:11px; transform-origin:0px 0px;}
 .leaf .l_b{ transform:rotateZ(120deg);}
 .leaf .l_c{ transform:rotateZ(240deg);}
-.leaf .in{ position:relative; width:9px; height:9px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 2px 50%;}
-.leaf .in::after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:0; border-top:#000 1px solid; transform:rotate(45deg); transform-origin:3px 0;}
+.leaf .in{ position:relative; display:inline-block; vertical-align:top; width:9px; height:9px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 1px 50%;}
+.leaf .in::after{ position:absolute; content:""; left:-2px; top:0; width:9px; height:1px; background-color:#000; transform:rotate(45deg); transform-origin:3px 0; border-radius:50%}
 .leaf .l_a .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .l_b .in{ transform:scale(1.25) translateZ(60px);}
 .leaf .l_c .in{ transform:scale(1.25) translateZ(60px);}
-
-h2 .plant{ display:none}
 
 .e_plant_act{ position:absolute; left:0}
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
@@ -354,8 +352,8 @@ h2 .plant{ display:none}
 .e_plant_logo .leaf .l_a,
 .e_plant_logo .leaf .l_b,
 .e_plant_logo .leaf .l_c{ width:80px; height:80px;}
-.e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:4px}
-.e_plant_logo .leaf .in::after{ left:-20px; width:88px; height:2px; border-top-width:2px; transform-origin:21px 0;}
+.e_plant_logo .leaf .in{ width:74px; height:74px; border-width:3px; border-bottom-right-radius:2px}
+.e_plant_logo .leaf .in::after{ left:-19px; width:88px; height:3px; transform-origin:21px 0;}
 
 .sampletext{ margin-top:1.5rem; font-weight:100;}
 .sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
@@ -433,7 +431,7 @@ nav{ position:absolute; line-height:1.3em; left:0; margin-left:-14rem;
   transform:translateY(-200%);
   transition:all .8s ease;
 }
-nav .ins{ width:13rem; padding-left:1rem; padding-bottom:1rem; border-left:#000 1px solid; overflow:hidden;
+nav .ins{ width:13rem; padding-left:1rem; padding-bottom:2rem; border-left:#000 1px solid; overflow:hidden;
 }
 nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap;
    transform:perspective(100px) rotateX(-90deg);
@@ -611,10 +609,14 @@ li img{ margin-left:0; margin-right:0}
 h1{ padding:75px 0 .7em; font-size:5.2rem;}
 .navwrap{ display:block; }
 nav{}
-nav .leaf{ display:block; margin:-8px 0 0 -5px}
-nav .leaf .l_a{ transform:rotate(45deg); transform-origin:center center}
-nav .leaf .l_a .in{ background:none;}
-nav .leaf .l_a .in::after{ display:none}
+nav .leaf{ position:absolute; bottom:-10px; display:block; transform:rotate(45deg); transform-origin:0 0;
+  transition:transform .5s ease;
+}
+nav .leaf .l_a{}
+nav .leaf .in{ background:none;}
+
+nav .ins{ transition:padding-bottom .3s ease;}
+nav .leaf:hover ~ .ins{ padding-bottom:2.5rem}
 
 .showcase .inner{ width:auto}
 
@@ -748,7 +750,39 @@ hr{ display:none }
 }
 
 /* nav contrast color */
-.f_dark_bg nav .ins{ border-left-color:#fff }
+.f_dark_bg nav .ins{ border-left-color:#fff;}
 .f_dark_bg nav .ins a{ color:#fff;}
 .f_dark_bg nav .ins a:hover{ color:#FFEB3B;}
-.f_dark_bg nav .leaf .in{ border-color:#fff; }
+.f_dark_bg nav .leaf{/* transform:rotate(165deg);*/}
+.f_dark_bg nav .leaf .l_a,
+.f_dark_bg nav .leaf .l_b,
+.f_dark_bg nav .leaf .l_c{
+  animation-duration:1s;
+  animation-timing-function:ease;
+  animation-iteration-count:1;
+  animation-fill-mode:both;
+}
+
+/* initial animation*/
+nav .leaf .l_a{ opacity:0; transform:rotateZ(-120deg);}
+nav .leaf .l_b{ opacity:0; transform:rotateZ(120deg);}
+nav .leaf .l_c{ transform:rotateZ(0deg);}
+
+.f_dark_bg nav .leaf .l_a{ animation-name:ldrop_l}
+.f_dark_bg nav .leaf .l_b{ animation-name:ldrop_r}
+.f_dark_bg nav .leaf .l_c{ animation-name:ldrop_m}
+
+@keyframes ldrop_l{
+  0%{ opacity:0; transform:rotateZ(-120deg);}
+  100%{ opacity:1; transform:rotateZ(-240deg);}
+}
+@keyframes ldrop_r{
+  0%{ opacity:0; transform:rotateZ(120deg);}
+  100%{ opacity:1; transform:rotateZ(0deg);}
+}
+@keyframes ldrop_m{
+  0%{ transform:rotateZ(0deg);}
+  100%{ transform:rotateZ(-120deg);}
+}
+.f_dark_bg nav .in{ border-color:#fff; mix-blend-mode:difference;}
+.f_dark_bg nav .in::after{ background-color:#fff;}
