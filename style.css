@@ -381,7 +381,7 @@ h1{ position:relative; z-index:4; text-align:center; font-family:Circular Std Bo
 section,
 .section{ padding:1rem 4% 2rem; vertical-align:top}
 section > .inner,
-.section > .inner{ width:86%; max-width:3200px; margin:0 auto;}
+.section > .inner{ width:92%; max-width:3200px; margin:0 auto;}
 
 h2{ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
 h3{ font-size:1.25rem; color:#242424}
@@ -423,7 +423,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 
 .navwrap{ display:none; position:fixed; top:0; z-index:1; width:100%; left:0; right:0}
 .navwrap .inner{ padding-left:15rem;}
-.navwrap .sec{ position:relative; width:86%; max-width:3200px; margin:0 auto;}
+.navwrap .sec{ position:relative; width:92%; max-width:3200px; margin:0 auto;}
 nav{ position:absolute; line-height:1.3em; left:0; margin-left:-14rem;
   transform:translateY(-200%);
   transition:all .8s ease;
