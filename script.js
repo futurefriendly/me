@@ -81,6 +81,7 @@ function textsize(n,o){
 	document.getElementById('option_txtsize').childNodes[1].style = 'text-decoration:none';
 	document.getElementById('option_txtsize').childNodes[2].style = 'text-decoration:none';
 	o.style = 'text-decoration:underline';
+  secHeight();
 }
 
 $(function(){
