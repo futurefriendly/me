@@ -84,6 +84,7 @@ function textsize(n,o){
 }
 
 $(function(){
+  secHeight();
   $('nav').show();
 
   $('.f_play').on(tapend,function(){
