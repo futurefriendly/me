@@ -247,14 +247,14 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .mb20{ margin-bottom:1.25rem}
 .ml20{ margin-left:1.25rem}
 
-.pt5{ padding-top:5px}
-.pr5{ padding-right:5px}
-.pb5{ padding-bottom:5px}
-.pl5{ padding-left:5px}
-.pt10{ padding-top:10px}
-.pr10{ padding-right:10px}
-.pb10{ padding-bottom:10px}
-.pl10{ padding-left:10px}
+.pt5{ padding-top:.3rem}
+.pr5{ padding-right:.3rem}
+.pb5{ padding-bottom:.3rem}
+.pl5{ padding-left:.3rem}
+.pt10{ padding-top:.625rem}
+.pr10{ padding-right:.625rem}
+.pb10{ padding-bottom:.625rem}
+.pl10{ padding-left:.625rem}
 
 body .mt0{ margin-top:0!important}
 body .mr0{ margin-right:0!important}
@@ -327,16 +327,16 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; wo
 
 .lg_only{ display:none;}
 
-.plant{ display:inline-block; vertical-align:middle; width:11px; height:14px; padding:2px 0 0 10px; transform:rotateZ(-15deg)}
-.leaf{ position:relative; width:11px; height:11px;}
+.plant{ display:inline-block; vertical-align:middle; width:.6875rem; height:.875rem; padding:.125rem 0 0 .625rem; transform:rotateZ(-15deg)}
+.leaf{ position:relative; width:.6875rem; height:.6875rem;}
 
 .leaf .l_a,
 .leaf .l_b,
-.leaf .l_c{ display:inline-block; vertical-align:top; position:absolute; left:0; top:0; width:14px; height:14px; transform-origin:1px 1px;}
+.leaf .l_c{ display:inline-block; vertical-align:top; position:absolute; left:0; top:0; width:.875rem; height:.875rem; transform-origin:.0625rem .0625rem;}
 .leaf .l_b{ transform:rotateZ(120deg);}
 .leaf .l_c{ transform:rotateZ(240deg);}
-.leaf .in{ position:relative; display:inline-block; vertical-align:top; width:12px; height:12px; background-color:#fff; border:#000 1px solid; border-radius:50% 50% 1px 50%}
-.leaf .in::after{ position:absolute; content:""; left:-2px; top:0; width:14px; height:1px; background-color:#000; transform:rotate(45deg); transform-origin:3px 0; border-radius:0 50% 50% 0}
+.leaf .in{ position:relative; display:inline-block; vertical-align:top; width:.75rem; height:.75rem; background-color:#fff; border:#000 .0625rem solid; border-radius:50% 50% .0625rem 50%}
+.leaf .in::after{ position:absolute; content:""; left:-.125rem; top:0; width:.75rem; height:.0625rem; background-color:#000; transform:rotate(45deg); transform-origin:.1875rem 0; border-radius:0 50% 50% 0}
 
 .e_plant_act{ position:absolute; left:0}
 .e_plant_act .leaf .in{ transition:transform .5s ease-in-out;}
@@ -344,16 +344,16 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; wo
 .e_plant_act .leaf .l_b:hover .in,
 .e_plant_act .leaf .l_c:hover .in{ transform:scale(.9) rotateZ(10deg);}
 
-.e_plant_logo{ opacity:.1; display:block; position:absolute; z-index:3; left:50%; top:4rem; height:100px; width:100px; transform:perspective(400px) rotateX(40deg) rotateZ(0deg); padding:0;}
-.e_plant_logo .leaf{ width:100px; height:100px;}
+.e_plant_logo{ opacity:.1; display:block; position:absolute; z-index:3; left:50%; top:4rem; height:6.25rem; width:6.25rem; transform:perspective(25rem) rotateX(40deg) rotateZ(0deg); padding:0;}
+.e_plant_logo .leaf{ width:6.25rem; height:6.25rem;}
 .e_plant_logo .leaf .l_a,
 .e_plant_logo .leaf .l_b,
-.e_plant_logo .leaf .l_c{ width:100px; height:100px; transform-origin:10px 10px;}
-.e_plant_logo .leaf .in{ width:92px; height:92px; border-width:4px; border-bottom-right-radius:2px;}
-.e_plant_logo .leaf .in::after{ left:-19px; width:110px; height:3px; transform-origin:21px 0;}
+.e_plant_logo .leaf .l_c{ width:6.25rem; height:6.25rem; transform-origin:.625rem .625rem;}
+.e_plant_logo .leaf .in{ width:5.75rem; height:5.75rem; border-width:.25rem; border-bottom-right-radius:.125rem;}
+.e_plant_logo .leaf .in::after{ left:-1.1875rem; width:6.875rem; height:.1875rem; transform-origin:1.3125rem 0;}
 
 .sampletext{ margin-top:1.5rem; font-weight:100;}
-.sampletext img{ height:150px; margin:0 .625rem .625rem 0; float:left;}
+.sampletext img{ height:9.375rem; margin:0 .625rem .625rem 0; float:left;}
 .sampletext .text .col{ padding-left:5%; padding-right:5%; overflow:hidden; font-size:.875rem; font-weight:400;
 	box-sizing:border-box;
 }
@@ -391,7 +391,7 @@ li{ padding-top:1rem}
 li img{ display:block; margin:.625rem auto;}
 
 .summary{ background-color:#f4f4f4; padding:5%; border-radius:1rem;}
-.summary .avatar{ position:relative; text-align:center; width:50%; padding-top:50%; border-radius:50%; background-color:#fff; border:#fff 3px solid; box-shadow:rgba(0,0,0,.1) 0 0 3px; display:block; overflow:hidden; margin:auto;}
+.summary .avatar{ position:relative; text-align:center; width:50%; padding-top:50%; border-radius:50%; background-color:#fff; border:#fff .2rem solid; box-shadow:rgba(0,0,0,.1) 0 0 .2rem; display:block; overflow:hidden; margin:auto;}
 .summary .avatar img{ position:absolute; width:100%; height:100%; left:0; top:0;}
 .summary blockquote{ overflow:hidden;}
 
@@ -403,7 +403,7 @@ li img{ display:block; margin:.625rem auto;}
 .showcase{ width:100%; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;}
 .showcase .inner{}
 
-.showcase .c1{ display:none; float:left; padding-left:20px; padding-bottom:20px; padding-top:1.5rem; margin-right:40px}
+.showcase .c1{ display:none; float:left; padding-left:1.25rem; padding-bottom:1.25rem; padding-top:1.5rem; margin-right:2.5rem}
 .showcase .c1 .phone{ position:relative; overflow:hidden;}
 .showcase .c1 .phone iframe{/* border:rgba(255,255,255,.8) 2px solid;*/}
 .showcase .c2{ overflow:hidden;}
@@ -431,7 +431,7 @@ nav{ position:absolute; line-height:1.3em; left:0; margin-left:-14rem;
 nav .ins{ width:13rem; padding-left:1rem; padding-bottom:2rem; border-left:#000 1px solid; overflow:hidden;
 }
 nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap; opacity:.8;
-  transform:perspective(100px) rotateX(-90deg);
+  transform:perspective(6.25rem) rotateX(-90deg);
   transition:transform .8s ease;
   transition-delay:.8s;
 }
@@ -440,14 +440,14 @@ nav .ins a:hover{ opacity:1}
   transform:translateY(0);
 }
 .scroll nav .ins{ padding-top:1rem;}
-.scroll nav .ins a{ transform:perspective(100px) rotateX(0);}
+.scroll nav .ins a{ transform:perspective(6.25rem) rotateX(0);}
 
 .singleimg{ position:relative; margin-left:-4%; margin-right:-4%}
-.singleimg::before{ content:''; position:absolute; z-index:1; left:0; top:0; height:100%; width:5px;
-  background-image:linear-gradient(90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
+.singleimg::before{ content:''; position:absolute; z-index:1; left:0; top:0; height:100%; width:.3rem;
+  background-image:linear-gradient(90deg, rgba(0,0,0,.1) 0, transparent .3rem, transparent);
 }
-.singleimg::after{ content:''; position:absolute; right:0; top:0; height:100%; width:5px;
-  background-image:linear-gradient(-90deg, rgba(0,0,0,.1) 0, transparent 5px, transparent);
+.singleimg::after{ content:''; position:absolute; right:0; top:0; height:100%; width:.3rem;
+  background-image:linear-gradient(-90deg, rgba(0,0,0,.1) 0, transparent .3rem, transparent);
 }
 .singleimg .inner{ box-sizing:border-box; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
 .singleimg .tbimg{ box-sizing:border-box; width:180%; max-width:180%}
@@ -523,7 +523,7 @@ nav .ins a:hover{ opacity:1}
 @media (min-width:800px){
 .navwrap{ display:block; }
 nav{}
-nav .leaf{ position:absolute; bottom:-9px; left:-1px; display:block; transform:rotate(45deg); transform-origin:4px 0;
+nav .leaf{ position:absolute; bottom:-.5625rem; left:-.0625rem; display:block; transform:rotate(45deg); transform-origin:.25rem 0;
   transition:transform .5s ease;
 }
 nav .leaf .l_a{}
@@ -547,7 +547,7 @@ blockquote{ padding:2rem;}
 
 .e_pubwrap_book .pubimg{ width:auto; min-width:0; background-color:#f9f9f9;}
 
-.f_dropcover:hover img{ transform:perspective(1000px) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
+.f_dropcover:hover img{ transform:perspective(60rem) rotateY(-10deg) rotateZ(10deg) translateX(30%) translateY(40%); transform-origin:90% 90%; opacity:0}
 .e_pubwrap_book .pubimg img{ width:auto; height:15rem;}
 .e_pubwrap_book .pubimg img{ transition:all .5s ease;}
 .pubimg .slidewrap{}
@@ -569,7 +569,7 @@ blockquote{ padding:2rem;}
 .f_zoom:hover{ transform:scale(2); z-index:1}
 
 .e_plant_act{ position:static;}
-.e_plant_logo{ opacity:1; position:absolute; left:-130px; top:0; padding:100px 0 0 10px; z-index:1; transform:perspective(400px) rotateX(40deg) rotateZ(20deg);}
+.e_plant_logo{ opacity:1; position:absolute; left:-8.125rem; top:0; padding:6.25rem 0 0 .625rem; z-index:1; transform:perspective(25rem) rotateX(40deg) rotateZ(20deg);}
 .e_plant_logo .leaf{
   animation:plant_logo 60s ease-in-out infinite;
   transform-origin:0 0;
@@ -587,7 +587,7 @@ blockquote{ padding:2rem;}
 .content{ position:relative;}
 section,
 .section{ padding-left:15rem; padding-right:1rem}
-h1{ z-index:1; font-size:3.7rem; text-align:left; padding:50px 0 .5em}
+h1{ z-index:1; font-size:3.7rem; text-align:left; padding:3rem 0 .5em}
 h2{ padding-left:0; font-size:2.7rem; line-height:1.5em; letter-spacing:.06em}
 h3{ font-size:1.8rem; line-height:1.5em}
 h3 + p{ font-size:1rem}
@@ -611,22 +611,22 @@ li img{ margin-left:0; margin-right:0}
 
 .li_pend{ margin-top:-5rem}
 
-.e_plant_logo{ padding:120px 0 0 10px;}
-h1{ padding:75px 0 .7em; font-size:5.2rem;}
+.e_plant_logo{ padding:7.5rem 0 0 .625rem;}
+h1{ padding:4.7rem 0 .7em; font-size:5.2rem;}
 
 .showcase .inner{ width:auto}
 
 .showcase .c1{ display:block;}
-.showcase .c1 .phone{ border-radius:50px; padding:90px 20px; border:rgba(255,255,255,.8) 2px solid;/* box-shadow:rgba(0,0,0,.1) 6px 6px 30px;*/}
+.showcase .c1 .phone{ border-radius:3.125rem; padding:5.625rem 1.25rem; border:rgba(255,255,255,.8) .125rem solid;/* box-shadow:rgba(0,0,0,.1) 6px 6px 30px;*/}
 .showcase .c1 .phone .d1,
 .showcase .c1 .phone .d2,
 .showcase .c1 .phone .d3,
 .showcase .c1 .phone .d4{ position:absolute; display:block}
-.showcase .c1 .phone .d1{ width:50px; height:50px; border:rgba(255,255,255,.8) 2px solid; bottom:20px; left:50%; margin-left:-25px; border-radius:26px}
-.showcase .c1 .phone .d2{ width:64px; height:6px; background:rgba(255,255,255,.8); border-radius:3px; top:46px; left:50%; margin-left:-32px}
-.showcase .c1 .phone .d3{ width:8px; height:8px; background:rgba(255,255,255,.8); border-radius:4px; top:20px; left:50%; margin-left:-4px}
-.showcase .c1 .phone .d4{ width:12px; height:12px; background:rgba(255,255,255,.8); border-radius:6px;top:43px; left:120px}
-.showcase .c2{ padding-top:90px;}
+.showcase .c1 .phone .d1{ width:3.125rem; height:3.125rem; border:rgba(255,255,255,.8) .125rem solid; bottom:1.25rem; left:50%; margin-left:-1.5625rem; border-radius:1.625rem}
+.showcase .c1 .phone .d2{ width:4rem; height:.375rem; background:rgba(255,255,255,.8); border-radius:.1875rem; top:2.875rem; left:50%; margin-left:-2rem}
+.showcase .c1 .phone .d3{ width:.5rem; height:.5rem; background:rgba(255,255,255,.8); border-radius:.25rem; top:1.25rem; left:50%; margin-left:-.25rem}
+.showcase .c1 .phone .d4{ width:.75rem; height:.75rem; background:rgba(255,255,255,.8); border-radius:.375rem;top:2.6875rem; left:7.5rem}
+.showcase .c2{ padding-top:5.625rem;}
 
 footer{ height:100%;}
 
@@ -643,6 +643,14 @@ footer{ height:100%;}
   opacity:1;
   transform:translateY(0);
 }
+}
+
+@media (min-width:1860px){
+  html{ font-size:150%;}
+}
+
+@media (min-width:2480px){
+  html{ font-size:200%;}
 }
 
 @media print{
