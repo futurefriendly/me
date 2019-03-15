@@ -733,7 +733,7 @@ hr{ display:none }
 
 @media screen and (min-width:1240px){
   .theme_4{ padding-top:4rem;
-    clip-path:polygon(0 0, 100% 6%, 100% 100%, 0 100%);
+    clip-path:polygon(0 0, 100% 9%, 100% 100%, 0 100%);
   }
 }
 
