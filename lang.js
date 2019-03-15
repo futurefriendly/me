@@ -31,9 +31,13 @@ function switchlang(bl){
     la_15 : ['二、响应式设计网站的Web设计。','2) Design consultation of making a responsive website\;'],
     la_16 : ['三、高质量技术翻译或文学翻译（英译中）。','3) Technical translation, from English to Chinese\;'],
     la_17 : ['四、简体和繁體中文的软件本地化工作。','4) Copy localization, both of Mandarin and Cantonese\;'],
+    la_18 : ['作为「营销为主、客户第一」的公司，滴滴出行在设计团队中设置了品牌设计、交互设计、UI设计、视觉设计4种角色。2015年起，我在9人设计团队中负责了20余个运营活动的交互设计，确保了最终效果的实现。','As a marketing-oriented group\, there are 4 roles within the design center of DiDi\: Brand Designer\, Interaction Designer\, UI Designer\, and Graphic Designer\. Since the middle of 2015\, with a 9-member design team\, I was responsible for the interaction design and effects implementation of more than 20 promotion webpages\.'],
     la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图中分类标注。','The picture below depicts Dōngfāng\'s knowledge structure about design\, past experience is listed in it by relevance\.'],
     la_20 : ['人工智能','A\.I\.'],
     la_21 : ['2019年1月，第45届\<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\"\>「青年文學獎」\<\/a\>小小说组优异奖，221字','2019\, THE 45\<sup\>th\<\/sup\> \<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\/\"\>YOUTH LITERARY AWARD\<\/a\> OF MERIT\, 153 words'],
+    la_22 : ['作为一个重视产品体验的组织，腾讯各业务线的设计团队均拥有交互设计、视觉设计、UI开发三种角色。在网络媒体事业部的微视项目中，我作为交互设计师负责移动客户端产品流程的设计。','As an organization that values user experience\, there are 3 roles in each of the design team of different product department in Tencent\: UX Designer\, Visual Designer\, and UI Developer\. In the Weishi project of Online Media Group\, I was responsible for the mobile product process design as an interaction designer\.'],
+    la_23 : ['2015年后，设计体系取代了设计规范，渐渐成为了更有效率的设计实践方式。一些组织，如Salesforce的lightningdesignsystem\.com做出了设计体系的最佳实践。设计体系将内容与可访问性等元素纳入了设计需求的一部分，将设计规范和组件库统一了起来。结合之前我在腾讯微博维护Web设计规范的经验和Brad Frost的Atomic Design模块化设计思想，我们制作了这份顺风车的设计体系。','Since 2015\, The design system replaced the guideline\, gradually became a more efficient design practice\. Some organizations\, such as Salesforce\'s lightingdesignsystem\.com\, have done best practices in that way\. The design system incorporates elements such as content strategy and accessibility into the design requirements and unifies the design guideline and component library\. Rely on my previous experience of Tencent Weibo\'s Web design guideline\, and Brad Frost\'s Atomic Design philosophy\, we created this design system of DiDi Hitch\.'],
+    la_24 : ['2015年，作为交互设计和前端开发的角色，我参与了北京大学国际版官方网站改版工程。3人团队，3个版本，6个月设计开发周期后交付并通过最终评估。','In 2015\, I was responsible for interaction design and front-end development in the redesign project of the International Official Website of Peking University\. 3-member team\, 3 editions\, delivered after the 6-month design & development cycle and passed the final assessment\.'],
     la_25 : ['第一年，亲爱的，你说「替我画一只蓝羽毛的孔雀。」我说好的，画出来了。','In the first year\, my dear\, you said\: \<i\>\"Draw a peacock with blue feathers for me\.\"\<\/i\> I said ok\, then I did it\.'],
     la_26 : ['第二年，你说：「画一只孔雀。」我说好的，画出来了，蓝羽毛的。','In the second year\, you said\: \<i\>\"Draw a peacock\.\"\<\/i\> I said ok\, I did it\, with blue feathers\.'],
     la_27 : ['第三年，你说要画一只鸟，我说好的，画出来了一只蓝羽毛的孔雀。你说「你知道我想画孔雀，真贴心。」','In the third year\, you said you want to draw a bird\. I said ok\, then drew a peacock with blue feathers\. You said\: \<i\>\"You do know what I want is to draw peacocks\, really sweet\.\"\<\/i\>'],
@@ -47,8 +51,12 @@ function switchlang(bl){
     la_35 : ['译自《DATA VISUALIZATION WITH JAVASCRIPT》，原作者 STEPHEN A\. THOMAS','TRANSLATED FROM\: THOMAS\, S\. A\. \(2015\)\. DATA VISUALIZATION WITH JAVASCRIPT\.'],
     la_36 : ['情感化内容策略','From Voice & Tone to Content Strategy'],
     la_37 : ['这次分享在滴滴顺风车设计团队内部讨论了两类内容设计规范，UBER 的 \"Copy Style\" 和 MAILCHIMP 的 \"Voice \& Tone\"。同时涉及了内容策略的一些基本原则。','I introduced two types of content guideline to DiDi Hitch\'s design team members: Uber\'s \"Copy Style\" and MailChimp\'s \"Voice \& Tone\"\. At the same time\, the essential principles of Content Strategy were also mentioned in this presentation\.'],
+
+
     la_40 : ['面向未来的友好设计','Future Friendly Web Design'],
     la_41 : ['在腾讯网络媒体事业部内部的分享。介绍了近年来的设计趋势和「面向未来的友好设计」的设计概念。介绍了一些已经出版或引进的设计图书和资源，讲了这些设计资源彼此之间的脉络联系。','This keynote is for junior designers of Tencent online media group\. Here I introduced some fantastic shares by great designers around the world\, sorted the core concepts and principles of Future Friendly Web Design\, listed some designers\, books\, and resources about FFLY\.'],
+
+
     la_44 : ['滴滴顺风车','DiDi Hitch'],
     la_45 : ['用户界面设计','UI Design'],
     la_46 : ['用户界面开发','UI Development'],
@@ -62,7 +70,7 @@ function switchlang(bl){
     la_54 : ['首先，这份设计规范服务于滴滴顺风车的Web产品，既包含APP中以webserver方式引入的部分，也包含供社交平台传播的H5页面。其次，这份设计规范服务于滴滴顺风车的用户体验设计师和前端开发工程师，既是UI开发规范，也是一个交互组件库。','Firstly\, this design system serves Web products of DiDi Hitch\, including the built-in webserver and the promotion pages\. Secondly\, this design system serves UX designer and front-end developer\. It is both a front-end guideline and a UI component library\.'],
     la_55 : ['订单完成后的用户评价页面：','The Survey Page After A Hitch Journey\: '],
     la_56 : ['订单结束后，滴滴顺风车会通过此页面收集乘客和车主对本次行程的主观感受，这些数据将作为我们持续提升平台质量，优化产品细节的参考。评价页分为实名和匿名两部分。车主和乘客双方可以看到彼此以实名方式给出的正面评价，而双方的负面评价我们会以匿名方式提交给系统，作为双方信任值的评价标准之一。','After the trip\, we will collect passengers\' evaluation data on his or her driver to help us continuously improve the quality of our services\. The survey page is divided into a real-name part and an anonymous part\. The driver client will see a positive evaluation written by the passenger\, and the negative evaluation written by the passenger will be submitted directly to the backend system anonymously as evidence\, we will use that data to analyze whether a driver is good enough\.'],
-    la_57 : ['为了方便快速迭代和数据更新，滴滴顺风车项目中，70%的UI元素以webserver方式实现。','For fast-paced iterations, 70\% of DiDi client\'s UI was implemented by webserver way\, no exception this page was\.'],
+    la_57 : ['我和设计团队一起负责了滴滴顺风车的全流程交互设计。为了方便快速迭代和数据更新，滴滴顺风车项目中，70%的UI元素以webserver方式实现。','Together with the design team\, as an interaction designer\, I was responsible for the entire product flow of DiDi Hitch\. For fast-paced iterations, 70\% of DiDi client\'s UI was implemented by webserver way\, no exception this page was\.'],
     la_58 : ['腾讯微视 (OMG版本)','Weishi APP (OMG Version)'],
     la_59 : ['转发视频：','Interaction of Forwarding A Video: '],
     la_60 : ['网络媒体事业部(OMG)早期立项的「微视」是一个8秒短视频分享平台。考虑到iOS和Android操作系统的操作习惯不同，我们将两个平台上面的交互设计做了差异化处理。举例来说，我们在iOS平台的类ActionSheet组件上面合并了「分享」和「转发」操作，减少了视频详情页中可见的操作按钮数量。','Weishi was a Vine-like short video sharing App\. In this project\, considering the difference between iOS and Android platform\, we applied different design strategies for them\. For example\, on the iOS platform\, we combined \"share\" and \"forward\" operations into the iOS-only actionsheet to reduce the number of buttons visible on the video page\.'],
@@ -72,6 +80,8 @@ function switchlang(bl){
     la_64 : ['轻春运：空座共享计划','Transport During The Spring Festival'],
     la_65 : ['2016年12月','December 2016'],
     la_66 : ['顺风飞船一周年大数据','Trip Data on The 1\<sup\>st\<\/sup\> Anniversary Show'],
+
+
     la_69 : ['2016年6月','June 2016'],
     la_70 : ['北京大学官方网站（国际版）','The International Official Website'],
     la_71 : ['北京大学官方网站（国际版）于2015年11月20日改版上线。网站基于「面向未来的友好设计」设计思想，应用栅格布局和响应式设计方法，向前兼容IE7浏览器。','The International Official Portal Website of Peking University has made its debut on November 20\<sup\>th\<\/sup\> 2015\. This new responsive site is designed with \"Future-Friendly Design\" thinking\, applied bootstrap grid system\, and support IE7+ browser\.'],
@@ -84,11 +94,13 @@ function switchlang(bl){
     la_78 : ['去epubit.com看电子书','E-book on epubit.com'],
     la_79 : ['在线查看','View it online'],
     la_80 : ['英文版','English ver.'],
+
     la_82 : ['查看并播放','Display'],
     la_83 : ['访问 newsen.pku.edu.cn','Visit newsen.pku.edu.cn'],
     la_84 : ['飞机稿1号','Draft 1'],
     la_85 : ['飞机稿2号','Draft 2'],
     la_86 : ['在线试用','Try it online'],
+
     la_88 : ['小','A'],
     la_89 : ['中','A'],
     la_90 : ['大','A'],
@@ -108,12 +120,13 @@ function switchlang(bl){
     la_104 : ['香港文化之源在哪里呢？小思老师将香港文化历史装进了档案袋，标志着向七十年代之前寻找的行为告一段落。2018年香港书展上推出了西西研究资料，煌煌四巨册。那麦理浩总督管辖的亚洲四小龙之一，才是本地文化信心的起源，才是国人更能懂得的香港。','Where is the source of Hong Kong culture\? Professor Xiao Si put Hong Kong\'s cultural history into the portfolio\, marked the end of the search in the 1970s\. In the 2018 Hong Kong Book Fair\, a set of four books on Xi Xi literature research was launched\. Perhaps\, one of the Four Asian Tigers under the management of Governor MacLehose is the origin of local cultural confidence\, and it is surely a better Hong Kong imagination that Chinese people could understand\.'],
     la_105 : ['中国互联网个人记录','An Individual Record of China\'s Internet Phenomenon'],
     la_106 : ['2018，节选','2018\, An excerpt'],
+
     la_108 : ['2009年，六度人脉理论及平台意识：校内网改名人人网。Web2\.0火。康盛创想发布UCenter Home，众多平台各自为战，最后的个人站长时代。','\<span class=\"tx_up\"\>2009\, Six-degree Network Theory And Platform Awareness\<\/span\>\: The Xiaonei\.com was known as China\'s Facebook\, which initially served only for student users\. This year\, it changed its product strategy\, like Facebook\, everyone can register and use it from now on\. At the same time\, it was renamed Renren\.com. In addition\, Web 2\.0 became popular this year\. Comsenz corporation\, which owns \"Discuz\!\"\, released the \"UCenter Home\" series\. Many platforms were fighting each other\, this is the last \"Personal webmaster\" era\.'],
     la_109 : ['——UCenter Home（可集成于Discuz!X中）是中国个人站长时代最后一个可以凭个人或小团队力量部署的平台级Web2\.0社区产品，康盛创想提供包括主机托管、游戏平台在内的完整服务链条。次年，坐标北京上地环岛的康盛创想被腾讯收购，原CEO戴志康改任新成立的腾讯电商控股公司总经理。此后，运用个人力量搭建与巨头分羹的平台已经变得不可能。','— \"UCenter Home\"\, which can be integrated into Discuz\!X\, is the last platform-level social network service that can be deployed by individuals or start-up teams in China\'s personal webmaster era\. Comsenz corporation could provide virtual hosting and gaming platform support\. The following year\, Comsenz\, which located in Shangdi Beijing\, was acquired by Tencent\. The former CEO Dai Zhikang was appointed as the general manager of the newly established Tencent E-Commerce Holdings\. Since then\, it has become impossible for individuals to deploy a platform that has the ability to compete with giants\.'],
     la_110 : ['2010年，网页游戏及跑马圈地：ActionScript3\.0的逻辑呈现分离为Adobe Flash带来最后的辉煌，而 ActionScript3\.0是网页游戏遍地开花的技术基础。开心网火，全民抢车位、开心农场等。腾讯收购康盛创想，将BBS作为精准投放的水平渠道，结合腾讯网的垂直渠道，实现了横纵两个方向的广告平台布局。海淀大街上的微博之战打响，腾讯微博大V刘翔于亚运会夺冠。','\<span class=\"tx_up\"\>2010\, Web Games And New Tracks\<\/span\>\: ActionScript 3\.0 physically separated the code from the animation\, it was the last shining of Adobe Flash\. Almost all of the popular webpage games this year were based on ActionScript 3\.0 technology\. These webpage games such as \"Parking Wars\" and \"Happy Farm\" were incredibly popular on Kaixin001\.com\. After the acquisition of Comsenz\, Tencent got a BBS ecosystem that could be used as an important advertising channel by aggregating users with interest\. With the influence of this BBS ecosystem and QQ\.com\, Tencent built a giant advertising platform\. In this year\, Sina (weibo\.com) and Tencent (t\.qq\.com) started the Weibo battle on Haidian Street\. Liu Xiang\, the biggest athlete star of Tencent Weibo\, won the championship in the Asian Games\.'],
     la_111 : ['——如果你还记得腾讯微博，可能也记得官方服务号“腾讯薇薇”。蒲公英Logo正是出于薇薇之手。起初，腾讯微博的slogan是“与其在别处仰望，不如在这里并肩”。这个slogan是针对新浪微博的以大V为中心，忽视草根声音而提出。后改为“你的心声，世界的回声”，意为草根的声音也能在微博平台得到回应。','— If you still remember Tencent Weibo \(t\.qq\.com\)\, you may also remember an official service account \"Tencent WeiWei\" that owns a young lady\'s avatar\. Actually\, WeiWei is a visual designer of Tencent\, the Dandelion Logo of that product is designed by her\. In the beginning\, the slogan of Tencent Weibo was \<i\>\"It\’s better to be together here than to envy others elsewhere\.\"\<\/i\> Tencent Weibo believes that Sina Weibo pays too much attention to the key opinion leaders and ignores the voice of the general public\, so this slogan conveys the meaning that Tencent pays more attention to ordinary users\. Later\, Tencent Weibo\'s slogan was changed to \<i\>\"Your voice\, the echo of the world\"\<\/i\>\. This means that the voices of ordinary people can also be widely spread and responded\.'],
     la_112 : ['春运暖心日历：','SPRING FESTIVAL TRANSPORTATION CALENDAR: '],
-    la_113 : ['作为一个和单向空间合作的运营页面，为了吸引用户互动，我们在产品中加入了一个对联游戏。除此以外，为了配合合作方的产品风格，我们在这个页面中设计了一些微动效。','This is a promotion webpage which cooperates with One-Way Street Bookstore\. It can be accessed via a link in DiDi\'s Mobile Client\. In order to attract users\, we added a traditional Chinese Couplet game into this page\.'],
+    la_113 : ['这是一个和单向空间合作的运营页面。为了吸引用户互动，我们在产品中加入了一个对联游戏。除此以外，为了配合合作方的产品风格，我们在这个页面中设计了一些微动效。','This is a promotion webpage which cooperates with One-Way Street Bookstore\. It can be accessed via a link in DiDi\'s Mobile Client\. In order to attract users\, we added a traditional Chinese Couplet game into this page\.'],
     la_114 : ['滴滴顺风车运营活动','Promotion Webpages of DiDi Hitch'],
     la_115 : ['滴滴顺风车产品流程','Product Flow of DiDi Hitch']
   };
