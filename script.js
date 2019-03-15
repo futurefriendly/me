@@ -72,7 +72,7 @@ window.onresize = function(){
 
 // All animations will take exactly 500ms
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 500
+  speed: 1000
 });
 
 function textsize(n,o){
