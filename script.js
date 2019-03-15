@@ -7,6 +7,17 @@ var windowW = $(window).width();
 var documentH = 0;
 var pct = 0;
 
+var sectionOffset = [];
+
+$('nav').hide();
+
+function secHeight(){
+  var seccount = $('section').length;
+  for (i=0;i<seccount;i++){
+    sectionOffset[i] = Math.floor($('section:eq('+ i +')').offset().top - 180);
+  }
+}
+
 function onScroll(){
 
     scrollPos = Math.floor($(document).scrollTop());
@@ -17,18 +28,18 @@ function onScroll(){
     	$("body").removeClass('scroll');
     };
 
-    if (scrollPos > 1600){
+    if (scrollPos > sectionOffset[1]){
       $("body").addClass('f_dark_bg');
     }else{
       $("body").removeClass('f_dark_bg');
     };
-    if(scrollPos > 4700){
+    if(scrollPos > sectionOffset[3]){
       $("body").removeClass('f_dark_bg');
     };
-    if(scrollPos > 8600){
+    if(scrollPos > sectionOffset[5]){
       $("body").addClass('f_dark_bg');
     }
-    if(scrollPos > 9600){
+    if(scrollPos > sectionOffset[6]){
       $("body").removeClass('f_dark_bg');
     };
 
@@ -45,10 +56,12 @@ window.onscroll = function(){
 };
 window.onload = function(){
   onScroll();
+  secHeight();
   windowH = $(window).height();
   windowW = $(window).width();
 }
 window.onresize = function(){
+  secHeight();
   windowH = $(window).height();
   windowW = $(window).width();
 }
@@ -71,6 +84,7 @@ function textsize(n,o){
 }
 
 $(function(){
+  $('nav').show();
 
   $('.f_play').on(tapend,function(){
     $(this).attr('target',(windowW > 1239)?'h5stage':'_blank');
