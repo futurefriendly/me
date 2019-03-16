@@ -80,8 +80,8 @@ function switchlang(bl){
     la_64 : ['轻春运：空座共享计划','Transport During The Spring Festival'],
     la_65 : ['2016年12月','December 2016'],
     la_66 : ['顺风飞船一周年大数据','Trip Data on The 1\<sup\>st\<\/sup\> Anniversary Show'],
-
-
+    la_67 : ['翻得不错，语言轻松幽默，原作理念我深深认同，有帮助。','\<i\>A good translation in a relaxed and humorous tone\. I deeply agree with the original author\'s idea\, this book is very helpful\.\<\/i\>'],
+    la_68 : ['——豆瓣网友','— A user from douban\.com'],
     la_69 : ['2016年6月','June 2016'],
     la_70 : ['北京大学官方网站（国际版）','The International Official Website'],
     la_71 : ['北京大学官方网站（国际版）于2015年11月20日改版上线。网站基于「面向未来的友好设计」设计思想，应用栅格布局和响应式设计方法，向前兼容IE7浏览器。','The International Official Portal Website of Peking University has made its debut on November 20\<sup\>th\<\/sup\> 2015\. This new responsive site is designed with \"Future-Friendly Design\" thinking\, applied bootstrap grid system\, and support IE7+ browser\.'],
