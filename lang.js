@@ -51,12 +51,12 @@ function switchlang(bl){
     la_35 : ['译自《DATA VISUALIZATION WITH JAVASCRIPT》，原作者 STEPHEN A\. THOMAS','TRANSLATED FROM\: THOMAS\, S\. A\. \(2015\)\. DATA VISUALIZATION WITH JAVASCRIPT\.'],
     la_36 : ['情感化内容策略','From Voice & Tone to Content Strategy'],
     la_37 : ['这次分享在滴滴顺风车设计团队内部讨论了两类内容设计规范，UBER 的 \"Copy Style\" 和 MAILCHIMP 的 \"Voice \& Tone\"。同时涉及了内容策略的一些基本原则。','I introduced two types of content guideline to DiDi Hitch\'s design team members: Uber\'s \"Copy Style\" and MailChimp\'s \"Voice \& Tone\"\. At the same time\, the essential principles of Content Strategy were also mentioned in this presentation\.'],
-
-
+    la_38 : ['移动互联网时代，设计师和工程师要比从前走得更近。一方面，技术的发展为设计提供了更多的可能；一方面，复杂的用户场景让设计师不得不去考虑技术的适应性等等。这就迫使两种角色必须合作处理问题。本书讲述的“渐进增强”概念提供了一种思维方式，这种思维方式沟通了设计师和工程师各自思考问题的路径，使大家不为分工所局限，共同实现业务目标。','\<i\>In the era of mobile Internet\, designers and engineers need to be closer than ever\. On the one hand\, the development of technology provides more possibilities for product design\; on the other hand\, the increasingly complex contexts forces our designers to consider the adaptability of devices for solving current problems\. Therefore\, cooperation has become the only way. The concept of Progressive Enhancement conveys in this book has provided an approach of thinking\. It\'s about the best practice of communication between designers and developers\. This approach has enabled them to go beyond the limits of their own perspective and achieve business goals together\.\<\/i\>'],
+    la_39 : ['——五八赶集集团CTO 邢宏宇 推荐','— Comments by Hongyu XING\, CTO of 58\.com Inc\.'],
     la_40 : ['面向未来的友好设计','Future Friendly Web Design'],
     la_41 : ['在腾讯网络媒体事业部内部的分享。介绍了近年来的设计趋势和「面向未来的友好设计」的设计概念。介绍了一些已经出版或引进的设计图书和资源，讲了这些设计资源彼此之间的脉络联系。','This keynote is for junior designers of Tencent online media group\. Here I introduced some fantastic shares by great designers around the world\, sorted the core concepts and principles of Future Friendly Web Design\, listed some designers\, books\, and resources about FFLY\.'],
-
-
+    la_42 : ['数据化时代，两项专业技能非常重要：数据的分析能力和数据的表达能力。让数据提供信息，把信息进行最有效的沟通，对从业人员有非常高的要求。数据可视化在信息爆炸，时间碎片化的现实情况下成为最为有效的沟通手段。本书没有停留在晦涩难懂的理论，用生动的实例系统介绍了不同图像展示和交互方法。译者具有良好的技术功底，真实反映原著的精髓。','\<i\>In the data age\, two professional skills become very important\: the ability to analyze data and the ability to express data. Whether refining information from data or using information for the most effective communication\, it places high demands on practitioners\. Therefore\, data visualization becomes the most effective means of communication in the realities of information explosion and time fragmentation\. This book does not stop at the obscure theory\, but introduces the display and interaction methods of different images with a vivid example system\. In addition\, the translator has a good technical background and truly reflects the essence of the original\.\<\/i\>'],
+    la_43 : ['——云峰金融集团CEO 李婷 推荐','— Comments by Ting LI\, CEO of Yunfeng Capital'],
     la_44 : ['滴滴顺风车','DiDi Hitch'],
     la_45 : ['用户界面设计','UI Design'],
     la_46 : ['用户界面开发','UI Development'],
