@@ -16,7 +16,7 @@ body{ font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;
 input,textarea,select,button{ outline: none; resize:none; font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 input,textarea{ font-family:Georgia, serif; box-shadow:none}
 .cn input,
-.cn textarea{ font-family:Pingfang, sans-serif;}
+.cn textarea{ font-family:Pingfang SC, sans-serif;}
 button{line-height:2;white-space:nowrap;vertical-align:middle;cursor:pointer}
 strong{font-weight:400}
 a{ text-decoration: none; outline: none; cursor: pointer;}
@@ -384,6 +384,7 @@ section > .inner,
 
 h2{ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
 h3{ font-size:1.1rem; color:#242424}
+
 h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; color:#242424}
 ul{}
 li{ padding-top:1rem}
@@ -667,12 +668,14 @@ footer{ display:none;}
 }
 
 /* language */
-.cn h2{ font-family:Pingfang, sans-serif; font-weight:600}
-.cn p{ font-family:Pingfang, sans-serif;}
-.cn .paper{ font-family:Pingfang, sans-serif;}
+.cn,
+.cn p{ font-family:Pingfang SC, sans-serif;}
+.cn h2,
+.cn h3{ font-family:Pingfang SC, sans-serif; font-weight:600}
+.cn .paper{ font-family:Pingfang SC, sans-serif;}
 .cn .paper .topic{}
 .cn .paper strong{ font-weight:400}
-.cn nav .ins a{ font-family:Pingfang, sans-serif; font-weight:400; font-size:.875rem}
+.cn nav .ins a{ font-family:Pingfang SC, sans-serif; font-weight:400; font-size:.875rem}
 
 /* theme */
 
