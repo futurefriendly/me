@@ -15,8 +15,7 @@ body{ font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 input,textarea,select,button{ outline: none; resize:none; font:100%/2 Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 input,textarea{ font-family:Georgia, serif; box-shadow:none}
-.cn input,
-.cn textarea{ font-family:Pingfang SC, sans-serif;}
+
 button{line-height:2;white-space:nowrap;vertical-align:middle;cursor:pointer}
 strong{font-weight:400}
 a{ text-decoration: none; outline: none; cursor: pointer;}
@@ -669,13 +668,20 @@ footer{ display:none;}
 
 /* language */
 .cn,
-.cn p{ font-family:Pingfang SC, sans-serif;}
+.cn p,
+.cn input,
+.cn textarea,
+.cn .btn1,
+.cn .btn2,
+.cn .btn3,
 .cn h2,
-.cn h3{ font-family:Pingfang SC, sans-serif; font-weight:600}
-.cn .paper{ font-family:Pingfang SC, sans-serif;}
-.cn .paper .topic{}
+.cn h3,
+.cn .paper,
+.cn nav .ins a{ font-family:Pingfang SC, sans-serif;}
+.cn h2,
+.cn h3{ font-weight:600}
 .cn .paper strong{ font-weight:400}
-.cn nav .ins a{ font-family:Pingfang SC, sans-serif; font-weight:400; font-size:.875rem}
+.cn nav .ins a{ font-weight:400; font-size:.875rem}
 
 /* theme */
 
