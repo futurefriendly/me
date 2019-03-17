@@ -351,7 +351,7 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; wo
 .e_plant_logo .leaf .in{ width:5.75rem; height:5.75rem; border-width:.25rem; border-bottom-right-radius:.125rem;}
 .e_plant_logo .leaf .in::after{ left:-1.1875rem; width:6.875rem; height:.1875rem; transform-origin:1.3125rem 0;}
 
-.sampletext{ margin-top:1.5rem; font-weight:100;}
+.sampletext{ margin-top:1.5rem;}
 .sampletext img{ height:9.375rem; margin:0 .625rem .625rem 0; float:left;}
 .sampletext .text .col{ overflow:hidden;
 	box-sizing:border-box;
