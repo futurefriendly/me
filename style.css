@@ -383,7 +383,7 @@ section > .inner,
 .section > .inner{ width:93%; max-width:3200px; margin:0 auto;}
 
 h2{ padding-top:2rem; font-size:1.5rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
-h3{ font-size:1.25rem; color:#242424}
+h3{ font-size:1.1rem; color:#242424}
 h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; font-size:.875rem; color:#242424}
 ul{}
 li{ padding-top:1rem}
@@ -471,6 +471,10 @@ nav .ins a:hover{ opacity:1}
 
 .logo_pku{ display:inline-block; width:11.3rem; height:.8rem; background:url(./assets/logo_pku.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
 
+.quote{ padding-left:1.5rem; padding-top:.5rem; padding-bottom:.5rem}
+.quote::before{ position:absolute; margin-left:-1.5rem; margin-top:-.25rem; font-family:'icomoon'; color:rgba(0,0,0,.8); font-size:1rem; content: "\e977";}
+.quote p:last-child{ margin-bottom:0}
+
 @media (min-width:480px){
 
 .btn,.btn2,.btn3{ display:inline-block; margin-top:.3rem; width:auto;}
@@ -535,8 +539,7 @@ nav .leaf:hover ~ .ins{ padding-bottom:2.5rem}
 .btn2:hover{ padding:.75rem 1.5rem; border-radius:0 1.5rem 1.5rem 1.5rem; margin-top:1rem; margin-right:.3rem; font-size:.875rem}
 
 .quote{ padding-left:3rem; padding-top:1rem; padding-bottom:1rem}
-.quote::before{ position:absolute; margin-left:-3rem; margin-top:-1.5rem; font-family:'icomoon'; color:rgba(0,0,0,.8); font-size:2rem; content: "\e977";}
-.quote p:last-child{ margin-bottom:0}
+.quote::before{ margin-left:-3rem; margin-top:-1.5rem; font-size:2rem;}
 
 .lg_only{ display:block;}
 .paper{ max-width:90%; padding-left:11%; padding-right:11%}
