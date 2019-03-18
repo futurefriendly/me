@@ -558,7 +558,7 @@ blockquote{ padding:2rem;}
 
 .sampletext{}
 .sampletext .text{}
-.sampletext .text .col{ width:50%; float:left; padding-left:0; padding-right:1rem; text-align:justify;}
+.sampletext .text .col{ width:50%; float:left; padding-left:0; padding-right:1rem;}
 .sampletext .text .col:last-child{ margin-top:0; padding-left:1rem; padding-right:0}
 
 .f_zoom{ position:relative; transition:transform ease .3s; transform-origin:50% 0; background-color:#fff}
