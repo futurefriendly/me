@@ -423,11 +423,11 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .navwrap{ display:none; position:fixed; top:0; z-index:1; width:100%; left:0; right:0}
 .navwrap .inner{ padding-left:15rem;}
 .navwrap .sec{ position:relative; width:93%; max-width:3200px; margin:0 auto;}
-nav{ position:absolute; line-height:1.3em; left:0; margin-left:-14rem;
+nav{ position:absolute; line-height:1.3em; left:0; margin-left:-15rem;
   transform:translateY(-200%);
   transition:all .8s ease;
 }
-nav .ins{ width:13rem; padding-left:1rem; padding-bottom:2rem; border-left:#000 1px solid; overflow:hidden;
+nav .ins{ width:14rem; padding-left:1rem; padding-bottom:2rem; border-left:#000 1px solid; overflow:hidden;
 }
 nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap; opacity:.8;
   transform:perspective(6.25rem) rotateX(-90deg);
