@@ -313,7 +313,7 @@ body{ background:#fff;}
 
 .email::after{ content:"bienfantaisie@gmail.com";}
 
-.loadbar{ position:fixed; z-index:1; top:0; left:0; right:0; width:100%; overflow:hidden; background-color:#000;}
+.loadbar{ position:fixed; z-index:1; top:0; left:0; right:0; width:100%; overflow:hidden; background-color:#000; mix-blend-mode:difference;}
 #loadbar{ display:block; width:110%; height:.3rem; background-color:#f4f4f4;
   transform:translateX(-100%);
 }
