@@ -450,7 +450,7 @@ nav .ins a:hover{ opacity:1}
 }
 .singleimg .inner{ box-sizing:border-box; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
 .singleimg .tbimg{ box-sizing:border-box; width:180%; max-width:180%}
-.singleimg .tbimg img{ box-sizing:border-box; margin-top:0}
+.singleimg .tbimg img{ box-sizing:border-box; margin-top:0; width:100%}
 .singleimg .tbimg td{ padding:.5rem; vertical-align:top}
 .singleimg .tbimg thead td{ padding-bottom:0}
 
