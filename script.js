@@ -76,7 +76,7 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 function textsize(n,o){
-	document.getElementById('root').style = 'font-size:' + n + 'px';
+	$('html').attr('class','f_font' + n);
 	document.getElementById('option_txtsize').childNodes[0].style = 'text-decoration:none';
 	document.getElementById('option_txtsize').childNodes[1].style = 'text-decoration:none';
 	document.getElementById('option_txtsize').childNodes[2].style = 'text-decoration:none';

@@ -309,6 +309,11 @@ a.c_a2:active{ color:#366}
 
 .c_dark{ color:rgba(0,0,0,.8)}
 
+/* root fontsize*/
+.f_font14{ font-size:14px}
+.f_font16{ font-size:16px}
+.f_font18{ font-size:18px}
+
 body{ background:#fff;}
 
 .email::after{ content:"bienfantaisie@gmail.com";}
@@ -641,11 +646,15 @@ footer{ height:100%;}
 }
 
 @media (min-width:1860px){
-  html{ font-size:150%;}
+  .f_font14{ font-size:21px}
+  .f_font16{ font-size:24px}
+  .f_font18{ font-size:27px}
 }
 
 @media (min-width:2480px){
-  html{ font-size:200%;}
+  .f_font14{ font-size:28px}
+  .f_font16{ font-size:32px}
+  .f_font18{ font-size:36px}
 }
 
 @media print{
