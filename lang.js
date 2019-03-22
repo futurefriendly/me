@@ -30,7 +30,7 @@ function switchlang(bl){
     la_14 : ['一、为基于iOS或Android平台的移动应用做交互设计。谋生技能，主要业务。','1) Interaction design for mobile application\;'],
     la_15 : ['二、定制设计制作响应式网站。可兼容适应从IE6到iOS12，或从智能手表到跑步机屏显在内的Web终端。','2) Design consultation of making a responsive website\;'],
     la_16 : ['三、高质量技术翻译或文学翻译（英译中）。质量保持图书出版校对环节一次过审。','3) Technical translation, from English to Chinese\;'],
-    la_17 : ['四、简体和繁體中文的软件本地化工作。日常简繁同时书写，熟悉两岸三地汉字使用习惯差异。','4) Copy localization, both of Mandarin and Cantonese\;'],
+    la_17 : ['四、简体和繁體中文的软件本地化工作。日常简繁同时书写，熟悉两岸三地汉字使用习惯差异。','4) Chinese localization copywriting, Simplified or Traditional\.'],
     la_18 : ['作为「营销为主、客户第一」的公司，滴滴出行在设计团队中设置了品牌设计、交互设计、UI设计、视觉设计4种角色。2015年起，我在9人设计团队中负责了20余个运营活动的交互设计，确保了最终效果的实现。','As a marketing-oriented group\, there are 4 roles within the design center of DiDi\: Brand Designer\, Interaction Designer\, UI Designer\, and Graphic Designer\. Since the middle of 2015\, with a 9-member design team\, I was responsible for the interaction design and effects implementation of more than 20 promotion webpages\.'],
     la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图中分类标注。','The picture below depicts my knowledge structure about design\, past experience is listed in it by relevance\.'],
     la_20 : ['人工智能','A\.I\.'],
