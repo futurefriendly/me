@@ -25,7 +25,7 @@ function switchlang(bl){
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
     la_11 : ['Benny Chak','Benny Chak'],
-    la_12 : ['你好！欢迎并感谢莅临本网页。我是一名中文和互联网交叉背景的Web设计师，常住北京。香港教育大学文学硕士。曾在腾讯、滴滴出行等公司任职。','Welcome\! Here is a craftsman living in Beijing with an X-shaped skill background\. He holds a Master of Arts degree (Dean\'s Honour) from the Education University of Hong Kong in Chinese Studies\. As a user experience designer passionate about Web design and writing\, he used to work for Tencent and DiDi Chuxing Group for years\.'],
+    la_12 : ['你好！欢迎并感谢莅临本网页。我是一名中文和互联网交叉背景的Web设计师，常住北京。香港教育大学文学硕士。曾在腾讯、滴滴出行等公司任职。','Welcome\! Here is a craftsman living in Beijing with an X-shaped skill background\. He holds a Master of Arts degree from the Education University of Hong Kong in Chinese Studies which completed with distinction\. As a user experience designer passionate about Web design and writing\, he used to work for Tencent and DiDi Chuxing Group for years\.'],
     la_13 : ['我乐于为个人或组织提供以下帮助：','I\'m glad to provide you with the following helps\:'],
     la_14 : ['一、为基于iOS或Android平台的移动应用做交互设计。谋生技能，主要业务。','1) Interaction design for mobile application\;'],
     la_15 : ['二、定制设计制作响应式网站。可兼容适应从IE6到iOS12，或从智能手表到跑步机屏显在内的Web终端。','2) Design consultation of making a responsive website\;'],
