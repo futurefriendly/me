@@ -94,7 +94,7 @@ function switchlang(bl){
     la_78 : ['去epubit.com看电子书','E-book on epubit.com'],
     la_79 : ['在线查看','View it online'],
     la_80 : ['英文版','English ver.'],
-
+    la_81 : ['查看更多写作样章（简体中文）','More writing samples in Simplify Chinese'],
     la_82 : ['查看并播放','Display'],
     la_83 : ['访问 newsen.pku.edu.cn','Visit newsen.pku.edu.cn'],
     la_84 : ['飞机稿1号','Draft 1'],
