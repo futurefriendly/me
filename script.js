@@ -88,6 +88,10 @@ $(function(){
   secHeight();
   $('nav').show();
 
+  $('nav a').on(tapend,function(){
+    secHeight();
+  });
+
   $('.f_play').on(tapend,function(){
     $(this).attr('target',(windowW > 1239)?'h5stage':'_blank');
   });
