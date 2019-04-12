@@ -108,7 +108,7 @@ function switchlang(bl){
     la_92 : ['\<a target\=\"_blank\" href\=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>点击这里\<\/a\> 访问我的领英主页，','Click \<a target\=\"_blank\" href=\"https\:\/\/www\.linkedin\.com\/in\/bennychak\/\"\>HERE\<\/a\> to visit my profile via LinkedIn\, '],
     la_93 : ['\<object data=\".\/assets\/cdm_cn.svg\" type=\"image\/svg+xml\"\>\<\/object\>','\<object data=\".\/assets\/cdm.svg\" type=\"image\/svg+xml\"\>\<\/object\>'],
     la_94 : ['2018年8月，845字','2018, 568 words'],
-    la_95 : ['版权 2018-2019 \&copy\;futurefriendly\.cn\, 保留所有权利，包括以任何形式复制本网站或其中部分内容的权利。\<br\>有关信息，请咨询内容发布者。','Copyright 2018-2019 \&copy\;futurefriendly\.cn\, all rights reserved\, including the right to reproduce this site or portions thereof in any form whatsoever\. \<br\>For information\, address the content publisher\.'],
+    la_95 : ['版权 2018-2019 \&copy\;futurefriendly\.cn\, 保留所有权利，包括以任何形式复制本网站或其中部分内容的权利。有关信息，请咨询内容发布者。','Copyright 2018-2019 \&copy\;futurefriendly\.cn\, all rights reserved\, including the right to reproduce this site or portions thereof in any form whatsoever\. For information\, address the content publisher\.'],
     la_96 : ['展开全文 \&raquo\;','Full Text \&raquo\;'],
     la_97 : ['……','...'],
     la_98 : ['如何理解香港的本土意识','How Should We Understand Hong Kong\'s Local Consciousness'],
@@ -141,7 +141,7 @@ function switchlang(bl){
               thislang = $(this).data('lang')
               $(this).html(eval('lang.' + thislang)[1]);
             });
-            $('#langs').text('切换为简体中文');
+            $('.f_langs .txt').text('简体中文');
             $('.contactform [name=_replyto]').attr('placeholder','Your Email');
             $('.contactform [name=message]').attr('placeholder','Message');
             $('body').removeClass('cn').addClass('en');
@@ -153,7 +153,7 @@ function switchlang(bl){
               thislang = $(this).data('lang');
               $(this).html(eval('lang.' + thislang)[0]);
             });
-            $('#langs').text('To English');
+            $('.f_langs .txt').text('English');
             $('.contactform [name=_replyto]').attr('placeholder','你的邮箱地址');
             $('.contactform [name=message]').attr('placeholder','邮件内容');
             $('body').removeClass('en').addClass('cn');
@@ -165,7 +165,7 @@ function switchlang(bl){
 }
 
 function handleSwitchlang(){
-  if($('#langs').text() == 'To English'){
+  if($('.f_langs:eq(0)').children('.txt').text() == 'English'){
     switchlang('en')
   }else{
     switchlang('zh')
@@ -176,7 +176,7 @@ function handleSwitchlang(){
 $(function(){
   checklang();
 
-  $('#langs').click(function(){
+  $('.f_langs').click(function(){
     handleSwitchlang();
     return false;
   });
