@@ -435,7 +435,7 @@ nav{ position:absolute; line-height:1.3em; left:0; margin-left:-15rem;
 }
 nav .ins{ width:14rem; padding-left:1rem; padding-bottom:2rem; border-left:#000 1px solid; overflow:hidden;
 }
-nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:1em; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap; opacity:.8;
+nav .ins a{ display:inline-block; vertical-align:top; font-size:.75rem; margin-top:.75rem; text-transform:uppercase; letter-spacing:.12em; white-space:nowrap; opacity:.8;
   transform:perspective(6.25rem) rotateX(-90deg);
   transition:transform .8s ease;
   transition-delay:.8s;
