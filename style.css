@@ -427,7 +427,7 @@ label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; paddi
 .pubtxt{ margin-top:1rem; overflow:hidden;}
 
 .navwrap{ display:none; position:fixed; top:0; z-index:1; width:100%; left:0; right:0}
-.navwrap .inner{ padding-left:15rem;}
+.navwrap .inner{ padding-left:15rem; padding-right:1rem}
 .navwrap .sec{ position:relative; width:93%; max-width:3200px; margin:0 auto;}
 nav{ position:absolute; line-height:1.3em; left:0; margin-left:-15rem;
   transform:translateY(-200%);
