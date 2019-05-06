@@ -80,7 +80,7 @@ function switchlang(bl){
     la_64 : ['轻春运：空座共享计划','Transport During The Spring Festival'],
     la_65 : ['2016年12月','December 2016'],
     la_66 : ['顺风飞船一周年大数据','Trip Data on The 1\<sup\>st\<\/sup\> Anniversary Show'],
-    la_67 : ['翻得不错，语言轻松幽默，原作理念我深深认同，有帮助。','\<i\>A good translation in a relaxed and humorous tone\. I deeply agree with the original author\'s idea\, this book is very helpful\.\<\/i\>'],
+    la_67 : ['少有的翻译的通俗易懂的书，让你知道渐进增强是什么。','Well translated and easy to understand\. It lets you know what progressive enhancement is\.'],
     la_68 : ['——豆瓣网友','— A user from douban\.com'],
     la_69 : ['2016年6月','June 2016'],
     la_70 : ['北京大学官方网站（国际版）','The International Official Website'],
