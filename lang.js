@@ -32,7 +32,7 @@ function switchlang(bl){
     la_16 : ['三、技术翻译或文学翻译（英译中）。','3) Technical translation, from English to Chinese\;'],
     la_17 : ['四、简体和繁體中文的软件本地化工作。','4) Chinese localization copywriting, Simplified or Traditional\.'],
     la_18 : ['作为「营销为主、客户第一」的公司，滴滴出行在设计团队中设置了品牌设计、交互设计、UI设计、视觉设计4种角色。2015年起，我在9人设计团队中负责了20余个运营活动的交互设计，确保了最终效果的实现。','As a marketing-oriented group\, there are 4 roles within the design center of DiDi\: Brand Designer\, Interaction Designer\, UI Designer\, and Graphic Designer\. Since the middle of 2015\, with a 9-member design team\, I was responsible for the interaction design and effects implementation of more than 20 promotion webpages\.'],
-    la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图中分类标注。','The picture below depicts my knowledge structure about design\, past experience is listed in it by relevance\.'],
+    la_19 : ['为了方便快速了解，下图显示了我的知识结构中和设计工作有关的部分。以往的经验已在图中分类标注。','The picture below depicts my knowledge range about design that I\'m interested in\. Past experience is listed in it by relevance\.'],
     la_20 : ['人工智能','A\.I\.'],
     la_21 : ['2019年1月，第45届\<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\"\>「青年文學獎」\<\/a\>小小说组优异奖','2019\, THE 45\<sup\>th\<\/sup\> \<a target\=\"_blank\" href\=\"http\:\/\/ylaa\.org\.hk\/\"\>YOUTH LITERARY AWARD\<\/a\> OF MERIT'],
     la_22 : ['作为一个重视产品体验的组织，腾讯各业务线的设计团队均拥有交互设计、视觉设计、UI开发三种角色。在网络媒体事业部的微视项目中，我作为交互设计师负责移动客户端产品流程的设计。','As an organization that values user experience\, there are 3 roles in each of the design team of different product department in Tencent\: UX Designer\, Visual Designer\, and UI Developer\. In the Weishi project of Online Media Group\, I was responsible for the mobile product process design as an interaction designer\.'],
