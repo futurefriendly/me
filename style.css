@@ -339,7 +339,7 @@ blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; wo
 .leaf .l_c{ display:inline-block; vertical-align:top; position:absolute; left:0; top:0; width:.875rem; height:.875rem; transform-origin:.0625rem .0625rem;}
 .leaf .l_b{ transform:rotateZ(120deg);}
 .leaf .l_c{ transform:rotateZ(240deg);}
-.leaf .in{ position:relative; display:inline-block; vertical-align:top; width:.75rem; height:.75rem; background-color:#fff; border:#000 .0625rem solid; border-radius:50% 50% .0625rem 50%}
+.leaf .in{ position:relative; display:inline-block; vertical-align:top; width:.75rem; height:.75rem; background-color:rgba(255,255,255,.4); border:#000 .0625rem solid; border-radius:50% 50% .0625rem 50%}
 .leaf .in::after{ position:absolute; content:""; left:-.125rem; top:0; width:.75rem; height:.0625rem; background-color:#000; transform:rotate(45deg); transform-origin:.1875rem 0; border-radius:0 50% 50% 0}
 
 .e_plant_act{ position:absolute; left:0}
