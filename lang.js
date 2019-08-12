@@ -88,7 +88,7 @@ function switchlang(bl){
     la_72 : ['UFO Animate','UFO Animate'],
     la_73 : ['个人项目','PERSONAL PROJECT'],
     la_74 : ['UFO Animate 是一个用来快速预览CSS动画效果的在线工具，支持中文和英文两种语言的操作界面。','UFO Animate is a CSS animation system that can quickly build CSS animation effects visually\. Depends on your system language settings\, English and Simplify Chinese are supported\.'],
-    la_75 : ['或者邮件联系 \<u\>\<span class\=\"email\"\>\<\/span\>\<\/u\>。','or also feel free to contact me at \<u\>\<span class\=\"email\"\>\<\/span\>\<\/u\>\.'],
+    la_75 : ['欢迎邮件联系 \<u\>\<span class\=\"email\"\>\<\/span\>\<\/u\>。','or also feel free to contact me at \<u\>\<span class\=\"email\"\>\<\/span\>\<\/u\>\.'],
     // la_76 : ['\<a target\=\"_blank\" href\=\"\.\/assets\/cdm_cn\.svg\" class\=\"btn2\"\>在新窗口中查看大图\<\/a\>','\<a target\=\"_blank\" href\=\"\.\/assets\/cdm\.svg\" class\=\"btn2\"\>View it in a new window\<\/a\>'],
     la_77 : ['去京东看读者评论','View comments on JD.com'],
     la_78 : ['去epubit.com看电子书','E-book on epubit.com'],
