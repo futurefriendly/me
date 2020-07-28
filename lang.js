@@ -24,7 +24,7 @@ function switchlang(bl){
     la_8 : ['网站设计制作','Make Websites'],
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
-    la_11 : ['Benny Chak','Benny Chak'],
+    la_11 : ['ZHAI Dongfang','ZHAI Dongfang'],
     la_12 : ['你好！欢迎并感谢莅临本网页。我是一名中文和互联网交叉背景的产品交互设计师，常住北京。香港教育大学文学硕士，10年互联网从业经验，曾供职腾讯、滴滴出行等公司。','Welcome! Here is a craftsman living in Beijing with an X-shaped skill background\. He owns a M\.A\. degree with distinction from the Education University of Hong Kong\. As a professional UX designer who is familiar with Web design and technical writing\, he used to work for Tencent and DiDi Chuxing Group and owns 10 years of industry experience\.'],
     la_13 : ['我乐于为个人或组织提供以下帮助：','I\'m glad to provide you with the following helps\:'],
     la_14 : ['一、为基于iOS或Android平台的移动应用做交互设计。','1) Interaction design for mobile application\;'],
