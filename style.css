@@ -575,9 +575,9 @@ blockquote{ padding:2rem;}
 .e_plant_act{ position:static;}
 .e_plant_logo{ opacity:1; position:absolute; left:-8.125rem; top:0; padding:6.25rem 0 0 .625rem; z-index:1; transform:perspective(25rem) rotateX(40deg) rotateZ(20deg);}
 .e_plant_logo .leaf{
-  animation:plant_logo 60s ease-in-out infinite;
+/*  animation:plant_logo 60s ease-in-out infinite;
   transform-origin:0 0;
-  animation-fill-mode: both;
+  animation-fill-mode: both;*/
 }
 @keyframes plant_logo{
   0%{transform:rotateZ(-15deg);}
