@@ -96,6 +96,10 @@ $(function(){
     $(this).attr('target',(windowW > 1239)?'h5stage':'_blank');
   });
 
+  $('.f_display').on(tapend,function(){
+    $('#showexp')[0].play();
+  });
+
   $('.f_expand').on(tapend,function(){
     $(this).parents('.f_sm').hide().siblings('.hid').show();
   });
