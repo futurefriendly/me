@@ -592,7 +592,7 @@ blockquote{ padding:2rem;}
 section,
 .section{ padding-left:15rem; padding-right:1rem}
 h1{ z-index:1; font-size:3.7rem; text-align:left; padding:3rem 0 .5em}
-h2{ padding-left:0; font-size:3.5rem; line-height:1.5em; letter-spacing:.06em}
+h2{ padding-left:0; font-size:3rem; line-height:1.5em; letter-spacing:.06em}
 h3{ font-size:1.8rem; line-height:1.5em}
 
 footer{}
