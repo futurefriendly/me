@@ -388,7 +388,7 @@ section > .inner,
 .section > .inner{ width:93%; max-width:3200px; margin:0 auto;}
 
 h2{ padding-top:2rem; font-size:2rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
-h3{ font-size:1.1rem; color:#242424}
+h3{ font-size:1.1rem; font-family:Georgia,serif; color:#242424}
 
 h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; color:#242424}
 ul{}
