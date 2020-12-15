@@ -97,6 +97,8 @@ $(function(){
   });
 
   $('.f_display').on(tapend,function(){
+    $('#scene .layer').remove();
+    $('#showexp').css('opacity','1');
     $('#showexp')[0].play();
   });
 
