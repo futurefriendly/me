@@ -634,7 +634,7 @@ h1{ padding:4.7rem 0 .7em; font-size:5.2rem;}
 footer{ height:100%;}
 
 .summary{}
-.summary .avatar{ width:20%; padding-top:20%;}
+.summary .avatar{ width:20%; padding-top:20%; margin-left:-10%;}
 .summary blockquote{}
 
 #cnzz::before{ position:absolute; left:1rem; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
