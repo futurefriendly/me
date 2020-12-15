@@ -385,7 +385,7 @@ h1{ position:relative; z-index:4; text-align:center; font-family:Circular Std Bo
 section,
 .section{ padding:1rem 4% 2rem; vertical-align:top}
 section > .inner,
-.section > .inner{ width:93%; max-width:3200px; margin:0 auto}
+.section > .inner{ width:93%; max-width:3200px; margin:0 auto; perspective:100000rem}
 
 h2{ padding-top:2rem; font-size:2rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
 h3{ font-size:1.1rem; font-family:Georgia,serif; color:#242424}
