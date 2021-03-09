@@ -515,14 +515,14 @@ nav .ins a:hover{ opacity:1}
   -ms-align-items: center;
   align-items: center;
 }
-.summary .avatar{ width:26%; padding-top:26%; font-size:1.5rem;
+.summary .avatar{ width:26%; padding-top:26%;
   -webkit-flex-shrink:0;
   -moz-flex-shrink:0;
   -o-flex-shrink:0;
   -ms-flex-shrink:0;
   flex-shrink:0;
 }
-.summary blockquote{ padding:0 0 0 3%;}
+.summary blockquote{ padding:0 0 0 3%; font-size:1.5rem;}
 
 }
 
