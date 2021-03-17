@@ -130,7 +130,7 @@ function switchlang(bl){
     la_114 : ['滴滴顺风车运营活动','Promotion Webpages of DiDi Hitch'],
     la_115 : ['滴滴顺风车产品流程','Product Flow of DiDi Hitch'],
     la_116 : ['腾讯微博、微视','Tencent Weibo, Weishi'],
-    la_117 : ['将视觉设计方案转换为以HTML、CSS、JavaScript构建的UI界面。应用BEM方法提升UI开发质量，改善组内工作流程。设计规范的创建和管理，响应式设计和带宽优化工作。','Responsible for creating user interfaces by frontend coding, PSD to HTML/CSS/JavaScript. Apply BEM methodology to improve coding quality, Web design guideline management. Responsive Web design, and bandwidth-oriented optimization work.']
+    la_117 : ['将视觉设计方案转换为以HTML、CSS、JavaScript构建的UI界面。应用BEM方法提升UI开发质量，改善团队工作流程。设计规范的创建和管理，响应式设计和带宽优化工作。','Responsible for creating user interfaces by frontend coding, PSD to HTML/CSS/JavaScript. Apply BEM methodology to improve coding quality, Web design guideline management. Responsive Web design, and bandwidth-oriented optimization work.']
   };
   var thislang = '';
          
