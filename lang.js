@@ -128,7 +128,9 @@ function switchlang(bl){
     la_112 : ['春运暖心日历：','SPRING FESTIVAL TRANSPORTATION CALENDAR: '],
     la_113 : ['这是一个和单向空间合作的运营页面。为了吸引用户互动，我们在产品中加入了一个对联游戏。除此以外，为了配合合作方的产品风格，我们在这个页面中设计了一些微动效。','This is a promotion webpage which cooperates with One-Way Street Bookstore\. It can be accessed via a link in DiDi\'s Mobile Client\. In order to attract users\, we added a traditional Chinese Couplet game into this page\.'],
     la_114 : ['滴滴顺风车运营活动','Promotion Webpages of DiDi Hitch'],
-    la_115 : ['滴滴顺风车产品流程','Product Flow of DiDi Hitch']
+    la_115 : ['滴滴顺风车产品流程','Product Flow of DiDi Hitch'],
+    la_116 : ['腾讯微博、微视','Tencent Weibo, Weishi'],
+    la_117 : ['将视觉设计方案转换为以HTML、CSS、JavaScript构建的UI界面。应用BEM方法提升UI开发质量，改善组内工作流程。设计规范的创建和管理，响应式设计和带宽优化工作。','Responsible for creating user interfaces by frontend coding, PSD to HTML/CSS/JavaScript. Apply BEM methodology to improve coding quality, Web design guideline management. Responsive Web design, and bandwidth-oriented optimization work.']
   };
   var thislang = '';
          

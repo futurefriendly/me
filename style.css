@@ -761,6 +761,15 @@ footer{ display:none;}
 .theme_5 .btn3{ background:#6D4C41; }
 .theme_5 .quote::before{ color:rgba(0,0,0,.8)}
 
+.theme_6{ background:#fff}
+.theme_6 h1,
+.theme_6 h2,
+.theme_6 h3,
+.theme_6 .c_dark{ color:#000;}
+.theme_6 p{ color:rgba(0,0,0,.8);}
+.theme_6 p label{ background:#f4f4f4; border:#f4f4f4 1px solid; color:rgba(0,0,0,.5);}
+.theme_6 .quote::before{ color:rgba(0,0,0,.8)}
+
 /* nav contrast color */
 .f_dark_bg nav .ins{ border-left-color:#fff;}
 .f_dark_bg nav .ins a{ color:#fff;}

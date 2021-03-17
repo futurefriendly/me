@@ -36,10 +36,10 @@ function onScroll(){
     if(scrollPos > sectionOffset[3]){
       $("body").removeClass('f_dark_bg');
     };
-    if(scrollPos > sectionOffset[5]){
+    if(scrollPos > sectionOffset[6]){
       $("body").addClass('f_dark_bg');
     }
-    if(scrollPos > sectionOffset[6]){
+    if(scrollPos > sectionOffset[7]){
       $("body").removeClass('f_dark_bg');
     };
 
@@ -105,4 +105,21 @@ $(function(){
   $('.f_expand').on(tapend,function(){
     $(this).parents('.f_sm').hide().siblings('.hid').show();
   });
+  
+  $('.owl-carousel').owlCarousel({
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    loop:true,
+    margin:20,
+    responsive:{
+        0:{
+            items:1
+        },
+        1240:{
+            items:2
+        }
+    }
+  });
+
 });
