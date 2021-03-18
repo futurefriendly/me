@@ -123,4 +123,6 @@ $(function(){
     }
   });
 
+  $("#h5stage").attr("src","https://www.futurefriendly.cn/ds/page/invitation2016.html");
+
 });
