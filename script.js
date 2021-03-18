@@ -106,7 +106,7 @@ $(function(){
     $(this).parents('.f_sm').hide().siblings('.hid').show();
   });
   
-  $('.owl-carousel').owlCarousel({
+  $('.f_owl-carousel_wb').owlCarousel({
     autoplay:true,
     autoplayTimeout:3000,
     autoplayHoverPause:true,
@@ -119,6 +119,24 @@ $(function(){
         },
         1240:{
             items:2
+        }
+    }
+  });
+  
+  $('.f_owl-carousel_dd').owlCarousel({
+    autoplay:false,
+    loop:true,
+    lazyLoad:true,
+    margin:20,
+    responsive:{
+        0:{
+            items:2
+        },
+        800:{
+            items:4
+        },
+        1240:{
+            items:5
         }
     }
   });
