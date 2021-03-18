@@ -111,6 +111,7 @@ $(function(){
     autoplayTimeout:3000,
     autoplayHoverPause:true,
     loop:true,
+    lazyLoad:true,
     margin:20,
     responsive:{
         0:{
