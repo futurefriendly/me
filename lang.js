@@ -20,7 +20,7 @@ function switchlang(bl){
     // la_4 : ['设计分享交流','Keynotes'],
     la_5 : ['设计规范建设','Design System'],
     la_6 : ['交互原型设计','Interaction Design'],
-    la_7 : ['动效动画设计','Motion Design'],
+    la_7 : ['交互动效设计','Motion Design'],
     la_8 : ['网站设计制作','Make Websites'],
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
