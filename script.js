@@ -92,7 +92,7 @@ $(function(){
     percentage: false,
     barHeight: 0,
     minimumTime: 500,
-    maxTime: 20000,
+    maxTime: 60000,
     fadeOutTime: 500,
     onProgress: function(){
       $('#bodyload').css({
