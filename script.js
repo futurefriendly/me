@@ -85,6 +85,27 @@ function textsize(n,o){
 }
 
 $(function(){
+  $("body").append("<div id=\"bodyloadwrap\" style=\"position:fixed; width:100%;height:100%; top:0; left:0;background:#fff;z-index:100000\"><div style=\"position:absolute;left:50%;top:38%;margin-left:-153px;width:292px;border-bottom:#000 1px solid;overflow:hidden;background:#000;padding-right:2px\"\><p style=\"margin:0;height:1.2rem; line-height:1.2rem; top:-2rem;text-align:center;font-family:Georgia,serif;font-size:1rem;color:#fff\">Hello, This is Dongfang.<\/p><div id=\"bodyload\" data-progress=\"0\" style=\"position:absolute;left:0;top:0; height:1.2rem;width:105%;mix-blend-mode:difference;background:#fff;transform:translateX(0) skewX(15deg)\"><\/div><\/div><\/div>");
+  $("body").queryLoader2({
+    barColor: "#000",
+    backgroundColor: "#fff",
+    percentage: false,
+    barHeight: 0,
+    minimumTime: 500,
+    maxTime: 10000,
+    fadeOutTime: 500,
+    onProgress: function(){
+      $('#bodyload').css({
+        "transform" : "translateX(" + $("#bodyload").attr("data-progress") + "px) skewX(15deg)"
+      }).attr({
+        "data-progress" : Math.floor($("#bodyload").attr("data-progress")) + 4
+      });
+    },
+    onComplete: function(){
+      $('#bodyloadwrap').fadeOut();
+    }
+  });
+
   secHeight();
   $('nav').show();
 
