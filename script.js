@@ -108,6 +108,7 @@ $(function(){
   
   $('.f_owl-carousel_wb').owlCarousel({
     autoplay:true,
+    smartSpeed:250,
     autoplayTimeout:3000,
     autoplayHoverPause:true,
     loop:true,
@@ -125,6 +126,7 @@ $(function(){
   
   $('.f_owl-carousel_dd').owlCarousel({
     autoplay:false,
+    smartSpeed:100,
     loop:true,
     lazyLoad:true,
     margin:20,
