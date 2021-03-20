@@ -503,7 +503,7 @@ nav .ins a:hover{ opacity:1}
 .option_txtsize,
 .option_printer{ display:inline;}
 
-.summary{ padding:3%; border-radius:0 2rem 2rem 2rem;
+.summary{ padding:2%; border-radius:0 2rem 2rem 2rem;
   display:-webkit-flex;
   display:-moz-flex;
   display:-o-flex;
