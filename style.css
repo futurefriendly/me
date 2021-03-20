@@ -413,7 +413,7 @@ li img{ display:block; margin:.625rem auto;}
 .showcase .c1 .phone iframe{/* border:rgba(255,255,255,.8) 2px solid;*/}
 .showcase .c2{ overflow:hidden;}
 
-label{ display:inline-block; background:#f4f4f4; border:#f4f4f4 1px solid; padding:1px .8rem; border-radius:0 1rem 1rem 1rem; font-size:.75rem; font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
+label{ display:inline-block; margin-right:.3rem; background:#f4f4f4; border:#f4f4f4 1px solid; padding:1px .8rem; border-radius:0 1rem 1rem 1rem; font-size:.75rem; font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif;}
 
 .pubwrap{ padding-top:1.5rem}
 .pubimg{ text-align:center;}
