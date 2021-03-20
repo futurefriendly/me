@@ -102,7 +102,7 @@ $(function(){
       });
     },
     onComplete: function(){
-      //$('#bodyloadwrap').fadeOut();
+      $('#bodyloadwrap').fadeOut();
       $('body').css("overflow","auto");
     }
   });
