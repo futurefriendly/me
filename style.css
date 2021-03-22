@@ -326,7 +326,7 @@ body{ background:#fff;}
 .scroll #loadbar{}
 
 p{ margin-bottom:1rem; font-family:Georgia, serif; word-wrap:break-word; overflow-wrap:break-word;}
-blockquote{ padding:5%; font-family:Georgia, serif; background-color:#f4f4f4; word-wrap:break-word; overflow-wrap:break-word;}
+blockquote{ padding:5%; font-family:Georgia, serif; word-wrap:break-word; overflow-wrap:break-word;}
 .container{ position:relative;}
 
 .lg_only{ display:none;}
@@ -396,8 +396,8 @@ li{ padding-top:1rem}
 li img{ display:block; margin:.625rem auto;}
 
 .summary{ background-color:#f4f4f4; padding:5%; border-radius:1rem;}
-.summary .avatar{ position:relative; text-align:center; width:50%; padding-top:50%; border-radius:2% 50% 50% 50%; background-color:#fff; border:#fff .25rem solid; box-shadow:rgba(0,0,0,.1) 0 0 .2rem; display:block; overflow:hidden; margin:auto;}
-.summary .avatar img{ position:absolute; width:100%; height:100%; left:0; top:0;}
+.summary .avatar{ position:relative; text-align:center; width:75%; padding-top:50%; border-radius:2% 10rem 10rem 10rem; background-color:#fff; display:block; overflow:hidden; margin:auto;}
+.summary .avatar img{ position:absolute; width:100%; height:100%; left:0; top:0;object-fit:cover}
 .summary blockquote{ overflow:hidden;}
 
 .semiul li{ padding-bottom:1rem}
@@ -489,7 +489,7 @@ nav .ins a:hover{ opacity:1}
 
 .summary{ border-radius:0 1rem 1rem 1rem;}
 .summary .avatar{}
-.summary .avatar::after{ content:''; position:absolute; left:0; top:0; width:100%; height:100%; border-radius:2% 50% 50% 50%; box-shadow:rgba(0,0,0,.4) 0 0 1rem inset; pointer-events:none;}
+.summary .avatar::after{ content:''; position:absolute; left:0; top:0; width:100%; height:100%; border-radius:2% 10rem 10rem 10rem; box-shadow:rgba(0,0,0,.4) 0 0 1rem inset; pointer-events:none;}
 .summary blockquote{ padding:5% 0 0;}
 }
 
@@ -503,7 +503,7 @@ nav .ins a:hover{ opacity:1}
 .option_txtsize,
 .option_printer{ display:inline;}
 
-.summary{ padding:2%; border-radius:0 2rem 2rem 2rem;
+.summary{ padding:2%; border-radius:0 10rem 10rem 10rem;
   display:-webkit-flex;
   display:-moz-flex;
   display:-o-flex;
@@ -522,7 +522,7 @@ nav .ins a:hover{ opacity:1}
   -ms-flex-shrink:0;
   flex-shrink:0;
 }
-.summary blockquote{ padding:0 0 0 3%; font-size:1.25rem}
+.summary blockquote{ padding:0 0 0 3%}
 
 }
 
@@ -607,9 +607,6 @@ li img{ margin-left:0; margin-right:0}
 .singleimg::before,
 .singleimg::after{ display:none;}
 
-.summary{ border-radius:0 2rem 2rem 2rem;}
-}
-
 @media (min-width:1240px){
 
 .li_pend{ margin-top:-5rem}
@@ -635,7 +632,7 @@ footer{ height:100%;}
 
 .summary{}
 .summary .avatar{ margin-left:-5%;}
-.summary blockquote{}
+.summary blockquote{ font-size:1.25rem; }
 
 #cnzz::before{ position:absolute; left:1rem; color:#000; font-size:1.5rem; font-family:'icomoon' !important; content: "\e99a";
   transform:translateY(-100%);
