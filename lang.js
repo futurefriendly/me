@@ -25,7 +25,7 @@ function switchlang(bl){
     la_9 : ['设计工具开发','Build Tools'],
     la_10 : ['我的联系方式','Get in Touch'],
     la_11 : ['Dongfang','Dongfang'],
-    la_12 : ['你好！欢迎并感谢莅临本网页。我是一名语文教育和互联网行业的从业者，曾供职清华附中、滴滴出行、阿里巴巴、腾讯等，常住北京。','Welcome! This is a craftsman living in Beijing\. He used to work for Tsinghua University High School, Tencent and DiDi Chuxing Group\.'],
+    la_12 : ['你好！欢迎并感谢莅临本网页。我是一名语文教育和互联网行业的从业者，曾供职清华附中、滴滴出行、阿里巴巴、腾讯等，常住北京。','Welcome! This is a craftsman living in Beijing\. He used to work for Tsinghua University High School, DiDi Chuxing, Alibaba, and Tencent\.'],
     la_13 : ['我乐于为个人或组织提供以下帮助：','I\'m glad to provide you with the following helps\:'],
     la_14 : ['一、为基于iOS或Android平台的移动应用做交互设计。','1) Interaction design for mobile application\;'],
     la_15 : ['二、响应式网站设计。','2) Design consultation of making a responsive website\;'],
