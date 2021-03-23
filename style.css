@@ -124,33 +124,27 @@ font-weight: normal;
 src: local('Circular Std Book'), url('./font/CircularStd-Book.woff') format('woff');
 }
 
-
 @font-face {
-font-family: 'Circular Std Book Italic';
-font-style: normal;
+font-family: 'Vesterbro Medium';
+src: url('./font/Vesterbro-Medium.woff2') format('woff2'),
+    url('./font/Vesterbro-Medium.woff') format('woff');
 font-weight: normal;
-src: local('Circular Std Book Italic'), url('./font/CircularStd-BookItalic.woff') format('woff');
+font-style: normal;
+font-display: swap;
 }
 
 @font-face {
-font-family: 'Circular Std Medium';
-font-style: normal;
+font-family: 'Vesterbro Light';
+src: url('./font/Vesterbro-Light.woff2') format('woff2'),
+    url('./font/Vesterbro-Light.woff') format('woff');
 font-weight: normal;
-src: local('Circular Std Medium'), url('./font/CircularStd-Medium.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Circular Std Bold';
 font-style: normal;
-font-weight: normal;
-src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('woff');
+font-display: swap;
 }
 
 .tx_l{ text-align:left;}
 .tx_r{ text-align:right;}
 .tx_c{ text-align:center;}
-.tx_cm{ font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif;}
-.tx_cb{ font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif;}
 .tx_geo{ font-family:Georgia, serif}
 
 .btn,
@@ -170,7 +164,7 @@ src: local('Circular Std Bold'), url('./font/CircularStd-Bold.woff') format('wof
 .btn3:visited{ color:#fff;}
 .btn,
 .btn2,
-.btn3{ display:block; width:100%; box-sizing:border-box; text-align:center; margin-top:.625rem; line-height:1.5rem; border-radius:0 1rem 1rem 1rem; vertical-align:top; border:none; cursor:pointer; font-family:Circular Std Bold,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-appearance:none; appearance:none; background:#D84315;}
+.btn3{ display:block; width:100%; box-sizing:border-box; text-align:center; margin-top:.625rem; line-height:1.5rem; border-radius:0 1rem 1rem 1rem; vertical-align:top; border:none; cursor:pointer; font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; -webkit-appearance:none; appearance:none; background:#D84315;}
 
 .btn3{ background:#00a699; }
 
@@ -325,8 +319,8 @@ body{ background:#fff;}
 }
 .scroll #loadbar{}
 
-p{ margin-bottom:1rem; font-family:Georgia, serif; word-wrap:break-word; overflow-wrap:break-word;}
-blockquote{ padding:5%; font-family:Georgia, serif; word-wrap:break-word; overflow-wrap:break-word;}
+p{ margin-bottom:1rem; font-family:Vesterbro Light, serif; word-wrap:break-word; overflow-wrap:break-word;}
+blockquote{ padding:5%; font-family:Vesterbro Light, serif; word-wrap:break-word; overflow-wrap:break-word;}
 .container{ position:relative;}
 
 .lg_only{ display:none;}
@@ -381,16 +375,16 @@ footer .container{}
 footer .content{ padding-bottom:5rem; padding-bottom:10vw}
 footer .content .section{}
 h1,h2{ color:#000}
-h1{ position:relative; z-index:4; text-align:center; font-family:Circular Std Bold,Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2.5rem; padding:4rem 0 5rem; line-height:1em; letter-spacing:.12em; text-transform:uppercase;}
+h1{ position:relative; z-index:4; text-align:center; font-family:Vesterbro Medium,Georgia,serif; font-size:3rem; padding:4rem 0; line-height:1em;}
 section,
 .section{ padding:1rem 4% 2rem; vertical-align:top}
 section > .inner,
 .section > .inner{ width:93%; max-width:3200px; margin:0 auto; perspective:100000rem}
 
-h2{ padding-top:2rem; font-size:2rem; font-family:Circular Std Medium,Helvetica Neue,Helvetica,Arial,sans-serif; text-transform:uppercase;}
-h3{ font-size:1.1rem; font-family:Georgia,serif; color:#242424}
+h2{ padding-top:2rem; font-size:2rem; font-family:Vesterbro Medium,Georgia,serif}
+h3{ font-size:1.1rem; font-family:Vesterbro Medium,Georgia,serif; color:#242424}
 
-h3 + p{ font-family:Circular Std Book,Helvetica Neue,Helvetica,Arial,sans-serif; color:#242424}
+h3 + p{ font-family:Vesterbro Light,Georgia,serif; color:#242424}
 ul{}
 li{ padding-top:1rem}
 li img{ display:block; margin:.625rem auto;}
@@ -591,8 +585,8 @@ blockquote{ padding:2rem;}
 .content{ position:relative;}
 section,
 .section{ padding-left:15rem; padding-right:1rem}
-h1{ z-index:1; font-size:3.7rem; text-align:left; padding:3rem 0 .5em}
-h2{ padding-left:0; font-size:3rem; line-height:1.5em; letter-spacing:.06em}
+h1{ z-index:1; font-size:4.5rem; text-align:left; padding:3rem 0 1rem}
+h2{ padding-left:0; font-size:3rem; line-height:1.5em}
 h3{ font-size:1.8rem; line-height:1.5em}
 
 footer{}
@@ -612,7 +606,7 @@ li img{ margin-left:0; margin-right:0}
 .li_pend{ margin-top:-5rem}
 
 .e_plant_logo{ padding:7.5rem 0 0 .625rem;}
-h1{ padding:4.7rem 0 .7em; font-size:5.2rem;}
+h1{ padding:4rem 0 3rem; font-size:6rem;}
 
 .showcase .inner{ width:auto}
 
