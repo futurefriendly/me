@@ -377,7 +377,7 @@ footer .content .section{}
 h1,h2{ color:#000}
 h1{ position:relative; z-index:4; text-align:center; font-family:Vesterbro Medium,Georgia,serif; font-size:3rem; padding:4rem 0; line-height:1em;}
 section,
-.section{ padding:1% 4%; vertical-align:top}
+.section{ padding:2% 4%; vertical-align:top}
 section > .inner,
 .section > .inner{ width:93%; max-width:3200px; margin:0 auto; perspective:100000rem}
 
@@ -603,7 +603,7 @@ li img{ margin-left:0; margin-right:0}
 
 @media (min-width:1240px){
 
-.li_pend{ margin-top:-5rem}
+.li_pend{ margin-top:-2%}
 
 .e_plant_logo{ padding:7.5rem 0 0 .625rem;}
 h1{ padding:4rem 0 3rem; font-size:6rem;}
