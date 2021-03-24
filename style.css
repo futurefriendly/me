@@ -408,7 +408,7 @@ section,
 }
 section > .inner,
 .section > .inner{ max-width:3200px; perspective:100000rem;
-  grid-column:3 / span 8;
+  grid-column:2 / span 8;
 }
 
 h2{ padding-top:2rem; font-size:2rem; font-family:Vesterbro Medium,Georgia,serif}
@@ -652,6 +652,10 @@ body{ font-size:100%}
   section,
   .section{
     grid-column:2 / span 8;
+  }
+  section > .inner,
+  .section > .inner{
+    grid-column:3 / span 8;
   }
   h1{ z-index:1; font-size:4.5rem; text-align:left; padding:3rem 0 2rem}
   h2{ padding-left:0; font-size:3rem; line-height:1.5em}
