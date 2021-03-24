@@ -419,7 +419,7 @@ ul{}
 li{ padding-top:1rem}
 li img{ display:block; margin:.625rem auto;}
 
-.summary{ background-color:#f4f4f4; padding:5% 0; border-radius:1rem; align-items:center;
+.summary{ padding:5% 0; border-radius:1rem; align-items:center;
   display:grid;
   grid-template-columns:var(--grid--primary);
   grid-column-gap:var(--grid--gutter);
