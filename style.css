@@ -678,7 +678,7 @@ body{ font-size:100%}
   h1{ padding:4rem 0 3rem; font-size:6rem;}
 
   .showcase .inner{ width:auto}
-  .showcase .layout{ align-items:center;
+  .showcase .layout{ align-items:start;
       grid-template-columns:.5fr 22.75rem repeat(8,1fr) .5fr;
   }
 
@@ -716,7 +716,7 @@ body{ font-size:100%}
   .summary{}
   .summary .avatar{ margin-left:-15%;}
   .summary blockquote{ font-size:1.25rem; }
-  
+
   .contactform{
     grid-column: 1 / span 6;
   }
