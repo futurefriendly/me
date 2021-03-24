@@ -564,11 +564,11 @@ body{ font-size:100%}
 
   .summary{ padding:2%; border-radius:0 10rem 10rem 10rem;
   }
-  .summary .avatar{
+  .summary .avatar{ margin-top:-10%; margin-bottom:-10%; margin-left:-15%;
     grid-column:1 / span 3;
     grid-row:1 / span 1;
   }
-  .summary blockquote{ padding-top:0;
+  .summary blockquote{ padding-top:5%; padding-bottom:5%;
     grid-column:4 / span 6;
     grid-row:1 / span 1;
   }
@@ -653,7 +653,7 @@ body{ font-size:100%}
   .section{
     grid-column:2 / span 8;
   }
-  h1{ z-index:1; font-size:4.5rem; text-align:left; padding:3rem 0 1rem}
+  h1{ z-index:1; font-size:4.5rem; text-align:left; padding:3rem 0 2rem}
   h2{ padding-left:0; font-size:3rem; line-height:1.5em}
   h3{ font-size:1.8rem; line-height:1.5em}
 
@@ -714,7 +714,7 @@ body{ font-size:100%}
   footer{ height:100%;}
 
   .summary{}
-  .summary .avatar{ margin-left:-15%;}
+  .summary .avatar{}
   .summary blockquote{ font-size:1.25rem; }
 
   .contactform{
