@@ -369,7 +369,7 @@ blockquote{ font-family:Vesterbro Light, serif; word-wrap:break-word; overflow-w
 .sampletext{ margin-top:1.5rem;}
 .sampletext img{ height:9.375rem; margin:0 .625rem .625rem 0; float:left;}
 .sampletext .text .col{ overflow:hidden;
-	box-sizing:border-box;
+  box-sizing:border-box;
 }
 .sampletext .text .col:last-child{ margin-top:.626rem}
 .sampletext .text .col p{ margin-bottom:0}
@@ -405,6 +405,10 @@ section,
   display:grid;
   grid-template-columns:var(--grid--outer);
   grid-column-gap:var(--grid--gutter);
+}
+section > a,
+.section > a{
+  grid-column:1 / span 11;
 }
 section > .inner,
 .section > .inner{ max-width:3200px; perspective:100000rem;
