@@ -408,7 +408,7 @@ section,
 }
 section > .inner,
 .section > .inner{ max-width:3200px; perspective:100000rem;
-  grid-column:2 / span 8;
+  grid-column:3 / span 8;
 }
 
 h2{ padding-top:2rem; font-size:2rem; font-family:Vesterbro Medium,Georgia,serif}
