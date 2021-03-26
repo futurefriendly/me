@@ -902,3 +902,5 @@ nav .leaf .l_c{ transform:rotateZ(0deg);}
 }
 .f_dark_bg nav .in{ border-color:#fff; mix-blend-mode:difference;}
 .f_dark_bg nav .in::after{ background-color:#fff;}
+
+#qLtempOverlay{ background:#fff!important;}
