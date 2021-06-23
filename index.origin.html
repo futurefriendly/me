@@ -18,7 +18,7 @@
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/futurefriendly/me/LaTeXMathML.js"></script> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/parallax-js@3.1.0/dist/parallax.min.js"></script>
-<script type="text/javascript" src="./script.min.js"></script>
+<script type="text/javascript" src="./script.js"></script>
 </head>
 <body ontouchstart="">
 
@@ -96,15 +96,11 @@
           <br><span data-lang="la_17">4) Chinese localization copywriting, Simplified or Traditional.</span>
         </p>
         <p style="display:none" data-lang="la_19">The picture below depicts what I'm interested in. Past experience is listed in it by relevance.</p>
-        <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-          <tr>
-            <!--<td valign="top" data-lang="la_93">-->
-            <td valign="top" id="scene">
-              <object data="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/map.svg" type="image/svg+xml" style="opacity:0;z-index:-1"></object>
-              <!-- <video id="showexp" poster="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/map.svg" style="object-fit:cover" src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/map.mp4" preload="none" width="100%"></video> -->
-            </td>
-          </tr>
-        </table>
+        <div class="owl-carousel owl-theme f_owl-carousel_map">
+          <div id="scene">
+            <object data="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/map.svg" type="image/svg+xml" style="opacity:0;z-index:-1"></object>
+          </div>
+        </div>
         <!-- <p class="mt10" style="display: none;">
           <a class="btn2 f_display" href="javascript:;" data-lang="la_82">Display</a>
           <span data-lang="la_76"><a target="_blank" href="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/map.svg" class="btn2">View it in a new window</a></span>
@@ -258,25 +254,16 @@
           <p class="firsthead" data-lang="la_23">Since 2015, The design system replaced the guideline, gradually became a more efficient design practice. Some organizations, such as <a href="https://www.lightningdesignsystem.com" target="_blank">Salesforce</a>, have done best practices in that way. The design system incorporates elements such as content strategy and accessibility into the design requirements and unifies the design guideline and component library. Rely on my previous experience of Tencent Weibo's Web design guideline, and Brad Frost's Atomic Design philosophy, we created this design system of DiDi Hitch.</p>
           <p data-lang="la_54">Firstly, this design system serves Web products of DiDi Hitch, including the built-in webserver and the promotion pages. Secondly, this design system serves UX designer and front-end developer. It is both a front-end guideline and a UI component library.</p>
         </div>
-        <div class="singleimg">
-          <div class="inner">
-            <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0" style="table-layout:fixed;">
-              <tr>
-                <td valign="top">
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_btn1.png" style="padding:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_btn4.png" style="padding:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_btn5.png" style="padding:.5rem" /></p>
-                  <!-- <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_form1.png" style="padding:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_form2.png" style="padding:.5rem" /></p> -->
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_msg1.png" style="padding:.5rem" /></p>
-                </td>
-                <td valign="top">
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_ico1.png" style="padding:.5rem" /></p>
-                  <!-- <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_ico2.png" style="padding:.5rem" /></p> -->
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_ava1.png" style="padding:.5rem" /></p>
-                </td>
-              </tr>
-            </table>
+        <div class="owl-carousel owl-theme f_owl-carousel_designsystem">
+          <div>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_btn1.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_btn4.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_btn5.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_msg1.png" /></p>
+          </div>
+          <div>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_ico1.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ds_ava1.png" /></p>
           </div>
         </div>
         <p><a target="_blank" href="https://www.futurefriendly.cn/ds/page/guideline.html" class="btn2" data-lang="la_79">View it online</a></p>
@@ -299,28 +286,11 @@
           <p class="firsthead" data-lang="la_24">From June to November 2015, I was responsible for interaction design and front-end development in the redesign project of the International Official Website of Peking University. 3-member team, 3 editions, delivered after the 6-month design & development cycle and passed the final assessment.</p>
           <p><span data-lang="la_71">The International Official Portal Website of Peking University has made its debut on November 20<sup>th</sup> 2015. This new responsive site is designed with "Future-Friendly Design" thinking, applied bootstrap grid system, and support IE7+ browser.</span></p>
         </div>
-        <div class="singleimg">
-          <div class="inner">
-            <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-              <tr>
-                <td valign="top">
-                  <img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/pkurwd_shadow.jpg" />
-                </td>
-              </tr>
-            </table>
+        <div class="owl-carousel owl-theme f_owl-carousel_pku">
+          <div>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/pkurwd_shadow.jpg" /></p>
           </div>
         </div>
-        <!-- <div class="singleimg">
-          <div class="inner">
-            <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-              <tr>
-                <td valign="top"><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/pku1.png" /></td>
-                <td valign="top"><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/pku2.png" /></td>
-                <td valign="top"><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/pku3.png" /></td>
-              </tr>
-            </table>
-          </div>
-        </div> -->
         <p>
           <a target="_blank" href="http://newsen.pku.edu.cn" class="btn2" data-lang="la_83">Visit newsen.pku.edu.cn</a>
           <a target="_blank" href="https://www.futurefriendly.cn/pku-en-2015/" class="btn2" data-lang="la_84">Draft 1</a>
@@ -346,90 +316,12 @@
           <p class="firsthead" data-lang="la_117">Responsible for creating user interfaces by frontend coding, PSD to HTML/CSS/JavaScript. Apply BEM methodology to improve coding quality, Web design guideline management. Responsive Web design, and bandwidth-oriented optimization work.</p>
         </div>
         <div class="owl-carousel owl-theme f_owl-carousel_wb">
-          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_main1.png" /></p>
-              </td>
-            </tr>
-          </table>
-          <!-- <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_main2.png" /></p>
-              </td>
-            </tr>
-          </table> -->
-          <!-- <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_exp0.png" /></p>
-              </td>
-            </tr>
-          </table> -->
-          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_exp1.png" /></p>
-              </td>
-            </tr>
-          </table>
-          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_login1.jpg" /></p>
-              </td>
-            </tr>
-          </table>
-          <!-- <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_login2.jpg" /></p>
-              </td>
-            </tr>
-          </table> -->
-          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_fun1.jpg" /></p>
-              </td>
-            </tr>
-          </table>
-          <!-- <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_fun2.jpg" /></p>
-              </td>
-            </tr>
-          </table> -->
-          <!-- <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ws_1.jpg" /></p>
-              </td>
-            </tr>
-          </table> -->
-          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ws_2.jpg" /></p>
-              </td>
-            </tr>
-          </table>
-          <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/yd_1.jpg" /></p>
-              </td>
-            </tr>
-          </table>
-          <!-- <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0">
-            <tr>
-              <td valign="top">
-                <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/yd_2.jpg" /></p>
-              </td>
-            </tr>
-          </table> -->
+          <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_main1.png" /></p>
+          <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_exp1.png" /></p>
+          <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_login1.jpg" /></p>
+          <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/wb_fun1.jpg" /></p>
+          <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/ws_2.jpg" /></p>
+          <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/yd_1.jpg" /></p>
         </div>
       </li>
     </ul>
@@ -449,31 +341,19 @@
         <div class="quote">
           <p class="firsthead" data-lang="la_74">UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Depends on your system language settings, English and Simplify Chinese are supported.</p>
         </div>
-        <div class="singleimg">
-          <div class="inner">
-            <table class="tbimg" width="100%" cellpadding="0" cellpadding="0" border="0" style="table-layout:fixed;">
-              <tr>
-                <td colspan="3">
-                  <img src="https://www.futurefriendly.cn/ufoanimate/demo/images/ufo_top.jpg" style="border-radius:.5rem; margin-bottom:0" />
-                </td>
-              </tr>
-              <tr>
-                <!-- <td valign="top"><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/csstool_lg.png" /></td> -->
-                <td valign="top">
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel1.png" style="border-radius:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel4.png" style="border-radius:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel5.png" style="border-radius:.5rem" /></p>
-                </td>
-                <td valign="top">
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel3.png" style="border-radius:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel2.png" style="border-radius:.5rem" /></p>
-                </td>
-                <td valign="top">
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel6.png" style="border-radius:.5rem" /></p>
-                  <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel7.png" style="border-radius:.5rem" /></p>
-                </td>
-              </tr>
-            </table>
+        <div class="owl-carousel owl-theme f_owl-carousel_ufo">
+          <div>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel1.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel4.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel5.png" /></p>
+          </div>
+          <div>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel3.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel2.png" /></p>
+          </div>
+          <div>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel6.png" /></p>
+            <p><img src="https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/panel7.png" /></p>
           </div>
         </div>
         <p><a target="_blank" href="https://www.futurefriendly.cn/ufoanimate/" class="btn2" data-lang="la_86">Try it online</a></p>

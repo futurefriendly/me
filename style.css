@@ -499,19 +499,6 @@ nav .ins a:hover{ opacity:1}
 .scroll nav .ins{ padding-top:1rem;}
 .scroll nav .ins a{ transform:perspective(6.25rem) rotateX(0);}
 
-.singleimg{ position:relative; margin-left:-4%; margin-right:-4%}
-.singleimg::before{ content:''; position:absolute; z-index:1; left:0; top:0; height:100%; width:.3rem;
-  background-image:linear-gradient(90deg, rgba(0,0,0,.1) 0, transparent .3rem, transparent);
-}
-.singleimg::after{ content:''; position:absolute; right:0; top:0; height:100%; width:.3rem;
-  background-image:linear-gradient(-90deg, rgba(0,0,0,.1) 0, transparent .3rem, transparent);
-}
-.singleimg .inner{ box-sizing:border-box; width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
-.singleimg .tbimg{ box-sizing:border-box; width:180%; max-width:180%}
-.singleimg .tbimg img{ box-sizing:border-box; margin-top:0; width:100%}
-.singleimg .tbimg td{ padding:.5rem; vertical-align:top}
-.singleimg .tbimg thead td{ padding-bottom:0}
-
 .paper{ font-family:Georgia, serif; padding:3% 0;}
 .paper .topic{ font-size:1.5rem; line-height:1.5em; margin-bottom:1rem; text-align:center;}
 .cn .paper .topic{ font-size:1.5em;}
@@ -673,11 +660,6 @@ body{ font-size:100%}
   .semiul li{ width:100%; float:left;}
   .semiul li img{ width:24rem; max-width:100%}
 
-  .singleimg{ margin-left:0; margin-right:0}
-  .singleimg .tbimg{ width:100%; max-width:100%; border:none;}
-  .singleimg .tbimg td{}
-  .singleimg::before,
-  .singleimg::after{ display:none}
 }
 
 @media (min-width:1240px){

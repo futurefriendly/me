@@ -129,6 +129,70 @@ $(function(){
     $(this).parents('.f_sm').hide().siblings('.hid').show();
   });
   
+  $('.f_owl-carousel_map').owlCarousel({
+    autoplay:false,
+    smartSpeed:250,
+    loop:false,
+    lazyLoad:true,
+    margin:20,
+    responsive:{
+        0:{
+            items:1
+        },
+        480:{
+            items:1
+        }
+    }
+  });
+  
+  $('.f_owl-carousel_designsystem').owlCarousel({
+    autoplay:false,
+    smartSpeed:250,
+    loop:true,
+    lazyLoad:true,
+    margin:20,
+    responsive:{
+        0:{
+            items:1
+        },
+        800:{
+            items:2
+        }
+    }
+  });
+  
+  $('.f_owl-carousel_pku').owlCarousel({
+    autoplay:false,
+    smartSpeed:250,
+    loop:false,
+    lazyLoad:true,
+    margin:20,
+    responsive:{
+        0:{
+            items:1
+        },
+        480:{
+            items:1
+        }
+    }
+  });
+  
+  $('.f_owl-carousel_ufo').owlCarousel({
+    autoplay:false,
+    smartSpeed:250,
+    loop:true,
+    lazyLoad:true,
+    margin:20,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        }
+    }
+  });
+  
   $('.f_owl-carousel_wb').owlCarousel({
     autoplay:true,
     smartSpeed:250,
@@ -141,7 +205,7 @@ $(function(){
         0:{
             items:1
         },
-        1240:{
+        800:{
             items:2
         }
     }
