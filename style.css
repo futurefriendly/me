@@ -44,11 +44,11 @@ img{ vertical-align:top; max-width:100%}
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/icomoon.eot?3aoubj');
-  src:  url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/icomoon.eot?3aoubj#iefix') format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/icomoon.ttf?3aoubj') format('truetype'),
-    url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/icomoon.woff?3aoubj') format('woff'),
-    url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/icomoon.svg?3aoubj#icomoon') format('svg');
+  src:  url('https://designer.futurefriendly.cn/font/icomoon.eot?3aoubj');
+  src:  url('https://designer.futurefriendly.cn/font/icomoon.eot?3aoubj#iefix') format('embedded-opentype'),
+    url('https://designer.futurefriendly.cn/font/icomoon.ttf?3aoubj') format('truetype'),
+    url('https://designer.futurefriendly.cn/font/icomoon.woff?3aoubj') format('woff'),
+    url('https://designer.futurefriendly.cn/font/icomoon.svg?3aoubj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -137,13 +137,13 @@ img{ vertical-align:top; max-width:100%}
 font-family: 'Circular Std Book';
 font-style: normal;
 font-weight: normal;
-src: local('Circular Std Book'), url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/CircularStd-Book.woff') format('woff');
+src: local('Circular Std Book'), url('https://designer.futurefriendly.cn/font/CircularStd-Book.woff') format('woff');
 }
 
 @font-face {
 font-family: 'Vesterbro Medium';
-src: url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/Vesterbro-Medium.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/Vesterbro-Medium.woff') format('woff');
+src: url('https://designer.futurefriendly.cn/font/Vesterbro-Medium.woff2') format('woff2'),
+    url('https://designer.futurefriendly.cn/font/Vesterbro-Medium.woff') format('woff');
 font-weight: normal;
 font-style: normal;
 font-display: swap;
@@ -151,8 +151,8 @@ font-display: swap;
 
 @font-face {
 font-family: 'Vesterbro Light';
-src: url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/Vesterbro-Light.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/futurefriendly/me/font/Vesterbro-Light.woff') format('woff');
+src: url('https://designer.futurefriendly.cn/font/Vesterbro-Light.woff2') format('woff2'),
+    url('https://designer.futurefriendly.cn/font/Vesterbro-Light.woff') format('woff');
 font-weight: normal;
 font-style: normal;
 font-display: swap;
@@ -512,11 +512,11 @@ nav .ins a:hover{ opacity:1}
 .contactform input{ width:100%; box-sizing:border-box;}
 .contactform textarea{ width:100%; height:12rem; box-sizing:border-box;}
 
-.logo_tencent{ display:inline-block; width:7rem; height:1.8rem; background:url(https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/logo_tencent.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
+.logo_tencent{ display:inline-block; width:7rem; height:1.8rem; background:url(https://designer.futurefriendly.cn/assets/logo_tencent.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
 
-.logo_didi{ display:inline-block; width:4rem; height:1.2rem; background:url(https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/logo_didi.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
+.logo_didi{ display:inline-block; width:4rem; height:1.2rem; background:url(https://designer.futurefriendly.cn/assets/logo_didi.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
 
-.logo_pku{ display:inline-block; width:11.3rem; height:.8rem; background:url(https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/logo_pku.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
+.logo_pku{ display:inline-block; width:11.3rem; height:.8rem; background:url(https://designer.futurefriendly.cn/assets/logo_pku.svg) center center no-repeat; background-size:contain; text-indent:-9999rem; overflow:hidden; -webkit-filter:grayscale(100%);}
 
 .quote{ padding-left:1.5rem;}
 .quote::before{ position:absolute; margin-left:-1.5rem; margin-top:-.25rem; font-family:'icomoon'; color:rgba(0,0,0,.8); color:currentColor; font-size:1rem; content: "\e977";}
@@ -678,7 +678,7 @@ body{ font-size:100%}
     grid-row: 1 / span 1;
     grid-column:1 / span 3;
   }
-  .showcase .c1 .phone{ box-sizing:border-box; width:25rem; height:51rem; padding:7rem 1.7rem 0; background-image:url(https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/iphone-bg.svg); background-size:100%;}
+  .showcase .c1 .phone{ box-sizing:border-box; width:25rem; height:51rem; padding:7rem 1.7rem 0; background-image:url(https://designer.futurefriendly.cn/assets/iphone-bg.svg); background-size:100%;}
   .showcase .c2{
     grid-row:1 / span 1;
     grid-column:4 / span 8;
@@ -782,7 +782,7 @@ footer{ display:none;}
 */
 
 @media screen and (min-width:600px){
-  .theme_1{ background:#E65100 url(https://cdn.jsdelivr.net/gh/futurefriendly/me/assets/theme_bg1.jpg) left top no-repeat; background-size:cover; background-attachment:fixed;}
+  .theme_1{ background:#E65100 url(https://designer.futurefriendly.cn/assets/theme_bg1.jpg) left top no-repeat; background-size:cover; background-attachment:fixed;}
 }
 
 .theme_2{ background-color:#DCEDC8}
@@ -794,7 +794,7 @@ footer{ display:none;}
 .theme_2 p label{ background:rgba(255,255,255,.3); border:none; color:rgba(0,0,0,.8);}
 .theme_2 .btn3{ background:#33691E; }
 
-.theme_3{ background:#111 url(https://cdn.jsdelivr.net/gh/futurefriendly/ufoanimate/demo/images/grid.png) center center; background-size:100px; background-attachment:fixed;}
+.theme_3{ background:#111 url(https://designer.futurefriendly.cn/assets/grid.png) center center; background-size:100px; background-attachment:fixed;}
 .theme_3 h1,
 .theme_3 h2,
 .theme_3 h3,
