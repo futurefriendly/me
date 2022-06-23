@@ -678,7 +678,7 @@ body{ font-size:100%}
     grid-row: 1 / span 1;
     grid-column:1 / span 3;
   }
-  .showcase .c1 .phone{ box-sizing:border-box; width:25rem; height:51rem; padding:7rem 1.7rem 0; background-image:url(https://designer.futurefriendly.cn/assets/iphone-bg.svg); background-size:100%;}
+  .showcase .c1 .phone{ box-sizing:border-box; width:25rem; height:51.2rem; padding:7rem 1.7rem 0; background-image:url(https://designer.futurefriendly.cn/assets/iphone-bg.svg); background-size:100%;}
   .showcase .c2{
     grid-row:1 / span 1;
     grid-column:4 / span 8;
