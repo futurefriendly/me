@@ -411,7 +411,7 @@ section > a,
   grid-column:1 / span 11;
 }
 section > .inner,
-.section > .inner{ max-width:3200px; perspective:100000rem;
+.section > .inner{ width:100%; max-width:3200px; perspective:100000rem;
   grid-column:2 / span 8;
 }
 
