@@ -429,7 +429,7 @@ li img{ display:block; margin:.625rem auto;}
   grid-column-gap:var(--grid--gutter);
   grid-row-gap:1rem;
 }
-.summary .avatar{ position:relative; text-align:center; width:100%; border-radius:2% 10rem 10rem 10rem; max-height:20rem;background-color:#fff; display:block; overflow:hidden;
+.summary .avatar{ position:relative; text-align:center; width:100%; border-radius:1%; max-height:40rem;background-color:#fff; display:block; overflow:hidden;
   grid-column:2 / span 8;
   grid-row:1 / span 1;
 }
@@ -557,12 +557,12 @@ body{ font-size:100%}
 
   .summary{ padding:2%; border-radius:0 10rem 10rem 10rem;
   }
-  .summary .avatar{ margin-top:-10%; margin-bottom:-10%; margin-left:-15%;
-    grid-column:1 / span 3;
+  .summary .avatar{ margin-top:-10%; margin-bottom:-10%; margin-left:-5%;
+    grid-column:1 / span 4;
     grid-row:1 / span 1;
   }
   .summary blockquote{ padding-top:5%; padding-bottom:5%;
-    grid-column:4 / span 6;
+    grid-column:5 / span 5;
     grid-row:1 / span 1;
   }
 
