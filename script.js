@@ -14,7 +14,7 @@ $('nav').hide();
 function secHeight(){
   var seccount = $('section').length;
   for (i=0;i<seccount;i++){
-    sectionOffset[i] = Math.floor($('section:eq('+ i +')').offset().top - 180);
+    sectionOffset[i] = Math.floor($('section:eq('+ i +')').offset().top)
   }
 }
 
@@ -28,18 +28,18 @@ function onScroll(){
     	$("body").removeClass('scroll');
     };
 
-    if (scrollPos > sectionOffset[1]){
+    if (scrollPos > sectionOffset[2]){
       $("body").addClass('f_dark_bg');
     }else{
       $("body").removeClass('f_dark_bg');
     };
-    if(scrollPos > sectionOffset[3]){
+    if(scrollPos > sectionOffset[4]){
       $("body").removeClass('f_dark_bg');
     };
-    if(scrollPos > sectionOffset[6]){
-      $("body").addClass('f_dark_bg');
-    }
     if(scrollPos > sectionOffset[7]){
+      $("body").addClass('f_dark_bg');
+    };
+    if(scrollPos > sectionOffset[8]){
       $("body").removeClass('f_dark_bg');
     };
 
