@@ -119,51 +119,82 @@ const langData = {
     la_114 : ['滴滴顺风车运营活动','Promotion Webpages of DiDi Hitch'],
     la_115 : ['滴滴顺风车产品流程','Product Flow of DiDi Hitch'],
     la_116 : ['腾讯微博、微视','Tencent Weibo, Weishi'],
-    la_117: ['将视觉设计方案转换为以HTML、CSS、JavaScript构建的UI界面。应用BEM方法提升UI开发质量，改善团队工作流程。设计规范的创建和管理，响应式设计和带宽优化工作。','Responsible for creating user interfaces by frontend coding, PSD to HTML/CSS/JavaScript. Apply BEM methodology to improve coding quality, Web design guideline management. Responsive Web design, and bandwidth-oriented optimization work.'
-  ]
+    la_117: [
+      '将视觉设计方案转换为以HTML、CSS、JavaScript构建的UI界面。应用BEM方法提升UI开发质量，改善团队工作流程。设计规范的创建和管理，响应式设计和带宽优化工作。',
+      'Responsible for creating user interfaces by frontend coding, PSD to HTML/CSS/JavaScript. Apply BEM methodology to improve coding quality, Web design guideline management. Responsive Web design, and bandwidth-oriented optimization work.'
+    ]
 };
 
-// 检测浏览器默认语言
+// =======================
+// 工具函数
+// =======================
+
+// 获取浏览器语言
 function detectBrowserLang() {
   return (navigator.language || navigator.userLanguage || 'zh').substring(0,2).toLowerCase();
 }
 
+// 设置元素文本
+function setElementText(el, text) {
+  if (el) el.innerHTML = text;
+}
+
+// 设置占位符
+function setPlaceholder(selector, text) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute('placeholder', text);
+}
+
 // 切换语言
 function switchLang(langCode) {
-  $('[data-lang]').each(function () {
-    const key = $(this).data('lang');
+  // 更新 data-lang 元素
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    const key = el.getAttribute('data-lang');
     if (langData[key]) {
-      $(this).html(langCode === 'en' ? langData[key][1] : langData[key][0]);
+      setElementText(el, langCode === 'en' ? langData[key][1] : langData[key][0]);
     }
   });
 
+  // 更新按钮文本和占位符
+  const langBtnTxt = document.querySelector('.f_langs .txt');
   if (langCode === 'en') {
-    $('.f_langs .txt').text('简体中文');
-    $('.contactform [name=_replyto]').attr('placeholder','Your Email');
-    $('.contactform [name=message]').attr('placeholder','Message');
-    $('body').removeClass('cn').addClass('en');
-    $('#root').attr('lang','en');
+    if (langBtnTxt) langBtnTxt.textContent = '简体中文';
+    setPlaceholder('.contactform [name=_replyto]', 'Your Email');
+    setPlaceholder('.contactform [name=message]', 'Message');
+    document.body.classList.remove('cn');
+    document.body.classList.add('en');
+    const root = document.getElementById('root');
+    if (root) root.setAttribute('lang','en');
   } else {
-    $('.f_langs .txt').text('English');
-    $('.contactform [name=_replyto]').attr('placeholder','你的邮箱地址');
-    $('.contactform [name=message]').attr('placeholder','邮件内容');
-    $('body').removeClass('en').addClass('cn');
-    $('#root').attr('lang','zh-cn');
+    if (langBtnTxt) langBtnTxt.textContent = 'English';
+    setPlaceholder('.contactform [name=_replyto]', '你的邮箱地址');
+    setPlaceholder('.contactform [name=message]', '邮件内容');
+    document.body.classList.remove('en');
+    document.body.classList.add('cn');
+    const root = document.getElementById('root');
+    if (root) root.setAttribute('lang','zh-cn');
   }
 }
 
 // 切换按钮处理
 function handleLangToggle() {
-  const current = $('.f_langs:eq(0) .txt').text();
+  const langBtnTxt = document.querySelector('.f_langs .txt');
+  if (!langBtnTxt) return;
+  const current = langBtnTxt.textContent;
   switchLang(current === 'English' ? 'en' : 'zh');
 }
 
+// =======================
 // 初始化
-$(function() {
+// =======================
+document.addEventListener('DOMContentLoaded', () => {
   switchLang(detectBrowserLang());
 
-  $('.f_langs').click(function () {
-    handleLangToggle();
-    return false;
-  });
+  const langBtn = document.querySelector('.f_langs');
+  if (langBtn) {
+    langBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      handleLangToggle();
+    });
+  }
 });
