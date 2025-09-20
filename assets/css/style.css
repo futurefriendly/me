@@ -782,7 +782,7 @@ footer{ display:none;}
 */
 
 @media screen and (min-width:600px){
-  .theme_1{ background:#E65100 url(https://designer.futurefriendly.cn/assets/images/theme_bg1.jpg) left top no-repeat; background-size:cover; background-attachment:fixed;}
+  .theme_1{ background:#E65100; background-size:cover; background-attachment:fixed;}
 }
 
 .theme_2{ background-color:#DCEDC8}
