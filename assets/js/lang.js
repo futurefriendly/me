@@ -35,10 +35,17 @@ function switchLang(langCode) {
     }
   });
 
-  const langBtnTxt = document.querySelector('.f_langs .txt');
+  // 更新所有语言切换按钮
+  document.querySelectorAll('.f_langs .txt').forEach(langBtnTxt => {
+    if (langCode === 'en') {
+      langBtnTxt.textContent = '简体中文';
+    } else {
+      langBtnTxt.textContent = 'English';
+    }
+  });
 
+  // 更新占位符和 body / root 语言属性
   if (langCode === 'en') {
-    if (langBtnTxt) langBtnTxt.textContent = '简体中文';
     setPlaceholder('.contactform [name=_replyto]', 'Your Email');
     setPlaceholder('.contactform [name=message]', 'Message');
     document.body.classList.remove('cn');
@@ -46,7 +53,6 @@ function switchLang(langCode) {
     const root = document.getElementById('root');
     if (root) root.setAttribute('lang','en');
   } else {
-    if (langBtnTxt) langBtnTxt.textContent = 'English';
     setPlaceholder('.contactform [name=_replyto]', '你的邮箱地址');
     setPlaceholder('.contactform [name=message]', '邮件内容');
     document.body.classList.remove('en');
@@ -55,6 +61,10 @@ function switchLang(langCode) {
     if (root) root.setAttribute('lang','zh-cn');
   }
 }
+
+// =======================
+// 语言切换按钮点击处理
+// =======================
 
 function handleLangToggle() {
   const isEnglish = document.body.classList.contains('en');
@@ -68,11 +78,11 @@ function handleLangToggle() {
 document.addEventListener('DOMContentLoaded', () => {
   switchLang(detectBrowserLang());
 
-  const langBtn = document.querySelector('.f_langs');
-  if (langBtn) {
+  // 给所有语言切换按钮绑定事件
+  document.querySelectorAll('.f_langs').forEach(langBtn => {
     langBtn.addEventListener('click', (e) => {
       e.preventDefault();
       handleLangToggle();
     });
-  }
+  });
 });
