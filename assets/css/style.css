@@ -763,83 +763,77 @@ footer{ display:none;}
 .cn .paper strong{ font-weight:400}
 .cn nav .ins a{ font-weight:400; font-size:.875rem}
 
-/* theme */
-
-/* https://material.io/design/color/the-color-system.html#tools-for-picking-colors */
-
-.theme_1{ background:#e65100 url(https://designer.futurefriendly.cn/assets/images/grid.png) center center fixed; background-size:100px; padding-bottom:10vw}
+/* ================================
+   Themes
+================================ */
+/* ---------------- Theme 1 ---------------- */
+.theme_1 { background: #e65100 url(https://designer.futurefriendly.cn/assets/images/grid.png) center center fixed; background-size: 100px; padding-bottom: 10vw; color: #fff; }
 .theme_1 h1,
 .theme_1 h2,
 .theme_1 h3,
-.theme_1 .c_dark{ color:#fff;}
-.theme_1 p{ color:rgba(255,255,255,.8);}
-.theme_1 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
-.theme_1 .btn3{ background:#6D4C41; }
-.theme_1 .quote::before{ color:rgba(255,255,255,.8)}
-
-/*.theme_1 p{ color:rgba(0,0,0,.8);}
-.theme_1 p label{ background:rgba(255,255,255,.3); border:none; color:rgba(0,0,0,.8);}
-*/
-
-@media screen and (min-width:600px){
-  .theme_1{background-attachment:fixed;}
+.theme_1 .c_dark { color: #fff; }
+.theme_1 p { color: rgba(255, 255, 255, 0.8); }
+.theme_1 p label { background: rgba(0, 0, 0, .3); border: none; color: rgba(255, 255, 255, .8); }
+.theme_1 .btn3 { background: #6D4C41; }
+.theme_1 .quote::before { color: rgba(255, 255, 255, .8); }
+@media screen and (min-width:600px) {
+  .theme_1 { background-attachment: fixed; }
 }
 
-.theme_2{ background-color:#DCEDC8}
+/* ---------------- Theme 2 ---------------- */
+.theme_2 { background-color: #DCEDC8; color: #000; }
 .theme_2 h1,
 .theme_2 h2,
 .theme_2 h3,
-.theme_2 .c_dark{ color:#000;}
-.theme_2 p{ color:rgba(0,0,0,.8);}
-.theme_2 p label{ background:rgba(255,255,255,.3); border:none; color:rgba(0,0,0,.8);}
-.theme_2 .btn3{ background:#33691E; }
+.theme_2 .c_dark { color: #000; }
+.theme_2 p { color: rgba(0, 0, 0, .8); }
+.theme_2 p label { background: rgba(255, 255, 255, .3); border: none; color: rgba(0, 0, 0, .8); }
+.theme_2 .btn3 { background: #33691E; }
 
-.theme_3{ background:#111 url(https://designer.futurefriendly.cn/assets/images/grid.png) center center; background-size:100px; background-attachment:fixed;}
+/* ---------------- Theme 3 ---------------- */
+.theme_3 { background: #111 url(https://designer.futurefriendly.cn/assets/images/grid.png) center center; background-size: 100px; background-attachment: fixed; color: #fff; }
 .theme_3 h1,
 .theme_3 h2,
 .theme_3 h3,
-.theme_3 .c_dark{ color:#fff;}
-.theme_3 p{ color:rgba(255,255,255,.8);}
-.theme_3 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
-.theme_3 .quote::before{ color:rgba(255,255,255,.8)}
+.theme_3 .c_dark { color: #fff; }
+.theme_3 p { color: rgba(255, 255, 255, .8); }
+.theme_3 p label { background: rgba(0, 0, 0, .3); border: none; color: rgba(255, 255, 255, .8); }
+.theme_3 .quote::before { color: rgba(255, 255, 255, .8); }
 
-.theme_4{ background-color:#039BE5; padding-top:4rem; padding-top:9vw; margin-top:-10vw;
-  clip-path:polygon(0 0, 100% 4rem, 100% 100%, 0 100%);
-  clip-path:polygon(0 0, 100% 9vw, 100% 100%, 0 100%);
-}
+/* ---------------- Theme 4 ---------------- */
+.theme_4 { background: #039BE5 url(https://designer.futurefriendly.cn/assets/images/grid.png) center center fixed; padding-top: 9vw; margin-top: -10vw; clip-path: polygon(0 0, 100% 9vw, 100% 100%, 0 100%); color: #fff; }
 .theme_4 h1,
 .theme_4 h2,
 .theme_4 h3,
-.theme_4 .c_dark{ color:#fff;}
-.theme_4 p{ color:rgba(255,255,255,.8);}
-.theme_4 p label{ background:rgba(0,0,0,.3); border:none; color:rgba(255,255,255,.8);}
-.theme_4 .btn3{ background:#6D4C41; }
-.theme_4 .quote::before{ color:rgba(255,255,255,.8)}
-
-.theme_5{ background-color:#f5f5f5; padding-top:9rem; padding-top:10vw; padding-bottom:9rem; padding-bottom:10vw;
-  clip-path:polygon(0 9rem, 100% 0, 100% 100%, 0 100%);
-  clip-path:polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
+.theme_4 .c_dark { color: #fff; }
+.theme_4 p { color: rgba(255, 255, 255, .8); }
+.theme_4 p label { background: rgba(0, 0, 0, .3); border: none; color: rgba(255, 255, 255, .8); }
+.theme_4 .btn3 { background: #6D4C41; }
+.theme_4 .quote::before { color: rgba(255, 255, 255, .8); }
+@media screen and (min-width:600px) {
+  .theme_4 { background-attachment: fixed; }
 }
+
+/* ---------------- Theme 5 ---------------- */
+.theme_5 { background-color: #f5f5f5; padding: 10vw 0; clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%); color: #000; }
 .theme_5 h1,
 .theme_5 h2,
 .theme_5 h3,
-.theme_5 .c_dark{ color:#000;}
-.theme_5 p{ color:rgba(0,0,0,.8);}
-.theme_5 p label{ background:rgba(255,255,255,1); border:none; color:rgba(0,0,0,.5);}
-.theme_5 .btn3{ background:#6D4C41; }
-.theme_5 .quote::before{ color:rgba(0,0,0,.8)}
+.theme_5 .c_dark { color: #000; }
+.theme_5 p { color: rgba(0, 0, 0, .8); }
+.theme_5 p label { background: #fff; border: none; color: rgba(0, 0, 0, .5); }
+.theme_5 .btn3 { background: #6D4C41; }
+.theme_5 .quote::before { color: rgba(0, 0, 0, .8); }
 
-.theme_6{ background:#fff; margin-top:-9rem; margin-top:-10vw; padding-top:9rem; padding-top:10vw;
-  clip-path:polygon(0 9rem, 100% 0, 100% 100%, 0 100%);
-  clip-path:polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
-}
+/* ---------------- Theme 6 ---------------- */
+.theme_6 { background: #fff; margin-top: -10vw; padding-top: 10vw; clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%); color: #000; }
 .theme_6 h1,
 .theme_6 h2,
 .theme_6 h3,
-.theme_6 .c_dark{ color:#000;}
-.theme_6 p{ color:rgba(0,0,0,.8);}
-.theme_6 p label{ background:#f4f4f4; border:#f4f4f4 1px solid; color:rgba(0,0,0,.5);}
-.theme_6 .quote::before{ color:rgba(0,0,0,.8)}
+.theme_6 .c_dark { color: #000; }
+.theme_6 p { color: rgba(0, 0, 0, .8); }
+.theme_6 p label { background: #f4f4f4; border: 1px solid #f4f4f4; color: rgba(0, 0, 0, .5); }
+.theme_6 .quote::before { color: rgba(0, 0, 0, .8); }
 
 /* nav contrast color */
 .f_dark_bg nav .ins{ border-left-color:#fff;}
