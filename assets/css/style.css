@@ -767,7 +767,7 @@ footer{ display:none;}
 
 /* https://material.io/design/color/the-color-system.html#tools-for-picking-colors */
 
-.theme_1{ background:#ed6e2d url(https://designer.futurefriendly.cn/assets/images/grid.png) center center 100px fixed; padding-bottom:10vw}
+.theme_1{ background:#e65100 url(https://designer.futurefriendly.cn/assets/images/grid.png) center center fixed; background-size:100px; padding-bottom:10vw}
 .theme_1 h1,
 .theme_1 h2,
 .theme_1 h3,
@@ -782,7 +782,7 @@ footer{ display:none;}
 */
 
 @media screen and (min-width:600px){
-  .theme_1{ background:#E65100; background-size:cover; background-attachment:fixed;}
+  .theme_1{background-attachment:fixed;}
 }
 
 .theme_2{ background-color:#DCEDC8}
