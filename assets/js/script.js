@@ -1,23 +1,23 @@
 // ================================
 // 触控检测 & 点击事件类型
 // ================================
-const hasTouch = "ontouchstart" in window;
-const tapend = hasTouch ? "touchend" : "click";
+export const hasTouch = "ontouchstart" in window;
+export const tapend = hasTouch ? "touchend" : "click";
 
 // ================================
 // 全局变量
 // ================================
-let scrollPos = 0;
-let windowH = $(window).height();
-let windowW = $(window).width();
-let documentH = 0;
-let pct = 0;
-const sectionOffset = [];
+export let scrollPos = 0;
+export let windowH = $(window).height();
+export let windowW = $(window).width();
+export let documentH = 0;
+export let pct = 0;
+export const sectionOffset = [];
 
 // ================================
 // 工具函数: requestAnimationFrame 节流
 // ================================
-function rafThrottle(fn) {
+export function rafThrottle(fn) {
   let ticking = false;
   return function (...args) {
     if (!ticking) {
@@ -33,7 +33,7 @@ function rafThrottle(fn) {
 // ================================
 // 初始化 Section 高度
 // ================================
-function secHeight() {
+export function secHeight() {
   const seccount = $("section").length;
   for (let i = 0; i < seccount; i++) {
     sectionOffset[i] = Math.floor($("section").eq(i).offset().top);
@@ -43,7 +43,7 @@ function secHeight() {
 // ================================
 // 滚动处理
 // ================================
-function onScroll() {
+export function onScroll() {
   scrollPos = Math.floor($(document).scrollTop());
 
   $("body").toggleClass("scroll", scrollPos > 290);
@@ -71,7 +71,7 @@ function onScroll() {
 // ================================
 // 窗口尺寸变化处理
 // ================================
-function onResize() {
+export function onResize() {
   secHeight();
   windowH = $(window).height();
   windowW = $(window).width();
@@ -80,7 +80,7 @@ function onResize() {
 // ================================
 // 字号切换
 // ================================
-function textsize(n, o) {
+export function textsize(n, o) {
   $("html").removeClass("f_font14 f_font16 f_font18").addClass("f_font" + n);
 
   const children = document.getElementById("option_txtsize").childNodes;
@@ -95,7 +95,7 @@ function textsize(n, o) {
 // ================================
 // 初始化 OwlCarousel
 // ================================
-function initCarousel(selector, options) {
+export function initCarousel(selector, options) {
   $(selector).owlCarousel(
     Object.assign(
       {
@@ -110,9 +110,9 @@ function initCarousel(selector, options) {
 }
 
 // ================================
-// 事件绑定
+// 页面初始化
 // ================================
-$(function () {
+export function initPage() {
   secHeight();
   $("nav").show();
 
@@ -169,19 +169,26 @@ $(function () {
     "src",
     "https://www.futurefriendly.cn/ds/page/invitation2016.html"
   );
-});
+
+  // ================================
+  // 统一窗口事件绑定
+  // ================================
+  $(window).on("scroll", rafThrottle(onScroll));
+  $(window).on("resize", rafThrottle(onResize));
+  $(window).on("load", () => {
+    onScroll();
+    onResize();
+  });
+
+  // ================================
+  // 平滑滚动
+  // ================================
+  const scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
+}
 
 // ================================
-// 统一窗口事件 (requestAnimationFrame 节流)
+// 自动初始化
 // ================================
-$(window).on("scroll", rafThrottle(onScroll));
-$(window).on("resize", rafThrottle(onResize));
-$(window).on("load", () => {
-  onScroll();
-  onResize();
+$(document).ready(() => {
+  initPage();
 });
-
-// ================================
-// 平滑滚动
-// ================================
-const scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
