@@ -1,0 +1,334 @@
+// =======================
+// Language Data
+// =======================
+
+export const langData = {
+    "la_1": [
+        "我擅长的领域",
+        "Overview"
+    ],
+    "la_3": [
+        "技术图书翻译",
+        "Translation"
+    ],
+    "la_5": [
+        "设计规范建设",
+        "Design System"
+    ],
+    "la_6": [
+        "交互原型设计",
+        "Interaction Design"
+    ],
+    "la_7": [
+        "交互动效设计",
+        "Motion Design"
+    ],
+    "la_8": [
+        "网站设计制作",
+        "Make Websites"
+    ],
+    "la_9": [
+        "设计工具开发",
+        "Build Tools"
+    ],
+    "la_10": [
+        "我的联系方式",
+        "Get in Touch"
+    ],
+    "la_11": [
+        "Benjamin Z.",
+        "Benjamin Z."
+    ],
+    "la_12": [
+        "您好！欢迎并感谢您莅临本页面。我是一名语文教育与互联网行业的从业者，常住粤港澳大湾区。",
+        "Welcome! I'm a craftsman based in the Greater Bay Area, formerly working in secondary schools and technology companies."
+    ],
+    "la_13": [
+        "我乐于为个人或组织提供以下支持与协助：",
+        "I'm pleased to offer the following support and services to individuals or organisations:"
+    ],
+    "la_14": [
+        "一、为基于 iOS 或 Android 平台的移动应用提供交互设计服务。",
+        "1) Interaction design for mobile applications on iOS or Android platforms;"
+    ],
+    "la_15": [
+        "二、响应式网站的设计咨询与方案实施。",
+        "2) Consultation and implementation for responsive website design;"
+    ],
+    "la_16": [
+        "三、技术类或文学类文本的英译中翻译服务。",
+        "3) Translation from English to Chinese, including technical and literary content;"
+    ],
+    "la_17": [
+        "四、面向简体中文与繁体中文的软件本地化文案撰写。",
+        "4) Copywriting for Chinese software localization, in both Simplified and Traditional Chinese."
+    ],
+    "la_18": [
+        "滴滴出行秉持“营销为主、客户第一”的理念，在设计团队中设立了品牌设计、交互设计、UI 设计和视觉设计四类角色。自 2015 年起，我在一个 9 人设计团队中主导了 20 多个运营活动页面的交互设计，并确保设计方案的最终落地与效果实现。",
+        "As a marketing-driven and customer-centric company, DiDi has established four design roles: Brand Designer, Interaction Designer, UI Designer, and Visual Designer. Since mid-2015, within a 9-member design team, I led the interaction design and ensured the successful implementation of over 20 promotional campaigns."
+    ],
+    "la_19": [
+        "为便于快速了解，下图展示了我的兴趣领域，过往经验也已按相关性分类标注。",
+        "To facilitate a quick overview, the image below illustrates my areas of interest, with past experiences categorised by relevance."
+    ],
+    "la_22": [
+        "作为一家高度重视产品体验的企业，腾讯各业务线的设计团队普遍设有交互设计、视觉设计与UI开发三类角色。在微视项目中，我担任交互设计师，负责移动端产品流程的整体设计与用户体验优化。",
+        "As an organisation that places strong emphasis on product experience, Tencent's design teams across business units typically include three roles: Interaction Designer, Visual Designer, and UI Developer. In the Weishi project under the Online Media Group, I served as the Interaction Designer, responsible for end-to-end mobile product flow design and user experience optimisation."
+    ],
+    "la_23": [
+        "自2015年起，设计体系逐步取代传统设计规范，成为更高效的设计实践方式。以<a href=\"https://www.lightningdesignsystem.com\" target=\"_blank\">Salesforce</a>为代表的组织已在此领域实现最佳实践。设计体系将内容策略、可访问性等要素纳入设计需求，整合了设计规范与组件库。结合我在腾讯微博维护Web设计规范的经验，以及Brad Frost提出的Atomic Design模块化理念，我们为滴滴顺风车构建了完整的设计体系。",
+        "Since 2015, design systems have gradually replaced traditional design guidelines, emerging as a more efficient approach to design practice. Organisations such as <a href=\"https://www.lightningdesignsystem.com\" target=\"_blank\">Salesforce</a> have led the way in implementing best practices. A design system integrates elements such as content strategy and accessibility into design requirements, unifying design guidelines with component libraries. Drawing on my prior experience maintaining the Web design guidelines for Tencent Weibo, as well as Brad Frost's Atomic Design methodology, we developed a comprehensive design system for DiDi Hitch."
+    ],
+    "la_24": [
+        "2015年6月至11月，我参与了北京大学国际版官方网站的改版项目，负责交互设计与前端开发工作。项目由3人团队完成，历经3个版本迭代，在6个月的设计与开发周期后顺利交付并通过最终评估。",
+        "From June to November 2015, I participated in the redesign of Peking University's International Official Website, responsible for interaction design and front-end development. The project was delivered by a 3-member team, underwent 3 iterations, and was successfully completed after a 6-month design and development cycle, passing the final evaluation."
+    ],
+    "la_32": [
+        "2017，人民邮电出版社",
+        "2017, Post & Telecom Press"
+    ],
+    "la_33": [
+        "译自《ADAPTIVE WEB DESIGN: CRAFTING RICH EXPERIENCES WITH PROGRESSIVE ENHANCEMENT (第2版)》，原作者 AARON GUSTAFSON",
+        "Translated from: Gustafson, A. (2016). *Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement* (Second Edition)."
+    ],
+    "la_34": [
+        "样章：",
+        "Sample Chapter:"
+    ],
+    "la_35": [
+        "译自《DATA VISUALIZATION WITH JAVASCRIPT》，原作者 STEPHEN A\\. THOMAS",
+        "Translated from: Thomas, S. A. (2015). *Data Visualization with JavaScript*."
+    ],
+    "la_38": [
+        "本书讲述的“渐进增强”概念提供了一种思维方式，沟通了设计师与工程师的问题解决路径，使团队能超越职能界限，共同实现业务目标。",
+        "<i>The concept of Progressive Enhancement presented in this book offers a way of thinking that bridges the problem-solving approaches of designers and engineers. It enables teams to transcend functional silos and collaboratively achieve business objectives.</i>"
+    ],
+    "la_39": [
+        "——58赶集集团CTO 邢宏宇 推荐",
+        "— Comment by Hongyu Xing, Chief Technology Officer, 58.com Inc."
+    ],
+    "la_42": [
+        "数据化时代，两项专业技能尤为重要：数据的分析能力与表达能力。如何从数据中提炼信息，并以最有效的方式进行沟通，对从业者提出了更高要求。在信息爆炸与时间碎片化的当下，数据可视化已成为最高效的沟通手段之一。本书并未拘泥于晦涩理论，而是通过生动案例，系统讲解了多种图表呈现与交互方式。译者具备扎实的技术背景，准确传达了原著精髓。",
+        "<i>In the data-driven era, two professional competencies are increasingly vital: the ability to analyse data and the ability to communicate it effectively. Extracting meaningful information and conveying it clearly places high demands on practitioners. In today's context of information overload and fragmented attention, data visualization has become one of the most effective communication tools. Rather than dwelling on abstract theory, this book systematically presents various visual representations and interactive methods through concrete, engaging examples. The translator, possessing solid technical expertise, faithfully conveys the essence of the original work.</i>"
+    ],
+    "la_43": [
+        "——云锋金融集团CEO 李婷 推荐",
+        "— Comment by Ting Li, Chief Executive Officer, Yunfeng Capital"
+    ],
+    "la_44": [
+        "滴滴顺风车",
+        "DiDi Hitch"
+    ],
+    "la_45": [
+        "用户界面设计",
+        "UI Design"
+    ],
+    "la_46": [
+        "用户界面开发",
+        "UI Development"
+    ],
+    "la_47": [
+        "产品原型设计",
+        "Prototyping"
+    ],
+    "la_48": [
+        "交互设计",
+        "Interaction Design"
+    ],
+    "la_49": [
+        "组织头脑风暴",
+        "Brainstorming"
+    ],
+    "la_50": [
+        "故事板设计",
+        "Storyboarding"
+    ],
+    "la_51": [
+        "动效设计",
+        "Motion Design"
+    ],
+    "la_52": [
+        "前端开发",
+        "Front-end Development"
+    ],
+    "la_53": [
+        "本地化",
+        "Localization"
+    ],
+    "la_54": [
+        "首先，这份设计规范服务于滴滴顺风车的Web产品，既包含APP中以webserver方式引入的部分，也包含供社交平台传播的H5页面。其次，它面向顺风车团队的用户体验设计师与前端开发工程师，既是UI开发规范，也是一个可复用的交互组件库。",
+        "Firstly, this design system serves the web-based products of DiDi Hitch, including webview-embedded content within the app and H5 promotion pages for social media. Secondly, it is intended for UX designers and front-end developers on the Hitch team, functioning both as a UI development guideline and a reusable interaction component library."
+    ],
+    "la_55": [
+        "订单完成后的用户评价页面：",
+        "The Post-Trip Feedback Page: "
+    ],
+    "la_56": [
+        "订单结束后，滴滴顺风车会通过此页面收集乘客和车主对本次行程的主观感受，这些数据将作为我们持续提升平台质量、优化产品细节的参考。评价页分为实名和匿名两部分。车主和乘客可以看到彼此以实名方式给出的正面评价，而负面评价则以匿名方式提交至系统，作为双方信任值评估的依据之一。",
+        "After a trip concludes, DiDi Hitch collects subjective feedback from both passengers and drivers via this page, which informs our ongoing efforts to improve platform quality and refine product details. The feedback page is divided into real-name and anonymous sections. Positive evaluations are displayed under real names to both parties, while negative feedback is submitted anonymously to the backend system, serving as one indicator in the mutual trust scoring mechanism."
+    ],
+    "la_57": [
+        "我和设计团队一起负责了滴滴顺风车的全流程交互设计。为支持快速迭代与动态内容更新，项目中约70%的UI元素采用Web技术实现。",
+        "Together with the design team, I was responsible for end-to-end interaction design for DiDi Hitch. To support rapid iteration and dynamic content updates, approximately 70% of the UI elements were implemented using web technologies, including this page."
+    ],
+    "la_58": [
+        "腾讯微视 (网络媒体事业部版本)",
+        "Tencent Weishi (Online Media Group Version)"
+    ],
+    "la_59": [
+        "转发视频：",
+        "Interaction for Forwarding a Video: "
+    ],
+    "la_60": [
+        "网络媒体事业部（OMG）早期立项的「微视」是一个8秒短视频分享平台。考虑到iOS与Android系统操作习惯的差异，我们对双平台的交互设计进行了差异化处理。例如，在iOS平台上，我们将「分享」与「转发」操作合并至类ActionSheet组件中，从而减少视频详情页的可见按钮数量，提升界面简洁度。",
+        "Weishi, initiated by Tencent's Online Media Group (OMG), was an 8-second short video sharing platform. Given the differing interaction patterns between iOS and Android, we adopted platform-specific design strategies. For instance, on iOS, we consolidated the \"Share\" and \"Forward\" actions into a native-style Action Sheet, reducing the number of visible buttons on the video detail page and enhancing interface clarity."
+    ],
+    "la_61": [
+        "滴滴顺风车的端外运营页面：",
+        "Off-App Promotion Pages for DiDi Hitch: "
+    ],
+    "la_62": [
+        "我们相信共享是优雅而美好的，因此在运营页面的设计中力求细节精致。除视觉设计外，声音与动效也是我们关注的重点。若页面同时包含动画与背景音乐，我们会将动画时长与音乐节拍对齐，确保节奏统一。",
+        "We believe that sharing is elegant and meaningful, hence we pay meticulous attention to detail in promotional page design. Beyond visuals, sound and motion are equally prioritised. When a page includes both animation and background music, we synchronise the animation duration with musical beats, ensuring rhythmic harmony. The duration value in code is precisely set to an integer multiple of one beat."
+    ],
+    "la_63": [
+        "如果你使用的是桌面浏览器，不妨在手机区域内尝试点按或拖拽操作，以预览完整动画效果。",
+        "If you are viewing this on a desktop browser, try tapping or dragging within the PHONE area to preview the full animation sequence."
+    ],
+    "la_64": [
+        "轻春运：空座共享计划",
+        "Light Spring Festival Travel Rush: Empty Seat Sharing Initiative"
+    ],
+    "la_65": [
+        "2016年12月",
+        "December 2016"
+    ],
+    "la_66": [
+        "顺风飞船一周年大数据",
+        "Trip Data on the 1<sup>st</sup> Anniversary Show"
+    ],
+    "la_67": [
+        "少有的翻译通俗易懂的书籍，让你真正理解渐进增强的含义。",
+        "<i>A rare example of a well-translated, accessible book that clearly explains the concept of progressive enhancement.</i>"
+    ],
+    "la_68": [
+        "——豆瓣网友",
+        "— A user review from douban.com"
+    ],
+    "la_69": [
+        "2016年6月",
+        "June 2016"
+    ],
+    "la_70": [
+        "北京大学官方网站（国际版）",
+        "Peking University Official Website (International Edition)"
+    ],
+    "la_71": [
+        "北京大学官方网站（国际版）于2015年11月20日改版上线。网站基于「面向未来的友好设计」理念，采用栅格布局与响应式设计，前向兼容至IE7浏览器。",
+        "The International Edition of Peking University's official website was relaunched on 20<sup>th</sup> November 2015. Designed under the \"Future-Friendly Design\" philosophy, it employs a grid layout and responsive techniques, with backward compatibility down to Internet Explorer 7."
+    ],
+    "la_72": [
+        "UFO Animate",
+        "UFO Animate"
+    ],
+    "la_73": [
+        "个人项目",
+        "Personal Project"
+    ],
+    "la_74": [
+        "UFO Animate 是一个用于快速预览和构建 CSS 动画效果的在线可视化工具，支持中文与英文界面。",
+        "UFO Animate is an online visual tool for rapidly prototyping and previewing CSS animation effects, supporting both Simplified Chinese and English interface languages."
+    ],
+    "la_75": [
+        "欢迎邮件联系 <u><span class=\"email\"></span></u>。",
+        "Feel free to contact me via email at <u><span class=\"email\"></span></u>."
+    ],
+    "la_76": [
+        "<a target=\"_blank\" href=\"./assets/map.svg\" class=\"btn2\">在新窗口中查看大图</a>",
+        "<a target=\"_blank\" href=\"./assets/map.svg\" class=\"btn2\">View Full-Sized Map in New Window</a>"
+    ],
+    "la_77": [
+        "去京东看读者评论",
+        "Read User Reviews on JD.com"
+    ],
+    "la_78": [
+        "去epubit.com看电子书",
+        "E-book Available at epubit.com"
+    ],
+    "la_79": [
+        "在线查看",
+        "View Online"
+    ],
+    "la_82": [
+        "查看并播放",
+        "Preview and Play"
+    ],
+    "la_83": [
+        "访问网站",
+        "Visit Website"
+    ],
+    "la_84": [
+        "设计稿一",
+        "Design Draft 1"
+    ],
+    "la_85": [
+        "设计稿二",
+        "Design Draft 2"
+    ],
+    "la_86": [
+        "在线试用",
+        "Try Online"
+    ],
+    "la_87": [
+        "渐进增强：跨平台用户体验设计",
+        "Adaptive Web Design: Crafting Rich Experiences With Progressive Enhancement"
+    ],
+    "la_88": [
+        "小",
+        "Small"
+    ],
+    "la_89": [
+        "中",
+        "Medium"
+    ],
+    "la_90": [
+        "大",
+        "Large"
+    ],
+    "la_91": [
+        "发送邮件",
+        "Send Email"
+    ],
+    "la_95": [
+        "版权 &copy;2011-2025 by futurefriendly.cn，保留所有权利，包括以任何形式复制本网站或其中部分内容的权利。有关信息，请咨询内容发布者。",
+        "Copyright &copy; 2011–2025 by futurefriendly.cn, all rights reserved, including the right to reproduce this website or any portion thereof in any form. For inquiries, please contact the content publisher."
+    ],
+    "la_107": [
+        "JavaScript数据可视化编程",
+        "Data Visualization with JavaScript"
+    ],
+    "la_112": [
+        "春运暖心日历：",
+        "Spring Festival Transportation Calendar: "
+    ],
+    "la_113": [
+        "这是一个和单向空间合作的运营页面。为了吸引用户互动，我们在产品中加入了一个对联游戏。此外，为了配合合作方的产品风格，我们在这个页面中设计了一些微动效。",
+        "This is a promotion webpage developed in collaboration with One-Way Street Bookstore. To attract user interaction, we added a traditional Chinese couplet game to the page. Additionally, to match the partner's product style, we incorporated some micro animations into the design."
+    ],
+    "la_114": [
+        "滴滴顺风车运营活动",
+        "Promotion Webpages of DiDi Hitch"
+    ],
+    "la_115": [
+        "滴滴顺风车产品流程",
+        "Product Flow of DiDi Hitch"
+    ],
+    "la_116": [
+        "腾讯微博、微视",
+        "Tencent Weibo, Weishi"
+    ],
+    "la_117": [
+        "将视觉设计方案转换为以HTML、CSS、JavaScript构建的UI界面。应用BEM方法提升UI开发质量，改善团队工作流程。设计规范的创建和管理，响应式设计和带宽优化工作。",
+        "Responsible for creating user interfaces through frontend coding (PSD to HTML/CSS/JavaScript). Apply BEM methodology to improve coding quality and streamline team workflows. Manage design guidelines, implement responsive web design, and conduct bandwidth-focused optimisation work."
+    ]
+};
