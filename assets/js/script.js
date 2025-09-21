@@ -14,6 +14,13 @@ export let documentH = 0;
 export let pct = 0;
 export const sectionOffset = [];
 
+// 缓存常用 DOM 元素
+const bodyEl = $("body");
+const loadBarEl = $("#loadbar");
+const sections = $("section");
+const navEl = $("nav");
+const optionTxtsizeEl = document.getElementById("option_txtsize");
+
 // ================================
 // 工具函数: requestAnimationFrame 节流
 // ================================
@@ -34,10 +41,9 @@ export function rafThrottle(fn) {
 // 初始化 Section 高度
 // ================================
 export function secHeight() {
-  const seccount = $("section").length;
-  for (let i = 0; i < seccount; i++) {
-    sectionOffset[i] = Math.floor($("section").eq(i).offset().top);
-  }
+  sections.each((i, el) => {
+    sectionOffset[i] = Math.floor($(el).offset().top);
+  });
 }
 
 // ================================
@@ -46,26 +52,20 @@ export function secHeight() {
 export function onScroll() {
   scrollPos = Math.floor($(document).scrollTop());
 
-  $("body").toggleClass("scroll", scrollPos > 290);
+  bodyEl.toggleClass("scroll", scrollPos > 290);
 
-  if (scrollPos > sectionOffset[2]) {
-    $("body").addClass("f_dark_bg");
-  } else {
-    $("body").removeClass("f_dark_bg");
-  }
-  if (scrollPos > sectionOffset[4]) {
-    $("body").removeClass("f_dark_bg");
-  }
-  if (scrollPos > sectionOffset[7]) {
-    $("body").addClass("f_dark_bg");
-  }
-  if (scrollPos > sectionOffset[8]) {
-    $("body").removeClass("f_dark_bg");
-  }
+  // 减少重复操作，只操作必要 class
+  if (scrollPos > sectionOffset[2]) bodyEl.addClass("f_dark_bg");
+  else if (scrollPos <= sectionOffset[2]) bodyEl.removeClass("f_dark_bg");
+
+  if (scrollPos > sectionOffset[4]) bodyEl.removeClass("f_dark_bg");
+  if (scrollPos > sectionOffset[7]) bodyEl.addClass("f_dark_bg");
+  if (scrollPos > sectionOffset[8]) bodyEl.removeClass("f_dark_bg");
 
   documentH = $(document).height();
   pct = 100 - (scrollPos / documentH) * 100 + "%";
-  $("#loadbar").css("transform", `translateX(-${pct})`);
+
+  loadBarEl.css("transform", `translateX(-${pct})`);
 }
 
 // ================================
@@ -81,14 +81,17 @@ export function onResize() {
 // 字号切换
 // ================================
 export function textsize(n, o) {
-  $("html").removeClass("f_font14 f_font16 f_font18").addClass("f_font" + n);
+  const htmlEl = $("html");
+  htmlEl.removeClass("f_font14 f_font16 f_font18").addClass("f_font" + n);
 
-  const children = document.getElementById("option_txtsize").childNodes;
-  children.forEach(child => {
-    if (child.style) child.style.textDecoration = "none";
-  });
+  if (optionTxtsizeEl) {
+    optionTxtsizeEl.childNodes.forEach(child => {
+      if (child.style) child.style.textDecoration = "none";
+    });
+  }
 
-  o.style.textDecoration = "underline";
+  if (o && o.style) o.style.textDecoration = "underline";
+
   secHeight();
 }
 
@@ -96,17 +99,13 @@ export function textsize(n, o) {
 // 初始化 OwlCarousel
 // ================================
 export function initCarousel(selector, options) {
-  $(selector).owlCarousel(
-    Object.assign(
-      {
-        autoplay: false,
-        smartSpeed: 250,
-        lazyLoad: true,
-        margin: 20,
-      },
-      options
-    )
-  );
+  const defaultOptions = {
+    autoplay: false,
+    smartSpeed: 250,
+    lazyLoad: true,
+    margin: 20,
+  };
+  $(selector).owlCarousel(Object.assign(defaultOptions, options));
 }
 
 // ================================
@@ -114,9 +113,9 @@ export function initCarousel(selector, options) {
 // ================================
 export function initPage() {
   secHeight();
-  $("nav").show();
+  navEl.show();
 
-  $("nav a").on(tapend, secHeight);
+  navEl.find("a").on(tapend, secHeight);
 
   $(".f_play").on(tapend, function () {
     $(this).attr("target", windowW > 1239 ? "h5stage" : "_blank");
@@ -124,51 +123,30 @@ export function initPage() {
 
   $(".f_display").on(tapend, function () {
     $("#scene .layer").remove();
-    $("#showexp").css("opacity", "1")[0].play();
+    const showexp = $("#showexp")[0];
+    if (showexp) {
+      $("#showexp").css("opacity", "1");
+      showexp.play();
+    }
   });
 
   $(".f_expand").on(tapend, function () {
-    $(this).parents(".f_sm").hide().siblings(".hid").show();
+    $(this).closest(".f_sm").hide().siblings(".hid").show();
   });
 
-  initCarousel(".f_owl-carousel_map", {
-    loop: false,
-    responsive: { 0: { items: 1 }, 480: { items: 1 } },
-  });
+  // 批量初始化 OwlCarousel
+  const carousels = [
+    { selector: ".f_owl-carousel_map", options: { loop: false, responsive: { 0: { items: 1 }, 480: { items: 1 } } } },
+    { selector: ".f_owl-carousel_designsystem", options: { loop: true, responsive: { 0: { items: 1 }, 800: { items: 2 } } } },
+    { selector: ".f_owl-carousel_pku", options: { loop: false, responsive: { 0: { items: 1 }, 480: { items: 1 } } } },
+    { selector: ".f_owl-carousel_ufo", options: { loop: true, responsive: { 0: { items: 2 }, 600: { items: 3 } } } },
+    { selector: ".f_owl-carousel_wb", options: { autoplay: true, autoplayTimeout: 3000, autoplayHoverPause: true, loop: true, responsive: { 0: { items: 1 }, 800: { items: 2 } } } },
+    { selector: ".f_owl-carousel_dd", options: { smartSpeed: 100, loop: true, responsive: { 0: { items: 2 }, 800: { items: 4 }, 1240: { items: 5 } } } },
+  ];
 
-  initCarousel(".f_owl-carousel_designsystem", {
-    loop: true,
-    responsive: { 0: { items: 1 }, 800: { items: 2 } },
-  });
+  carousels.forEach(c => initCarousel(c.selector, c.options));
 
-  initCarousel(".f_owl-carousel_pku", {
-    loop: false,
-    responsive: { 0: { items: 1 }, 480: { items: 1 } },
-  });
-
-  initCarousel(".f_owl-carousel_ufo", {
-    loop: true,
-    responsive: { 0: { items: 2 }, 600: { items: 3 } },
-  });
-
-  initCarousel(".f_owl-carousel_wb", {
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    loop: true,
-    responsive: { 0: { items: 1 }, 800: { items: 2 } },
-  });
-
-  initCarousel(".f_owl-carousel_dd", {
-    smartSpeed: 100,
-    loop: true,
-    responsive: { 0: { items: 2 }, 800: { items: 4 }, 1240: { items: 5 } },
-  });
-
-  $("#h5stage").attr(
-    "src",
-    "https://www.futurefriendly.cn/ds/page/invitation2016.html"
-  );
+  $("#h5stage").attr("src", "https://www.futurefriendly.cn/ds/page/invitation2016.html");
 
   // ================================
   // 统一窗口事件绑定
@@ -183,7 +161,7 @@ export function initPage() {
   // ================================
   // 平滑滚动
   // ================================
-  const scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
+  new SmoothScroll('a[href*="#"]', { speed: 1000 });
 }
 
 // ================================
