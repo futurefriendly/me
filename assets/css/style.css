@@ -404,7 +404,7 @@ footer .content .section{}
 h1,h2{ color:#000}
 h1{ position:relative; z-index:4; text-align:center; font-family:Vesterbro Medium,Georgia,serif; font-size:3rem; padding:4rem 0; line-height:1em;}
 section,
-.section { display: grid; grid-template-columns: var(--grid-outer); grid-column-gap: var(--grid-gutter); padding: 2% 0; vertical-align: top; }
+.section { display: grid; grid-template-columns: var(--grid-outer); grid-column-gap: var(--grid-gutter); vertical-align: top; }
 section > a,
 .section > a { grid-column: 1 / -1; /* 占满整行 */ }
 section > .inner,
@@ -550,14 +550,14 @@ body{ font-size:100%}
   .option_txtsize,
   .option_printer{ display:inline;}
 
-  .summary{ padding:2%; border-radius:0 10rem 10rem 10rem;
+  .summary{ padding:2% 0; border-radius:0 10rem 10rem 10rem;
   }
-  .summary .avatar{ margin-top:-10%; margin-bottom:-10%; margin-left:-5%;
+  .summary .avatar{
     grid-column:1 / span 4;
     grid-row:1 / span 1;
   }
   .summary blockquote{ padding-top:5%; padding-bottom:5%;
-    grid-column:5 / span 5;
+    grid-column:5 / span 4;
     grid-row:1 / span 1;
   }
 
@@ -570,6 +570,14 @@ body{ font-size:100%}
 @media screen and (min-width:800px){
   .option{ font-size:.875rem; padding:.5rem 1rem 0 0;
     grid-column: 2 / span 10;
+  }
+  .summary .avatar{
+    grid-column:1 / span 3;
+    grid-row:1 / span 1;
+  }
+  .summary blockquote{ padding-top:5%; padding-bottom:5%;
+    grid-column:4 / span 5;
+    grid-row:1 / span 1;
   }
 }
 
@@ -645,7 +653,7 @@ body{ font-size:100%}
   .section > .inner{
     grid-column:3 / span 8;
   }
-  h1{ z-index:1; font-size:4.5rem; text-align:left; padding:3rem 0 2rem}
+  h1{ z-index:1; font-size:4.5rem; text-align:left;}
   h2{ padding-left:0; font-size:3rem; line-height:1.5em}
   h3{ font-size:1.8rem; line-height:1.5em}
 
@@ -662,7 +670,7 @@ body{ font-size:100%}
   .li_pend{ margin-top:-2%}
 
   .e_plant_logo{ padding:7.5rem 0 0 .625rem;}
-  h1{ padding:4rem 0 3rem; font-size:6rem;}
+  h1{ font-size:6rem;}
 
   .showcase .inner{ width:auto}
   .showcase .layout{ align-items:center;
@@ -680,10 +688,10 @@ body{ font-size:100%}
   }
 
   .e_pubwrap_book .pubimg{
-    grid-column:2 / span 3;
+    grid-column:1 / span 3;
   }
   .e_pubwrap_book .pubtxt{
-    grid-column:5 / span 6;
+    grid-column:4 / span 6;
   }
   .e_pubwrap_book .pubpurchase{
     grid-row:2 / span 1;
